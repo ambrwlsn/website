@@ -1,0 +1,18 @@
+{
+  "name": "tech-blog-list",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx @11ty/eleventy --serve --output=public --input=src",
+    "build": "npx @11ty/eleventy --output=public --input=src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "markdown-it": "^12.0.0"
+  }
+}
