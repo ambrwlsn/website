@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="566px" height="152px" viewBox="0 0 566 152" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>URI</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="iPad" transform="translate(-7.000000, -17.000000)">
+            <g id="URI" transform="translate(7.000000, 14.000000)">
+                <g stroke-width="1" fill-rule="evenodd" transform="translate(47.000000, 99.000000)" id="Line" stroke="#4990E2" stroke-linecap="square">
+
+                </g>
+
+                <g id="URL" stroke-width="1" fill-rule="evenodd" transform="translate(43.000000, 103.000000)" stroke="#7ED321" stroke-linecap="square">
+
+                </g>
+                <path d="M363,104.317233 L363,109.392954 L363,104.317233 Z" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M370,104.317233 L370,109.392954 L370,104.317233 Z" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M363.5,104 L370,104 L363.5,104 Z" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+
+
+                <g id="URN" stroke-width="1" fill-rule="evenodd" transform="translate(93.000000, 138.000000)" stroke="#F6A623" stroke-linecap="square">
+
+                  
+                </g>
+                <path d="M51.9516977,104 L87,104 L51.9516977,104 Z" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M52,104.317233 L52,109.392954 L52,104.317233 Z" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M87,104.317233 L87,109.392954 L87,104.317233 Z" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M130,104 L182.009614,104 L130,104 Z" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M130,104.317233 L130,109.392954 L130,104.317233 Z" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M182,104.317233 L182,109.392954 L182,104.317233 Z" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M186,104 L217.016125,104 L186,104 Z" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M186,104.317233 L186,109.392954 L186,104.317233 Z" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M217,104.317233 L217,109.392954 L217,104.317233 Z" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M221,103.666667 L243.040367,103.666667 L221,103.666667 Z" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M482,103.666667 L532.071061,103.666667 L482,103.666667 Z" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M243,104.317233 L243,109.392954 L243,104.317233 Z" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M221,104.317233 L221,109.392954 L221,104.317233 Z" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M91,104 L125,104 L91,104 Z" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M91,104.317233 L91,109.392954 L91,104.317233 Z" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M125,104.317233 L125,109.392954 L125,104.317233 Z" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M248,104 L360.004464,104 L248,104 Z" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M373,104 L479,104 L373,104 Z" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M248,104.317233 L248,109.392954 L248,104.317233 Z" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M482,104.317233 L482,109.392954 L482,104.317233 Z" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M532,104.317233 L532,109.392954 L532,104.317233 Z" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M248,104 L360.004464,104 L248,104 Z" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <text id="https://www.example." font-family="Helvetica" font-size="14" font-weight="normal" fill="#A050E6">
+                    <tspan x="53" y="125">https://www.example.co.uk:443/blog/article/search?docid=720&amp;hl=en#dayone</tspan>
+                </text>
+                <path d="M373,104.317233 L373,109.392954 L373,104.317233 Z" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M479,104.317233 L479,109.392954 L479,104.317233 Z" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M360,104.317233 L360,109.392954 L360,104.317233 Z" id="Line" stroke="#000000" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M69.5,102.5 L69.5,67 L69.5,102.5 Z" id="Line" stroke="#7D7676" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M230.5,101.5 L230.5,78.9944451 L230.5,101.5 Z" id="Line" stroke="#7D7676" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M366.5,102.5 L366.5,43.9978633 L366.5,102.5 Z" id="Line" stroke="#7D7676" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M506.5,101.5 L506.5,42.9978633 L506.5,101.5 Z" id="Line" stroke="#7D7676" stroke-width="2" stroke-linecap="square"></path>
+                <text id="query-string-separat" font-family="Helvetica-Bold, Helvetica" font-size="13" font-weight="bold" fill="#000000">
+                    <tspan x="331.437744" y="23">query string</tspan>
+                    <tspan x="339.375488" y="39">separator</tspan>
+                </text>
+                <path d="M155.5,102.5 L155.5,67 L155.5,102.5 Z" id="Line" stroke="#7D7676" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M296.5,102.5 L296.5,67 L296.5,102.5 Z" id="Line" stroke="#7D7676" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M427.5,102.5 L427.5,83.9392888 L427.5,102.5 Z" id="Line" stroke="#7D7676" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M109.5,102.5 L109.5,35 L109.5,102.5 Z" id="Line" stroke="#7D7676" stroke-width="2" stroke-linecap="square"></path>
+                <path d="M200.5,102.5 L200.5,35 L200.5,102.5 Z" id="Line" stroke="#7D7676" stroke-width="2" stroke-linecap="square"></path>
+                <text id="scheme/protocol" font-family="Helvetica-Bold, Helvetica" font-size="13" font-weight="bold" fill="#000000">
+                    <tspan x="0" y="61">scheme/protocol</tspan>
+                </text>
+                <text id="subdomain" font-family="Helvetica-Bold, Helvetica" font-size="13" font-weight="bold" fill="#000000">
+                    <tspan x="73" y="31">subdomain</tspan>
+                </text>
+                <text id="domain" font-family="Helvetica-Bold, Helvetica" font-size="13" font-weight="bold" fill="#000000">
+                    <tspan x="133" y="63">domain</tspan>
+                </text>
+                <text id="second-level-(.co.uk" font-family="Helvetica-Bold, Helvetica" font-size="13" font-weight="bold" fill="#000000">
+                    <tspan x="159" y="13">second level (.co.uk)</tspan>
+                    <tspan x="159" y="29">&amp; top level (uk) domain</tspan>
+                </text>
+                <text id="port" font-family="Helvetica-Bold, Helvetica" font-size="13" font-weight="bold" fill="#000000">
+                    <tspan x="219" y="74">port</tspan>
+                </text>
+                <text id="path" font-family="Helvetica-Bold, Helvetica" font-size="13" font-weight="bold" fill="#000000">
+                    <tspan x="284" y="61">path</tspan>
+                </text>
+                <text id="query-string-/-param" font-family="Helvetica-Bold, Helvetica" font-size="13" font-weight="bold" fill="#000000">
+                    <tspan x="388.325928" y="63">query string /</tspan>
+                    <tspan x="398.066406" y="79">parameter</tspan>
+                </text>
+                <text id="fragment-/-anchor-ID" font-family="Helvetica-Bold, Helvetica" font-size="13" font-weight="bold" fill="#000000">
+                    <tspan x="476.079102" y="21">fragment / </tspan>
+                    <tspan x="477.523193" y="37">anchor ID</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

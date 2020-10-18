@@ -1,0 +1,20 @@
+---
+title: Podcasts and Knowledge Sharing
+date: "2017-03-07"
+tags: [podcasts, learning]
+keywords: [amber wilson, javascript, software engineering, web development, coding]
+---
+
+Let’s talk about podcasts. I have always liked the idea of them. Like audio books, you can take them anywhere and listen anytime. They enable you to access up-to-date, current opinions on just about any facet of life you can think of. If you’re wondering whether there is a podcast on a topic you’re interested in, I can bet you there is. And, if not, you could make one. Please excuse me while I shield my ears while you scream “but what could anyone ever learn from ME?!”.
+
+Over the past months, I’ve encountered people who are on the extreme ends of willingness to share experiences, either though speaking, blogging, or through other forms of communication. Some have animatedly explained how writing about their experiences has not only helped them track progress, but also consolidate their knowledge and receive thanks from people. Others look at me with mild confusion and ask what good could possibly come from sharing their pallid, commonplace, and unremarkable experiences.
+
+I’ve always been at the more willing extreme when it comes to writing about what I’ve done. To me, the idea of helping or inspiring even one person this way gives me a warm, glowing feeling inside. I believe that information and education are important for leading a more happy and productive life. A person can learn, through reading about or listening to people with similar experiences, ways to increase their own happiness and that of those around them. Shared knowledge is power. Not only does this knowledge teach us, it makes us feel more connected to each other. And this is a beautiful and comforting thing.
+
+A lot of the time, learning from others involves emotion. Hearing about similar experiences from others, being able to relate to their ideas and thoughts, can bring rushes of exhilaration, moments of ‘a-ha!’, and sobering realisations. When we share, we place a little bit of ourselves out there for others to do with what they will. There is a sense of vulnerability to this. It is the willingness to be vulnerable, though, that can encourage others come out of their shells and rejoice in their new-found knowledge. They may feel inspired, motivated, reassured, at ease.
+
+I believe that sharing of knowledge and experiences should never be discouraged. Personally, I’ve always found that other people’s perspectives hugely increase my ability to step outside myself and consider the bigger picture. I always find that this improves my wellbeing. Our own perspectives can become stale and fragmented so quickly, which can lead us to feel confused, worried, unsure, and even sad. I like to gather as many different perspectives on a single subject as I can. Each perspective is like a puzzle piece. Put them together and you have a brightly-coloured, easily-understood, comprehensive view of the thing you are trying to make sense of.
+
+The topic of this post is podcasts, but communicating your ideas can take many forms. Another method is blogging. This is something I absolutely love. I don’t only enjoy doing it myself, but also when other people do it. I always feel a child-like thrill when I discover an awesome piece of writing from someone on a topic I am interested in. My feelings rise to ecstatic when I realise the author is also incredibly passionate about what they are writing. Recently, much of what I have read or listened to has been about tech. I still read up on many other things, especially on psychology and life (I am especially interested in how parents raise their children). I’ll write a new post on the podcasts I like listening to and the blogs I like reading soon. Look out for it and remember, don’t be afraid to share! Connect with others through your ideas and help to build a more informed and happy world.
+
+Also published on <a rel="syndication" class="u-syndication" href="https://medium.com/@ambrwlsn90/podcasts-and-knowledge-sharing-e90d84050bfa#.uo4u39c78">Medium</a>.

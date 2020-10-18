@@ -1,0 +1,18 @@
+---
+title: Pandemic
+date: "2020-05-26"
+tags: [non-tech, thoughts]
+keywords: [amber wilson]
+---
+
+What is a pandemic anyway? I mean, why did I never actually properly learn what that term meant? There have been pandemics in the past. Sure, I know that. But were the importance of these ever conveyed to me? I can say “not really”. This is the very first pandemic-type experience I’ve ever lived through. The fact it has affected the whole world, will change some lives forever, and the behaviour of many people forever, is a mind-blowing, wonderful and deeply scary thing to me. 
+
+I have been listening to a 2.5 hour [podcast episode where the covid-19 pandemic is being discussed](https://www.singularityweblog.com/ada-palmer/). A woman with an astonishingly broad range of expertise, Ada Palmer, speaks briefly about two pandemics - the Swine/Spanish Flu (1918) and the Black Plague (started 1300’s and some people still get it today!). Both combined killed staggering amounts of people - even more than are being killed by the current pandemic. What if the world was exposed to a virus that was ten times more deadly than covid-19?
+
+Ada Palmer also said something that I’ve never heard someone say before. She said that if you know a lot about the past, you automatically know a lot about the future. To me, it seems like she was echoing the saying: “Those who cannot remember the past are condemned to repeat it.” - George Santayana. I am not a good historian but the saying makes sense to me. Humans, the dominant force on planet Earth, were, are, and likely forever will be, strongly governed by things like emotions and greed. Human nature is definitely a thing, and it’s not always a good thing. If human nature is more or less constant, then it makes sense that we should learn from our past behaviours and strive to behave in a way that is better for everyone in the future.
+
+My desperate hope for the outcome of the current pandemic is that humans learn as much from it as they can. That they learn ways to prevent the same or similar pandemics happening in the future. Of course they are not entirely unavoidable but I believe there are things we can collectively do to lessen their frequency and/or impact. I am hugely hopeful that humans will now be kinder to animals, and realise we absolutely need to respect animals and their natural habitats. We can reduce both blatant and secretive animal cruelty, reduce harm to the environment, reduce the influence that industry lobbyists have over everyone’s health, reduce harm to the poorest people living in environments affected by meat production, and reduce the effects of cheap, hormone-stuffed, overly-fatty meat that we absolutely do not need. 
+
+What if a virus or disease 10 times more deadly than covid-19 comes along? One that kills 50% of infected people as opposed to 5%? How can we ensure that lessons about the effects of disrupted supply chains are learned, and lessons from the responses of various governments around the world are learned, and lessons from the delicate balance of safety and economy are learned? We can probably ensure these lessons are learned and discussed if the world takes them seriously. The world contains more humans than it ever has before and the number keeps on growing. The spaces between humans and their animal neighbours is shrinking, while human greed is not slowing down. 
+
+Are people going to learn to live in harmony with the rest of life on Earth? Or will we continue poking holes in it until one day everything goes to shit and no amount of technological know-how or hoping or praying can save us? Humans are typically not good at delaying gratification in return for future rewards, so let’s see!

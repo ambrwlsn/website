@@ -1,0 +1,17 @@
+---
+title: Blog
+eleventyExcludeFromCollections: true
+---
+
+<h2>Blog List!</h2>
+
+<a href="/">home</a>
+
+<ul>
+{% for p in collections.all | reverse %}
+<li>
+    <a href="{{ p.url }}">{{ p.data.title }}</a>
+    <div>{{ p.data.date }}</div>
+</li>
+{% endfor %}
+</ul>

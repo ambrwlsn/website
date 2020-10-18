@@ -1,6 +1,10 @@
 module.exports = function(eleventyConfig) {
-  eleventyConfig.addWatchTarget("./src/css/");
+  eleventyConfig.addWatchTarget('./src/css/');
   eleventyConfig.addPassthroughCopy('./src/css');
+  eleventyConfig.addPassthroughCopy('./src/blog/*/img/*');
+  eleventyConfig.addFilter('log', value => {
+    console.log('BOOO:', JSON.stringify(value));
+  });
 
   let markdownIt = require('markdown-it');
   let options = {

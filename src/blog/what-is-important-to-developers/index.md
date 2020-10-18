@@ -1,0 +1,18 @@
+---
+title: What Is Important To Developers?
+date: '2019-04-24'
+tags: ['reflection']
+keywords: [amber wilson, software engineering, web development]
+---
+
+What is important to you as a developer? Over time I've found that each developer has their own ideas of how to progress in their career, where they want to focus in the near future, and what being a good developer looks like. If you think about these things, what do you come up with?
+
+Personally, having come from a non-computer-science background, I’d very much like to gain some knowledge around backend langauges. This might include things like Java and NodeJS. To understand these languages better, I also need to improve my knowledge of client-side JavaScript so that I can better understand how the languages compare to each other. What will a comparison of different programming languages give me though?
+
+I think any sort of information—even a simple comparison–can open the gates to more easily understanding other important things in web development. For example, knowing how one programming language functions in comparison to another will allow me to understand how and why these language fit into a project ecosystem. A large project will be worked on by a team or teams that contain developers with very different levels of knowledge on different things. It pays to have at least a good, basic understanding of what everyone in your team does and why.
+
+Knowing what people in a team do and why can limit frustration - both on your side and theirs. This is because an understanding, even a basic one, of how parts of a project architecture fit together, and why they are there, will inform how you write your code. It will limit technical debt piling up from code that turns out to be irrelevant or not fit into a projects needs. Also, a healthy and maintainable project isn’t the only benefit - individuals benefit too.
+
+This benefit is developer experience. I find it so much more fun being a developer when I understand what is actually going on and why I am writing code. As a brand new developer, there were too many things to learn at once and as a result I felt overworked and underskilled. The result of this for me was imposter syndrome. Why was I there and how would I ever make valuable contributions? It took a long time for this feeling to fade and two years in, it is not completely gone. However, for the majority of the time I spend coding these days, I feel like I am on a good path and not stuck in a rut. There are still too many things for me to learn at once but I can now greet this as a healthy challenge rather than with a feeling of doom. A great thing about being a web developer is that there is so much to learn, and so many people to discuss with and support you in the web development community. For me this sparks a motivation to learn, share and be a better web developer.
+
+Being a better developer might be a universal goal that is shared by the majority of people who write code. I think finding the motivation to do this is the most important thing. Beyond this, you can do what you like to achieve it. Focus on a particular topic like security or accessibility, contribute to open source, write more documentation, review more PRs, create more PRs, speak at a conference, give a small presentation at work, read a book on a programming language you know nothing about, create a new personal project, whatever. Another important thing would be to share what you’ve learned and get feedback from others. Having a community to support what you’re trying to achieve is likely to get you there faster that working through things alone.
