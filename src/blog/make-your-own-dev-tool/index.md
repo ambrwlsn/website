@@ -16,12 +16,13 @@ keywords:
     dev tools,
     coding]
 tags: [create, learning, dev tips]
+excerpt: I have just found out what bookmarklets (aka favelets - a term coined by my friend Tatek back in the early 2000s) are and I like 'em! So what are they? 
 ---
-
 
 ## Bookmarklets - a cool personal dev tool
 
 I have just found out what **bookmarklets** (aka **favelets** - a term coined by my friend [Tantek](http://tantek.com/) back in the early 2000s) are and I like 'em! So what are they? 
+
 
 Bookmarklets run a JavaScript (JS) script against the DOM of the current document loaded in the browser. They allow a way to alter the DOM at the press of a button. They may not offer all that a browser extension or add-on can, but they can still be super handy, and also do not require downloading or installation of software.
 

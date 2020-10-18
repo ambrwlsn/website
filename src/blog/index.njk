@@ -12,7 +12,12 @@ layout: blogList.njk
 {% for p in collections.all | reverse %}
 <li>
     <a href="{{ p.url }}">{{ p.data.title }}</a>
-    <div>{{ p.data.date }}</div>
+    <p>{{ p.data.date }}</p>
+    {% if p.data.excerpt %}
+     <p>{{ p.data.excerpt | toHTML | safe }}…</p>
+    {% else %}
+    <p>{{ p.templateContent | getExcerpt }}</p>
+    {% endif %}    
 </li>
 {% endfor %}
 </ul>
