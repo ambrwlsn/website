@@ -1,11 +1,98 @@
 html {
+  --readText: #363535;
+  --reviewBorderRadius: 10px;
+
   font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
-  color: #240caa;
+  /* color: #240caa; */
+  color: var(--readText);
 }
 
 h2 {
   color: #305bcf;
+}
+
+.main-review-container {
+  display: grid;
+  margin: 0 1em 3em 1em;
+  width: auto;
+  height: auto;
+  grid-template-columns: 1fr 1rem 1fr 1rem 1fr 1rem 1fr;
+  grid-template-rows: 13rem 1rem 0.5fr 1rem 0.5fr;
+  grid-template-areas: 'review review review review review review review'
+    '. . . . . . .' 'method method method . picture picture picture'
+    '. . . . . . .' 'threewords threewords threewords . length length length';
+}
+
+@media only screen and (min-width: 500px) {
+  .main-review-container {
+    margin: 0 1em;
+    width: 500px;
+    height: auto;
+    grid-template-columns: 1fr 1rem 1fr 1rem 1fr 1rem 1fr;
+    grid-template-rows: 1fr 1rem 1fr 1rem 1fr;
+    grid-template-areas: 'review review review review review . length'
+      'review review review review review . .'
+      'review review review review review . picture' '. . . . . . picture'
+      'method . threewords threewords threewords . .';
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .main-review-container {
+    margin-bottom: 5em;
+    width: 800px;
+    height: 600px;
+    grid-template-columns: 1fr 1rem 1fr 1rem 1fr 1rem 1fr;
+    grid-template-rows: 1fr 1rem 1fr 1rem 1fr;
+    grid-template-areas: 'review review review . length length length'
+      'review review review . . . .' 'review review review . . . picture'
+      '. . . . . . picture' 'method . threewords threewords threewords . .';
+  }
+}
+
+.review-container {
+  grid-area: review;
+  padding: 1em;
+  line-height: 1.5;
+  font-size: 0.9rem;
+  border-radius: var(--reviewBorderRadius);
+  overflow: scroll;
+}
+
+.length-container {
+  grid-area: length;
+  border-radius: var(--reviewBorderRadius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container {
+  grid-area: picture;
+  border-radius: var(--reviewBorderRadius);
+}
+
+.image-container img {
+  width: 100%;
+  object-fit: contain;
+  vertical-align: middle;
+  border-radius: var(--reviewBorderRadius);
+}
+
+.method-container {
+  border-radius: var(--reviewBorderRadius);
+  grid-area: method;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.three-words-container {
+  grid-area: threewords;
+  border-radius: var(--reviewBorderRadius);
+  word-break: break-word;
+  color: var(--readText);
 }

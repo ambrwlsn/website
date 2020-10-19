@@ -15,10 +15,12 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addWatchTarget('./src/css/');
   eleventyConfig.addPassthroughCopy('./src/css');
   eleventyConfig.addPassthroughCopy('./src/blog/*/img/*');
+  eleventyConfig.addPassthroughCopy('./src/learn/*/img/*');
+  eleventyConfig.addPassthroughCopy('./src/read/img/*');
   eleventyConfig.addPlugin(readingTime);
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addFilter('log', value => {
-    console.log('BOOO:', JSON.stringify(value));
+    console.log('BOOO:', value);
   });
   eleventyConfig.addFilter('readableDate', dateObj => {
     return format(new Date(dateObj), 'MMMM do, yyyy');
@@ -30,6 +32,14 @@ module.exports = function(eleventyConfig) {
 
   eleventyConfig.addFilter('getExcerpt', excerpts);
 
+  eleventyConfig.addCollection('posts', collection => {
+    return collection.getFilteredByGlob('src/blog/**/*.md');
+  });
+
+  eleventyConfig.addCollection('learn', collection => {
+    return collection.getFilteredByGlob('src/learn/*.md');
+  });
+
   eleventyConfig.setFrontMatterParsingOptions({
     excerpt: true,
     // Optional, default is "---"
@@ -39,7 +49,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.setLibrary('md', markdownIt(MARKDOWN_OPTIONS));
 
   return {
-    // These are all optional, defaults are shown:
     dir: {
       input: 'src',
       includes: '_includes',

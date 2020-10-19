@@ -1,6 +1,5 @@
 ---
 title: Blog
-eleventyExcludeFromCollections: true
 layout: blogList.njk
 ---
 
@@ -9,7 +8,7 @@ layout: blogList.njk
 <a href="/">home</a>
 
 <ul>
-{% for p in collections.all | reverse %}
+{% for p in collections.posts | reverse %}
 <li>
     <a href="{{ p.url }}">{{ p.data.title }}</a>
     <p>{{ p.data.date }}</p>

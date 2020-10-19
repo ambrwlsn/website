@@ -1,0 +1,42 @@
+---
+title: Read
+eleventyExcludeFromCollections: true
+layout: bookReview.njk
+---
+
+<h2>Read</h2>
+
+{% from "macros/kindleSVG.njk" import kindleSVG %}
+{% from "macros/headphonesSVG.njk" import headphonesSVG %}
+{% from "macros/bookSVG.njk" import bookSVG %}
+
+{% for book in books %}
+    <div>
+        {{ book.title }}
+    </div>
+    <div class="main-review-container">
+        <div class="review-container" 
+        style="background-color:{{ book.reviewBoxColour }}";
+        >
+            {{ book.review }}
+        </div>
+        <div class="length-container" style="background-color:{{ book.lengthBoxColour }}";>{{ book.length}} pages</div>
+        <div class="three-words-container"
+        style="background-color:{{ book.useThreeWordsBoxColour }}";
+        >
+            {{ book.useThreeWords}}
+        </div>
+        <div class="method-container">
+            {% if (book.methodImage === "Kindle") %}
+            {{ kindleSVG(book.methodStroke , book.methodFill) }}
+            {% elif (book.methodImage === "Headphones") %}
+            {{ headphonesSVG(book.methodStroke , book.methodFill) }}
+            {% elif (book.methodImage === "Book") %}
+            {{ bookSVG(book.methodStroke , book.methodFill) }}
+            {% else %}
+            {{ "no method available" | log }} 
+            {% endif %}
+        </div>
+        <div class="image-container"><img loading="lazy" src="img/{{ book.coverImage }}" alt="{{ book.coverImageAlt }}"/></div>
+    </div>
+{% endfor %}

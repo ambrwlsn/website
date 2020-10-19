@@ -1,0 +1,15 @@
+---
+title: Learning Nuggets
+layout: main.njk
+---
+
+<h2>Nuggets!</h2>
+
+
+<ul>
+{% for p in collections.learn %}
+<li>
+    <a href="{{ p.url }}">{{ p.data.subject }}</a>  
+</li>
+{% endfor %}
+</ul>
