@@ -3,7 +3,7 @@ layout: main.njk
 ---
 
 <h1>{{ title }}</h1>
-<p>{{ date | readableDate }}</p>
+<p>{{ date | readableBlogPostDate }}</p>
 <p>{{ content | readingTime }}s</p>
 
 {{ content | safe }}

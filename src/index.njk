@@ -2,10 +2,40 @@
 title: Amber's Site
 eleventyExcludeFromCollections: true
 ---
+{% from "macros/githubIconSVG.njk" import githubIconSVG %}
+{% from "macros/twitterIconSVG.njk" import twitterIconSVG %}
 
-<h1>Homepage</h1>
-
+<nav>
 <a href="learn">Learn :)!</a>
 <a href="read">Read :)!</a>
 <a href="projects">Projects :)!</a>
-<a href="blog">Blog Posts :)!</a>
+</nav>
+
+<h1>Homepage</h1>
+
+<h2>Latest Posts</h2>
+
+<ul class="recent-posts-list" role="list">
+    {% for p in collections.posts | reverse | limit(3) %}
+    <li>
+        <a href="{{ p.url }}">{{ p.data.title }}</a>
+        <p>{{ p.data.date | readableBlogListDate }}</p>
+        {% if p.data.excerpt %}
+        <p>{{ p.data.excerpt | toHTML | safe }}…</p>
+        {% else %}
+        <p>{{ p.templateContent | getExcerpt }}</p>
+        {% endif %}    
+    </li>
+    {% endfor %}
+</ul>
+
+<a href="blog" class="read-more-link">Read more</a>
+
+<p>
+    <a href="https://github.com/ambrwlsn">
+        {{ githubIconSVG() }}
+    </a>
+     <a href="https://twitter.com/ambrwlsn90">
+        {{ twitterIconSVG() }}
+    </a>
+</p>

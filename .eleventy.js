@@ -17,17 +17,25 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/blog/*/img/*');
   eleventyConfig.addPassthroughCopy('./src/learn/*/img/*');
   eleventyConfig.addPassthroughCopy('./src/read/img/*');
+  eleventyConfig.addPassthroughCopy('./src/img/*');
   eleventyConfig.addPlugin(readingTime);
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addFilter('log', value => {
     console.log('BOOO:', value);
   });
-  eleventyConfig.addFilter('readableDate', dateObj => {
+  eleventyConfig.addFilter('readableBlogPostDate', dateObj => {
     return format(new Date(dateObj), 'MMMM do, yyyy');
+  });
+  eleventyConfig.addFilter('readableBlogListDate', dateObj => {
+    return format(new Date(dateObj), 'MMM do yyyy');
   });
   // see https://webbureaucrat.gitlab.io/posts/eleventy-excerpts/
   eleventyConfig.addFilter('toHTML', str => {
     return new markdownIt(MARKDOWN_OPTIONS).renderInline(str);
+  });
+
+  eleventyConfig.addFilter('limit', function(arr, limit) {
+    return arr.slice(0, limit);
   });
 
   eleventyConfig.addFilter('getExcerpt', excerpts);

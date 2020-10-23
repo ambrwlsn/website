@@ -1,6 +1,9 @@
 html {
   --readText: #363535;
   --reviewBorderRadius: 10px;
+  --textColor: #000000;
+  --linkColor: rgb(125, 57, 164);
+  --linkHoverColor: #b59ec4;
 
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -11,7 +14,11 @@ h1 {
 }
 
 h2 {
-  color: #305bcf;
+  color: #2e2c2e;
+}
+
+a {
+  text-decoration: none;
 }
 
 .main-review-container {
@@ -95,4 +102,59 @@ h2 {
   border-radius: var(--reviewBorderRadius);
   word-break: break-word;
   color: var(--readText);
+}
+
+.read-menu-details {
+  border: 3px solid var(--textColor);
+  max-width: 300px;
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.read-menu-summary {
+  display: block;
+  border-bottom: 3px solid var(--textColor);
+  cursor: pointer;
+  text-align: center;
+}
+
+/* removes marker arrow from details and summary elements */
+::-webkit-details-marker {
+  display: none;
+}
+
+.read-menu {
+  max-height: 200px;
+  overflow-y: scroll;
+  margin: auto;
+  padding: 0.5em 0;
+  list-style: none;
+}
+
+.read-menu li {
+  padding-left: 1em;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  margin-bottom: 0.5em;
+}
+
+.read-more-link::after {
+  content: ' →';
+}
+
+.github-icon,
+.twitter-icon {
+  color: var(--linkColor);
+}
+
+.github-icon:hover,
+.twitter-icon:hover {
+  color: var(--linkHoverColor);
+}
+
+.recent-posts-list {
+  list-style: none;
+  padding: 0;
 }

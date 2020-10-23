@@ -5,13 +5,16 @@ layout: blogList.njk
 
 <h2>Blog List!</h2>
 
-<a href="/">home</a>
+<p>
+    <a style="color: orange; text-decoration: underline; font-size: 2em;
+    font-weight: 900; padding-left: 1em;" href="/tags">All tags!</a>
+</p>
 
 <ul>
 {% for p in collections.posts | reverse %}
 <li>
     <a href="{{ p.url }}">{{ p.data.title }}</a>
-    <p>{{ p.data.date }}</p>
+    <p>{{ p.data.date | readableBlogListDate }}</p>
     {% if p.data.excerpt %}
      <p>{{ p.data.excerpt | toHTML | safe }}…</p>
     {% else %}
