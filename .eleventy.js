@@ -17,7 +17,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/blog/*/img/*');
   eleventyConfig.addPassthroughCopy('./src/learn/*/img/*');
   eleventyConfig.addPassthroughCopy('./src/read/img/*');
-  eleventyConfig.addPassthroughCopy('./src/img/*');
+  eleventyConfig.addPassthroughCopy('./src/img/**');
   eleventyConfig.addPlugin(readingTime);
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addFilter('log', value => {

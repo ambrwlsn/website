@@ -1,3 +1,5 @@
+{% from "macros/logoSVG.njk" import logoSVG %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,13 +7,18 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>{{ title }}</title>
 	<meta name="description" content="{{ description }}" />
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ '/img/favicon/apple-touch-icon.png' | url }}">
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ '/img/favicon/favicon-32x32.png' | url }}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ '/img/favicon/favicon-16x16.png' | url }}">
 	<link rel="canonical" href="{{ url }}"/>
 	<link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
 	<link rel="stylesheet" href="{{ '/css/code.css' | url }}" />	
 </head>
 <body>
 	<p>
-		<a href="/">LOGO</a>
+		<a href="/">        
+			{{ logoSVG() }}
+		</a>
 	</p>
 	<main>
 		{{ content | safe }}
