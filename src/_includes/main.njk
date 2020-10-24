@@ -14,6 +14,13 @@
 	<link rel="canonical" href="{{ url }}" />
 	<link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
 	<link rel="stylesheet" href="{{ '/css/code.css' | url }}" />
+	<script>
+		const html = document.getElementsByTagName("html")[0];
+		var localStorageDark = JSON.parse(localStorage.getItem("dark"));
+		if (localStorageDark) {
+			html.setAttribute("class", "dark");
+		}
+	</script>
 </head>
 
 <body>
@@ -25,10 +32,10 @@
 
 
 	<nav>
-		<a href="about">About</a>
-		<a href="learn">Learn</a>
-		<a href="read">Read</a>
-		<a href="projects">Projects</a>
+		<a href="{{ '/about' | url }}">About</a>
+		<a href="{{ '/learn' | url }}">Learn</a>
+		<a href="{{ '/read' | url }}">Read</a>
+		<a href="{{ '/projects' | url }}">Projects</a>
 	</nav>
 
 
@@ -42,9 +49,18 @@
 
 	<script>
 		const element = document.getElementById('dark');
-		const html = document.getElementsByTagName("html")[0];
+		if (localStorageDark) {
+			element.checked = true;
+		}
 		element.addEventListener('click', function (event) {
-			event.target.checked ? html.setAttribute("class", "dark") : html.removeAttribute("class");
+			if (event.target.checked) {
+				html.setAttribute("class", "dark");
+				localStorage.setItem("dark", element.checked);
+			} else {
+				html.removeAttribute("class");
+				localStorage.removeItem("dark", element.checked);
+				element.checked = false;
+			}
 		}, false);
 	</script>
 </body>
