@@ -1,13 +1,14 @@
 :root {
   --text-color-light-mode: #0c3981;
-  --text-color-dark-mode: #f8f8b9;
-  --background-color-light-mode: #f8f8b9;
+  --text-color-dark-mode: #ffffff;
+  --background-color-light-mode: #ffffff;
   --background-color-dark-mode: #0c3981;
   --link-color-light-mode: #7d39a4;
   --link-color-dark-mode: #e9d4f7;
   --link-hover-color-light-mode: #6f09aa;
   --link-hover-color-dark-mode: #fbf9fc;
   --reviewBorderRadius: 10px;
+  --readText: #2d2c2c;
   --duration: 0.5s;
   --timing: ease;
   transition: color var(--duration) var(--timing),
@@ -60,6 +61,11 @@ a {
 
 a:hover {
   color: var(--linkHoverColor);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
 }
 
 nav a {
@@ -128,6 +134,7 @@ nav a:hover {
   font-size: 0.9rem;
   border-radius: var(--reviewBorderRadius);
   overflow: scroll;
+  color: var(--readText);
 }
 
 .length-container {
@@ -136,6 +143,8 @@ nav a:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: var(--readText);
+  font-size: 2.5rem;
 }
 
 .image-container {
@@ -162,7 +171,7 @@ nav a:hover {
   grid-area: threewords;
   border-radius: var(--reviewBorderRadius);
   word-break: break-word;
-  color: var(--textColor);
+  color: var(--readText);
 }
 
 .read-menu-details {
@@ -205,6 +214,10 @@ nav a:hover {
   content: ' →';
 }
 
+.logo {
+  color: var(--textColor);
+}
+
 .github-icon,
 .twitter-icon,
 .linkedin-icon {
@@ -213,13 +226,9 @@ nav a:hover {
 
 .github-icon:hover,
 .twitter-icon:hover,
-.linkedin-icon:hover {
+.linkedin-icon:hover,
+.logo:hover {
   color: var(--linkHoverColor);
-}
-
-.recent-posts-list {
-  list-style: none;
-  padding: 0;
 }
 
 .blog-image {
