@@ -14,6 +14,7 @@
 	<link rel="canonical" href="{{ url }}" />
 	<link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
 	<link rel="stylesheet" href="{{ '/css/code.css' | url }}" />
+	<link rel="stylesheet" href="{{ '/css/reset.css' | url }}" />	
 	<script>
 		const html = document.getElementsByTagName("html")[0];
 		var localStorageDark = JSON.parse(localStorage.getItem("dark"));
@@ -33,9 +34,11 @@
 
 	<nav id="main-nav">
 		<a href="{{ '/about' | url }}">About</a>
+		<a href="{{ '/blog' | url }}">Blog</a>
 		<a href="{{ '/learn' | url }}">Learn</a>
 		<a href="{{ '/read' | url }}">Read</a>
 		<a href="{{ '/projects' | url }}">Projects</a>
+		<a href="{{ '/cv' | url }}">CV</a>
 	</nav>
 
 	<main>
