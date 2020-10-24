@@ -31,23 +31,25 @@
 	</p>
 
 
-	<nav>
+	<nav id="main-nav">
 		<a href="{{ '/about' | url }}">About</a>
 		<a href="{{ '/learn' | url }}">Learn</a>
 		<a href="{{ '/read' | url }}">Read</a>
 		<a href="{{ '/projects' | url }}">Projects</a>
 	</nav>
 
-
-	<div>
-		<input type="checkbox" id="dark" name="dark">
-		<label for="dark">Dark</label>
-	</div>
 	<main>
 		{{ content | safe }}
 	</main>
 
 	<script>
+		const inputMarkup = 
+		`<input type="checkbox" id="dark" name="dark">
+		<label for="dark">Light and Dark Mode Toggle</label>`
+
+		const navElement = document.getElementById("main-nav");
+		navElement.insertAdjacentHTML('afterend', inputMarkup);
+
 		const element = document.getElementById('dark');
 		if (localStorageDark) {
 			element.checked = true;
