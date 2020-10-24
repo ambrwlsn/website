@@ -1,24 +1,85 @@
-html {
-  --readText: #363535;
+:root {
+  --text-color-light-mode: #0c3981;
+  --text-color-dark-mode: #f8f8b9;
+  --background-color-light-mode: #f8f8b9;
+  --background-color-dark-mode: #0c3981;
+  --link-color-light-mode: #7d39a4;
+  --link-color-dark-mode: #e9d4f7;
+  --link-hover-color-light-mode: #6f09aa;
+  --link-hover-color-dark-mode: #fbf9fc;
   --reviewBorderRadius: 10px;
-  --textColor: #000000;
-  --linkColor: rgb(125, 57, 164);
-  --linkHoverColor: #b59ec4;
+  --duration: 0.5s;
+  --timing: ease;
+  transition: color var(--duration) var(--timing),
+    background-color var(--duration) var(--timing);
 
+  font-size: 112.5%;
+  scroll-behavior: smooth;
+  word-wrap: break-word;
   font-family: Arial, Helvetica, sans-serif;
+  background: var(--backgroundColor);
+  color: var(--textColor);
 }
 
-h1 {
-  /* color: #240caa; */
-  color: var(--readText);
+html {
+  --textColor: var(--text-color-light-mode);
+  --linkColor: var(--link-color-light-mode);
+  --linkHoverColor: var(--link-hover-color-light-mode);
+  --backgroundColor: var(--background-color-light-mode);
 }
 
-h2 {
-  color: #2e2c2e;
+.dark {
+  --textColor: var(--text-color-dark-mode);
+  --linkColor: var(--link-color-dark-mode);
+  --linkHoverColor: var(--link-hover-color-dark-mode);
+  --backgroundColor: var(--background-color-dark-mode);
+}
+
+@media screen and (prefers-color-scheme: light) {
+  html {
+    --textColor: var(--text-color-light-mode);
+    --linkColor: var(--link-color-light-mode);
+    --linkHoverColor: var(--link-hover-color-light-mode);
+    --backgroundColor: var(--background-color-light-mode);
+  }
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  html {
+    --textColor: var(--text-color-dark-mode);
+    --linkColor: var(--link-color-dark-mode);
+    --linkHoverColor: var(--link-hover-color-dark-mode);
+    --backgroundColor: var(--background-color-dark-mode);
+  }
 }
 
 a {
   text-decoration: none;
+  color: var(--linkColor);
+}
+
+a:hover {
+  color: var(--linkHoverColor);
+}
+
+nav a {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #000000;
+  font-weight: 900;
+  width: 150px;
+  height: auto;
+  padding: 30px;
+  margin-right: 20px;
+  background-color: #b0caf5;
+}
+
+nav a:hover {
+  color: #ffffff;
+  background-color: #000000;
 }
 
 .main-review-container {
@@ -101,7 +162,7 @@ a {
   grid-area: threewords;
   border-radius: var(--reviewBorderRadius);
   word-break: break-word;
-  color: var(--readText);
+  color: var(--textColor);
 }
 
 .read-menu-details {
@@ -157,4 +218,8 @@ a {
 .recent-posts-list {
   list-style: none;
   padding: 0;
+}
+
+.blog-image {
+  width: 100%;
 }

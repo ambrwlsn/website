@@ -19,7 +19,7 @@ tags: [create, learning, dev tips]
 excerpt: I have just found out what bookmarklets (aka favelets - a term coined by my friend Tatek back in the early 2000s) are and I like 'em! So what are they? 
 ---
 
-<img src="img/lego-press.jpg" alt="a child playing with lego" />
+<img class="blog-image" src="img/lego-press.jpg" alt="a child playing with lego" />
 
 ## Bookmarklets - a cool personal dev tool
 

@@ -1,19 +1,11 @@
----
-title: Amber's Site
+--- 
+title: Amber's Site 
 eleventyExcludeFromCollections: true
----
-{% from "macros/githubIconSVG.njk" import githubIconSVG %}
+--- 
+{% from "macros/githubIconSVG.njk" import githubIconSVG %} 
 {% from "macros/twitterIconSVG.njk" import twitterIconSVG %}
 
-<nav>
-<a href="learn">Learn :)!</a>
-<a href="read">Read :)!</a>
-<a href="projects">Projects :)!</a>
-</nav>
-
-<h1>Homepage</h1>
-
-<h2>Latest Posts</h2>
+<h1>Latest Posts</h1>
 
 <ul class="recent-posts-list" role="list">
     {% for p in collections.posts | reverse | limit(3) %}
@@ -24,7 +16,7 @@ eleventyExcludeFromCollections: true
         <p>{{ p.data.excerpt | toHTML | safe }}…</p>
         {% else %}
         <p>{{ p.templateContent | getExcerpt }}</p>
-        {% endif %}    
+        {% endif %}
     </li>
     {% endfor %}
 </ul>
@@ -32,10 +24,10 @@ eleventyExcludeFromCollections: true
 <a href="blog" class="read-more-link">Read more</a>
 
 <p>
-    <a href="https://github.com/ambrwlsn">
+     <a href="https://github.com/ambrwlsn">
         {{ githubIconSVG() }}
     </a>
-     <a href="https://twitter.com/ambrwlsn90">
+    <a href="https://twitter.com/ambrwlsn90">
         {{ twitterIconSVG() }}
     </a>
 </p>

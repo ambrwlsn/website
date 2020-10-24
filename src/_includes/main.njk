@@ -2,6 +2,7 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,18 +11,42 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="{{ '/img/favicon/apple-touch-icon.png' | url }}">
 	<link rel="icon" type="image/png" sizes="32x32" href="{{ '/img/favicon/favicon-32x32.png' | url }}">
 	<link rel="icon" type="image/png" sizes="16x16" href="{{ '/img/favicon/favicon-16x16.png' | url }}">
-	<link rel="canonical" href="{{ url }}"/>
+	<link rel="canonical" href="{{ url }}" />
 	<link rel="stylesheet" href="{{ '/css/style.css' | url }}" />
-	<link rel="stylesheet" href="{{ '/css/code.css' | url }}" />	
+	<link rel="stylesheet" href="{{ '/css/code.css' | url }}" />
 </head>
+
 <body>
 	<p>
 		<a href="/">        
 			{{ logoSVG() }}
 		</a>
 	</p>
+
+
+	<nav>
+		<a href="about">About</a>
+		<a href="learn">Learn</a>
+		<a href="read">Read</a>
+		<a href="projects">Projects</a>
+	</nav>
+
+
+	<div>
+		<input type="checkbox" id="dark" name="dark">
+		<label for="dark">Dark</label>
+	</div>
 	<main>
 		{{ content | safe }}
 	</main>
+
+	<script>
+		const element = document.getElementById('dark');
+		const html = document.getElementsByTagName("html")[0];
+		element.addEventListener('click', function (event) {
+			event.target.checked ? html.setAttribute("class", "dark") : html.removeAttribute("class");
+		}, false);
+	</script>
 </body>
+
 </html>

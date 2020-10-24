@@ -17,7 +17,7 @@ keywords:
 tags: [web history]
 ---
 
-<img src="img/dinosaur.jpg" alt="a toy dinosaur" />
+<img class="blog-image" src="img/dinosaur.jpg" alt="a toy dinosaur" />
 
 A long, long time ago in a land before dev tools, there lived all of its predecessors. These ancestors were more basic and didn't offer the wealth of tools we enjoy today. But, they certainly paved the way!
 
