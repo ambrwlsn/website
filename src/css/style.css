@@ -206,12 +206,14 @@ nav a:hover {
 }
 
 .github-icon,
-.twitter-icon {
+.twitter-icon,
+.linkedin-icon {
   color: var(--linkColor);
 }
 
 .github-icon:hover,
-.twitter-icon:hover {
+.twitter-icon:hover,
+.linkedin-icon:hover {
   color: var(--linkHoverColor);
 }
 
