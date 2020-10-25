@@ -1,12 +1,49 @@
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/rubik-v11-latin-regular.woff2') format('woff2');
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url('/fonts/rubik-v11-latin-900.woff2') format('woff2');
+  font-display: fallback;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Quattrocento';
+  src: url('/fonts/quattrocento-v12-latin-regular.woff2') format('woff2');
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'Quattrocento';
+  src: url('/fonts/quattrocento-v12-latin-700.woff2') format('woff2');
+  font-display: fallback;
+  font-weight: bold;
+}
+
 :root {
-  --text-color-light-mode: #0c3981;
+  /* --text-color-light-mode: #0c3981; */
+  --text-color-light-mode: #000000;
   --text-color-dark-mode: #ffffff;
   --background-color-light-mode: #ffffff;
-  --background-color-dark-mode: #0c3981;
+  --background-color-dark-mode: #191b1b;
   --link-color-light-mode: #7d39a4;
   --link-color-dark-mode: #e9d4f7;
   --link-hover-color-light-mode: #6f09aa;
   --link-hover-color-dark-mode: #fbf9fc;
+  --blog-post-preview-light-mode: radial-gradient(
+    circle,
+    rgba(244, 212, 226, 1) 0%,
+    rgba(179, 207, 241, 1) 100%
+  );
+  --blog-post-preview-dark-mode: radial-gradient(
+    circle,
+    rgba(156, 11, 74, 1) 0%,
+    rgba(9, 58, 117, 1) 100%
+  );
   --reviewBorderRadius: 10px;
   --readText: #2d2c2c;
   --duration: 0.5s;
@@ -17,9 +54,10 @@
   font-size: 112.5%;
   scroll-behavior: smooth;
   word-wrap: break-word;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Rubik';
   background: var(--backgroundColor);
   color: var(--textColor);
+  padding: 1rem;
 }
 
 html {
@@ -27,6 +65,7 @@ html {
   --linkColor: var(--link-color-light-mode);
   --linkHoverColor: var(--link-hover-color-light-mode);
   --backgroundColor: var(--background-color-light-mode);
+  --blogPostPreviewCard: var(--blog-post-preview-light-mode);
 }
 
 .dark {
@@ -34,6 +73,7 @@ html {
   --linkColor: var(--link-color-dark-mode);
   --linkHoverColor: var(--link-hover-color-dark-mode);
   --backgroundColor: var(--background-color-dark-mode);
+  --blogPostPreviewCard: var(--blog-post-preview-dark-mode);
 }
 
 @media screen and (prefers-color-scheme: light) {
@@ -42,6 +82,7 @@ html {
     --linkColor: var(--link-color-light-mode);
     --linkHoverColor: var(--link-hover-color-light-mode);
     --backgroundColor: var(--background-color-light-mode);
+    --blogPostPreviewCard: var(--blog-post-preview-light-mode);
   }
 }
 
@@ -51,6 +92,7 @@ html {
     --linkColor: var(--link-color-dark-mode);
     --linkHoverColor: var(--link-hover-color-dark-mode);
     --backgroundColor: var(--background-color-dark-mode);
+    --blogPostPreviewCard: var(--blog-post-preview-dark-mode);
   }
 }
 
@@ -68,24 +110,45 @@ ul {
   padding: 0;
 }
 
+nav {
+  padding: 1rem 1rem 1rem 0;
+}
+
 nav a {
   display: inline-flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
-  font-size: 1.5rem;
-  color: #000000;
-  font-weight: 900;
-  width: 150px;
-  height: auto;
-  padding: 30px;
+  font-size: 2.5rem;
+  font-weight: bold;
   margin-right: 20px;
-  background-color: #b0caf5;
+  color: var(--textColor);
 }
 
 nav a:hover {
   color: #ffffff;
   background-color: #000000;
+}
+
+article {
+  font-family: 'Quattrocento';
+}
+
+label {
+  border-top-width: 0 !important;
+  border-right-width: 0 !important;
+  border-bottom-width: 0 !important;
+  border-left-width: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding-top: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
 }
 
 .main-review-container {
@@ -233,4 +296,50 @@ nav a:hover {
 
 .blog-image {
   width: 100%;
+}
+
+.recent-posts-list {
+  font-family: 'Quattrocento';
+}
+
+.recent-posts-list li {
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  background: var(--blogPostPreviewCard);
+  position: relative;
+}
+
+.recent-posts-list li:hover {
+  -webkit-box-shadow: 8px 10px 8px -5px #969696;
+  box-shadow: 8px 10px 8px -5px #969696;
+}
+
+.recent-posts-list li a {
+  outline: none;
+}
+
+.recent-posts-list li a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.recent-posts-list li a:hover::after {
+  border: 2px solid var(--linkHoverColor);
+  border-radius: 8px;
+}
+
+.recent-posts-list li a:focus::after {
+  border: 2px solid var(--linkHoverColor);
+  border-radius: 8px;
+}
+
+.homepage-header {
+  font-size: 2.5rem;
+  margin: 1.5rem 0;
 }

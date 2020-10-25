@@ -25,14 +25,8 @@
 </head>
 
 <body>
-	<p>
-		<a href="/">        
-			{{ logoSVG() }}
-		</a>
-	</p>
-
-
 	<nav id="main-nav">
+		<a href="/">{{ logoSVG() }}</a>
 		<a href="{{ '/about' | url }}">About</a>
 		<a href="{{ '/blog' | url }}">Blog</a>
 		<a href="{{ '/learn' | url }}">Learn</a>
@@ -51,7 +45,7 @@
 		<label for="dark">Light and Dark Mode Toggle</label>`
 
 		const navElement = document.getElementById("main-nav");
-		navElement.insertAdjacentHTML('afterend', inputMarkup);
+		navElement.insertAdjacentHTML('beforeend', inputMarkup);
 
 		const element = document.getElementById('dark');
 		if (localStorageDark) {
