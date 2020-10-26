@@ -4,6 +4,7 @@ layout: main.njk
 
 <h1>{{ title }}</h1>
 <p>{{ date | readableBlogPostDate }}</p>
+<p>{{ content | emojiReadTime | safe }}</p>
 
 <article>
 {{ content | safe }}
@@ -34,7 +35,10 @@ layout: main.njk
     "mainEntityOfPage": {
       "@type": "WebPage"
     },
-    "publisher": "Amber Wilson",
+    "publisher": {
+      "@type": "Person",
+      "name": "Amber Wilson"
+    }
     "author": {
       "@type": "Person",
       "name": "Amber Wilson"

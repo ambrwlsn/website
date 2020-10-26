@@ -10,7 +10,7 @@ const MARKDOWN_OPTIONS = {
   linkify: true
 };
 
-module.exports = function(eleventyConfig) {
+module.exports = function(eleventyConfig, options) {
   eleventyConfig.addWatchTarget('./src/css/');
   eleventyConfig.addPassthroughCopy('./src/css');
   eleventyConfig.addPassthroughCopy('./src/blog/*/img/*');
@@ -18,6 +18,36 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/read/img/*');
   eleventyConfig.addPassthroughCopy('./src/img/**');
   eleventyConfig.addPassthroughCopy('./src/fonts/*');
+
+  const defaults = {
+    wpm: 275,
+    showEmoji: true,
+    emoji: '📖',
+    ariaLabel: 'book',
+    label: 'mins',
+    bucketSize: 2
+  };
+
+  eleventyConfig.addFilter('emojiReadTime', content => {
+    const { wpm, showEmoji, emoji, ariaLabel, label, bucketSize } = {
+      ...defaults,
+      ...options
+    };
+    const minutes = Math.ceil(content.trim().split(/\s+/).length / wpm);
+    const buckets = Math.round(minutes / bucketSize) || 1;
+
+    const displayLabel = `${minutes} ${label}`;
+
+    if (showEmoji) {
+      return `${displayLabel} <span role="img" aria-label="${buckets} ${ariaLabel} emoji to convey the length of the post">${new Array(
+        buckets || 1
+      )
+        .fill(`${emoji}&nbsp;`)
+        .join('')}</span>`;
+    }
+
+    return displayLabel;
+  });
 
   eleventyConfig.addPlugin(syntaxHighlight);
 
