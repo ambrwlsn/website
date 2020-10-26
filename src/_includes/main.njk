@@ -29,24 +29,26 @@
 </head>
 
 <body>
+
+	<a class="skip-to-content-link" href="#main">Skip to main content</a>	
 	<nav id="main-nav">
-		<a href="/">{{ logoSVG() }}</a>
-		<a href="{{ '/about' | url }}">About</a>
-		<a href="{{ '/blog' | url }}">Blog</a>
+		<a class="nav-logo-link" href="/">{{ logoSVG() }}</a>
+		<a href="{{ '/blog' | url }}">Blog</a>	
 		<a href="{{ '/learn' | url }}">Learn</a>
 		<a href="{{ '/read' | url }}">Read</a>
 		<a href="{{ '/projects' | url }}">Projects</a>
+		<a href="{{ '/about' | url }}">About</a>
 		<a href="{{ '/cv' | url }}">CV</a>
 	</nav>
 
-	<main>
+	<main id="main">
 		{{ content | safe }}
 	</main>
 
 	<script>
 		const inputMarkup = 
 		`<input type="checkbox" id="dark" name="dark">
-		<label for="dark">Light and Dark Mode Toggle</label>`
+		<label class="hidden" for="dark">Light and Dark Mode Toggle</label>`
 
 		const navElement = document.getElementById("main-nav");
 		navElement.insertAdjacentHTML('beforeend', inputMarkup);

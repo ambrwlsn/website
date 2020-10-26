@@ -3,11 +3,10 @@ title: From Office to Remote (During a Pandemic)
 date: "2020-09-10"
 tags: [reflection, self-care, thoughts]
 keywords: [amber wilson, software engineering, web development]
+excerpt: I wanted to write my thoughts on remote working as I enter my sixth consecutive month of it. This remote working situation I am in is special because
 ---
-
 ## Background
 
-<!-- end -->
 I wanted to write my thoughts on remote working as I enter my sixth consecutive month of it. This remote working situation I am in is special because it was not a personal choice, nor would it have been allowed by my company under normal circumstances. As you may have guessed, I am working remotely due to the global corona virus pandemic. Before mid-March of the year 2020, for 5 days each week I travelled to the office, worked there for eight hours, then travelled home. 
 
 

@@ -6,18 +6,21 @@ eleventyExcludeFromCollections: true
 {% from "macros/twitterIconSVG.njk" import twitterIconSVG %}
 {% from "macros/linkedInIconSVG.njk" import linkedInIconSVG %}
 
-<h1>Latest Posts</h1>
+<h1 class="homepage-header-h1">Hi, I'm Amber</h1>
+<h2 class="homepage-header-h2">Check out my latest posts</h2>
 
 <ul class="recent-posts-list" role="list">
     {% for p in collections.posts | reverse | limit(3) %}
     <li>
         <a href="{{ p.url }}">{{ p.data.title }}</a>
-        <p>{{ p.data.date | readableBlogListDate }}</p>
-        {% if p.data.excerpt %}
-        <p>{{ p.data.excerpt | toHTML | safe }}…</p>
-        {% else %}
-        <p>{{ p.templateContent | getExcerpt }}</p>
-        {% endif %}
+        <p><time class="recent-posts-list-time">{{ p.data.date | readableBlogListDate }}</time></p>
+        <p class="recent-posts-list-excerpts">        
+            {% if p.data.excerpt %}
+            {{ p.data.excerpt | toHTML | safe }}…
+            {% else %}
+            {{ p.templateContent | getExcerpt }}
+            {% endif %}
+        </p>
     </li>
     {% endfor %}
 </ul>
