@@ -1,7 +1,6 @@
 const markdownIt = require('markdown-it');
 const format = require('date-fns/format');
 // see https://plug11ty.com/plugins/reading-time-plugin-for-eleventy/
-const readingTime = require('eleventy-plugin-reading-time');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const excerpts = require('./helpers/excerpts');
 
@@ -19,8 +18,12 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/read/img/*');
   eleventyConfig.addPassthroughCopy('./src/img/**');
   eleventyConfig.addPassthroughCopy('./src/fonts/*');
-  eleventyConfig.addPlugin(readingTime);
+
   eleventyConfig.addPlugin(syntaxHighlight);
+
+  eleventyConfig.addFilter('count', value => {
+    return Math.ceil(value.trim().split(/\s+/).length);
+  });
   eleventyConfig.addFilter('log', value => {
     console.log('BOOO:', value);
   });

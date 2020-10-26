@@ -4,9 +4,10 @@ layout: main.njk
 
 <h1>{{ title }}</h1>
 <p>{{ date | readableBlogPostDate }}</p>
-<p>{{ content | readingTime }}s</p>
 
+<article>
 {{ content | safe }}
+</article>
 
 <hr>
 <ul>
@@ -15,3 +16,28 @@ layout: main.njk
   {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
   {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
 </ul>
+
+<script type="application/ld+json">
+  { 
+    "@context": "https://schema.org", 
+    "@type": "BlogPosting",
+    "headline": "{{ title }}",
+    "genre": "{{ tags }}",
+    "keywords": "{{ tags }}", 
+    "wordcount": "{{ content | count }}",
+    "url": "https://amberwilson.co.uk/{{ page.url }}",
+    "image": "https://amberwilson.co.uk/img/favicon/favicon-32x32.png",
+    "datePublished": "{{ date }}",
+    "dateModified": "{{ date }}",    
+    "description": "{{ content | getExcerpt }}",
+    "articleBody": "{{ content }}",
+    "mainEntityOfPage": {
+      "@type": "WebPage"
+    },
+    "publisher": "Amber Wilson",
+    "author": {
+      "@type": "Person",
+      "name": "Amber Wilson"
+    }
+  }
+</script>
