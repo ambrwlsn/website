@@ -2,3 +2,5 @@ public
 node_modules/
 package-lock.json
 .nvmrc
+# Local Netlify folder
+.netlify

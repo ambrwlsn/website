@@ -3,6 +3,7 @@ const format = require('date-fns/format');
 // see https://plug11ty.com/plugins/reading-time-plugin-for-eleventy/
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const excerpts = require('./helpers/excerpts');
+const { exec } = require('child_process');
 
 const MARKDOWN_OPTIONS = {
   html: true,
@@ -11,8 +12,10 @@ const MARKDOWN_OPTIONS = {
 };
 
 module.exports = function(eleventyConfig, options) {
-  eleventyConfig.addWatchTarget('./src/css/');
-  eleventyConfig.addPassthroughCopy('./src/css');
+  eleventyConfig.addWatchTarget('./src/css/**');
+  eleventyConfig.on('afterBuild', () => {
+    exec('npm run concat');
+  });
   eleventyConfig.addPassthroughCopy('./src/blog/*/img/*');
   eleventyConfig.addPassthroughCopy('./src/learn/*/img/*');
   eleventyConfig.addPassthroughCopy('./src/read/img/*');
