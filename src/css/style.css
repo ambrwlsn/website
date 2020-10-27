@@ -27,6 +27,7 @@ nav {
   display: flex;
   justify-content: flex-end;
   flex-flow: row wrap;
+  align-items: center;
   width: 100%;
 }
 
@@ -59,10 +60,16 @@ article {
 .skip-to-content-link:focus {
   transform: translateX(10%) translateY(30%);
   width: fit-content;
+  background-color: var(--secondaryBackgroundColor);
+  color: var(--textColor);
 }
 
 .nav-logo-link {
   margin-right: auto;
+}
+
+.nav-logo-link svg {
+  vertical-align: middle;
 }
 
 .hidden {
@@ -204,8 +211,23 @@ article {
   margin-bottom: 0.5em;
 }
 
+.read-more-link {
+  font-size: var(--text11);
+  margin-top: calc(-1 * var(--spacingM));
+  padding-top: var(--text02);
+  text-align: center;
+}
+
+@media only screen and (min-width: 686px) {
+  .read-more-link {
+    text-align: unset;
+  }
+}
+
 .read-more-link::after {
   content: ' →';
+  color: var(--linkColor);
+  vertical-align: middle;
 }
 
 .logo {
@@ -232,7 +254,14 @@ article {
 .recent-posts-list {
   display: flex;
   flex-flow: row wrap;
-  font-size: 1.1rem;
+  justify-content: center;
+  font-size: var(--text11);
+}
+
+@media only screen and (min-width: 686px) {
+  .recent-posts-list {
+    justify-content: unset;
+  }
 }
 
 .recent-posts-list-excerpts {
@@ -247,16 +276,25 @@ article {
   text-transform: uppercase;
 }
 
+.recent-posts-list-item-title:hover {
+  color: var(--linkColor);
+}
+
 .recent-posts-list li {
   padding: 1rem;
-  margin-right: 1rem;
-  margin-bottom: 1.5rem;
   border-radius: 3px;
   background: var(--blogPostPreviewCard);
+  margin-bottom: var(--spacingM);
   position: relative;
   width: 300px;
   height: auto;
-  border-bottom: 3px solid #b92f9b;
+  border-bottom: 3px solid var(--funkyBorder);
+}
+
+@media only screen and (min-width: 686px) {
+  .recent-posts-list li {
+    margin-right: 1rem;
+  }
 }
 
 .recent-posts-list li:hover {
@@ -279,25 +317,51 @@ article {
 }
 
 .recent-posts-list li a:hover::after {
-  border: 2px solid var(--linkHoverColor);
+  border-right: 2px solid var(--linkHoverColor);
+  border-left: 2px solid var(--linkHoverColor);
+  border-top: 2px solid var(--linkHoverColor);
+  border-bottom: 2px solid var(--funkyBorder);
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
 }
 
 .recent-posts-list li a:focus::after {
-  border: 2px solid var(--linkHoverColor);
+  border-right: 2px solid var(--linkHoverColor);
+  border-left: 2px solid var(--linkHoverColor);
+  border-top: 2px solid var(--linkHoverColor);
+  border-bottom: 1px solid var(--funkyBorder);
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
 }
 
-.homepage-header-h1 {
-  font-family: 'Quattrocento';
+.homepage-info {
+  display: inline-flex;
+  flex-flow: row wrap;
+  align-items: center;
+  margin-bottom: var(--spacingL);
+}
+
+.homepage-avatar {
+  border-radius: 50%;
+  opacity: var(--imageOpacity);
+  margin-right: var(--spacingM);
+  margin-bottom: var(--spacingS);
+}
+
+.homepage-title {
   font-weight: 500;
-  font-size: 2.5rem;
+  font-size: 2rem;
   display: inline;
 }
 
-.homepage-header-h2 {
-  font-family: 'Quattrocento';
+.homepage-description {
   font-weight: 500;
+  margin-bottom: var(--spacingS);
+  text-align: center;
+}
+
+@media only screen and (min-width: 686px) {
+  .homepage-description {
+    text-align: unset;
+  }
 }

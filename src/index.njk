@@ -6,13 +6,17 @@ eleventyExcludeFromCollections: true
 {% from "macros/twitterIconSVG.njk" import twitterIconSVG %}
 {% from "macros/linkedInIconSVG.njk" import linkedInIconSVG %}
 
-<h1 class="homepage-header-h1">Hi, I'm Amber</h1>
-<h2 class="homepage-header-h2">Check out my latest posts</h2>
+<div class="homepage-info">
+    <img class="homepage-avatar" src="/img/avatar.png" alt="Digitally-drawn avatar of Amber" />
+    <h1 class="homepage-title">Hi, I'm Amber, nice to meet you!</h1>
+</div>
+
+<h2 class="homepage-description">Check out my latest posts</h2> 
 
 <ul class="recent-posts-list" role="list">
     {% for p in collections.posts | reverse | limit(3) %}
     <li>
-        <a href="{{ p.url }}">{{ p.data.title }}</a>
+        <a class="recent-posts-list-item-title" href="{{ p.url }}">{{ p.data.title }}</a>
         <p><time class="recent-posts-list-time">{{ p.data.date | readableBlogListDate }}</time></p>
         <p class="recent-posts-list-excerpts">        
             {% if p.data.excerpt %}
@@ -25,9 +29,11 @@ eleventyExcludeFromCollections: true
     {% endfor %}
 </ul>
 
-<a href="blog" class="read-more-link">Read more</a>
+<p class="read-more-link">
+    <a href="blog">Read more</a>
+</p>
 
-<p>
+{# <p>
      <a href="https://github.com/ambrwlsn">
         {{ githubIconSVG() }}
     </a>
@@ -37,4 +43,4 @@ eleventyExcludeFromCollections: true
     <a href="https://www.linkedin.com/in/ambrwlsn90/">
         {{ linkedInIconSVG() }}
     </a>
-</p>
+</p> #}

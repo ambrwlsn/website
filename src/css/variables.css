@@ -34,12 +34,12 @@
   --secondary-background-color-dark-mode: #0e1c6a;
   --link-color-light-mode: #7d39a4;
   --link-color-dark-mode: #ffffff;
-  --link-hover-color-light-mode: #a10a95;
-  --link-hover-color-dark-mode: #e47af0;
+  --link-hover-color-light-mode: #970a7b;
+  --link-hover-color-dark-mode: #f758d7;
   --blog-post-preview-shadow-light-mode: 8px 10px 8px -5px rgba(150, 150, 150, 0.5);
   --blog-post-preview-light-mode: radial-gradient(
     circle at 100% 80%,
-    rgba(244, 212, 226, 1) 0%,
+    #f9e8f0 0%,
     rgba(179, 207, 241, 1) 100%
   );
   --blog-post-preview-dark-mode: radial-gradient(
@@ -49,10 +49,22 @@
   );
   --reviewBorderRadius: 10px;
   --readText: #2d2c2c;
+  --funkyBorder: #fa0dc7;
   --duration: 0.5s;
   --timing: ease;
   transition: color var(--duration) var(--timing),
     background-color var(--duration) var(--timing);
+
+  --text15: 1.5rem;
+  --text11: 1.1rem;
+  --text1: 1rem;
+  --text09: 0.9rem;
+  --text02: 0.2rem;
+
+  --spacingL: 1.5rem;
+  --spacingM: 1rem;
+  --spacingS: 0.5rem;
+  --spacingXS: 0.2rem;
 
   font-size: 112.5%;
   scroll-behavior: smooth;
@@ -70,6 +82,7 @@ html {
   --secondaryBackgroundColor: var(--secondary-background-color-light-mode);
   --blogPostPreviewCard: var(--blog-post-preview-light-mode);
   --blogPostPreviewCardShadow: var(--blog-post-preview-shadow-light-mode);
+  --imageOpacity: 1;
 }
 
 .dark {
@@ -79,7 +92,7 @@ html {
   --backgroundColor: var(--background-color-dark-mode);
   --secondaryBackgroundColor: var(--secondary-background-color-dark-mode);
   --blogPostPreviewCard: var(--blog-post-preview-dark-mode);
-  --blogPostPreviewCardShadow: '';
+  --imageOpacity: 0.9;
 }
 
 @media screen and (prefers-color-scheme: light) {
@@ -91,6 +104,7 @@ html {
     --secondaryBackgroundColor: var(--secondary-background-color-light-mode);
     --blogPostPreviewCard: var(--blog-post-preview-light-mode);
     --blogPostPreviewCardShadow: var(--blog-post-preview-shadow-light-mode);
+    --imageOpacity: 1;
   }
 }
 
@@ -103,5 +117,6 @@ html {
     --secondaryBackgroundColor: var(--secondary-background-color-dark-mode);
     --blogPostPreviewCard: var(--blog-post-preview-dark-mode);
     --blogPostPreviewCardShadow: '';
+    --imageOpacity: 0.9;
   }
 }
