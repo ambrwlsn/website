@@ -8,10 +8,10 @@ eleventyExcludeFromCollections: true
 
 <div class="homepage-info">
     <img class="homepage-avatar" src="/img/avatar.png" alt="Digitally-drawn avatar of Amber" />
-    <h1 class="homepage-title">Hi, I'm Amber, nice to meet you!</h1>
+    <h1 class="homepage-title">Hi, I'm Amber, welcome to my site!</h1>
 </div>
 
-<h2 class="homepage-description">Check out my latest posts</h2> 
+<h2 class="homepage-description">Latest blog posts</h2> 
 
 <ul class="recent-posts-list" role="list">
     {% for p in collections.posts | reverse | limit(3) %}
@@ -30,11 +30,11 @@ eleventyExcludeFromCollections: true
 </ul>
 
 <p class="read-more-link">
-    <a href="blog">Read more</a>
+    <a href="blog">Read more<span class="read-more-arrow">&nbsp;&#8594;</span></a>
 </p>
 
-{# <p>
-     <a href="https://github.com/ambrwlsn">
+<p class="find-me-on-links">
+    <a href="https://github.com/ambrwlsn">
         {{ githubIconSVG() }}
     </a>
     <a href="https://twitter.com/ambrwlsn90">
@@ -43,4 +43,4 @@ eleventyExcludeFromCollections: true
     <a href="https://www.linkedin.com/in/ambrwlsn90/">
         {{ linkedInIconSVG() }}
     </a>
-</p> #}
+</p>

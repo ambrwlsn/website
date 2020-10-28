@@ -2,21 +2,23 @@
 layout: main.njk
 ---
 
-<h1>{{ title }}</h1>
-<p>{{ date | readableBlogPostDate }}</p>
-<p>{{ content | emojiReadTime | safe }}</p>
+<div class="blog-post-wrapper">
+  <h1 class="blog-post-title">{{ title }}</h1>
+  <p class="blog-post-date">{{ date | readableBlogPostDate }}</p>
+  <p>{{ content | emojiReadTime | safe }}</p>
 
-<article>
-{{ content | safe }}
-</article>
+  <article class="blog-post">
+  {{ content | safe }}
+  </article>
 
-<hr>
-<ul>
-  {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
-  {%- if nextPost %}<li>Next: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
-  {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
-  {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
-</ul>
+  <hr>
+  <ul>
+    {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
+    {%- if nextPost %}<li>Next: <a href="{{ nextPost.url | url }}">{{ nextPost.data.title }}</a></li>{% endif %}
+    {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
+    {%- if previousPost %}<li>Previous: <a href="{{ previousPost.url | url }}">{{ previousPost.data.title }}</a></li>{% endif %}
+  </ul>
+</div>
 
 <script type="application/ld+json">
   { 

@@ -13,6 +13,7 @@ const MARKDOWN_OPTIONS = {
 
 module.exports = function(eleventyConfig, options) {
   eleventyConfig.addWatchTarget('./src/css/**');
+  eleventyConfig.addWatchTarget('./src/blog/**/**');
   eleventyConfig.on('afterBuild', () => {
     exec('npm run concat');
   });

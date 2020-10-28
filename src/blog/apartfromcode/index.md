@@ -4,10 +4,10 @@ date: "2018-04-28"
 keywords: [amber wilson,javascript,software engineering,web development, coding]
 tags: [mentor, learning]
 ---
-<p>
-    <blockquote>
-    <p lang="en" dir="ltr">Yes, exactly!!!!</p>&mdash; Amber Wilson (@ambrwlsn90) <a href="https://twitter.com/ambrwlsn90/status/989514766807904256?ref_src=twsrc%5Etfw">April 26, 2018</a></blockquote>
-</p>
+<blockquote>
+<p lang="en" dir="ltr">Yes, exactly!!!!</p>&mdash; Amber Wilson (@ambrwlsn90) <a href="https://twitter.com/ambrwlsn90/status/989514766807904256?ref_src=twsrc%5Etfw">April 26, 2018</a>
+</blockquote>
+
 Apart from code, what makes a good developer?
 
 After a brilliant meeting with [Richard](https://twitter.com/richardbausek), the tech lead at my company, where we discussed my progress as a developer and what I could start aiming for, I came away with some (what I think are) really nice insights from our discussion. I want to share those here.

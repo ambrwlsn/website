@@ -1,0 +1,21 @@
+<svg
+    width="48"
+    height="20"
+    viewBox="0 0 53 25"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-labelledby="title desc"
+    aria-describedby="desc"
+    class="back-to-top-svg"
+>
+    <title id="title">Back to the top arrow</title>
+    <desc id="desc">Click this to go back to the top of the blog post</desc>
+    <path
+    stroke="currentcolor"
+    stroke-width="6"
+    d="M2 22.5L27.46 2 51 22.5"
+    fill="currentcolor"
+    fill-rule="evenodd"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    />
+</svg>

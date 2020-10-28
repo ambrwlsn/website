@@ -35,11 +35,11 @@ On retina screens, JPGs rarely look good and PNGs have trouble scaling. SVGs loo
 
 ## TL;DR
 
-JPG – lossy and raster-based, use for photos and images with loads of colours where crisp lines aren’t absolutely essential. They won’t support transparency, although there are ways around this.
+**JPG** – lossy and raster-based, use for photos and images with loads of colours where crisp lines aren’t absolutely essential. They won’t support transparency, although there are ways around this.
 
-PNG – lossless and raster-based, use for images that need crisp lines or text (but do not need to scale), need transparency, have few colours. There are PNG8, 24 and 32 – research the best to use for your specific case (see [this](http://www.patrickhansen.com/2011/02/04/png-8-24-32-what/) great article)
+**PNG** – lossless and raster-based, use for images that need crisp lines or text (but do not need to scale), need transparency, have few colours. There are PNG8, 24 and 32 – research the best to use for your specific case (see [this](http://www.patrickhansen.com/2011/02/04/png-8-24-32-what/) great article)
 
-SVG – vector-based, use for flat line drawings, icons, logos that’ll scale to any size while file size remains small.
+**SVG** – vector-based, use for flat line drawings, icons, logos that’ll scale to any size while file size remains small.
 
 For some _heavy_ reading on JPG and PNG science, click [here](https://medium.freecodecamp.org/how-jpg-works-a4dbd2316f35) and [here](https://medium.com/@duhroach/how-png-works-f1174e3cc7b7). These articles blew my mind!
 

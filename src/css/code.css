@@ -21,7 +21,7 @@ pre[class*='language-'] {
 }
 pre[class*='language-'] {
   padding: 1.5em;
-  margin: 0.5em;
+  margin-bottom: var(--spacingM);
   overflow: auto;
 }
 :not(pre) > code[class*='language-'] {
@@ -123,4 +123,13 @@ pre[class*='language-'] {
 pre > code.highlight {
   outline: 0.4em solid #f92672;
   outline-offset: 0.4em;
+}
+
+/* Inline code */
+article code {
+  border-radius: 0.3rem;
+  background-color: var(--inlineCodeBackgroundColor);
+  color: var(--inlineCodeColor);
+  padding: var(--spacingXS) var(--spacingXS);
+  font-size: var(--text11);
 }

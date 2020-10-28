@@ -6,10 +6,10 @@ keywords:
   [amber wilson, software engineering, web development, coding, practice]
 ---
 
-<span class="blog-image">
-<img src="img/hugues-de-buyer-mimeure.jpg" alt="girl walking on paw prints" />
-<em class="image-caption">Image by <a href="https://unsplash.com/@huguesdb">hugues-dbm</a></em>
-</span>
+<figure class="blog-image">
+  <img src="img/hugues-de-buyer-mimeure.jpg" alt="girl walking on paw prints" />
+  <figcaption>Image by <a href="https://unsplash.com/@huguesdb">hugues-dbm</a></figcaption>
+</figure>
 
 I was recently asked by more than one junior developer about how to progress to a mid-level developer. As a junior developer looking to move towards a mid role myself, I wanted to collect a few of my thoughts in a blog post. This isn't a checklist of skills that a workplace might typically give you. Instead, it's a collection advice from my own, lived experiences!
 
@@ -23,11 +23,10 @@ I've organised my thoughts into three categories:
 2. [Current skills](#current-skills)
 3. [Skill focus](#skill-focus)
 
-<span id="non-technical-skills">
-  <h2>Non-technical skills&nbsp;
-    <a href="#non-technical-skills"> # </a>
-  </h2>
-</span>
+<div class="heading-with-siblings" id="non-technical-skills">
+  <h2>Non-technical skills&nbsp;</h2>
+  <a href="#non-technical-skills"> # </a>
+</div>
 
 As a junior it should be expected that you get better at writing code, and spend most of your time writing it. You should also get feedback on your learning and performance and be helped to get better. Becoming a mid-level developer involves spending more time on things that don't involve writing code. You should spend more time looking at the bigger picture of a project. In other words, it will become more important to look at how all parts of a project (that are worked on by every member of the team) fit together, rather than focusing solely on your own, separate coding tasks.
 
@@ -53,9 +52,10 @@ Both when planning and implementing tasks, try taking some time to find out how 
 
 Spending less time coding and more time thinking about how best to approach a feature actually saves time in the long run. Creating features that are robust and well-thought-through helps you and your team feel much more in control and able to move onto new features faster.
 
-<span id="current-skills">
-<h2>Current skills&nbsp;<a href="#current-skills"> # </a></h2>
-</span>
+<div class="heading-with-siblings" id="current-skills">
+  <h2>Current skills&nbsp;</h2>
+  <a href="#current-skills"> # </a>
+</div>
 
 This list covers both technical _and_ non-technical skills that I've already begun using as a junior. If I'd gone into depth on them it would have made this post five times longer. Still, I think it's fairly easy to grasp their importance. I find it really valuable to remind myself of them:
 
@@ -70,9 +70,10 @@ This list covers both technical _and_ non-technical skills that I've already beg
 - Trying several methods of approaching a problem, discussing the pros and cons, and choosing the method that makes most sense at the time.
 - Making sure to spend plenty of time not coding, so that you get a rest, and have more fun when actually coding.
 
-<span id="skill-focus">
-<h2>Skill focus&nbsp;<a href="#skill-focus"> # </a></h2>
-</span>
+<div class="heading-with-siblings" id="skill-focus">
+  <h2>Skill focus&nbsp;</h2>
+  <a href="#skill-focus"> # </a>
+</div>
 
 ### Finding what to focus on
 

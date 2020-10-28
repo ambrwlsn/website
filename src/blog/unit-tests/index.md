@@ -99,7 +99,7 @@ It was at this point that Dave began to further explain what Test Driven Develop
 
 Dave also told me about red, green, refactor (RFR). Uncle Bob does an amazing job of describing this [here](http://blog.cleancoder.com/uncle-bob/2014/12/17/TheCyclesOfTDD.html).
 
-> “the RGR cycle tells us to first focus on making the software work correctly; and then, and only then, to focus on giving that working software a long-term survivable structure.”
+> the RGR cycle tells us to first focus on making the software work correctly; and then, and only then, to focus on giving that working software a long-term survivable structure.
 
 In other words, write a unit test for a specific bit of code before you even write that code so that the test initially fails (red), write code that makes the test pass (green), then refactor the code to be readable, DRY, maintainable, and built for the future.
 

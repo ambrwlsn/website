@@ -5,11 +5,10 @@ body {
 }
 
 main {
-  padding: 1rem;
+  padding: var(--spacingM) var(--spacingL);
 }
 
 a {
-  text-decoration: none;
   color: var(--linkColor);
 }
 
@@ -23,7 +22,7 @@ ul {
 }
 
 nav {
-  padding: 1rem;
+  padding: var(--spacingM);
   display: flex;
   justify-content: flex-end;
   flex-flow: row wrap;
@@ -41,7 +40,75 @@ nav a {
 }
 
 article {
-  font-family: 'Quattrocento';
+  font-family: var(--fontSerif);
+  line-height: 1.8;
+  margin-top: var(--spacingL);
+  font-size: var(--text09);
+  font-weight: 300;
+}
+
+article p {
+  margin-bottom: var(--spacingM);
+}
+
+article ul {
+  list-style: unset;
+  padding-left: var(--spacingM);
+}
+
+article strong {
+  font-weight: bold;
+}
+
+article img,
+article figure,
+article blockquote {
+  margin-bottom: var(--spacingM);
+}
+
+article a {
+  font-weight: bold;
+}
+
+article blockquote {
+  background: var(--blockQuoteBackgroundColor);
+  border-left: 3px solid #777373;
+  padding: var(--spacingL) var(--spacingM) var(--spacingL) var(--spacingL);
+  border-radius: 3px;
+}
+
+article blockquote:before {
+  color: #777373;
+  content: open-quote;
+  font-size: 4rem;
+  line-height: 0;
+  vertical-align: bottom;
+  font-family: Arial, sans-serif;
+  margin-right: var(--spacingXS);
+}
+
+article blockquote p {
+  display: inline;
+}
+
+.blog-post-wrapper {
+  padding: var(--spacingXL) 0 0 0;
+  max-width: 45rem;
+}
+
+.blog-post-title,
+.blog-post h2 {
+  font-family: var(--fontSansSerif);
+  font-weight: 500;
+}
+
+.blog-post h2 {
+  margin-bottom: var(--spacingM);
+  font-size: var(--text15);
+}
+
+.blog-post-date {
+  margin-top: var(--spacingS);
 }
 
 /* .skip-to-content-link:focus + nav .nav-logo-link {
@@ -72,6 +139,10 @@ article {
   vertical-align: middle;
 }
 
+.nav-blog-link {
+  padding-left: var(--spacingM);
+}
+
 .hidden {
   border-top-width: 0 !important;
   border-right-width: 0 !important;
@@ -94,8 +165,9 @@ article {
   margin: 0 1em 3em 1em;
   width: auto;
   height: auto;
-  grid-template-columns: 1fr 1rem 1fr 1rem 1fr 1rem 1fr;
-  grid-template-rows: 13rem 1rem 0.5fr 1rem 0.5fr;
+  grid-template-columns: 1fr var(--spacingM) 1fr var(--spacingM) 1fr
+    var(--spacingM) 1fr;
+  grid-template-rows: 13rem var(--spacingM) 0.5fr var(--spacingM) 0.5fr;
   grid-template-areas: 'review review review review review review review'
     '. . . . . . .' 'method method method . picture picture picture'
     '. . . . . . .' 'threewords threewords threewords . length length length';
@@ -106,8 +178,9 @@ article {
     margin: 0 1em;
     width: 500px;
     height: auto;
-    grid-template-columns: 1fr 1rem 1fr 1rem 1fr 1rem 1fr;
-    grid-template-rows: 1fr 1rem 1fr 1rem 1fr;
+    grid-template-columns: 1fr var(--spacingM) 1fr var(--spacingM) 1fr
+      var(--spacingM) 1fr;
+    grid-template-rows: 1fr var(--spacingM) 1fr var(--spacingM) 1fr;
     grid-template-areas: 'review review review review review . length'
       'review review review review review . .'
       'review review review review review . picture' '. . . . . . picture'
@@ -120,8 +193,9 @@ article {
     margin-bottom: 5em;
     width: 800px;
     height: 600px;
-    grid-template-columns: 1fr 1rem 1fr 1rem 1fr 1rem 1fr;
-    grid-template-rows: 1fr 1rem 1fr 1rem 1fr;
+    grid-template-columns: 1fr var(--spacingM) 1fr var(--spacingM) 1fr
+      var(--spacingM) 1fr;
+    grid-template-rows: 1fr var(--spacingM) 1fr var(--spacingM) 1fr;
     grid-template-areas: 'review review review . length length length'
       'review review review . . . .' 'review review review . . . picture'
       '. . . . . . picture' 'method . threewords threewords threewords . .';
@@ -130,9 +204,9 @@ article {
 
 .review-container {
   grid-area: review;
-  padding: 1em;
+  padding: var(--spacingM);
   line-height: 1.5;
-  font-size: 0.9rem;
+  font-size: var(--text09);
   border-radius: var(--reviewBorderRadius);
   overflow: scroll;
   color: var(--readText);
@@ -145,7 +219,7 @@ article {
   justify-content: center;
   align-items: center;
   color: var(--readText);
-  font-size: 2.5rem;
+  font-size: var(--text25);
 }
 
 .image-container {
@@ -179,8 +253,8 @@ article {
   border: 3px solid var(--textColor);
   max-width: 300px;
   margin: auto;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  margin-top: var(--spacingXL);
+  margin-bottom: var(--spacingXL);
 }
 
 .read-menu-summary {
@@ -199,35 +273,35 @@ article {
   max-height: 200px;
   overflow-y: scroll;
   margin: auto;
-  padding: 0.5em 0;
+  padding: var(--spacingS) 0;
   list-style: none;
 }
 
 .read-menu li {
-  padding-left: 1em;
+  padding-left: var(--spacingM);
   overflow-wrap: break-word;
   word-wrap: break-word;
   word-break: break-word;
-  margin-bottom: 0.5em;
+  margin-bottom: var(--spacingS);
 }
 
 .read-more-link {
   font-size: var(--text11);
-  margin-top: calc(-1 * var(--spacingM));
-  padding-top: var(--text02);
   text-align: center;
+  text-decoration: underline;
+  display: inline-block;
+  line-height: 1;
+}
+
+.read-more-arrow {
+  vertical-align: middle;
+  display: inline-block;
 }
 
 @media only screen and (min-width: 686px) {
   .read-more-link {
     text-align: unset;
   }
-}
-
-.read-more-link::after {
-  content: ' →';
-  color: var(--linkColor);
-  vertical-align: middle;
 }
 
 .logo {
@@ -249,6 +323,7 @@ article {
 
 .blog-image {
   width: 100%;
+  margin-bottom: var(--spacingL);
 }
 
 .recent-posts-list {
@@ -256,6 +331,7 @@ article {
   flex-flow: row wrap;
   justify-content: center;
   font-size: var(--text11);
+  margin-bottom: calc(-1 * var(--spacingS));
 }
 
 @media only screen and (min-width: 686px) {
@@ -265,13 +341,15 @@ article {
 }
 
 .recent-posts-list-excerpts {
-  font-size: 1rem;
-  margin-top: 1rem;
-  font-family: 'Quattrocento';
+  font-size: var(--text09);
+  margin-top: var(--spacingM);
+  font-family: var(--fontSerif);
+  font-weight: 300;
+  line-height: 1.8;
 }
 
 .recent-posts-list-time {
-  margin-top: 0.2rem;
+  margin-top: var(--spacingXS);
   font-size: 0.85rem;
   text-transform: uppercase;
 }
@@ -281,19 +359,20 @@ article {
 }
 
 .recent-posts-list li {
-  padding: 1rem;
+  padding: var(--spacingM);
   border-radius: 3px;
   background: var(--blogPostPreviewCard);
   margin-bottom: var(--spacingM);
   position: relative;
-  width: 300px;
   height: auto;
+  width: 100%;
   border-bottom: 3px solid var(--funkyBorder);
 }
 
 @media only screen and (min-width: 686px) {
   .recent-posts-list li {
-    margin-right: 1rem;
+    margin-right: var(--spacingM);
+    width: 300px;
   }
 }
 
@@ -338,14 +417,20 @@ article {
   display: inline-flex;
   flex-flow: row wrap;
   align-items: center;
-  margin-bottom: var(--spacingL);
+  margin-bottom: var(--spacingXL);
 }
 
 .homepage-avatar {
   border-radius: 50%;
   opacity: var(--imageOpacity);
   margin-right: var(--spacingM);
-  margin-bottom: var(--spacingS);
+  margin-bottom: var(--spacingM);
+}
+
+@media only screen and (min-width: 686px) {
+  .homepage-avatar {
+    margin-bottom: var(--spacingS);
+  }
 }
 
 .homepage-title {
@@ -357,11 +442,173 @@ article {
 .homepage-description {
   font-weight: 500;
   margin-bottom: var(--spacingS);
+}
+
+.find-me-on-links {
+  margin-top: var(--spacingXL);
+  display: flex;
+}
+
+.find-me-on-links a {
+  margin-right: var(--spacingM);
+}
+
+.back-to-top-svg {
+  stroke: var(--linkColor);
+}
+
+.back-to-top-svg::hover {
+  stroke: var(--linkHoverColor);
+}
+
+.heading-with-siblings {
+  display: flex;
+}
+
+/**
+  * Start of scotland js | css page styles
+  */
+
+.image-grid-two-images {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-grid-two-images .item2,
+.image-grid-two-images .item4 {
+  font-size: var(--text09);
+  font-family: var(--fontSansSerif);
+}
+
+.image-grid-two-images .item2 a,
+.image-grid-two-images .item4 a {
+  font-weight: 500;
+}
+
+figure img {
+  margin-bottom: 0;
+}
+
+@media screen and (min-width: 700px) {
+  .image-grid-two-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .captions-two-images {
+    grid-template-areas: 'a b' 'c d';
+  }
+
+  .image-grid-two-images .item2 {
+    grid-area: c;
+  }
+  .image-grid-two-images .item4 {
+    grid-area: d;
+  }
+}
+
+/**
+  * End of scotland js | css page styles
+  */
+
+/**
+  * Start of word page styles
+  */
+
+.bubble {
+  position: relative;
+  line-height: 1.2em;
+  font-size: 0.8em;
+  padding: 15px;
+  margin: 1em 0 3em;
+  border: 5px solid #2f4f4f;
+  color: #333;
+  background: #fff;
+  border-radius: 10px;
+  line-height: 1.8;
+}
+
+.bubble:before {
+  font-size: 0.8em;
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  left: 40px;
+  border-width: 20px 20px 0;
+  border-style: solid;
+  border-color: #2f4f4f transparent;
+  display: block;
+  width: 0;
+}
+
+.bubble:after {
+  content: '';
+  position: absolute;
+  bottom: -13px;
+  left: 47px;
+  border-width: 13px 13px 0;
+  border-style: solid;
+  border-color: #fff transparent;
+  display: block;
+  width: 0;
+}
+
+.bubbley {
+  font-size: 0.8em;
+  position: relative;
+  line-height: 1.2em;
+  padding: 15px;
+  margin: 1em 0 3em;
+  border: 5px solid #2f4f4f;
+  color: #333;
+  background: #fff;
+  border-radius: 10px;
+  line-height: 1.8;
+}
+
+.bubbley:before {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  right: 40px;
+  border-width: 20px 20px 0;
+  border-style: solid;
+  border-color: #2f4f4f transparent;
+  display: block;
+  width: 0;
+}
+
+.bubbley:after {
+  content: '';
+  position: absolute;
+  bottom: -13px;
+  right: 47px;
+  border-width: 13px 13px 0;
+  border-style: solid;
+  border-color: #fff transparent;
+  display: block;
+  width: 0;
+}
+
+.words-container {
+  color: #333;
+  max-width: 500px;
+  padding: 0 0 50px;
+  margin: 0 auto;
+}
+
+.words-container h3 {
+  font-size: 1.2em;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 0.5em;
   text-align: center;
 }
 
-@media only screen and (min-width: 686px) {
-  .homepage-description {
-    text-align: unset;
-  }
+.words-header {
+  font-weight: 500;
+  margin-bottom: var(--spacingM);
 }
+
+/**
+    * End of word page styles
+    */

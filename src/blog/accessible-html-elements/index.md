@@ -38,9 +38,9 @@ An important thing to remember is that HTML is the semantic structure (like a sk
 
 <section>
 
-<div class="heading-margin">
-<h2 class="heading-with-neighbour-element" id="section-heading">Section Heading (h1-h6)</h2>&nbsp;
-<a href="#section-heading" aria-hidden="true">#</a>
+<div class="heading-with-siblings">
+  <h2 id="section-heading">Section Heading (h1-h6)</h2>&nbsp;
+  <a href="#section-heading" aria-hidden="true">#</a>
 </div>
 
 ```markdown
@@ -72,9 +72,9 @@ A great way to check the heading structure of a web page is by using the [W3C Va
 
 Another site for checking outlines with is the [HTML 5 Outliner](https://gsnedders.html5.org/outliner/)!
 
-<div class="heading-margin">
-<h2 class="heading-with-neighbour-element" id="paragraph">Paragraph</h2>&nbsp;
-<a href="#paragraph" aria-hidden="true">#</a>
+<div class="heading-with-siblings">
+  <h2 id="paragraph">Paragraph</h2>&nbsp;
+  <a href="#paragraph" aria-hidden="true">#</a>
 </div>
 
 ```html
@@ -84,9 +84,9 @@ Another site for checking outlines with is the [HTML 5 Outliner](https://gsnedde
 
 Breaking content into paragraphs is another way to section content. Screen reader users can skip forward or backward between paragraphs, improving the navigability of a page. Using empty paragraphs for visual spacing or for any other styling consideration tends to hurt accessibility. This is because screen readers will announce even empty paragraphs, which can confuse users.
 
-<div class="heading-margin">
-<h2 class="heading-with-neighbour-element" id="lists-and-list-item">Ordered List, Unordered List, and List Item</h2>&nbsp;
-<a href="#lists-and-list-item" aria-hidden="true">#</a>
+<div class="heading-with-siblings">
+  <h2 id="lists-and-list-item">Ordered List, Unordered List, and List Item</h2>&nbsp;
+  <a href="#lists-and-list-item" aria-hidden="true">#</a>
 </div>
 
 ```markdown
@@ -111,9 +111,9 @@ An ordered list (`ol`) can provide a numerical list and an unordered list (`ul`)
 
 Screen readers know to announce nested or unnested `ol` or `ul` elements as a list, and `li` as a list item. If an element other than `ol`, `ul`, or `li` is used to create a list, a screen reader will not recognise the list or any list items. In this case, ARIA roles can help. However, it's definitely best to use the correct, semantic HTML element wherever possible.
 
-<div class="heading-margin">
-<h2 class="heading-with-neighbour-element" id="description-list">Description List, Description Term, and Description Details</h2>&nbsp;
-<a href="#description-list" aria-hidden="true">#</a>
+<div class="heading-with-siblings">
+  <h2 id="description-list">Description List, Description Term, and Description Details</h2>&nbsp;
+  <a href="#description-list" aria-hidden="true">#</a>
 </div>
 
 ```html
@@ -135,9 +135,9 @@ The three elements `dl`, `dt`, and `dd` are designed to be used together. In a d
 
 A few screen readers such as VoiceOver for iOS will not announce these elements as lists (see [how description lists are treated differently](https://cdpn.io/aardrian/debug/NzGaKP)). Because of this, it's important to make sure each list item makes sense in the context of the other list items. Don't at all be put off that some screen readers do not announce these elements properly. Think of how many other screen reader users will still benefit.
 
-<div class="heading-margin">
-<h2 class="heading-with-neighbour-element" id="time-and-datetime">Time and Datetime (attribute)</h2>&nbsp;
-<a href="#time-and-datetime" aria-hidden="true">#</a>
+<div class="heading-with-siblings">
+  <h2 id="time-and-datetime">Time and Datetime (attribute)</h2>&nbsp;
+  <a href="#time-and-datetime" aria-hidden="true">#</a>
 </div>
 
 ```markdown

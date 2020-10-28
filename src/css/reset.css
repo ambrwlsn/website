@@ -1,4 +1,4 @@
-/* https://hankchizljaw.com/wrote/a-modern-css-reset/ */
+/* Based mostly on https://hankchizljaw.com/wrote/a-modern-css-reset/ */
 
 /* Box sizing rules */
 *,
@@ -20,8 +20,6 @@ h2,
 h3,
 h4,
 p,
-ul[class],
-ol[class],
 li,
 figure,
 figcaption,
@@ -31,18 +29,17 @@ dd {
   margin: 0;
 }
 
+h1,
+h2 {
+  line-height: 1;
+}
+
 /* Set core body defaults */
 body {
   min-height: 100vh;
   scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-}
-
-/* Remove list styles on ul, ol elements with a class attribute */
-ul[class],
-ol[class] {
-  list-style: none;
 }
 
 /* A elements that don't have a class get default styles */
@@ -54,11 +51,6 @@ a:not([class]) {
 img {
   max-width: 100%;
   display: block;
-}
-
-/* Natural flow and rhythm in articles by default */
-article > * + * {
-  margin-top: 1em;
 }
 
 /* Inherit fonts for inputs and buttons */

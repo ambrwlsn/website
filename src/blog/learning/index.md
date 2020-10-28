@@ -10,6 +10,7 @@ keywords: [amber wilson, javascript, software engineering, web development, codi
         Publish, speak, build. Repeat.</p>&mdash; Rachel🦄Nabors (@rachelnabors) <a href="https://twitter.com/rachelnabors/status/881730920331452416">July 3, 2017</a>
 </blockquote>
 
+
 I discover ideas every day by talking to people, listening to them, reading, writing, attending events, going to meetups, sharing ideas, pushing myself out of my comfort zone.
 
 None of these are restricted to Web development:

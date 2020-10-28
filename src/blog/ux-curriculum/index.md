@@ -78,5 +78,4 @@ Iâ€™ve had a go at creating my own UX curriculum based on my psychology Masterâ€
 *   Trainers Course Communication Skills (5)
 *   Time Management & Organisational Skills (5)
 *   Public Speaking Workshops (5) - _modes of presenting_
-
-+ reading list.
+*   Reading list.
