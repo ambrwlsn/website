@@ -60,6 +60,7 @@
   --text11: 1.1rem;
   --text1: 1rem;
   --text09: 0.9rem;
+  --text07: 0.7rem;
   --text02: 0.2rem;
 
   --spacingXXXL: 5rem;
@@ -139,4 +140,10 @@ html {
   --blogPostPreviewCard: var(--blog-post-preview-dark-mode);
   --blogPostPreviewCardShadow: '';
   --imageOpacity: 0.9;
+}
+
+/* Utility classes */
+
+.link-single {
+  font-weight: bold;
 }

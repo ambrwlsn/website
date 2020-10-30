@@ -15,9 +15,9 @@ pre[class*='language-'] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  background-color: rgb(40, 44, 52);
+  background-color: #2b313e;
   color: #f8f8f2;
-  border-radius: 15px;
+  border-radius: 8px;
 }
 pre[class*='language-'] {
   padding: 1.5em;
@@ -25,18 +25,18 @@ pre[class*='language-'] {
   overflow: auto;
 }
 :not(pre) > code[class*='language-'] {
-  border-radius: 0.3rem;
+  border-radius: 3px;
   background: var(--inlineCode-bg);
   color: var(--inlineCode--text);
-  padding: 0.2rem;
+  padding: var(--spacingXS);
   white-space: normal;
-  font-size: 0.9rem;
+  font-size: var(--text09);
 }
 .token.comment,
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #75715e;
+  color: #a7a0a0;
 }
 .token.punctuation {
   color: #adbbbb;

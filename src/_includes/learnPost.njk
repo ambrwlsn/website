@@ -1,0 +1,42 @@
+---
+layout: main.njk
+---
+<div class="learn-post-wrapper">
+    <h1>{{ subject }}</h1>
+    <article>{{ content | safe }}</article>
+    <hr>
+    <ul>
+        {%- set nextLearnPost = collections.learn | getNextCollectionItem(page) %}
+        {%- if nextLearnPost %}<li>Next: <a href="{{ nextLearnPost.url | url }}">{{ nextLearnPost.data.subject }}</a></li>{% endif %}
+        {%- set previousLearnPost = collections.learn | getPreviousCollectionItem(page) %}
+        {%- if previousLearnPost %}<li>Previous: <a href="{{ previousLearnPost.url | url }}">{{ previousLearnPost.data.subject }}</a></li>{% endif %}
+    </ul>
+</div>
+
+{# <script type="application/ld+json">
+  { 
+    "@context": "https://schema.org", 
+    "@type": "BlogPosting",
+    "headline": "{{ title }}",
+    "genre": "{{ tags }}",
+    "keywords": "{{ tags }}", 
+    "wordcount": "{{ content | count }}",
+    "url": "https://amberwilson.co.uk/{{ page.url }}",
+    "image": "https://amberwilson.co.uk/img/favicon/favicon-32x32.png",
+    "datePublished": "{{ date }}",
+    "dateModified": "{{ date }}",    
+    "description": "{{ content | getExcerpt }}",
+    "articleBody": "{{ content }}",
+    "mainEntityOfPage": {
+      "@type": "WebPage"
+    },
+    "publisher": {
+      "@type": "Person",
+      "name": "Amber Wilson"
+    }
+    "author": {
+      "@type": "Person",
+      "name": "Amber Wilson"
+    }
+  }
+</script> #}

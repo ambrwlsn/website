@@ -3,12 +3,15 @@ title: Learning Nuggets
 layout: main.njk
 ---
 
-<h2>Knowledge Nuggets 💛</h2>
-
-<ul>
-{% for p in collections.learn %}
-<li>
-    <a href="{{ p.url }}">{{ p.data.subject }}</a>  
-</li>
-{% endfor %}
-</ul>
+<div class="learn-wrapper">
+    <h1 class="learn-title">Knowledge Nuggets 💛</h1>
+    <p class="learn-introduction">Here I will document handy nuggets of knowledge on what I <strong>learn</strong> in my journey as a developer. Enjoy!</p>
+    <ul class="learn-list">
+    {% for p in collections.learn | learnSort %}
+    <li>
+        <a href="{{ p.url }}">{{ p.data.subject }}</a>
+        <span class="learn-post-dates">{{ p.data.postdate }}</span>  
+    </li>
+    {% endfor %}
+    </ul>
+</div>

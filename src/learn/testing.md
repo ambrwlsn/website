@@ -14,6 +14,8 @@ Automated testing helps with this. Pre-commit hooks can be used when deploying b
 
 Please see the image below for one of many examples of the testing pyramid if you are confused when I mention unit tests or end-to-end (UI) tests:
 
-[![The Testing Pyramid](img/test-pyramid.png)](http://blog.xebia.com/its-2017-test-automation-is-not-optional-when-building-mobile-apps/)
+<a href="http://blog.xebia.com/its-2017-test-automation-is-not-optional-when-building-mobile-apps/">
+    <img src="../img/test-pyramid.png" alt="The Testing Pyramid">
+</a>
 
 Manual testing is important too. It is usually done by QA engineers, and helps reveal edge cases that automated tests do not catch. As one developer at my work said, these tests are like the cherry on top of the testing pyramid.

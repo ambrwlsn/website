@@ -18,11 +18,13 @@ module.exports = function(eleventyConfig, options) {
     exec('npm run concat');
   });
   eleventyConfig.addPassthroughCopy('./src/blog/*/img/*');
-  eleventyConfig.addPassthroughCopy('./src/learn/*/img/*');
+  eleventyConfig.addPassthroughCopy('./src/learn/img/**');
   eleventyConfig.addPassthroughCopy('./src/read/img/*');
   eleventyConfig.addPassthroughCopy('./src/img/**');
   eleventyConfig.addPassthroughCopy('./src/fonts/*');
+  eleventyConfig.addPassthroughCopy('./src/_redirects');
 
+  // Inspired by https://github.com/5t3ph/eleventy-plugin-emoji-readtime
   const defaults = {
     wpm: 275,
     showEmoji: true,
@@ -93,6 +95,13 @@ module.exports = function(eleventyConfig, options) {
   });
 
   eleventyConfig.setLibrary('md', markdownIt(MARKDOWN_OPTIONS));
+
+  // Sort with `Array.sort`
+  eleventyConfig.addFilter('learnSort', function(collection) {
+    return collection.sort(function(a, b) {
+      return b.data.number - a.data.number;
+    });
+  });
 
   // https://www.11ty.dev/docs/quicktips/tag-pages/
   eleventyConfig.addCollection('tagList', function(collection) {

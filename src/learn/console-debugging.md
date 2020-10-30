@@ -8,7 +8,7 @@ A lot of people use `console.log` to debug in the console.
 
 The `log()` method of `console` logs things to the web console. What some people may not know is that you can log things in nice ways! Here are three:
 
-### 1. Computed property names -
+## 1. Computed property names -
 
 The following objects could be logged one at a time:
 
@@ -40,7 +40,7 @@ dog: {name: "Thor", colour: "brown", specialSkill: "running"}
 fish: {name: "Glub", colour: "blue", specialSkill: "blowing bubbles"}
 ```
 
-### 2. CSS in the console -
+## 2. CSS in the console -
 
 Define styles like this in the console:
 
@@ -66,7 +66,7 @@ console.log(
 
 Try it in your console or look at [this](https://codesandbox.io/embed/determined-wozniak-4lt93) example on CodeSandbox!
 
-### 3. Tables in the console -
+## 3. Tables in the console -
 
 To display objects in a table in order to more easily compare them, try using `console.table`. You can do so with the animal objects above by running:
 
@@ -76,6 +76,6 @@ console.table([cat, dog, fish])
 
 Not only will there be a nicely-formatted table to see in the console, but the (unlabeled) objects will also be displayed as well.
 
-### Note
+## Note
 
 All of these things make console logging a little better. Not sure how many I will start using myself, but I'll give them a go to see whether I like them :)

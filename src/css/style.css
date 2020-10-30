@@ -111,10 +111,6 @@ article blockquote p {
   }
 }
 
-.read-wrapper a {
-  font-weight: bold;
-}
-
 .read-introduction {
   font-family: var(--fontSerif);
   margin-top: var(--spacingM);
@@ -135,12 +131,15 @@ article blockquote p {
 .blog-post-wrapper,
 .read-wrapper,
 .blog-list-wrapper,
-.about-wrapper {
+.about-wrapper,
+.learn-wrapper,
+.learn-post-wrapper {
   padding: var(--spacingXL) 0 0 0;
 }
 
 @media only screen and (min-width: 686px) {
-  .blog-post-wrapper {
+  .blog-post-wrapper,
+  .learn-post-wrapper {
     max-width: 45rem;
   }
 }
@@ -148,9 +147,51 @@ article blockquote p {
 .blog-post-title,
 .blog-post h2,
 .read-title,
-.about-title {
+.about-title,
+.learn-title {
   font-family: var(--fontSansSerif);
   font-weight: 500;
+}
+
+.learn-post-wrapper h1,
+.learn-post-wrapper h2 {
+  font-weight: 300;
+  margin-bottom: var(--spacingM);
+}
+
+.learn-post-wrapper p {
+  font-family: var(--fontSerif);
+  font-weight: 300;
+  line-height: 1.7;
+  font-size: var(--text09);
+  margin-bottom: var(--spacingM);
+}
+
+.learn-post-dates {
+  font-size: var(--text07);
+  font-family: var(--fontSerif);
+  font-weight: 300;
+  opacity: 0.7;
+}
+
+.learn-list {
+  column-count: 1;
+  font-size: var(--text12);
+}
+
+@media only screen and (min-width: 686px) {
+  .learn-list {
+    column-count: 2;
+    font-size: var(--text15);
+  }
+}
+
+.learn-list li {
+  margin-bottom: var(--spacingS);
+}
+
+.learn-post-wrapper article a {
+  font-weight: bold;
 }
 
 .blog-post h2 {
@@ -162,7 +203,8 @@ article blockquote p {
   margin-top: var(--spacingS);
 }
 
-.blog-introduction {
+.blog-introduction,
+.learn-introduction {
   font-family: var(--fontSerif);
   margin-top: var(--spacingM);
   font-weight: 300;
