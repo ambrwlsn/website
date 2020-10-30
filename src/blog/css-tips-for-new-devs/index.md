@@ -1,7 +1,7 @@
 ---
 title: CSS Tips for New Devs
 date: "2020-05-04"
-tags: [learning, css, dev tips]
+tags: [learning, css, dev-tips]
 keywords: []
 ---
 

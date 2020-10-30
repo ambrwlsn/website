@@ -1,7 +1,7 @@
 ---
 title: The Big Picture
 date: '2019-04-25'
-tags: ['reflection']
+tags: [reflection]
 keywords: [amber wilson, software engineering, web development]
 ---
 

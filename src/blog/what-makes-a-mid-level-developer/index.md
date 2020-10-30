@@ -1,7 +1,7 @@
 ---
 title: 'What Makes a Mid-Level Developer?'
 date: '2019-10-02'
-tags: [dev tips, learning, reflection]
+tags: [dev-tips, learning, reflection]
 keywords:
   [amber wilson, software engineering, web development, coding, practice]
 ---

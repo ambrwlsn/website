@@ -1,7 +1,7 @@
 ---
 title: Preparing to Talk
 date: "2017-04-13"
-tags: ["public speaking"]
+tags: [public-speaking]
 keywords: [amber wilson,software engineering,web development,writing,preparing]
 ---
 

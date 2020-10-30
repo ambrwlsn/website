@@ -1,7 +1,7 @@
 ---
 title: IndieWebCamp
 date: "2017-05-23"
-tags: [workshop, indie web]
+tags: [workshop, indie-web]
 keywords: [amber wilson,software engineering,web development,coding,indiewebcamp]
 ---
 

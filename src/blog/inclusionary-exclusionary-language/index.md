@@ -1,7 +1,7 @@
 ---
 title: Inclusionary and Exclusionary Language
 date: "2018-02-03"
-tags: ["workshop", "public speaking"]
+tags: ["workshop", "public-speaking"]
 keywords: [amber wilson,software engineering,web development,speaking, event, workshop, mentoring]
 ---
 

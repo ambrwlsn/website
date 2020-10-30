@@ -1,7 +1,7 @@
 ---
 title: Mentorship
 date: "2017-03-06"
-tags: [mobile first]
+tags: [mobile-first]
 keywords: [amber wilson, javascript, software engineering, web development, coding]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Material Conference
 date: "2017-08-18"
-tags: [conference, public speaking]
+tags: [conference, public-speaking]
 keywords: [amber wilson, javascript, software engineering, web development, coding]
 ---
 

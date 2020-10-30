@@ -2,7 +2,7 @@
 title: Can You Code A Design? - Part Two
 date: "2019-01-13"
 keywords: [amber wilson, javascript, software engineering, web development, coding, design,communication, communicate, documentation, document]
-tags: [design, dev tips]
+tags: [design, dev-tips]
 ---
 
 Last time I wrote about [coding up a design](/blog/can-you-code-a-design), I was only two weeks into the related project. Now, it has been weeks since I finished and I am documenting the remainder of my scribbled-down points in the event that I or someone else might find them useful in the future. The below points are formatted exactly how I wrote them in the heat of varying degrees of exasperation - enjoy!

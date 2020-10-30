@@ -1,7 +1,7 @@
 ---
 title: Accessible HTML Elements
 date: "2020-03-19"
-tags: [html, accessibility, dev tips]
+tags: [html, accessibility, dev-tips]
 keywords:
   [
     amber wilson,

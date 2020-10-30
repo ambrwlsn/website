@@ -1,7 +1,7 @@
 ---
 title: Where did the focus go?
 date: "2020-06-17"
-tags: [javascript, dev tips, accessibility]
+tags: [javascript, dev-tips, accessibility]
 keywords: [learning, html, focus, element, document, DOM]
 ---
 

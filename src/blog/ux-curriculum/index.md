@@ -1,7 +1,7 @@
 ---
 title: UX Curriculum
 date: "2017-04-08"
-tags: ["ux"]
+tags: [ux]
 keywords: [amber wilson,software engineering,web development,coding, ux curriculum, thought project]
 ---
 

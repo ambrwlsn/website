@@ -1,7 +1,7 @@
 ---
 title: Nightlybuild 2017
 date: "2017-09-06"
-tags: [conference, public speaking]
+tags: [conference, public-speaking]
 keywords: [amber wilson, javascript, software engineering, web development, coding]
 ---
 

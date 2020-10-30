@@ -14,7 +14,7 @@ keywords:
     web development,
     dev tools,
     coding]
-tags: [web history]
+tags: [web-history]
 ---
 
 <img class="blog-image" src="img/dinosaur.jpg" alt="a toy dinosaur" />

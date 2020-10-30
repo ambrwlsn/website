@@ -1,7 +1,7 @@
 ---
 title: Mobile First
 date: "2017-05-19"
-tags: [mobile first]
+tags: [mobile-first]
 keywords: [amber wilson, javascript, software engineering, web development, coding]
 ---
 

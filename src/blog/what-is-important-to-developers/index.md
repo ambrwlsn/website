@@ -1,7 +1,7 @@
 ---
 title: What Is Important To Developers?
 date: '2019-04-24'
-tags: ['reflection']
+tags: [reflection]
 keywords: [amber wilson, software engineering, web development]
 ---
 

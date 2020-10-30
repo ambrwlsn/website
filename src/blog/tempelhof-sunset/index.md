@@ -1,7 +1,7 @@
 ---
 title: Tempelhof Sunset
 date: "2018-04-28"
-tags: ["photography", "germany"]
+tags: [photography, germany]
 keywords: [sunset, photos, photo, camera, photoshop, edited, berlin, tempelhof field]
 ---
 

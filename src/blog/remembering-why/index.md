@@ -1,7 +1,7 @@
 ---
 title: Remembering Why
 date: "2017-12-06"
-tags: ["reflection"]
+tags: [reflection]
 keywords: [amber wilson,software engineering,web development]
 ---
 

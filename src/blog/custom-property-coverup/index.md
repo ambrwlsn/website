@@ -2,7 +2,7 @@
 title: Custom Property Coverup
 date: "2020-07-22"
 keywords: [amber wilson, custom properties, css variables, software engineering, web development, coding,communication, styles, document]
-tags: [css, dev tools]
+tags: [css, dev-tools]
 ---
 
 The other day I was discussing CSS custom properties with <a href="https://adactio.com">Jeremy</a> when I noticed something. When using custom properties, some (but not all) of the custom property values do not show up in the computed values in Chrome dev tools. Jeremy tried the dev tools in Firefox and found the same thing. However, when the same values declared as custom properties are declared as regular CSS properties, the values show up in the computed values section.

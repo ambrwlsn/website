@@ -1,7 +1,7 @@
 ---
 title: Unit Tests
 date: '2018-02-05'
-tags: ['javascript', 'testing']
+tags: [javascript, testing]
 keywords:
   [
     amber wilson,

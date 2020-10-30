@@ -1,7 +1,7 @@
 ---
 title: Public Speaking - I Did It
 date: "2017-10-26"
-tags: ["public speaking"]
+tags: [public-speaking]
 keywords: [amber wilson,software engineering,web development]
 ---
 
