@@ -6,42 +6,45 @@ layout: bookReview.njk
 
 {% from "macros/bookReviewPanels.njk" import bookReviewPanels %}
 
-<h1>Read</h1>
+<div class="read-wrapper">
+    <h1 class="read-title">Read</h1>
+    <div class="read-introduction">
+        <p>
+            On this page are the books I've read or listened to in the last two
+            years. Skip to a year using the dropdown menu! Each block contains a
+            review, a picture, the book's length, format I read/heard it in
+            (audiobook, kindle, physical book), and summary of characteristics.
+        </p>
+        <p>
+            The images on this page total 500kb but to stop them being
+            downloaded all at once I added native lazy loading so they will only
+            load as you scroll! So, there is only ~150kb of images on page load
+            vs 500kb (<a href="https://caniuse.com/#feat=loading-lazy-attr">check browser support here</a>).
+        </p>
+    </div>
 
-<p>
-    On this page are the books I've read or listened to in the last two
-    years. Skip to a year using the dropdown menu! Each block contains a
-    review, a picture, the book's length, format I read/heard it in
-    (audiobook, kindle, physical book), and summary of characteristics.
-</p>
-<p>
-    This images on this page total 500kb but to stop them being
-    downloaded all at once I added native lazy loading so they will only
-    load as you scroll! So, there is only ~150kb of images on page load
-    vs 500kb (<a href="https://caniuse.com/#feat=loading-lazy-attr">check browser support here</a>).
-</p>
+    <details class="read-menu-details">
+        <summary class="read-menu-summary">Select year</summary>
+        <ul class="read-menu">
+            <li>
+                <a href="#2020">2020</a>
+            </li>
+            <li>
+                <a href="#2019">2019</a>
+            </li>
+            <li>
+                <a href="/blog/books">2018</a>
+            </li>
+        </ul>
+    </details>
 
- <details class="read-menu-details">
-    <summary class="read-menu-summary">Select year</summary>
-    <ul class="read-menu">
-        <li>
-            <a href="#2020">2020</a>
-        </li>
-        <li>
-            <a href="#2019">2019</a>
-        </li>
-        <li>
-            <a href="/blog/books">2018</a>
-        </li>
-    </ul>
-</details>
+    <h2 id="2020">2020</h2>
+    {% for book in books2020 %}
+        {{ bookReviewPanels(book) }}
+    {% endfor %}
 
-<h2 id="2020">2020</h2>
-{% for book in books2020 %}
-    {{ bookReviewPanels(book) }}
-{% endfor %}
-
-<h2 id="2019">2019</h2>
-{% for book in books2019 %}
-    {{ bookReviewPanels(book) }}
-{% endfor %}
+    <h2 id="2019">2019</h2>
+    {% for book in books2019 %}
+        {{ bookReviewPanels(book) }}
+    {% endfor %}
+</div>

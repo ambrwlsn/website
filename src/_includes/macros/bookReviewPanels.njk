@@ -3,7 +3,7 @@
 {% from "macros/bookSVG.njk" import bookSVG %}
 
  {% macro bookReviewPanels(book) %}
-<div>
+<div class="review-title" style="border: 3px solid {{ book.lengthBoxColour }}";>
     {{ book.title }}
 </div>
 <div class="main-review-container">

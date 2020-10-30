@@ -1,23 +1,6 @@
 [
   {
     "yearRead": "2019",
-    "title": "Entangled Life by Merlin Sheldrake",
-    "length": "368",
-    "useThreeWords": "",
-    "review": "50% through",
-    "coverImage": "entangled-life.jpg",
-    "coverImageAlt": "Entangled Life book cover",
-    "methodImage": "Kindle",
-    "methodFill": "#e0dcdc",
-    "methodStroke": "#e0dcdc",
-    "methodBoxColour": "#D01801",
-    "useThreeWordsBoxColour": "#6891FA",
-    "buttonBoxColour": "#9295AC",
-    "lengthBoxColour": "#C6CD74",
-    "reviewBoxColour": "#BDC1DC"
-  },
-  {
-    "yearRead": "2019",
     "title":
       "Technically Wrong: Sexist Apps, Biased Algorithms, and Other Threats of Toxic Tech by Sara Wachter-Boettcher",
     "length": "232",

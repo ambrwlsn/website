@@ -100,9 +100,37 @@ article blockquote p {
   display: inline;
 }
 
-.blog-post-wrapper {
+.read-wrapper {
+  width: 100%;
+}
+
+@media only screen and (min-width: 800px) {
+  .read-wrapper {
+    width: 800px;
+    margin: 0 auto;
+  }
+}
+
+.read-introduction {
+  font-family: var(--fontSerif);
+  margin-top: var(--spacingM);
+  font-weight: 300;
+  font-size: var(--text09);
+  line-height: 1.8;
+}
+
+.read-wrapper p {
+  margin-bottom: var(--spacingM);
+}
+
+.read-wrapper h2 {
+  font-weight: 500;
+  margin-bottom: var(--spacingM);
+}
+
+.blog-post-wrapper,
+.read-wrapper {
   padding: var(--spacingXL) 0 0 0;
-  /* width: 300px; */
 }
 
 @media only screen and (min-width: 686px) {
@@ -112,7 +140,8 @@ article blockquote p {
 }
 
 .blog-post-title,
-.blog-post h2 {
+.blog-post h2,
+.read-title {
   font-family: var(--fontSansSerif);
   font-weight: 500;
 }
@@ -177,9 +206,9 @@ article blockquote p {
 
 .main-review-container {
   display: grid;
-  margin: 0 1em 3em 1em;
   width: auto;
   height: auto;
+  margin-bottom: var(--spacingXL);
   grid-template-columns: 1fr var(--spacingM) 1fr var(--spacingM) 1fr
     var(--spacingM) 1fr;
   grid-template-rows: 13rem var(--spacingM) 0.5fr var(--spacingM) 0.5fr;
@@ -188,26 +217,11 @@ article blockquote p {
     '. . . . . . .' 'threewords threewords threewords . length length length';
 }
 
-@media only screen and (min-width: 500px) {
-  .main-review-container {
-    margin: 0 1em;
-    width: 500px;
-    height: auto;
-    grid-template-columns: 1fr var(--spacingM) 1fr var(--spacingM) 1fr
-      var(--spacingM) 1fr;
-    grid-template-rows: 1fr var(--spacingM) 1fr var(--spacingM) 1fr;
-    grid-template-areas: 'review review review review review . length'
-      'review review review review review . .'
-      'review review review review review . picture' '. . . . . . picture'
-      'method . threewords threewords threewords . .';
-  }
-}
-
 @media only screen and (min-width: 800px) {
   .main-review-container {
-    margin-bottom: 5em;
     width: 800px;
     height: 600px;
+    margin-bottom: var(--spacingXXXL);
     grid-template-columns: 1fr var(--spacingM) 1fr var(--spacingM) 1fr
       var(--spacingM) 1fr;
     grid-template-rows: 1fr var(--spacingM) 1fr var(--spacingM) 1fr;
@@ -227,6 +241,13 @@ article blockquote p {
   color: var(--readText);
 }
 
+.review-title {
+  margin-bottom: var(--spacingM);
+  font-size: var(--text13);
+  text-align: center;
+  padding: 10px;
+}
+
 .length-container {
   grid-area: length;
   border-radius: var(--reviewBorderRadius);
@@ -234,7 +255,13 @@ article blockquote p {
   justify-content: center;
   align-items: center;
   color: var(--readText);
-  font-size: var(--text25);
+  font-size: var(--text13);
+}
+
+@media only screen and (min-width: 686px) {
+  .length-container {
+    font-size: var(--text25);
+  }
 }
 
 .image-container {
@@ -259,9 +286,20 @@ article blockquote p {
 
 .three-words-container {
   grid-area: threewords;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: var(--reviewBorderRadius);
   word-break: break-word;
   color: var(--readText);
+  font-size: var(--text09);
+  text-align: center;
+}
+
+@media only screen and (min-width: 686px) {
+  .three-words-container {
+    font-size: var(--text11);
+  }
 }
 
 .read-menu-details {
@@ -270,6 +308,7 @@ article blockquote p {
   margin: auto;
   margin-top: var(--spacingXL);
   margin-bottom: var(--spacingXL);
+  border-radius: 5px;
 }
 
 .read-menu-summary {
@@ -277,6 +316,7 @@ article blockquote p {
   border-bottom: 3px solid var(--textColor);
   cursor: pointer;
   text-align: center;
+  padding: var(--spacingS) 0;
 }
 
 /* removes marker arrow from details and summary elements */
