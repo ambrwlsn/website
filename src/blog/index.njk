@@ -3,25 +3,30 @@ title: Blog
 layout: blogList.njk 
 ---
 
-<h2>Blog List!</h2>
-
-<p>
-  <a style="color: orange; text-decoration: underline; font-size: 2em;
-    font-weight: 900; padding-left: 1em;" href="/tags">All tags!</a>
-</p>
-
-<ul>
-  {% for p in collections.posts | reverse %}
-  <li>
-    <a href="{{ p.url }}">{{ p.data.title }}</a>
-    <p>{{ p.data.date | readableBlogListDate }}</p>
-    {% if p.data.excerpt %}
-    <p>{{ p.data.excerpt | toHTML | safe }}…</p>
-    {% else %}
-    <p>{{ p.templateContent | getExcerpt }}</p>
-    {% endif %} {% for tag in p.data.tags %} {%- if collections.tagList.indexOf(tag) != -1 -%} {% set tagUrl %}/tags/{{ tag }}/{%
-    endset %}
-    <a href="{{ tagUrl | url }}">{{ tag }}</a> {%- endif -%} {% endfor %}
-  </li>
-  {% endfor %}
-</ul>
+<div class="blog-list-wrapper">
+  <h1 class="blog-list-title">{{ title }}</h1>
+    <p class="blog-introduction">
+      These are all the blog posts I've written since I started web development back in 2017. I love writing and I encourage everyone to do the same. Being able to teach a concept shows you really understand it. Plus you get to help other people learn, and provide yourself proof of your progress! Have a browse, see <a class="all-tags-link" href="/tags">all tags</a> here, and add my rss feed!
+    </p>
+  <ul class="blog-list">
+    {% for p in collections.posts | reverse %}
+      <li>
+        <a class="blog-list-post-title" href="{{ p.url }}">{{ p.data.title }}</a>
+        <p class="blog-list-date">{{ p.data.date | readableBlogListDate }}</p>
+        {% if p.data.excerpt %}
+          <p class="blog-list-excerpt">{{ p.data.excerpt | toHTML | safe }}…</p>
+        {% else %}
+          <p class="blog-list-excerpt">{{ p.templateContent | getExcerpt }}</p>
+        {% endif %} 
+      </li>
+      <p class="tags blog-list-tags">
+        {% for tag in p.data.tags %} 
+          {%- if collections.tagList.indexOf(tag) != -1 -%} 
+          {% set tagUrl %}/tags/{{ tag }}/{%endset %}
+            <a href="{{ tagUrl | url }}">{{ tag }}</a> 
+          {%- endif -%} 
+        {% endfor %}
+      </p>
+    {% endfor %}
+  </ul>
+</div>

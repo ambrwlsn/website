@@ -111,6 +111,10 @@ article blockquote p {
   }
 }
 
+.read-wrapper a {
+  font-weight: bold;
+}
+
 .read-introduction {
   font-family: var(--fontSerif);
   margin-top: var(--spacingM);
@@ -129,7 +133,9 @@ article blockquote p {
 }
 
 .blog-post-wrapper,
-.read-wrapper {
+.read-wrapper,
+.blog-list-wrapper,
+.about-wrapper {
   padding: var(--spacingXL) 0 0 0;
 }
 
@@ -141,7 +147,8 @@ article blockquote p {
 
 .blog-post-title,
 .blog-post h2,
-.read-title {
+.read-title,
+.about-title {
   font-family: var(--fontSansSerif);
   font-weight: 500;
 }
@@ -155,9 +162,115 @@ article blockquote p {
   margin-top: var(--spacingS);
 }
 
-/* .skip-to-content-link:focus + nav .nav-logo-link {
-  visibility: hidden;
+.blog-introduction {
+  font-family: var(--fontSerif);
+  margin-top: var(--spacingM);
+  font-weight: 300;
+  font-size: var(--text09);
+  line-height: 1.8;
+}
+
+@media only screen and (min-width: 686px) {
+  .blog-list-wrapper {
+    max-width: 45rem;
+  }
+}
+
+.blog-list-title {
+  font-weight: 500;
+}
+
+.blog-list li {
+  margin-top: var(--spacingL);
+  background: var(--blogPostPreviewCard);
+  padding: var(--spacingL) var(--spacingL) var(--spacingL) var(--spacingM);
+  border-bottom: 3px solid var(--funkyBorder);
+  position: relative;
+  border-radius: 3px;
+  outline: none;
+}
+
+.all-tags-link {
+  font-weight: bold;
+}
+
+/* @media only screen and (min-width: 686px) {
+  .blog-list li {
+    width: 75%;
+  }
 } */
+
+.blog-list-post-title {
+  font-size: var(--text15);
+}
+
+.blog-list-post-title:hover {
+  color: var(--linkColor);
+}
+
+.blog-list-post-title::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.blog-list-post-title:hover::after,
+.blog-list-post-title:focus::after {
+  border-right: 2px solid var(--linkHoverColor);
+  border-left: 2px solid var(--linkHoverColor);
+  border-top: 2px solid var(--linkHoverColor);
+  border-bottom: 2px solid var(--funkyBorder);
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+.blog-list-date {
+  margin-bottom: var(--spacingM);
+  text-transform: uppercase;
+  font-size: var(--text09);
+}
+
+.blog-list-excerpt {
+  font-family: var(--fontSerif);
+  font-size: var(--text09);
+  font-weight: 300;
+}
+
+.tags a {
+  display: inline-block;
+  padding: var(--spacingXS) var(--spacingS);
+  background-color: var(--secondaryBackgroundColor);
+  font-size: var(--text09);
+  margin-bottom: var(--spacingXS);
+  position: relative;
+  color: var(--linkColor);
+  border-radius: 3px;
+  outline: none;
+}
+
+.tags a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.tags a:hover::after,
+.tags a:focus::after {
+  border: 2px solid var(--linkHoverColor);
+  border-radius: 3px;
+}
+
+.blog-list-tags {
+  margin: var(--spacingS) 0 var(--spacingM) 0;
+}
 
 .skip-to-content-link {
   position: absolute;
@@ -166,6 +279,20 @@ article blockquote p {
   font-size: 0.9rem;
   transform: translateX(-100%);
   padding: 0.2rem;
+}
+
+@media only screen and (min-width: 686px) {
+  .about-wrapper {
+    max-width: 45rem;
+  }
+}
+
+.about-wrapper p {
+  font-family: var(--fontSerif);
+  margin-top: var(--spacingM);
+  font-weight: 300;
+  font-size: var(--text09);
+  line-height: 1.8;
 }
 
 .skip-to-content-link:focus {
@@ -446,11 +573,6 @@ article blockquote p {
   }
 }
 
-.recent-posts-list li:hover {
-  -webkit-box-shadow: var(--blogPostPreviewCardShadow);
-  box-shadow: var(--blogPostPreviewCardShadow);
-}
-
 .recent-posts-list li a {
   outline: none;
 }
@@ -465,20 +587,12 @@ article blockquote p {
   z-index: 10;
 }
 
-.recent-posts-list li a:hover::after {
-  border-right: 2px solid var(--linkHoverColor);
-  border-left: 2px solid var(--linkHoverColor);
-  border-top: 2px solid var(--linkHoverColor);
-  border-bottom: 2px solid var(--funkyBorder);
-  border-top-right-radius: 3px;
-  border-top-left-radius: 3px;
-}
-
+.recent-posts-list li a:hover::after,
 .recent-posts-list li a:focus::after {
   border-right: 2px solid var(--linkHoverColor);
   border-left: 2px solid var(--linkHoverColor);
   border-top: 2px solid var(--linkHoverColor);
-  border-bottom: 1px solid var(--funkyBorder);
+  border-bottom: 2px solid var(--funkyBorder);
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
 }
@@ -507,6 +621,7 @@ article blockquote p {
   font-weight: 500;
   font-size: 2rem;
   display: inline;
+  line-height: 1.2;
 }
 
 .homepage-description {

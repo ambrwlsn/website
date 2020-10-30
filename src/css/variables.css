@@ -1,20 +1,20 @@
 @font-face {
   font-family: 'Rubik';
   src: url('/fonts/rubik-v11-latin-regular.woff2') format('woff2');
-  font-display: fallback;
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Rubik';
   src: url('/fonts/rubik-v11-latin-900.woff2') format('woff2');
-  font-display: fallback;
+  font-display: swap;
   font-weight: bold;
 }
 
 @font-face {
   font-family: 'Merriweather';
   src: url('merriweather-v22-latin-regular.woff2') format('woff2');
-  font-display: fallback;
+  font-display: swap;
 }
 
 :root {
@@ -26,8 +26,8 @@
   --inline-code-background-color-dark-mode: rgba(249, 248, 244, 0.17);
   --background-color-light-mode: #ffffff;
   --background-color-dark-mode: #191b1b;
-  --secondary-background-color-light-mode: #b3cff1;
-  --secondary-background-color-dark-mode: #0e1c6a;
+  --secondary-background-color-light-mode: #d4e9ff;
+  --secondary-background-color-dark-mode: #23399b;
   --blockquote-background-color-light-mode: #e9ebf3;
   --blockquote-background-color-dark-mode: #33374c;
   --link-color-light-mode: #7d39a4;
@@ -38,7 +38,7 @@
   --blog-post-preview-light-mode: radial-gradient(
     circle at 100% 80%,
     #f9e8f0 0%,
-    rgba(179, 207, 241, 1) 100%
+    #b3cff1 100%
   );
   --blog-post-preview-dark-mode: radial-gradient(
     circle at 100% 80%,
@@ -46,7 +46,7 @@
     #673ab7 100%
   );
   --reviewBorderRadius: 10px;
-  --readText: #2d2c2c;
+  --readText: #131212;
   --funkyBorder: #fa0dc7;
   --duration: 0.5s;
   --timing: ease;
