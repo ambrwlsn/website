@@ -2,10 +2,19 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 main {
-  padding: var(--spacingM) var(--spacingL);
+  max-width: 100%;
+  padding: var(--spacingS) var(--spacingM);
+}
+
+@media only screen and (min-width: 686px) {
+  main {
+    padding: var(--spacingM) var(--spacingL);
+  }
 }
 
 a {
@@ -93,7 +102,13 @@ article blockquote p {
 
 .blog-post-wrapper {
   padding: var(--spacingXL) 0 0 0;
-  max-width: 45rem;
+  /* width: 300px; */
+}
+
+@media only screen and (min-width: 686px) {
+  .blog-post-wrapper {
+    max-width: 45rem;
+  }
 }
 
 .blog-post-title,
@@ -321,9 +336,24 @@ article blockquote p {
   color: var(--linkHoverColor);
 }
 
+/* https://gomakethings.com/full-width-images-with-only-css/ */
 .blog-image {
-  width: 100%;
   margin-bottom: var(--spacingL);
+  left: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  max-width: 100vw;
+  position: relative;
+  right: 50%;
+  width: 100vw;
+}
+
+@media only screen and (min-width: 800px) {
+  .blog-image {
+    margin-left: 0;
+    max-width: 100%;
+    position: static;
+  }
 }
 
 .recent-posts-list {

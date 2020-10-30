@@ -133,3 +133,17 @@ article code {
   padding: var(--spacingXS) var(--spacingXS);
   font-size: var(--text11);
 }
+
+article code {
+  border-radius: 0.3rem;
+  background-color: var(--inlineCodeBackgroundColor);
+  color: var(--inlineCodeColor);
+  padding: var(--spacingXS) var(--spacingXS);
+  font-size: var(--text09);
+}
+
+@media only screen and (min-width: 686px) {
+  article code {
+    font-size: var(--text11);
+  }
+}
