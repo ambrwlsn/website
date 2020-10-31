@@ -3,6 +3,7 @@ const format = require('date-fns/format');
 // see https://plug11ty.com/plugins/reading-time-plugin-for-eleventy/
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const excerpts = require('./helpers/excerpts');
+const pluginRss = require('@11ty/eleventy-plugin-rss');
 const { exec } = require('child_process');
 
 const MARKDOWN_OPTIONS = {
@@ -56,6 +57,8 @@ module.exports = function(eleventyConfig, options) {
   });
 
   eleventyConfig.addPlugin(syntaxHighlight);
+
+  eleventyConfig.addPlugin(pluginRss);
 
   eleventyConfig.addFilter('count', value => {
     return Math.ceil(value.trim().split(/\s+/).length);
