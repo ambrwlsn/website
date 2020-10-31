@@ -133,13 +133,15 @@ article blockquote p {
 .blog-list-wrapper,
 .about-wrapper,
 .learn-wrapper,
-.learn-post-wrapper {
+.learn-post-wrapper,
+.words-wrapper {
   padding: var(--spacingXL) 0 0 0;
 }
 
 @media only screen and (min-width: 686px) {
   .blog-post-wrapper,
-  .learn-post-wrapper {
+  .learn-post-wrapper,
+  .words-wrapper {
     max-width: 45rem;
   }
 }
@@ -148,7 +150,8 @@ article blockquote p {
 .blog-post h2,
 .read-title,
 .about-title,
-.learn-title {
+.learn-title,
+.words-title {
   font-family: var(--fontSansSerif);
   font-weight: 500;
 }
@@ -741,99 +744,101 @@ figure img {
   * Start of word page styles
   */
 
-.bubble {
+.bubble,
+.bubbley {
   position: relative;
-  line-height: 1.2em;
-  font-size: 0.8em;
+  font-size: var(--text08);
   padding: 15px;
-  margin: 1em 0 3em;
-  border: 5px solid #2f4f4f;
-  color: #333;
-  background: #fff;
+  margin: var(--spacingM) 0 var(--spacingXXL);
+  border: 5px solid var(--textColor);
+  color: var(--textColor);
+  background-color: var(--backgroundColor);
   border-radius: 10px;
-  line-height: 1.8;
+  line-height: 2;
 }
 
-.bubble:before {
-  font-size: 0.8em;
+@media screen and (min-width: 686px) {
+  .bubble,
+  .bubbley {
+    font-size: var(--text09);
+  }
+}
+
+.words-wrapper {
+  font-family: var(--fontSerif);
+}
+
+.bubble:before,
+.bubbley:before {
+  font-size: var(--text08);
   content: '';
   position: absolute;
   bottom: -20px;
-  left: 40px;
   border-width: 20px 20px 0;
   border-style: solid;
-  border-color: #2f4f4f transparent;
+  border-color: var(--textColor) transparent;
+  display: block;
+  width: 0;
+}
+
+.bubble:before {
+  left: 40px;
+}
+
+.bubbley:before {
+  right: 40px;
+}
+
+.bubble:after,
+.bubbley:after {
+  content: '';
+  position: absolute;
+  bottom: -13px;
+  border-width: 13px 13px 0;
+  border-style: solid;
+  border-color: var(--backgroundColor) transparent;
   display: block;
   width: 0;
 }
 
 .bubble:after {
-  content: '';
-  position: absolute;
-  bottom: -13px;
   left: 47px;
-  border-width: 13px 13px 0;
-  border-style: solid;
-  border-color: #fff transparent;
-  display: block;
-  width: 0;
-}
-
-.bubbley {
-  font-size: 0.8em;
-  position: relative;
-  line-height: 1.2em;
-  padding: 15px;
-  margin: 1em 0 3em;
-  border: 5px solid #2f4f4f;
-  color: #333;
-  background: #fff;
-  border-radius: 10px;
-  line-height: 1.8;
-}
-
-.bubbley:before {
-  content: '';
-  position: absolute;
-  bottom: -20px;
-  right: 40px;
-  border-width: 20px 20px 0;
-  border-style: solid;
-  border-color: #2f4f4f transparent;
-  display: block;
-  width: 0;
 }
 
 .bubbley:after {
-  content: '';
-  position: absolute;
-  bottom: -13px;
   right: 47px;
-  border-width: 13px 13px 0;
-  border-style: solid;
-  border-color: #fff transparent;
-  display: block;
-  width: 0;
 }
 
-.words-container {
-  color: #333;
-  max-width: 500px;
+.words-wrapper {
+  color: var(--textColor);
+}
+
+.bubble-wrapper {
+  width: 100%;
   padding: 0 0 50px;
   margin: 0 auto;
 }
 
-.words-container h3 {
-  font-size: 1.2em;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 0.5em;
+@media screen and (min-width: 686px) {
+  .bubble-wrapper {
+    width: 60%;
+  }
+}
+
+.words-wrapper h3 {
+  font-size: var(--text13);
+  margin-bottom: var(--spacingS);
   text-align: center;
 }
 
-.words-header {
-  font-weight: 500;
-  margin-bottom: var(--spacingM);
+.words-introduction {
+  font-weight: 300;
+  font-size: var(--text09);
+  margin-bottom: var(--spacingXL);
+}
+
+.words-introduction p {
+  margin: var(--spacingM) 0;
 }
 
 /**
