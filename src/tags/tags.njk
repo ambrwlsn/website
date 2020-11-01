@@ -12,12 +12,16 @@ pagination:
   addAllPagesToCollections: true
 permalink: /tags/{{ tag }}/
 layout: main.njk
+title: Posts by Amber Wilson tagged with '{{ tag }}'
+description: Posts by Amber Wilson tagged with '{{ tag }}'
 ---
 <h1>Tagged “{{ tag }}”</h1>
 
 <ul>
-{% set taglist = collections[ tag ] %}
-{% for post in taglist | reverse %}
-  <li><a href="{{ post.url | url }}">{{ post.data.title }}</a></li>
-{% endfor %}
+  {% set taglist = collections[tag] %}
+  {% for post in taglist | reverse %}
+    <li>
+      <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+    </li>
+  {% endfor %}
 </ul>

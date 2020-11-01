@@ -3,68 +3,94 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{{ title }}</title>
-	<meta name="description" content="{% if description -%}{{ description }}{% elif (excerpt) -%}{{ excerpt }}{% elif (postExcerpt) -%}{{ postExcerpt | trim }}{% elif (learnExcerpt) -%}{{ learnExcerpt | trim }}{% else -%}{{ "no description available" | log }}{% endif -%}" />
-	<link rel="apple-touch-icon" sizes="180x180" href="{{ '/img/favicon/apple-touch-icon.png' | url }}">
-	<link rel="icon" type="image/png" sizes="32x32" href="{{ '/img/favicon/favicon-32x32.png' | url }}">
-	<link rel="icon" type="image/png" sizes="16x16" href="{{ '/img/favicon/favicon-16x16.png' | url }}">
-	<link rel="canonical" href="{{ url }}" />
-	<link rel="preload" as="font" href="/fonts/rubik-v11-latin-regular.woff2" type="font/woff2" crossorigin="anonymous">
-	<link rel="preload" as="font" href="/fonts/merriweather-v22-latin-regular.woff2" type="font/woff2" crossorigin="anonymous">
-	<link rel="stylesheet" href="{{ '/css/styles.css' | url }}" />
-	<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap" rel="stylesheet">	
-	<script>
-		const html = document.getElementsByTagName("html")[0];
-		var localStorageDark = JSON.parse(localStorage.getItem("dark"));
-		if (localStorageDark) {
-			html.setAttribute("class", "dark");
-		}
-	</script>
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="robots" content="index,follow"/>
+		<title>{{ title }}</title>
+		<meta name="description" content="{% if description -%}{{ description }}{% elif (excerpt) -%}{{ excerpt }}{% elif (postExcerpt) -%}{{ postExcerpt | trim }}{% elif (learnExcerpt) -%}{{ learnExcerpt | trim }}{% else -%}{{ page.url | log }}{% endif -%}"/>
+		<link rel="canonical" href="{{ page.url }}"/>
+		<link rel="icon" href="{{ '/img/favicon/favicon-32x32.png' | url }}"/>
+		<meta name="keywords" content="{% if keywords -%}{{ keywords }}{% endif %}"/>
+		<meta name="author" content="Amber Wilson"/>
+		<meta name="publisher" content="Amber Wilson"/>
+		<meta name="copyright" content="Amber Wilson"/>
+		<meta name="DC.Title" content="{{ title }}"/>
+		<meta name="DC.Creator" content="Amber Wilson"/>
+		<meta name="DC.Rights" content="Amber Wilson"/>
+		<meta name="DC.Publisher" content="Amber Wilson"/>
+		<meta name="DC.Description" content="{% if description -%}{{ description }}{% elif (excerpt) -%}{{ excerpt }}{% elif (postExcerpt) -%}{{ postExcerpt | trim }}{% elif (learnExcerpt) -%}{{ learnExcerpt | trim }}{% endif -%}"/>
+		<meta property="og:title" content="All posts"/>
+		<meta property="og:type" content="website"/>
+		<meta property="og:description" content="{% if description -%}{{ description }}{% elif (excerpt) -%}{{ excerpt }}{% elif (postExcerpt) -%}{{ postExcerpt | trim }}{% elif (learnExcerpt) -%}{{ learnExcerpt | trim }}{% endif -%}"/>
+		<meta property="og:image" content="https://amberwilson.co.uk/favicon.png"/>
+		<meta property="og:url" content="{{ page.url }}"/>
+		<meta itemProp="name" content="{{ title }}"/>
+		<meta itemProp="description" content="{% if description -%}{{ description }}{% elif (excerpt) -%}{{ excerpt }}{% elif (postExcerpt) -%}{{ postExcerpt | trim }}{% elif (learnExcerpt) -%}{{ learnExcerpt | trim }}{% endif -%}"/>
+		<meta name="twitter:card" content="summary"/>
+		<meta name="twitter:image" property="og:image" content="https://amberwilson.co.uk/favicon.png"/>
+		<meta name="twitter:site" content="@ambrwlsn90"/>
+		<meta name="twitter:site:id" content="790735158"/>
+		<meta name="twitter:creator" content="@ambrwlsn90"/>
+		<meta name="twitter:creator:id" content="790735158"/>
+		<meta name="twitter:url" property="og:url" content="{{ page.url }}"/>
+		<meta name="twitter:title" property="og:title" content="{{ title }}"/>
+		<meta name="twitter:description" property="og:description" content="{% if description -%}{{ description }}{% elif (excerpt) -%}{{ excerpt }}{% elif (postExcerpt) -%}{{ postExcerpt | trim }}{% elif (learnExcerpt) -%}{{ learnExcerpt | trim }}{% endif -%}"/>
+		<link rel="apple-touch-icon" sizes="180x180" href="{{ '/img/favicon/apple-touch-icon.png' | url }}">
+		<link rel="icon" type="image/png" sizes="32x32" href="{{ '/img/favicon/favicon-32x32.png' | url }}">
+		<link rel="icon" type="image/png" sizes="16x16" href="{{ '/img/favicon/favicon-16x16.png' | url }}">
+		<link rel="preload" as="font" href="/fonts/rubik-v11-latin-regular.woff2" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" as="font" href="/fonts/merriweather-v22-latin-regular.woff2" type="font/woff2" crossorigin="anonymous">
+		<link rel="stylesheet" href="{{ '/css/styles.css' | url }}"/>
+		<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400&display=swap" rel="stylesheet">
+		<script>
+			const html = document.getElementsByTagName("html")[0];
+			var localStorageDark = JSON.parse(localStorage.getItem("dark"));
+			if (localStorageDark) {
+				html.setAttribute("class", "dark");
+			}
+		</script>
+	</head>
 
-<body>
+	<body>
 
-	<a class="skip-to-content-link" href="#main">Skip to main content</a>	
-	<nav id="main-nav">
-		<a class="nav-logo-link" href="/">{{ logoSVG() }}</a>
-		<a class="nav-blog-link" href="{{ '/blog' | url }}">Blog</a>	
-		<a href="{{ '/learn' | url }}">Learn</a>
-		<a href="{{ '/read' | url }}">Read</a>
-		<a href="{{ '/projects' | url }}">Projects</a>
-		<a href="{{ '/about' | url }}">About</a>
-		<a href="{{ '/cv' | url }}">CV</a>
-	</nav>
+		<a class="skip-to-content-link" href="#main">Skip to main content</a>
+		<nav id="main-nav">
+			<a class="nav-logo-link" href="/">{{ logoSVG() }}</a>
+			<a class="nav-blog-link {{ 'active' if '/blog' in page.url }}" href="{{ '/blog' | url }}">Blog</a>
+			<a class="{{ 'active' if '/learn' in page.url }}" href="{{ '/learn' | url }}">Learn</a>
+			<a class="{{ 'active' if '/read' in page.url }}" href="{{ '/read' | url }}">Read</a>
+			<a class="{{ 'active' if '/projects' in page.url }}" href="{{ '/projects' | url }}">Projects</a>
+			<a class="{{ 'active' if '/about' in page.url }}" href="{{ '/about' | url }}">About</a>
+			<a class="{{ 'active' if '/cv' in page.url }}" href="{{ '/cv' | url }}">CV</a>
+		</nav>
 
-	<main id="main">
-		{{ content | safe }}
-	</main>
+		<main id="main">
+			{{ content | safe }}
+		</main>
 
-	<script>
-		const inputMarkup = 
-		`<input type="checkbox" id="dark" name="dark">
+		<script>
+			const inputMarkup = `<input type="checkbox" id="dark" name="dark">
 		<label class="hidden" for="dark">Light and Dark Mode Toggle</label>`
 
-		const navElement = document.getElementById("main-nav");
-		navElement.insertAdjacentHTML('beforeend', inputMarkup);
+			const navElement = document.getElementById("main-nav");
+			navElement.insertAdjacentHTML('beforeend', inputMarkup);
 
-		const element = document.getElementById('dark');
-		if (localStorageDark) {
-			element.checked = true;
-		}
-		element.addEventListener('click', function (event) {
-			if (event.target.checked) {
-				html.setAttribute("class", "dark");
-				localStorage.setItem("dark", element.checked);
-			} else {
-				html.removeAttribute("class");
-				localStorage.removeItem("dark", element.checked);
-				element.checked = false;
+			const element = document.getElementById('dark');
+			if (localStorageDark) {
+				element.checked = true;
 			}
-		}, false);
-	</script>
-</body>
+			element.addEventListener('click', function (event) {
+				if (event.target.checked) {
+					html.setAttribute("class", "dark");
+					localStorage.setItem("dark", element.checked);
+				} else {
+					html.removeAttribute("class");
+					localStorage.removeItem("dark", element.checked);
+					element.checked = false;
+				}
+			}, false);
+		</script>
+	</body>
 
 </html>
