@@ -1,5 +1,5 @@
 ---
-subject: Arrow Functions
+title: Arrow Functions
 number: 2
 postdate: May 2018
 ---

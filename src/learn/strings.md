@@ -1,5 +1,5 @@
 ---
-subject: Strings
+title: Strings
 number: 10
 postdate: June 2018
 ---

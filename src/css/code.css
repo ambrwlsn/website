@@ -127,16 +127,8 @@ pre > code.highlight {
 
 /* Inline code */
 article code {
-  border-radius: 0.3rem;
-  background-color: var(--inlineCodeBackgroundColor);
-  color: var(--inlineCodeColor);
-  padding: var(--spacingXS) var(--spacingXS);
-  font-size: var(--text11);
-}
-
-article code {
-  border-radius: 0.3rem;
-  background-color: var(--inlineCodeBackgroundColor);
+  border-radius: 5px;
+  background-color: var(--secondaryBackgroundColor);
   color: var(--inlineCodeColor);
   padding: var(--spacingXS) var(--spacingXS);
   font-size: var(--text09);
@@ -146,4 +138,9 @@ article code {
   article code {
     font-size: var(--text11);
   }
+}
+
+/* do not give padding to code blocks */
+pre code {
+  padding: 0 !important;
 }

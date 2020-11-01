@@ -1,5 +1,5 @@
 ---
-subject: Pseudo Selectors
+title: Pseudo Selectors
 number: 3
 postdate: May 2018
 ---

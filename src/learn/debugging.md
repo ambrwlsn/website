@@ -1,5 +1,5 @@
 ---
-subject: Debugging
+title: Debugging
 number: 8
 postdate: June 2018
 ---

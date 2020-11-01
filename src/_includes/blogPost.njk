@@ -1,14 +1,13 @@
 ---
 layout: main.njk
 ---
-
 <div class="blog-post-wrapper">
   <h1 class="blog-post-title">{{ title }}</h1>
   <p class="blog-post-date">{{ date | readableBlogPostDate }}</p>
   <p>{{ content | emojiReadTime | safe }}</p>
 
   <article class="blog-post">
-  {{ content | safe }}
+    {{ content | safe }}
   </article>
 
   <hr>

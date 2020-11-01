@@ -1,5 +1,5 @@
 ---
-subject: Object Literals
+title: Object Literals
 number: 13
 postdate: July 2018
 ---

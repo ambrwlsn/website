@@ -1,15 +1,16 @@
 ---
 layout: main.njk
 ---
+
 <div class="learn-post-wrapper">
-    <h1>{{ subject }}</h1>
+    <h1>{{ title }}</h1>
     <article>{{ content | safe }}</article>
     <hr>
     <ul>
         {%- set nextLearnPost = collections.learn | getNextCollectionItem(page) %}
-        {%- if nextLearnPost %}<li>Next: <a href="{{ nextLearnPost.url | url }}">{{ nextLearnPost.data.subject }}</a></li>{% endif %}
+        {%- if nextLearnPost %}<li>Next: <a href="{{ nextLearnPost.url | url }}">{{ nextLearnPost.data.title }}</a></li>{% endif %}
         {%- set previousLearnPost = collections.learn | getPreviousCollectionItem(page) %}
-        {%- if previousLearnPost %}<li>Previous: <a href="{{ previousLearnPost.url | url }}">{{ previousLearnPost.data.subject }}</a></li>{% endif %}
+        {%- if previousLearnPost %}<li>Previous: <a href="{{ previousLearnPost.url | url }}">{{ previousLearnPost.data.title }}</a></li>{% endif %}
     </ul>
 </div>
 

@@ -22,12 +22,10 @@
   --text-color-dark-mode: #ffffff;
   --inline-code-color-light-mode: #1a1a1a;
   --inline-code-color-dark-mode: #e8e8e8;
-  --inline-code-background-color-light-mode: #cccccc;
-  --inline-code-background-color-dark-mode: rgba(249, 248, 244, 0.17);
   --background-color-light-mode: #ffffff;
   --background-color-dark-mode: #191b1b;
   --secondary-background-color-light-mode: #d4e9ff;
-  --secondary-background-color-dark-mode: #23399b;
+  --secondary-background-color-dark-mode: #2d3e88;
   --blockquote-background-color-light-mode: #e9ebf3;
   --blockquote-background-color-dark-mode: #33374c;
   --link-color-light-mode: #7d39a4;
@@ -87,7 +85,6 @@
   html {
     --textColor: var(--text-color-light-mode);
     --inlineCodeColor: var(--inline-code-color-light-mode);
-    --inlineCodeBackgroundColor: var(--inline-code-background-color-light-mode);
     --linkColor: var(--link-color-light-mode);
     --linkHoverColor: var(--link-hover-color-light-mode);
     --backgroundColor: var(--background-color-light-mode);
@@ -103,7 +100,6 @@
   html {
     --textColor: var(--text-color-dark-mode);
     --inlineCodeColor: var(--inline-code-color-dark-mode);
-    --inlineCodeBackgroundColor: var(--inline-code-background-color-dark-mode);
     --linkColor: var(--link-color-dark-mode);
     --linkHoverColor: var(--link-hover-color-dark-mode);
     --backgroundColor: var(--background-color-dark-mode);
@@ -118,7 +114,6 @@
 html {
   --textColor: var(--text-color-light-mode);
   --inlineCodeColor: var(--inline-code-color-light-mode);
-  --inlineCodeBackgroundColor: var(--inline-code-background-color-light-mode);
   --linkColor: var(--link-color-light-mode);
   --linkHoverColor: var(--link-hover-color-light-mode);
   --backgroundColor: var(--background-color-light-mode);
@@ -132,7 +127,6 @@ html {
 .dark {
   --textColor: var(--text-color-dark-mode);
   --inlineCodeColor: var(--inline-code-color-dark-mode);
-  --inlineCodeBackgroundColor: var(--inline-code-background-color-dark-mode);
   --linkColor: var(--link-color-dark-mode);
   --linkHoverColor: var(--link-hover-color-dark-mode);
   --backgroundColor: var(--background-color-dark-mode);

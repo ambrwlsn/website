@@ -1,5 +1,5 @@
 ---
-subject: JSON-LD
+title: JSON-LD
 number: 6
 postdate: May 2018
 ---

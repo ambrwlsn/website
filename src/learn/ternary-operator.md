@@ -1,5 +1,5 @@
 ---
-subject: Ternary Operator
+title: Ternary Operator
 number: 14
 postdate: July 2018
 ---

@@ -1,15 +1,16 @@
 ---
-title: Learning Nuggets
+title: Learn
 layout: main.njk
+description: These are mini-posts on things I learn as a developer!
 ---
 
 <div class="learn-wrapper">
-    <h1 class="learn-title">Knowledge Nuggets 💛</h1>
-    <p class="learn-introduction">Here I will document handy nuggets of knowledge on what I <strong>learn</strong> in my journey as a developer. Enjoy!</p>
+    <h1 class="learn-title">Learn</h1>
+    <p class="learn-introduction">These are mini-posts on things I learn as a developer!</p>
     <ul class="learn-list">
     {% for p in collections.learn | learnSort %}
     <li>
-        <a href="{{ p.url }}">{{ p.data.subject }}</a>
+        <a href="{{ p.url }}">{{ p.data.title }}</a>
         <span class="learn-post-dates">{{ p.data.postdate }}</span>  
     </li>
     {% endfor %}

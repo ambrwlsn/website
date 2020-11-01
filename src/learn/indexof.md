@@ -1,5 +1,5 @@
 ---
-subject: indexOf
+title: indexOf
 number: 16
 postdate: June 2019
 ---

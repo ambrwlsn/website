@@ -1,5 +1,5 @@
 ---
-subject: Types
+title: Types
 number: 18
 postdate: July 2019
 ---

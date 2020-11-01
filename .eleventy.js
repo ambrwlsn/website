@@ -5,6 +5,11 @@ const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const excerpts = require('./helpers/excerpts');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const { exec } = require('child_process');
+var nunjucks = require('nunjucks');
+var env = new nunjucks.Environment(null);
+env.addGlobal('variable', 'value');
+
+var provision_uri = env.getGlobal('variable', 'value');
 
 const MARKDOWN_OPTIONS = {
   html: true,
@@ -91,6 +96,7 @@ module.exports = function(eleventyConfig, options) {
     return collection.getFilteredByGlob('src/learn/*.md');
   });
 
+
   eleventyConfig.setFrontMatterParsingOptions({
     excerpt: true,
     // Optional, default is "---"
@@ -104,6 +110,10 @@ module.exports = function(eleventyConfig, options) {
     return collection.sort(function(a, b) {
       return b.data.number - a.data.number;
     });
+  });
+
+  eleventyConfig.addFilter('trim', function(value) {
+    return value.trim();
   });
 
   // https://www.11ty.dev/docs/quicktips/tag-pages/

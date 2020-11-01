@@ -106,7 +106,6 @@ article blockquote p {
 
 @media only screen and (min-width: 800px) {
   .read-wrapper {
-    width: 800px;
     margin: 0 auto;
   }
 }
@@ -139,9 +138,14 @@ article blockquote p {
 }
 
 @media only screen and (min-width: 686px) {
+  .blog-wrapper,
   .blog-post-wrapper,
+  .read-wrapper,
+  .learn-wrapper,
   .learn-post-wrapper,
-  .words-wrapper {
+  .words-wrapper,
+  .about-wrapper,
+  .cv-wrapper {
     max-width: 45rem;
   }
 }
@@ -216,8 +220,9 @@ article blockquote p {
 }
 
 @media only screen and (min-width: 686px) {
-  .blog-list-wrapper {
-    max-width: 45rem;
+  .blog-list-wrapper,
+  .learn-wrapper {
+    width: 45rem;
   }
 }
 
@@ -844,3 +849,7 @@ figure img {
 /**
     * End of word page styles
     */
+
+.active {
+  text-decoration-color: var(--funkyBorder);
+}

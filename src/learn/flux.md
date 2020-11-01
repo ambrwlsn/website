@@ -1,5 +1,5 @@
 ---
-subject: Flux
+title: Flux
 number: 5
 postdate: May 2018
 ---

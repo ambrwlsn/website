@@ -1,5 +1,5 @@
 ---
-subject: CSS Layout
+title: CSS Layout
 number: 7
 postdate: June 2018
 ---

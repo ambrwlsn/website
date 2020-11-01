@@ -1,5 +1,5 @@
 ---
-subject: Array Prototype Methods
+title: Array Prototype Methods
 number: 15
 postdate: July 2018
 ---

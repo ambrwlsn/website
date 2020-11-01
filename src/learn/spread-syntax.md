@@ -1,5 +1,5 @@
 ---
-subject: Spread Syntax
+title: Spread Syntax
 number: 21
 postdate: March 2020
 ---

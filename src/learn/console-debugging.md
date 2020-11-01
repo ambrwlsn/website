@@ -1,5 +1,5 @@
 ---
-subject: Console debugging
+title: Console debugging
 number: 19
 postdate: July 2019
 ---
