@@ -2,46 +2,61 @@
 title: Amber's Site 
 eleventyExcludeFromCollections: true
 description: Hi, I'm Amber, welcome to my site!
---- 
-{% from "macros/githubIconSVG.njk" import githubIconSVG %} 
+---
+{% from "macros/githubIconSVG.njk" import githubIconSVG %}
 {% from "macros/twitterIconSVG.njk" import twitterIconSVG %}
 {% from "macros/linkedInIconSVG.njk" import linkedInIconSVG %}
 
-<div class="homepage-info">
-    <img class="homepage-avatar" src="/img/avatar.png" alt="Digitally-drawn avatar of Amber" />
-    <h1 class="homepage-title">Hi, I'm Amber, welcome to my site!</h1>
-</div>
+<div class="homepage-wrapper">
+    <div class="homepage-info">
+        <img class="homepage-avatar" src="/img/avatar.png" alt="Digitally-drawn avatar of Amber"/>
+        <h1 class="homepage-title">Hi, I'm Amber, welcome to my site!</h1>
+    </div>
 
-<h2 class="homepage-description">Latest blog posts</h2> 
+    <h2 class="homepage-description">Latest blog posts</h2>
 
-<ul class="recent-posts-list" role="list">
-    {% for p in collections.posts | reverse | limit(3) %}
-    <li>
-        <a class="recent-posts-list-item-title" href="{{ p.url }}">{{ p.data.title }}</a>
-        <p><time class="recent-posts-list-time">{{ p.data.date | readableBlogListDate }}</time></p>
-        <p class="recent-posts-list-excerpts">        
-            {% if p.data.excerpt %}
-            {{ p.data.excerpt | toHTML | safe }}…
+    <ul class="recent-posts-list" role="list">
+        {% for p in collections.posts | reverse | limit(3) %}
+            <li>
+                <a class="recent-posts-list-item-title" href="{{ p.url }}">{{ p.data.title }}</a>
+                <p>
+                    <time class="recent-posts-list-time">{{ p.data.date | readableBlogListDate }}</time>
+                </p>
+                <p class="recent-posts-list-excerpts">
+                    {% if p.data.excerpt %}
+                        {{ p.data.excerpt | toHTML | safe }}…
             {% else %}
-            {{ p.templateContent | getExcerpt }}
-            {% endif %}
-        </p>
-    </li>
-    {% endfor %}
-</ul>
+                        {{ p.templateContent | getExcerpt }}
+                    {% endif %}
+                </p>
+                <p class="tags recent-blog-list-tags">
+                    {% for tag in p.data.tags %}
+                        {%- if collections.tagList.indexOf(tag) != -1 -%}
+                            {% set tagUrl %}/tags/{{ tag }}/{%endset %}
+                            <a href="{{ tagUrl | url }}">{{ tag }}</a>
+                        {%- endif -%}
+                    {% endfor %}
+                </p>
+            </li>
+        {% endfor %}
+    </ul>
 
-<p class="read-more-link">
-    <a href="blog">Read more<span class="read-more-arrow">&nbsp;&#8594;</span></a>
-</p>
+    <p class="read-more-link">
+        <a href="blog">Read more<span class="read-more-arrow">&nbsp;&#8594;</span></a>
+    </p>
 
-<p class="find-me-on-links">
-    <a href="https://github.com/ambrwlsn">
-        {{ githubIconSVG() }}
-    </a>
-    <a href="https://twitter.com/ambrwlsn90">
-        {{ twitterIconSVG() }}
-    </a>
-    <a href="https://www.linkedin.com/in/ambrwlsn90/">
-        {{ linkedInIconSVG() }}
-    </a>
-</p>
+    <p class="find-me-on-links">
+        <a href="https://github.com/ambrwlsn">
+            {{ githubIconSVG() }}
+        </a>
+        <a href="https://twitter.com/ambrwlsn90">
+            {{ twitterIconSVG() }}
+        </a>
+        <a href="https://www.linkedin.com/in/ambrwlsn90/">
+            {{ linkedInIconSVG() }}
+        </a>
+    </p>
+    <p class="made-with">
+    Made in Berlin&nbsp;<span role='img' aria-label="German flag emoji">🇩🇪</span>with&nbsp;<a href="https://www.11ty.dev/">Eleventy</a>&nbsp;and hosted on&nbsp;<a href="https://www.netlify.com/">Netlify</a>
+    </p>
+</div>

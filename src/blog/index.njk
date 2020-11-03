@@ -19,8 +19,7 @@ description: These are all the blog posts I've written since I started web devel
         {% else %}
           <p class="blog-list-excerpt">{{ p.templateContent | getExcerpt }}</p>
         {% endif %} 
-      </li>
-      <p class="tags blog-list-tags">
+              <p class="tags blog-list-tags">
         {% for tag in p.data.tags %} 
           {%- if collections.tagList.indexOf(tag) != -1 -%} 
           {% set tagUrl %}/tags/{{ tag }}/{%endset %}
@@ -28,6 +27,7 @@ description: These are all the blog posts I've written since I started web devel
           {%- endif -%} 
         {% endfor %}
       </p>
+      </li>
     {% endfor %}
   </ul>
 </div>
