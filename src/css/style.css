@@ -129,7 +129,8 @@ article blockquote p {
   margin-bottom: var(--spacingM);
 }
 
-.read-wrapper h2, .cv-wrapper h2 {
+.read-wrapper h2,
+.cv-wrapper h2 {
   font-weight: 500;
   margin-bottom: var(--spacingM);
 }
@@ -144,7 +145,7 @@ article blockquote p {
 
 .cv-wrapper ul {
   font-weight: 300;
-  font-size: var(--text08);
+  font-size: var(--text09);
   line-height: 1.8;
   margin-top: 0;
   font-family: var(--fontSerif);
@@ -155,11 +156,11 @@ article blockquote p {
 }
 
 .cv-item {
-  width:100%; 
+  width: 100%;
   height: auto;
-  display: flex; 
+  display: flex;
   flex-direction: column;
-  align-items: flex-start; 
+  align-items: flex-start;
   margin-bottom: var(--spacingS);
   position: relative;
 }
@@ -167,30 +168,12 @@ article blockquote p {
 @media only screen and (min-width: 900px) {
   .cv-item {
     flex-direction: row;
-    align-items: flex-start; 
+    align-items: flex-start;
     margin-bottom: var(--spacingXXL);
   }
 }
 
-.cv-item:before {
-  content: "";
-  position: absolute;
-  top: 175px;
-  left: 0;
-  bottom: 20px;
-  width: 3px;
-  background-color: var(--textColor);
-}
-
-@media only screen and (min-width: 900px) {
-.cv-item:not(:last-of-type):before {
-    top: 160px;
-    left: 75px;
-    bottom: -45px;
-  }
-}
-
-@media only screen and (min-width: 900px) {
+@media only screen and (max-width: 900px) {
   .cv-item:before {
     content: "";
     position: absolute;
@@ -202,11 +185,22 @@ article blockquote p {
   }
 }
 
+@media only screen and (min-width: 900px) {
+  .cv-item:not(:last-of-type):before {
+    content: "";
+    position: absolute;
+    top: 160px;
+    left: 75px;
+    bottom: -45px;
+    width: 3px;
+    background-color: var(--textColor);
+  }
+}
+
 .cv-description-date-location {
   color: gray;
-  margin-bottom: var(--spacingXS);
+  margin-bottom: var(--spacingS);
   display: block;
-  font-size: var(--text08);
   font-family: var(--fontSansSerif);
 }
 
@@ -215,8 +209,8 @@ article blockquote p {
     margin-left: 0;
     width: 100%;
     margin-top: -0.33rem;
-    }
   }
+}
 
 .cv-details {
   margin-left: var(--spacingL);
@@ -259,13 +253,15 @@ article blockquote p {
   background-color: #36a28b;
 }
 
-.unit-logo, .edenspiekermann-logo {
+.unit-logo,
+.edenspiekermann-logo {
   padding: var(--spacingM);
 }
 
 .cv-description-title {
   font-family: var(--fontSansSerif);
   text-transform: uppercase;
+  font-size: var(--text11);
 }
 
 .blog-post-wrapper,
@@ -281,6 +277,7 @@ article blockquote p {
 }
 
 @media only screen and (min-width: 686px) {
+
   .blog-wrapper,
   .blog-list-wrapper,
   .blog-post-wrapper,
@@ -479,7 +476,8 @@ article blockquote p {
   padding: 0.2rem;
 }
 
-.about-wrapper p, .cv-wrapper p {
+.about-wrapper p,
+.cv-wrapper p {
   font-family: var(--fontSerif);
   margin-top: var(--spacingM);
   font-weight: 300;
@@ -528,12 +526,11 @@ article blockquote p {
   width: auto;
   height: auto;
   margin-bottom: var(--spacingXL);
-  grid-template-columns: 1fr var(--spacingM) 1fr var(--spacingM) 1fr
-    var(--spacingM) 1fr;
+  grid-template-columns: 1fr var(--spacingM) 1fr var(--spacingM) 1fr var(--spacingM) 1fr;
   grid-template-rows: 13rem var(--spacingM) 0.5fr var(--spacingM) 0.5fr;
   grid-template-areas: 'review review review review review review review'
-    '. . . . . . .' 'method method method . picture picture picture'
-    '. . . . . . .' 'threewords threewords threewords . length length length';
+    '. . . . . . .''method method method . picture picture picture'
+    '. . . . . . .''threewords threewords threewords . length length length';
 }
 
 @media only screen and (min-width: 800px) {
@@ -541,12 +538,11 @@ article blockquote p {
     width: 800px;
     height: 600px;
     margin-bottom: var(--spacingXXXL);
-    grid-template-columns: 1fr var(--spacingM) 1fr var(--spacingM) 1fr
-      var(--spacingM) 1fr;
+    grid-template-columns: 1fr var(--spacingM) 1fr var(--spacingM) 1fr var(--spacingM) 1fr;
     grid-template-rows: 1fr var(--spacingM) 1fr var(--spacingM) 1fr;
     grid-template-areas: 'review review review . length length length'
-      'review review review . . . .' 'review review review . . . picture'
-      '. . . . . . picture' 'method . threewords threewords threewords . .';
+      'review review review . . . .''review review review . . . picture'
+      '. . . . . . picture''method . threewords threewords threewords . .';
   }
 }
 
@@ -874,13 +870,15 @@ figure img {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
+
   .captions-two-images {
-    grid-template-areas: 'a b' 'c d';
+    grid-template-areas: 'a b''c d';
   }
 
   .image-grid-two-images .item2 {
     grid-area: c;
   }
+
   .image-grid-two-images .item4 {
     grid-area: d;
   }
@@ -908,6 +906,7 @@ figure img {
 }
 
 @media screen and (min-width: 686px) {
+
   .bubble,
   .bubbley {
     font-size: var(--text09);
