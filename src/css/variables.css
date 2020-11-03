@@ -30,12 +30,16 @@
 :root {
   --text-color-light-mode: #000000;
   --text-color-dark-mode: #ffffff;
+  --secondary-text-color-light-mode: #6d6767;
+  --secondary-text-color-dark-mode: #b8aeae;
   --inline-code-color-light-mode: #1a1a1a;
   --inline-code-color-dark-mode: #e8e8e8;
+  --inline-code-background-color-light-mode: #c3e0fc;
+  --inline-code-background-color-dark-mode: #0b2c69;
   --background-color-light-mode: #ffffff;
   --background-color-dark-mode: #191b1b;
-  --secondary-background-color-light-mode: #d4e9ff;
-  --secondary-background-color-dark-mode: #2d3e88;
+  --secondary-background-color-light-mode: #f1f6ff;
+  --secondary-background-color-dark-mode: #141640;
   --blockquote-background-color-light-mode: #e9ebf3;
   --blockquote-background-color-dark-mode: #33374c;
   --link-color-light-mode: #7d39a4;
@@ -43,16 +47,12 @@
   --link-hover-color-light-mode: #970a7b;
   --link-hover-color-dark-mode: #f758d7;
   --blog-post-preview-shadow-light-mode: 8px 10px 8px -5px rgba(150, 150, 150, 0.5);
-  --blog-post-preview-light-mode: radial-gradient(
-    circle at 100% 80%,
-    #f9e8f0 0%,
-    #b3cff1 100%
-  );
-  --blog-post-preview-dark-mode: radial-gradient(
-    circle at 100% 80%,
-    #0e1c6a 0%,
-    #673ab7 100%
-  );
+  --blog-post-preview-light-mode: radial-gradient(circle at 100% 80%,
+      #f9e8f0 0%,
+      #b3cff1 100%);
+  --blog-post-preview-dark-mode: radial-gradient(circle at 100% 80%,
+      #0e1c6a 0%,
+      #673ab7 100%);
   --reviewBorderRadius: 10px;
   --readText: #131212;
   --funkyBorder: #fa0dc7;
@@ -66,7 +66,7 @@
   --text13: 1.3rem;
   --text12: 1.2rem;
   --text11: 1.1rem;
-  --text1:  1.0rem;
+  --text1: 1.0rem;
   --text09: 0.9rem;
   --text08: 0.8rem;
   --text07: 0.7rem;
@@ -79,6 +79,7 @@
   --spacingM: 1rem;
   --spacingS: 0.5rem;
   --spacingXS: 0.2rem;
+  --spacingXXS: 0.1rem;
 
   --fontSansSerif: 'Rubik', Arial, Helvetica, sans-serif;
   --fontSerif: 'Merriweather', Georgia, serif;
@@ -94,7 +95,9 @@
 @media screen and (prefers-color-scheme: light) {
   html {
     --textColor: var(--text-color-light-mode);
+    --secondaryTextColor: var(--secondary-text-color-light-mode);
     --inlineCodeColor: var(--inline-code-color-light-mode);
+    --inlineCodeBackgroundColor: var(--inline-code-background-color-light-mode);
     --linkColor: var(--link-color-light-mode);
     --linkHoverColor: var(--link-hover-color-light-mode);
     --backgroundColor: var(--background-color-light-mode);
@@ -109,7 +112,9 @@
 @media screen and (prefers-color-scheme: dark) {
   html {
     --textColor: var(--text-color-dark-mode);
+    --secondaryTextColor: var(--secondary-text-color-dark-mode);
     --inlineCodeColor: var(--inline-code-color-dark-mode);
+    --inlineCodeBackgroundColor: var(--inline-code-background-color-dark-mode);
     --linkColor: var(--link-color-dark-mode);
     --linkHoverColor: var(--link-hover-color-dark-mode);
     --backgroundColor: var(--background-color-dark-mode);
@@ -123,7 +128,9 @@
 
 html {
   --textColor: var(--text-color-light-mode);
+  --secondaryTextColor: var(--secondary-text-color-light-mode);
   --inlineCodeColor: var(--inline-code-color-light-mode);
+  --inlineCodeBackgroundColor: var(--inline-code-background-color-light-mode);
   --linkColor: var(--link-color-light-mode);
   --linkHoverColor: var(--link-hover-color-light-mode);
   --backgroundColor: var(--background-color-light-mode);
@@ -136,7 +143,9 @@ html {
 
 .dark {
   --textColor: var(--text-color-dark-mode);
+  --secondaryTextColor: var(--secondary-text-color-dark-mode);
   --inlineCodeColor: var(--inline-code-color-dark-mode);
+  --inlineCodeBackgroundColor: var(--inline-code-background-color-dark-mode);
   --linkColor: var(--link-color-dark-mode);
   --linkHoverColor: var(--link-hover-color-dark-mode);
   --backgroundColor: var(--background-color-dark-mode);

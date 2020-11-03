@@ -7,7 +7,7 @@ postdate: June 2018
 - A sequence containing some letters, numbers or symbols.
 - Have available methods and properties.
 - Can be stored in variables.
-- Sit between either single quotes (`' '`), double quotes (`" "`), or backticks ( ``).
+- Sit between either single quotes (`' '`), double quotes (`" "`), or backticks (``` `` ```).
 - Can be concatenated (stuck together) with the `+` operator, or with backticks (template strings) in ES6.
 - Template strings, or template literals, can take any valid JavaScript expression, allowing dynamic strings.
 - Can contain special characters, such as quotation marks, as long as they are escaped - e.g. `"She'\ll be coming '\round the mountain when she comes"`.

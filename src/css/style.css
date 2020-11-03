@@ -104,6 +104,7 @@ article blockquote p {
   margin-top: var(--spacingXL);
   display: flex;
   align-items: center;
+  flex-flow: row wrap;
   font-size: var(--text08);
 }
 
@@ -181,7 +182,7 @@ article blockquote p {
     left: 0;
     bottom: 20px;
     width: 3px;
-    background-color: var(--textColor);
+    background-color: var(--secondaryTextColor);
   }
 }
 
@@ -193,12 +194,12 @@ article blockquote p {
     left: 75px;
     bottom: -45px;
     width: 3px;
-    background-color: var(--textColor);
+    background-color: var(--secondaryTextColor);
   }
 }
 
 .cv-description-date-location {
-  color: gray;
+  color: var(--secondaryTextColor);
   margin-bottom: var(--spacingS);
   display: block;
   font-family: var(--fontSansSerif);
@@ -240,13 +241,7 @@ article blockquote p {
   height: 150px;
   background-color: #ffffff;
   margin-bottom: var(--spacingM);
-  border: 1px solid #cccccc;
-}
-
-@media only screen and (min-width: 900px) {
-  .cv-image {
-    align-items: flex-start;
-  }
+  border: 1px solid var(--secondaryTextColor);
 }
 
 .n26-logo {
@@ -318,10 +313,10 @@ article blockquote p {
 }
 
 .learn-post-dates {
-  font-size: var(--text07);
+  font-size: var(--text08);
   font-family: var(--fontSerif);
   font-weight: 300;
-  opacity: 0.7;
+  color: var(--secondaryTextColor);
 }
 
 .learn-list {
@@ -376,15 +371,19 @@ article blockquote p {
   outline: none;
 }
 
-.all-tags-link {
+.all-tags-link,
+.rss-feed-link {
   font-weight: bold;
 }
 
-/* @media only screen and (min-width: 686px) {
-  .blog-list li {
-    width: 75%;
-  }
-} */
+.rss-feed-text {
+  display: inline-flex;
+}
+
+.rss-feed-text img {
+  margin-left: var(--spacingXS);
+  margin-bottom: var(--spacingXXS);
+}
 
 .blog-list-post-title {
   font-size: var(--text15);
@@ -428,7 +427,7 @@ article blockquote p {
 
 .tags a {
   display: inline-block;
-  padding: var(--spacingXS) var(--spacingS);
+  padding: var(--spacingXXS) var(--spacingXS);
   background-color: var(--secondaryBackgroundColor);
   font-size: var(--text09);
   margin-bottom: var(--spacingXS);

@@ -7,7 +7,7 @@ description: These are all the blog posts I've written since I started web devel
 <div class="blog-list-wrapper">
   <h1 class="blog-list-title">{{ title }}</h1>
     <p class="blog-introduction">
-      These are all the blog posts I've written since I started web development back in 2017. Have a browse, see <a class="all-tags-link" href="/tags">all tags</a> here, and add my rss feed!
+      These are all the blog posts I've written since I started web development back in 2017. Have a browse, see <a class="all-tags-link" href="/tags">all tags</a> here, and add <span class="rss-feed-text"><a class="rss-feed-link" href="/rss.xml">my RSS feed</a>!<img src="/img/rss-feed-icon.svg" alt="rss feed icon"/></span>
     </p>
   <ul class="blog-list">
     {% for p in collections.posts | reverse %}
