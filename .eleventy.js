@@ -23,11 +23,13 @@ module.exports = function(eleventyConfig, options) {
   eleventyConfig.on('afterBuild', () => {
     exec('npm run concat');
   });
-  eleventyConfig.addPassthroughCopy('./src/blog/*/img/*');
+  eleventyConfig.addPassthroughCopy('./src/blog/*/img/**');
   eleventyConfig.addPassthroughCopy('./src/learn/img/**');
-  eleventyConfig.addPassthroughCopy('./src/read/img/*');
+  eleventyConfig.addPassthroughCopy('./src/read/img/**');
+  eleventyConfig.addPassthroughCopy('./src/cv/img/**');
+  eleventyConfig.addPassthroughCopy('./src/cv/**');
   eleventyConfig.addPassthroughCopy('./src/img/**');
-  eleventyConfig.addPassthroughCopy('./src/fonts/*');
+  eleventyConfig.addPassthroughCopy('./src/fonts/**');
   eleventyConfig.addPassthroughCopy('./src/_redirects');
 
   // Inspired by https://github.com/5t3ph/eleventy-plugin-emoji-readtime
