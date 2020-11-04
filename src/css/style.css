@@ -100,6 +100,11 @@ article blockquote p {
   display: inline;
 }
 
+figcaption {
+  font-size: var(--text09);
+  font-family: var(--fontSansSerif);
+}
+
 .made-with {
   margin-top: var(--spacingXL);
   display: flex;
@@ -242,6 +247,10 @@ article blockquote p {
   background-color: #ffffff;
   margin-bottom: var(--spacingM);
   border: 1px solid var(--secondaryTextColor);
+}
+
+.cv-education~p {
+  margin-bottom: var(--spacingM);
 }
 
 .n26-logo {
@@ -476,7 +485,7 @@ article blockquote p {
 }
 
 .about-wrapper p,
-.cv-wrapper p {
+.cv-decription {
   font-family: var(--fontSerif);
   margin-top: var(--spacingM);
   font-weight: 300;
@@ -847,12 +856,6 @@ article blockquote p {
 .image-grid-two-images {
   display: flex;
   flex-direction: column;
-}
-
-.image-grid-two-images .item2,
-.image-grid-two-images .item4 {
-  font-size: var(--text09);
-  font-family: var(--fontSansSerif);
 }
 
 .image-grid-two-images .item2 a,

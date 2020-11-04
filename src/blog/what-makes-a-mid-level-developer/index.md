@@ -4,6 +4,7 @@ date: '2019-10-02'
 tags: [dev-tips, learning, reflection]
 keywords:
   [amber wilson, software engineering, web development, coding, practice]
+excerpt: I was recently asked by more than one junior developer about how to progress to a mid-level developer. As a junior developer looking to move towards a mid role myself
 ---
 
 <figure class="blog-image">
