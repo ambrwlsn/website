@@ -25,6 +25,7 @@ module.exports = function(eleventyConfig, options) {
   });
   eleventyConfig.addPassthroughCopy('./src/blog/*/img/**');
   eleventyConfig.addPassthroughCopy('./src/learn/img/**');
+  eleventyConfig.addPassthroughCopy('./src/projects/img/**');
   eleventyConfig.addPassthroughCopy('./src/read/img/**');
   eleventyConfig.addPassthroughCopy('./src/cv/img/**');
   eleventyConfig.addPassthroughCopy('./src/cv/**');
@@ -111,6 +112,14 @@ module.exports = function(eleventyConfig, options) {
   eleventyConfig.addFilter('learnSort', function(collection) {
     return collection.sort(function(a, b) {
       return b.data.number - a.data.number;
+    });
+  });
+
+  eleventyConfig.addFilter('tagSort', function(collection) {
+    return collection.sort(function(a, b) {
+      if (b > a) return -1;
+      else if (b < a) return 1;
+      else return 0;
     });
   });
 
