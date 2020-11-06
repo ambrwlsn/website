@@ -9,7 +9,7 @@ body {
 main {
   width: 100%;
   padding: var(--spacingS) var(--spacingM);
-  font-family: 'Rubik';
+  font-family: var(--fontSansSerif);
 }
 
 @media only screen and (min-width: 686px) {
@@ -19,7 +19,7 @@ main {
 }
 
 nav a {
-  font-family: 'Rubik';
+  font-family: var(--fontSansSerif);
   font-weight: bold;
 }
 
@@ -28,7 +28,7 @@ a {
 }
 
 a:hover {
-  color: var(--linkHoverColor);
+  color: var(--funkyBorder);
 }
 
 ul {
@@ -311,9 +311,44 @@ figcaption {
 .learn-title,
 .words-title,
 .cv-title,
-.tags-title {
+.tags-title,
+.title {
   font-family: var(--fontSansSerif);
   font-weight: 500;
+}
+
+.project-title,
+.not-found-title {
+  margin: var(--spacingM) 0;
+  font-weight: 500;
+  font-family: var(--fontSansSerif);
+}
+
+.project-image {
+  border: 1px solid var(--secondaryTextColor);
+}
+
+.project-wrapper a {
+  font-family: var(--fontSerif);
+  font-size: var(--text09);
+  font-weight: bold;
+  display: block;
+}
+
+.project-wrapper p {
+  font-family: var(--fontSerif);
+  font-weight: 300;
+  margin: var(--spacingM) 0;
+  font-size: var(--text09);
+  line-height: 1.8;
+}
+
+.not-found-description {
+  font-family: var(--fontSerif);
+  font-weight: 300;
+  margin: var(--spacingM) 0;
+  font-size: var(--text09);
+  line-height: 1.8;
 }
 
 .learn-post-wrapper h2,
@@ -528,7 +563,7 @@ figcaption {
 }
 
 .nav-blog-link {
-  padding-left: var(--spacingM);
+  margin-left: var(--spacingM);
 }
 
 .hidden {
@@ -728,7 +763,7 @@ figcaption {
 .twitter-icon:hover,
 .linkedin-icon:hover,
 .logo:hover {
-  color: var(--linkHoverColor);
+  color: var(--funkyBorder);
 }
 
 /* https://gomakethings.com/full-width-images-with-only-css/ */
@@ -826,6 +861,7 @@ figcaption {
   border-bottom: 2px solid var(--funkyBorder);
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
+  box-shadow: var(--blogPostPreviewCardShadow);
 }
 
 .homepage-info {
