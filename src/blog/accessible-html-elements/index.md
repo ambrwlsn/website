@@ -8,12 +8,8 @@ keywords:
     software engineering,
     web development,
     coding,
-    html,
-    accessibility,
     a11y,
     semantic,
-    resume,
-    cv,
   ]
 ---
 
