@@ -1,17 +1,25 @@
 ---
 title: Learn
 layout: main.njk
-description: This page contains links to mini-posts on things I learn as a developer! My aim is to add at least 100 posts here. Check back regularly for more.
+description: This page contains links to mini-posts on things I learn as a developer. My aim is to add at least 100 posts to this page. I didn't write 100 yet because most posts I begin writing here get too long and become regular blog posts!
 ---
 
-<div class="learn-wrapper">
+<div class="wrapper learn-wrapper">
     <h1 class="learn-title">Learn</h1>
-    <p class="learn-introduction">This page contains links to mini-posts on things I learn as a developer! My aim is to add at least 100 posts here. Check back regularly for more.</p>
+    <p class="learn-introduction">This page contains links to mini-posts on things I learn as a developer. My aim is to add at least 100 posts to this page. I didn't write 100 yet because most posts I begin writing here get too long and become regular blog posts!</p>
     <ul class="learn-list">
         {% for p in collections.learn | learnSort %}
             <li>
                 <a href="{{ p.url }}">{{ p.data.title }}</a>
                 <span class="learn-post-dates">{{ p.data.postdate }}</span>
+                <span class="tags learn-post-tags">
+                    {% for tag in p.data.tags %}
+                        {%- if collections.tagList.indexOf(tag) != -1 -%}
+                            {% set tagUrl %}/tags/{{ tag }}/{%endset %}
+                            <a href="{{ tagUrl | url }}">{{ tag }}</a>
+                        {%- endif -%}
+                    {% endfor %}
+                </span>
             </li>
         {% endfor %}
     </ul>

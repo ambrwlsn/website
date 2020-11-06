@@ -53,13 +53,13 @@
 
 		<a class="skip-to-content-link" href="#main">Skip to main content</a>
 		<nav id="main-nav">
-			<a class="nav-logo-link" href="/" title="back to homepage">{{ logoSVG() }}</a>
-			<a class="nav-blog-link {{ 'active' if '/blog' in page.url }}" href="{{ '/blog' | url }}" aria-label="all of my blog posts">Blog</a>
-			<a class="{{ 'active' if '/learn' in page.url }}" href="{{ '/learn' | url }}" aria-label="small posts on things I've learned">Learn</a>
+			<a class="nav-logo-link" href="/" title="return to homepage">{{ logoSVG() }}</a>
+			<a class="nav-blog-link {{ 'active' if '/blog' in page.url }}" href="{{ '/blog' | url }}">Blog</a>
+			<a class="{{ 'active' if '/learn' in page.url }}" href="{{ '/learn' | url }}">Learn</a>
 			<a class="{{ 'active' if '/read' in page.url }}" href="{{ '/read' | url }}">Read</a>
-			<a class="{{ 'active' if '/projects' in page.url }}" href="{{ '/projects' | url }}"  aria-label="a selection of my projects">Projects</a>
-			<a class="{{ 'active' if '/about' in page.url }}" href="{{ '/about' | url }}" aria-label="more information about me">About</a>
-			<a class="{{ 'active' if '/cv' in page.url }}" href="{{ '/cv' | url }}" aria-label="my CV">CV</a>
+			<a class="{{ 'active' if '/projects' in page.url }}" href="{{ '/projects' | url }}">Projects</a>
+			<a class="{{ 'active' if '/about' in page.url }}" href="{{ '/about' | url }}">About</a>
+			<a class="{{ 'active' if '/cv' in page.url }}" href="{{ '/cv' | url }}">CV</a>
 		</nav>
 
 		<main id="main">

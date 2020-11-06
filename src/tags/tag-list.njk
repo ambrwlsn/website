@@ -3,13 +3,15 @@ permalink: /tags/
 layout: main.njk
 description: This is a list of all tags used on blog posts written by Amber Wilson.
 ---
-<h1>Tags</h1>
+<div class="wrapper tag-list-wrapper">
+  <h1>Tags</h1>
 
-<ul>
-  {% for tag in collections.tagList %}
-    {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-    <li>
-      <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
-    </li>
-  {% endfor %}
-</ul>
+  <ul>
+    {% for tag in collections.tagList %}
+      {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+      <li>
+        <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>

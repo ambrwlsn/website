@@ -2,16 +2,24 @@
 layout: main.njk
 ---
 
-<div class="learn-post-wrapper">
-    <h1>{{ title }}</h1>
-    <article>{{ content | safe }}</article>
-    <hr>
-    <ul>
-        {%- set nextLearnPost = collections.learn | getNextCollectionItem(page) %}
-        {%- if nextLearnPost %}<li>Next: <a href="{{ nextLearnPost.url | url }}">{{ nextLearnPost.data.title }}</a></li>{% endif %}
-        {%- set previousLearnPost = collections.learn | getPreviousCollectionItem(page) %}
-        {%- if previousLearnPost %}<li>Previous: <a href="{{ previousLearnPost.url | url }}">{{ previousLearnPost.data.title }}</a></li>{% endif %}
-    </ul>
+<div class="wrapper learn-post-wrapper">
+  <h1>{{ title }}</h1>
+  <p class="learn-post-date">{{ postdate }}</p>
+  <p>{{ content | emojiReadTime | safe }}</p>
+  <article>{{ content | safe }}</article>
+  <hr>
+  <ul>
+    {%- set nextLearnPost = collections.learn | getNextCollectionItem(page) %}
+    {%- if nextLearnPost %}
+      <li>Next: <a href="{{ nextLearnPost.url | url }}">{{ nextLearnPost.data.title }}</a>
+      </li>
+    {% endif %}
+    {%- set previousLearnPost = collections.learn | getPreviousCollectionItem(page) %}
+    {%- if previousLearnPost %}
+      <li>Previous: <a href="{{ previousLearnPost.url | url }}">{{ previousLearnPost.data.title }}</a>
+      </li>
+    {% endif %}
+  </ul>
 </div>
 
 {# <script type="application/ld+json">
