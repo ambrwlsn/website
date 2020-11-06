@@ -43,9 +43,9 @@
   --tertiary-background-color-dark-mode: #9c2980;
   --blockquote-background-color-light-mode: #e9ebf3;
   --blockquote-background-color-dark-mode: #33374c;
-  --link-color-light-mode: #7d39a4;
+  --link-color-light-mode: #4b0e90;
   --link-color-dark-mode: #ffffff;
-  --link-hover-color-light-mode: #970a7b;
+  --link-hover-color-light-mode: #2b0a79;
   --link-hover-color-dark-mode: #f758d7;
   --blog-post-preview-shadow-light-mode: 8px 10px 8px -5px rgba(150, 150, 150, 0.5);
   --blog-post-preview-light-mode: radial-gradient(circle at 100% 80%,

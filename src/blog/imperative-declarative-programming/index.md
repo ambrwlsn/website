@@ -1,7 +1,7 @@
 ---
 title: Imperative and Declarative Programming
 date: '2019-07-28'
-tags: [dev tips, learning, javascript]
+tags: [dev-tips, learning, javascript]
 keywords: [amber wilson, software engineering, web development, mentoring]
 ---
 

@@ -16,10 +16,10 @@ title: Posts by Amber Wilson tagged with '{{ tag }}'
 description: Posts by Amber Wilson tagged with '{{ tag }}'
 ---
 <div class="wrapper tags-wrapper">
-  <h1 class="tags-title">All posts tagged with “{{ tag }}”</h1>
+  <h1 class="tags-title">Posts tagged with “{{ tag }}”</h1>
   <ul>
     {% set taglist = collections[tag] %}
-    {% for post in taglist | reverse %}
+    {% for post in taglist %}
       <li>
         <a href="{{ post.url | url }}">{{ post.data.title }}</a>
       </li>

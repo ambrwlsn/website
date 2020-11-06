@@ -4,13 +4,15 @@ layout: main.njk
 description: This is a list of all tags used on blog posts written by Amber Wilson.
 ---
 <div class="wrapper tag-list-wrapper">
-  <h1>Tags</h1>
+  <h1 class="tags-title">Tags</h1>
 
-  <ul>
-    {% for tag in collections.tagList %}
+  <ul style="column-width: 200px; font-family: var(--fontSerif); font-size: 0.9rem; font-weight: 300; line-height: 1.8;">
+    {% for tag in collections.tagList | tagSort %}
       {% set tagUrl %}/tags/{{ tag }}/{% endset %}
       <li>
         <a href="{{ tagUrl | url }}" class="post-tag">{{ tag }}</a>
+        {# http://dirtystylus.com/2020/09/01/eleventy-tag-list-sorting-and-post-count/ #}
+        <span>({{ collections[tag].length }})</span>
       </li>
     {% endfor %}
   </ul>
