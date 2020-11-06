@@ -5,18 +5,17 @@
 }
 
 @font-face {
-  font-family: 'Rubik';
-  src: url('/fonts/rubik-v11-latin-900.woff2') format('woff2');
-  font-display: swap;
-  font-weight: bold;
-}
-
-@font-face {
   font-family: 'Merriweather';
   src: url('/fonts/merriweather-v22-latin-regular.woff2') format('woff2');
   font-style: normal;
   font-weight: 400;
   font-display: swap;
+}
+
+@font-face {
+  font-family: 'Rubik';
+  src: url("/fonts/rubik-v11-latin-900.woff2") format('woff2');
+  font-weight: bold;
 }
 
 @font-face {
@@ -89,7 +88,6 @@
   font-size: 112.5%;
   scroll-behavior: smooth;
   word-wrap: break-word;
-  font-family: 'Rubik';
   background: var(--backgroundColor);
   color: var(--textColor);
 }

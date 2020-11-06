@@ -9,12 +9,18 @@ body {
 main {
   width: 100%;
   padding: var(--spacingS) var(--spacingM);
+  font-family: 'Rubik';
 }
 
 @media only screen and (min-width: 686px) {
   main {
     padding: var(--spacingM) var(--spacingL);
   }
+}
+
+nav a {
+  font-family: 'Rubik';
+  font-weight: bold;
 }
 
 a {
