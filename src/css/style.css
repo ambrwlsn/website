@@ -317,6 +317,69 @@ figcaption {
   font-weight: 500;
 }
 
+.tags-post-list li {
+  font-weight: 500;
+  line-height: 1.8;
+}
+
+.project-dad-joke {
+  position: relative;
+  max-width: 380px;
+  height: 200px;
+  background-color: #CEC1CB;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.project-dad-joke-face {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-color: #92694B;
+  border-radius: 100%;
+  bottom: -25px;
+  left: -20px;
+  overflow: hidden;
+}
+
+.project-dad-joke-face::before {
+  content: '';
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+  border: 5px solid transparent;
+  border-top-color: black;
+  right: 30px;
+  top: 32px;
+  transform: rotate(-22deg);
+}
+
+.project-dad-joke-face::after {
+  content: '';
+  position: absolute;
+  width: 55px;
+  height: 55px;
+  background-color: #CA3952;
+  right: -30px;
+  top: 48px;
+  transform: rotate(147deg) skewX(38deg);
+}
+
+.project-dad-joke-title {
+  font-size: var(--text15);
+  margin: var(--spacingS) 0 0 var(--spacingM);
+  display: inline-block;
+  color: #ac2828;
+}
+
+.project-dad-joke-lol {
+  position: absolute;
+  width: 80px;
+  bottom: 10px;
+  right: 10px;
+}
+
 .project-title,
 .not-found-title {
   margin: var(--spacingM) 0;
@@ -730,7 +793,8 @@ figcaption {
   margin-bottom: var(--spacingS);
 }
 
-.read-more-link {
+.read-more-link,
+.back-to-link {
   font-size: var(--text11);
   text-align: center;
   text-decoration: underline;
@@ -739,14 +803,7 @@ figcaption {
 }
 
 .read-more-arrow {
-  vertical-align: middle;
   display: inline-block;
-}
-
-@media only screen and (min-width: 686px) {
-  .read-more-link {
-    text-align: unset;
-  }
 }
 
 .logo {
