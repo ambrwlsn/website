@@ -6,7 +6,7 @@ description: This page contains links to mini-posts on things I learn as a devel
 
 <div class="wrapper learn-wrapper">
     <h1 class="learn-title">Learn</h1>
-    <p class="learn-introduction">This page contains links to mini-posts on things I learn as a developer. My aim is to add at least 100 posts to this page. I didn't write 100 yet because most posts I begin writing here get too long and become regular blog posts!</p>
+    <p class="learn-introduction">This page contains links to mini-posts on things I learn as a developer. There are currently <strong>{{ collections.learn.length }}</strong>. My aim is to add at least 100. I didn't yet because most get too long and become <a href="/blog" class="link-single">regular blog posts</a>!</p>
     <ul class="learn-list">
         {% for p in collections.learn | learnSort %}
             <li>
