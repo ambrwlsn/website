@@ -4,12 +4,50 @@ eleventyExcludeFromCollections: true
 description: Here are a selection of Amber Wilson's favourite projects
 keywords: [projects, developer, JavaScript, api, mvc, local state, empty state, error state]
 ---
-<div class="wrapper project-wrapper">
+<div class="wrapper project-wrapper" style="display: flex; flex-direction: column;">
 
-<h1 class="title">Projects</h1>
-<p>
-These are some projects I did for fun with vanilla JavaScript!
-</p>
+  <h1 class="title">
+    Projects
+  </h1>
+  <p>
+    These are some projects I did for fun with vanilla JavaScript!
+  </p>
 
-<div class="project-dad-joke"><span class="project-dad-joke-title">Dad Jokes Rock</span><div class="project-dad-joke-face"></div><img class="project-dad-joke-lol" src="img/lol.svg" alt=""/></div>
+  <div class="project-item-wrapper">
+
+    <ul class="project-list">
+      <li class="project project-dad-joke">
+        <a href="https://dad-jokes-rock.netlify.app/">
+          <span class="project-title project-dad-joke-title">
+            Dad Jokes Rock
+          </span>
+        </a>
+        <div class="project-dad-joke-face"></div>
+        <img class="project-dad-joke-lol" src="img/lol.svg" alt=""/>
+      </li>
+
+      <li class="project project-recipe-app">
+        <a href="https://mvc-recipes.netlify.app/">
+          <span class="project-title project-recipe-app-title">
+            MVC Recipe App
+          </span>
+        </a>
+        <img class="project-recipe-app-carrot" src="img/carrot.svg" alt=""/>
+        <div class="project-recipe-app-peas"></div>
+      </li>
+
+      <li class="project project-colour-lovahs">
+        <a href="https://github.com/ambrwlsn/colour-lovahs">
+          <span class="project-title project-colour-lovahs-title">
+            Colour Lovahs
+          </span>
+        </a>
+        <div class="project-colour-lovers-pencil"></div>
+        <img class="project-colour-lovahs-squiggle" src="img/squiggle.svg" alt=""/>
+      </li>
+    </ul>
+
+  </div>
+
 </div>
+

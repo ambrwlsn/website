@@ -275,14 +275,14 @@ figcaption {
 }
 
 .wrapper {
-  padding: var(--spacingXL) 0 0 0;
+  padding: var(--spacingXL) 0 var(--spacingM) 0;
 }
 
 .wrapper {
   width: 100%;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 1000px) {
 
   .wrapper {
     margin: 0 auto;
@@ -298,7 +298,7 @@ figcaption {
 }
 
 .homepage-wrapper {
-  padding: var(--spacingXL) 0 0 0;
+  padding: var(--spacingXL) 0 var(--spacingM) 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -322,13 +322,67 @@ figcaption {
   line-height: 1.8;
 }
 
-.project-dad-joke {
-  position: relative;
+.project {
+  margin-bottom: var(--spacingL);
   max-width: 380px;
   height: 200px;
-  background-color: #CEC1CB;
-  border-radius: 15px;
+  position: relative;
+  border-radius: 3px;
   overflow: hidden;
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
+  border-bottom: 3px solid var(--funkyBorder);
+}
+
+.project a {
+  outline: none;
+}
+
+.project a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.project a:hover::after,
+.project a:focus::after {
+  border-right: 2px solid var(--linkHoverColor);
+  border-left: 2px solid var(--linkHoverColor);
+  border-top: 2px solid var(--linkHoverColor);
+  border-bottom: 2px solid var(--funkyBorder);
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+.project-item-wrapper {
+  column-count: 1;
+}
+
+@media only screen and (min-width: 600px) {
+  .project-item-wrapper {
+    column-count: 2;
+  }
+}
+
+.project-list {
+  margin-top: 0;
+}
+
+.project-title {
+  font-size: var(--text15);
+  font-family: var(--fontSansSerif);
+  font-weight: 500;
+  margin: var(--spacingS) 0 0 var(--spacingM);
+  display: inline-block;
+}
+
+.project-dad-joke {
+  background-color: #e2ccdd;
 }
 
 .project-dad-joke-face {
@@ -361,26 +415,114 @@ figcaption {
   width: 55px;
   height: 55px;
   background-color: #CA3952;
-  right: -30px;
+  right: -33px;
   top: 48px;
   transform: rotate(147deg) skewX(38deg);
 }
 
 .project-dad-joke-title {
-  font-size: var(--text15);
-  margin: var(--spacingS) 0 0 var(--spacingM);
-  display: inline-block;
   color: #ac2828;
 }
 
 .project-dad-joke-lol {
   position: absolute;
-  width: 80px;
   bottom: 10px;
   right: 10px;
 }
 
-.project-title,
+.project-recipe-app {
+  background-color: #ffe9ca;
+  ;
+}
+
+.project-recipe-app-title {
+  color: #a05f06;
+}
+
+.project-recipe-app-carrot {
+  position: absolute;
+  bottom: -10px;
+  left: -10px;
+}
+
+.project-recipe-app-peas {
+  position: absolute;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  background-color: #00B53E;
+  bottom: 10px;
+  right: 10px;
+}
+
+.project-recipe-app-peas:after {
+  content: '';
+  position: absolute;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  background-color: #00B53E;
+  bottom: 10px;
+  right: 16px;
+}
+
+.project-recipe-app-peas:before {
+  content: '';
+  position: absolute;
+  border-radius: 100%;
+  width: 20px;
+  height: 20px;
+  background-color: #00B53E;
+  bottom: 1px;
+  right: 25px;
+}
+
+.project-colour-lovahs {
+  position: relative;
+  background: rgb(247, 138, 138);
+  background: linear-gradient(54deg, rgb(247, 138, 138) 0%, rgb(248, 247, 166) 16%, rgb(167, 248, 153) 35%, rgb(151, 201, 250) 61%, rgb(209, 163, 253) 81%, rgb(232, 183, 250) 100%);
+}
+
+.project-colour-lovers-pencil {
+  position: absolute;
+  width: 100px;
+  height: 28px;
+  transform: rotate(-42deg);
+  background-color: #719fdc;
+  bottom: 10px;
+  left: -25px;
+}
+
+.project-colour-lovers-pencil:after {
+  content: '';
+  position: absolute;
+  bottom: 8px;
+  right: -41px;
+  border: 10px solid transparent;
+  border-width: 6px 12px;
+  border-left-color: #000000;
+}
+
+.project-colour-lovers-pencil:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  border: 10px solid transparent;
+  border-width: 14px 30px;
+  border-left-color: #a57e43;
+}
+
+.project-colour-lovahs-title {
+  color: #5d0d5d;
+}
+
+.project-colour-lovahs-squiggle {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
 .not-found-title {
   margin: var(--spacingM) 0;
   font-weight: 500;
@@ -602,7 +744,7 @@ figcaption {
 }
 
 .about-wrapper p,
-.cv-decription {
+.cv-description {
   font-family: var(--fontSerif);
   margin-top: var(--spacingM);
   font-weight: 300;
