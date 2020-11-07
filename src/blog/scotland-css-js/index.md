@@ -26,22 +26,21 @@ This post is split into three parts. Click and choose!
 
 I will post a link to the official photos once they are out! (hint: they are good).
 
-See [Katie Fenn](https://www.katiefenn.co.uk)'s terrific and poignant article on the conferences [here](https://www.katiefenn.co.uk/scotland-js-retrospective/).
+See [Katie Fenn](https://www.katiefenn.co.uk)'s terrific and poignant [article on the conferences](https://www.katiefenn.co.uk/scotland-js-retrospective/).
 
 <div id="diary" class="heading-with-siblings">
-  <h1>Diary&nbsp;<a href="#diary" aria-hidden="true"> # </a>&nbsp;</h1>
+  <h1>Diary&nbsp;<a href="#diary"> # </a>&nbsp;</h1>
   <a href="#" role="link">
     <svg
     width="28"
     height="14"
     viewBox="0 0 53 25"
     xmlns="http://www.w3.org/2000/svg"
-    aria-labelledby="title desc"
-    aria-describedby="desc"
+    aria-labelledby="title1 desc1"
     class="back-to-top-svg"
 >
-    <title id="title">Back to the top arrow</title>
-    <desc id="desc">Click this to go back to the top of the blog post</desc>
+    <title id="title1">Back to the top arrow</title>
+    <desc id="desc1">Click this to go back to the top of the blog post</desc>
     <path
     stroke="currentcolor"
     stroke-width="6"
@@ -109,19 +108,18 @@ The last day of the conference began a little later at 9am. It was just as good 
 The last night of the conferences was spent again at Hemma, amongst friends. And amonst fish and chips because Edinburgh restaurants are _really_ busy on Friday nights! I was very glad that I was staying in Scotland for one more day so I could walk around beautiful Edinburgh. I miss it and my web friends already - until next time :-)
 
 <div id="tips" class="heading-with-siblings">
-  <h1>Tips&nbsp;<a href="#tips" aria-hidden="true"> # </a>&nbsp;</h1>
+  <h1>Tips&nbsp;<a href="#tips"> # </a>&nbsp;</h1>
 <a href="#" role="link">
     <svg
     width="28"
     height="14"
     viewBox="0 0 53 25"
     xmlns="http://www.w3.org/2000/svg"
-    aria-labelledby="title desc"
-    aria-describedby="desc"
+    aria-labelledby="title2 desc2"
     class="back-to-top-svg"
 >
-    <title id="title">Back to the top arrow</title>
-    <desc id="desc">Click this to go back to the top of the blog post</desc>
+    <title id="title2">Back to the top arrow</title>
+    <desc id="desc2">Click this to go back to the top of the blog post</desc>
     <path
     stroke="currentcolor"
     stroke-width="6"
@@ -141,27 +139,26 @@ I used tips from speakers in this blog post, because the material was just _so_ 
 - [Peter Müller](https://mntr.dk/)'s "[High Performance Web Fonts](http://slides.com/munter/high-performance-web-fonts-scotlandcss#/)" was about improving performance using local fonts rather than Google fonts, font subsetting, and his node package [subfont](https://www.npmjs.com/package/subfont). He added network tab visuals to help us understand the performance benefits. I went ahead and downloaded the two Google fonts I usually access with two separates HTTP requests, and added the local versions to my site.
 - [Anna Migas](https://twitter.com/szynszyliszys)'s "[Fast But Not Furious: Debugging User Interface Issues](https://www.slideshare.net/AnnaMigas1/fast-but-not-furious-debugging-user-interaction-performance-issues)" taught me the order pages load in. An event is fired (JavaScript), styles are calculated, layout is calculated, things are rasterised and painted into layers, layers are composited together. Check out a site's layers by going to the _layers_ tab in chrome dev tools! I figured out my site only has one layer as it is static and has no JavaScript.
 - [Natalya](http://www.artist-developer.com/)'s "[Bootstrap to CSS Grid](https://docs.google.com/presentation/d/1dERF3H9jQ3Yb7pIIx7hzWJKxvFjyvFNvFUq-mzcx27E/edit#slide=id.g34872239f6_0_6)" encourages companies to adopt CSS Grid and explains the benefits of doing so. Grid can be gradually adopted into an existing codebase. I demonstrated this here by using it to position my images and figure captions. I used `grid-template-columns` , `grid-template-areas` , and `grid-area` to position things exactly as I want them. The mobile version of this page uses Flexbox instead. Yep, you can mix Grid and Flexbox! Check out Firefox dev tools for a great visual representation of my picture grid.
-- [Sareh Heidari](https://twitter.com/Sareh88)'s "Quick Tips for Performant Websites" encouraged us to think what our users' priorities are. Sareh taught us about some resource hints to give browsers a helping hand loading things. I had not heard of these before. See an artice [here](https://css-tricks.com/prefetching-preloading-prebrowsing/) on how resource pre-fetching helps performance.
+- [Sareh Heidari](https://twitter.com/Sareh88)'s "Quick Tips for Performant Websites" encouraged us to think what our users' priorities are. Sareh taught us about some resource hints to give browsers a helping hand loading things. I had not heard of these before. See an artice on [how resource pre-fetching helps performance](https://css-tricks.com/prefetching-preloading-prebrowsing/).
 - [Jessics Rose's](http://jessica.tech/) talk on [Impostor Syndrome and Individual Competence](https://www.youtube.com/watch?v=nbg2Is6VOCM) taught me something completely new. Not something technical that I can add to this post, but something really important. About how feeling yourself struggle means growth. You have stuff that's too easy and stuff that's too hard and right in the middle of the venn diagram (the _zone of proximal development_) is where you should be, in order to grow. Challenging and pushing your mind. It can feel uncomfortable - this is where imposter syndrome can often kick in. But in these cases, it helps tremendously to give yourself a gentle reminder that you are absolutely fine. Of course while remembering to give yourself sufficient periods of rest to recover from the sustained effort of learning.
-- [Steven Robert](https://twitter.com/matchboxhero10)'s "CSS Animation - Best of the Web" was my favourite talk. I really couldn't wait to have a go at creating my own animation using code. He showed us how to use SVGs in separate cells (frames) with keyframes and animation properties to create just about any animation we'd want. A link to his codepen is [here](https://codepen.io/collection/nkBVzK/), and a link to his bird animation that inspired his talk and the below rabbity animation is [here](https://codepen.io/matchboxhero/pen/RLebOY). Scroll to number 4 in [this](https://www.creativebloq.com/inspiration/css-animation-examples) list for the tutorial. Steven helped me out when I had questions and I'm really grateful for that :-) Through making the rabbity animation (codepen [here](https://codepen.io/ambrwlsn90/pen/ajVReX)), I learned more about SVGs and how the viewBox attribute works.
+- [Steven Robert](https://twitter.com/matchboxhero10)'s "CSS Animation - Best of the Web" was my favourite talk. I really couldn't wait to have a go at creating my own animation using code. He showed us how to use SVGs in separate cells (frames) with keyframes and animation properties to create just about any animation we'd want. Here is a [link to Steven's codepen](https://codepen.io/collection/nkBVzK/), and a [link to his bird animation](https://codepen.io/matchboxhero/pen/RLebOY) that inspired his talk and the below rabbity animation. Scroll to [number 4 in this list for the tutorial](https://www.creativebloq.com/inspiration/css-animation-examples). Steven helped me out when I had questions and I'm really grateful for that :-) Through making the [rabbity animation](https://codepen.io/ambrwlsn90/pen/ajVReX)), I learned more about SVGs and how the viewBox attribute works.
 
-<img loading="lazy" src="img/rabbit-cells.svg" />
+<img loading="lazy" src="img/rabbit-cells.svg" alt="" />
 <br /><br />
 
 <div id="isspecial" class="heading-with-siblings">
-<h1>Why This Conference is Special&nbsp;<a href="#isspecial" aria-hidden="true"> # </a>&nbsp;</h1>
+<h1>Why This Conference is Special&nbsp;<a href="#isspecial"> # </a>&nbsp;</h1>
   <a href="#" role="link">
     <svg
     width="28"
     height="14"
     viewBox="0 0 53 25"
     xmlns="http://www.w3.org/2000/svg"
-    aria-labelledby="title desc"
-    aria-describedby="desc"
+    aria-labelledby="title3 desc3"
     class="back-to-top-svg"
 >
-    <title id="title">Back to the top arrow</title>
-    <desc id="desc">Click this to go back to the top of the blog post</desc>
+    <title id="title3">Back to the top arrow</title>
+    <desc id="desc3">Click this to go back to the top of the blog post</desc>
     <path
     stroke="currentcolor"
     stroke-width="6"
@@ -215,7 +212,7 @@ The youngest attendee, Connie, was 10 years old. Peter introduced her to us and 
   </p>&mdash; Scotland JS (@ScotlandJS) <a href="https://twitter.com/ScotlandJS/status/1020631634524196864?ref_src=twsrc%5Etfw">July 21, 2018</a>
 </blockquote>
 
-Connie was also [Upfront](http://weareupfront.com/). Other people were too, including my good friend Anwen. I first learned about being Upfront last year at UX London where I met the great Lauren Currie. She is from Scotland and has done a tonne of amazing work - check it out [here](http://www.redjotter.com/). She wanted a way for people to get experience being on stage without having to speak. What happens is a few chairs are set up on one side of the stage, and aspiring speakers sit down while a speaker gives their talk. Lauren hopes these people gain enough confidence to speak one day. I am on the Upfront [blog](http://weareupfront.com/blog/) :-)
+Connie was also [Upfront](http://weareupfront.com/). Other people were too, including my good friend Anwen. I first learned about being Upfront last year at UX London where I met the great Lauren Currie. She is from Scotland and has done [a tonne of amazing work](http://www.redjotter.com/). She wanted a way for people to get experience being on stage without having to speak. What happens is a few chairs are set up on one side of the stage, and aspiring speakers sit down while a speaker gives their talk. Lauren hopes these people gain enough confidence to speak one day. I am on the Upfront [blog](http://weareupfront.com/blog/) :-)
 
 As I mentioned in the first section of this post, there was a low stage, and also face-to-face speaker discussion - both of which broke down barriers between speakers and attendees. There has been talk around 'hero-worship' of speakers at some conferences. This certainly was not the case here, and I'm sure many people had a much more genuine experience because of it.
 

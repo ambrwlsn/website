@@ -16,6 +16,7 @@
   font-family: 'Rubik';
   src: url("/fonts/rubik-v11-latin-900.woff2") format('woff2');
   font-weight: bold;
+  font-display: swap;
 }
 
 @font-face {
