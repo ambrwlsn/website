@@ -21,7 +21,7 @@ description: Hi, I'm Amber, welcome to my site!
         <ul class="recent-posts-list" role="list">
             {% for p in collections.posts | reverse | limit(3) %}
                 <li>
-                    <a class="recent-posts-list-item-title" href="{{ p.url }}">{{ p.data.title }}</a>
+                    <a class="recent-posts-list-item-title" href="{{ p.url }}" aria-label="A blog post - {{ p.data.title }}">{{ p.data.title }}</a>
                     <p>
                         <time class="recent-posts-list-time">{{ p.data.date | readableBlogListDate }}</time>
                     </p>

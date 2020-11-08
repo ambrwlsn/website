@@ -317,9 +317,18 @@ figcaption {
   font-weight: 500;
 }
 
+.about-title {
+  margin-bottom: var(--spacingM);
+}
+
+.about-wrapper a {
+  font-weight: bold;
+}
+
 .tags-post-list li {
   font-weight: 500;
   line-height: 1.8;
+  font-size: var(--text15);
 }
 
 .project {
@@ -337,6 +346,16 @@ figcaption {
 
 .project a {
   outline: none;
+  text-decoration: underline;
+  font-size: var(--text15);
+  font-family: var(--fontSansSerif);
+  font-weight: 500;
+  margin: var(--spacingS) 0 0 var(--spacingM);
+  display: inline-block;
+}
+
+.project a:hover {
+  color: var(--linkHoverColorUnchanged);
 }
 
 .project a::after {
@@ -371,14 +390,6 @@ figcaption {
 
 .project-list {
   margin-top: 0;
-}
-
-.project-title {
-  font-size: var(--text15);
-  font-family: var(--fontSansSerif);
-  font-weight: 500;
-  margin: var(--spacingS) 0 0 var(--spacingM);
-  display: inline-block;
 }
 
 .project-dad-joke {
@@ -514,7 +525,7 @@ figcaption {
 }
 
 .project-colour-lovahs-title {
-  color: #5d0d5d;
+  color: #4827d8;
 }
 
 .project-colour-lovahs-squiggle {
@@ -531,13 +542,6 @@ figcaption {
 
 .project-image {
   border: 1px solid var(--secondaryTextColor);
-}
-
-.project-wrapper a {
-  font-family: var(--fontSerif);
-  font-size: var(--text09);
-  font-weight: bold;
-  display: block;
 }
 
 .project-wrapper p {
@@ -650,6 +654,7 @@ figcaption {
 
 .blog-list-post-title {
   font-size: var(--text15);
+  outline: 0;
 }
 
 .blog-list-post-title:hover {
@@ -944,7 +949,8 @@ figcaption {
   line-height: 1;
 }
 
-.read-more-arrow {
+.read-more-arrow,
+.back-to-arrow {
   display: inline-block;
 }
 
