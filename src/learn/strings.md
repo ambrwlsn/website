@@ -1,7 +1,7 @@
 ---
 title: Strings
 number: 10
-postdate: June 2018
+postdate: "2018-06-18"
 ---
 
 - A sequence containing some letters, numbers or symbols.

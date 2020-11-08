@@ -1,7 +1,7 @@
 ---
 title: Console debugging
 number: 19
-postdate: July 2019
+postdate: "2019-07-25"
 ---
 
 A lot of people use `console.log` to debug in the console.

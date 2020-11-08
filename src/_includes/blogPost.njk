@@ -28,27 +28,45 @@ layout: main.njk
 <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "{{ title }}",
-    "genre": "{{ tags }}",
-    "keywords": "{{ tags }}",
-    "wordcount": "{{ content | count }}",
-    "url": "https://amberwilson.co.uk/{{ page.url }}",
-    "image": "https://amberwilson.co.uk/img/favicon/favicon-32x32.png",
-    "datePublished": "{{ date }}",
-    "dateModified": "{{ date }}",
-    "description": "{{ content | getExcerpt }}",
-    "articleBody": "{{ content }}",
+    "@type": "NewsArticle",
     "mainEntityOfPage": {
-      "@type": "WebPage"
+      "@type": "WebPage",
+      "@id": "https://amberwilson.co.uk{{ page.url }}"
+    },
+    "headline": "{{ title }}",
+    "image": ["https://amberwilson.co.uk/img/avatar.png"],
+    "datePublished": "{{ date | structuredDataDate }}",
+    "dateModified": "{{ date | structuredDataDate }}",
+    "author": {
+      "@type": "Person",
+      "name": "Amberr Wilson"
     },
     "publisher": {
       "@type": "Person",
       "name": "Amber Wilson"
+    },
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://amberwilson.co.uk/img/favicon/favicon-32x32.png"
     }
-    "author": {
-      "@type": "Person",
-      "name": "Amber Wilson"
-    }
+  }
+}
+</script>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Blog",
+        "item": "https://amberwilson.co.uk/blog/"
+      }, {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "{{ title }}"
+      }
+    ]
   }
 </script>

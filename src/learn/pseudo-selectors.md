@@ -1,7 +1,7 @@
 ---
 title: Pseudo Selectors
 number: 3
-postdate: May 2018
+postdate: "2018-05-21"
 ---
 
 I only just found out that `::before` (`:before`) and `::after` (`:after`) are pseudo elements, which are different from pseudo classes. Both of these are grouped under pseudo selectors. I like this quote from MDN ~

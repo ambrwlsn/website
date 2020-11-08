@@ -1,7 +1,7 @@
 ---
 title: Spread Syntax
 number: 21
-postdate: March 2020
+postdate: "2020-03-18"
 ---
 
 New in ES6 were the three dots `...` known as the spread syntax. It's the evolution of `sum.apply`. Spread syntax can do a lot more than I can explain in this little post. All I want to share is one way it helped me greatly in real life recently. Consider the following code:

@@ -1,7 +1,7 @@
 ---
 title: Ternary Operator
 number: 14
-postdate: July 2018
+postdate: "2018-07-23"
 ---
 
 This is one of my favourite things in JavaScript. Not only is it simple and easy to use but it's also applicable to lots of situations **and** it can replace more verbose syntax (like `if` statements). It looks something like this:

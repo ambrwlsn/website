@@ -1,7 +1,7 @@
 ---
 title: Types
 number: 18
-postdate: July 2019
+postdate: "2019-07-16"
 ---
 
 JavaScript has six primitive types. These all have default values and can be checked for using the `typeof` operator.

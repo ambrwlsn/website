@@ -1,7 +1,7 @@
 ---
 title: indexOf
 number: 16
-postdate: June 2019
+postdate: "2019-06-12"
 ---
 
 `indexOf()` is a handy little JavaScript method that returns the **first** index (position) of an item within an array or a string. For example:

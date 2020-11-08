@@ -1,7 +1,7 @@
 ---
 title: JSON-LD
 number: 6
-postdate: May 2018
+postdate: "2018-05-29"
 ---
 
 JSON, or JavaScript Object Notation, is a simple language that represents objects on the Web and facilitates data exchange. LD, or Linked Data, allows for the expression of critical data on a site, and for it to be shared across sites. I first heard of it at [Beyond Tellerrand](https://beyondtellerrand.com/events/duesseldorf-2018/speakers) in Düsseldorf on May 7th, during a talk about web annotations by [Lyza Danger Gardner](https://lyza.com). JSON-LD allows expressions of linked data in JavaScript. It's like grammar for describing strutured data. It can be thought of as JSON, but with added semantics. And it can be easily implemented into existing JSON structures. Here's some example JSON:

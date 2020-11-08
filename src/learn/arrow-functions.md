@@ -1,7 +1,7 @@
 ---
 title: Arrow Functions
 number: 2
-postdate: May 2018
+postdate: "2018-05-15"
 ---
 
 Also known as a fat arrow, `=>`. This ES6 feature is a fat topic, so I'll concentrate on one aspect today.

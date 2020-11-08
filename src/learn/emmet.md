@@ -1,7 +1,7 @@
 ---
 title: Emmet
 number: 11
-postdate: July 2018
+postdate: "2018-07-02"
 ---
 
 Emmet provides a really useful way to make developing easier. It improves the **developer experience**™. I only discovered it recently but love it already. It originated as [Zen Coding](https://www.smashingmagazine.com/2009/11/zen-coding-a-new-way-to-write-html-code/) about ten years ago. There are a few uses (see official [docs](https://docs.emmet.io/)), but I'll focus on the amazing _abbreviation and snippet expansion_ feature.

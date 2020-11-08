@@ -1,7 +1,7 @@
 ---
 title: filter
 number: 20
-postdate: October 2019
+postdate: "2019-10-01"
 ---
 
 Howdy, sorry for the long hiatus. I was busy... planning an underwater holiday park. Nah, I was working hard and getting a little too much imposter syndrome. But now I've taken some helpful advice from myself to cut all that out and acknowledge the brilliant and hardworking developer that I am! And you should do the same. It does wonders for your self-esteem and sanity :)

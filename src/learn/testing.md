@@ -1,7 +1,7 @@
 ---
 title: Testing
 number: 12
-postdate: July 2018
+postdate: "2018-07-12"
 ---
 
 Today at work, we talked about test automation. One of the developers mentioned this quote:

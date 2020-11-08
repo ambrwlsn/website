@@ -1,7 +1,7 @@
 ---
 title: Object Literals
 number: 13
-postdate: July 2018
+postdate: "2018-07-15"
 ---
 
 I didn't learn about these at work but rather from a [video](https://www.youtube.com/watch?v=1DMolJ2FrNY) on the JavaScript reduce function by the wonderful [MPJ](https://twitter.com/mpjme).

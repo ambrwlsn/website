@@ -1,7 +1,7 @@
 ---
 title: CSS Layout
 number: 7
-postdate: June 2018
+postdate: "2018-06-28"
 ---
 
 CSS layout is something that amazes and confuses me at the same time. There seem to be so many approaches (e.g. floats, flexbox, grid), and so many frameworks (way too many to mention). The paradox of choice seems to apply here.

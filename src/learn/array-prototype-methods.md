@@ -1,7 +1,7 @@
 ---
 title: Array Prototype Methods
 number: 15
-postdate: July 2018
+postdate: "2018-07-30"
 ---
 
 `Array.prototype` methods are super useful for transforming array data and cover a lot of common needs in modern applications! They are a form of higher-order function (HOC), which are functions that take another function as their argument, or return one as a result. A good way to view functions is as values, because then it's easier to imagine being able to pass them around. For me, they've been a great introduction into the world of functional programming. In functional programming, the functions you create are _pure_, i.e. they have no side effects, rely on the input you give them, and will always produce the same output given the same input.

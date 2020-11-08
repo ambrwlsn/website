@@ -1,7 +1,7 @@
 ---
 title: Prebrowsing
 number: 17
-postdate: June 2019
+postdate: "2019-06-15"
 ---
 
 This is an umbrella term for telling browsers what users need (and allowing preloading of data) before the user requests them. Luckily, these techniques do their work behind the scenes, and do not block any other operations happening on a web page. Some browsers, e.g. Chrome, have some prebrowsing techniques built in.

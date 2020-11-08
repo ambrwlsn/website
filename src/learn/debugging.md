@@ -1,7 +1,7 @@
 ---
 title: Debugging
 number: 8
-postdate: June 2018
+postdate: "2018-06-03"
 ---
 
 Recently at work, I've watched other developers use `console.log` a lot in code to find desired values given by certain functions. I am often still confused where to put `console.log`, and it is definitely not the only way to debug, so I've also begun to use the developer tools JavaScript debugger in Firefox and Chrome. These tools allow you to pause the execution of your code, and walk through it to help you find bugs.

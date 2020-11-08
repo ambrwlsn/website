@@ -1,7 +1,7 @@
 ---
 title: Readable Code
 number: 9
-postdate: June 2018
+postdate: "2018-06-05"
 ---
 
 There are so many books, articles, and videos about how to make code readable, so I'll keep this short and from my perspective (as a new developer who works mainly with JavaScript).

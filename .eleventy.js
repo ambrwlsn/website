@@ -81,6 +81,9 @@ module.exports = function(eleventyConfig, options) {
   eleventyConfig.addFilter('readableBlogListDate', dateObj => {
     return format(new Date(dateObj), 'MMM do yyyy');
   });
+  eleventyConfig.addFilter('structuredDataDate', dateObj => {
+    return format(new Date(dateObj), 'yyyy MM dd');
+  });
   // see https://webbureaucrat.gitlab.io/posts/eleventy-excerpts/
   eleventyConfig.addFilter('toHTML', str => {
     return new markdownIt(MARKDOWN_OPTIONS).renderInline(str);
