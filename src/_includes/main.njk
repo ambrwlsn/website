@@ -67,8 +67,15 @@
 		</main>
 
 		<script>
-			const inputMarkup = `<input type="checkbox" id="dark" name="dark">
-		<label class="hidden" for="dark">Light and Dark Mode Toggle</label>`
+			const inputMarkup = `
+			<div class="checkbox-wrapper">
+				<input type="checkbox" id="dark" name="dark">
+				<span class="focus-outline"></span>
+				<label for="dark">
+					<span class="hidden">Light and Dark Mode Toggle</span>
+				</label>
+			</div>
+		`
 
 			const navElement = document.getElementById("main-nav");
 			navElement.insertAdjacentHTML('beforeend', inputMarkup);
