@@ -663,9 +663,9 @@ figcaption {
 
 .learn-post-dates {
   font-size: var(--text08);
-  font-family: var(--fontSerif);
-  font-weight: 300;
+  font-weight: 500;
   color: var(--secondaryTextColor);
+  text-transform: uppercase;
 }
 
 .learn-post-date {
@@ -689,10 +689,20 @@ figcaption {
 
 .learn-list li {
   margin-bottom: var(--spacingS);
+  -webkit-column-break-inside: avoid;
+  page-break-inside: avoid;
+  break-inside: avoid;
 }
 
 .learn-post-wrapper article a {
   font-weight: bold;
+}
+
+.previous-and-next-section {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--fontSerif);
+  font-size: var(--text09);
 }
 
 .blog-post h2 {

@@ -8,15 +8,15 @@ layout: main.njk
   <p>{{ content | emojiReadTime | safe }}</p>
   <article>{{ content | safe }}</article>
   <hr>
-  <ul>
+  <ul class="previous-and-next-section">
     {%- set nextLearnPost = collections.learn | getNextCollectionItem(page) %}
     {%- if nextLearnPost %}
-      <li>Next: <a href="{{ nextLearnPost.url | url }}">{{ nextLearnPost.data.title }}</a>
+      <li>Next: <a href="{{ nextLearnPost.url | url }}" aria-label="Next post - {{ nextLearnPost.data.title }}">{{ nextLearnPost.data.title }}</a>
       </li>
     {% endif %}
     {%- set previousLearnPost = collections.learn | getPreviousCollectionItem(page) %}
     {%- if previousLearnPost %}
-      <li>Previous: <a href="{{ previousLearnPost.url | url }}">{{ previousLearnPost.data.title }}</a>
+      <li>Previous: <a href="{{ previousLearnPost.url | url }}" aria-label="Previous post - {{ previousLearnPost.data.title }}">{{ previousLearnPost.data.title }}</a>
       </li>
     {% endif %}
   </ul>
