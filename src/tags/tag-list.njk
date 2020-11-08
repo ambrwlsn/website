@@ -1,4 +1,5 @@
 ---
+title: Tags
 permalink: /tags/
 layout: main.njk
 description: This is a list of all tags used on blog posts written by Amber Wilson.
@@ -6,7 +7,7 @@ description: This is a list of all tags used on blog posts written by Amber Wils
 <div class="wrapper tag-list-wrapper">
   <h1 class="tags-title">Tags</h1>
 
-  <ul style="column-width: 200px; font-family: var(--fontSerif); font-size: 0.9rem; font-weight: 300; line-height: 1.8;">
+  <ul class="tags-list">
     {% for tag in collections.tagList | tagSort %}
       {% set tagUrl %}/tags/{{ tag }}/{% endset %}
       <li>

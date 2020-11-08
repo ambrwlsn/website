@@ -26,6 +26,7 @@ dd {
 h1,
 h2 {
   line-height: 1;
+  font-weight: 500;
 }
 
 /* Set core body defaults */

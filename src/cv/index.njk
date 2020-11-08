@@ -1,7 +1,11 @@
 ---
-title: CV | Amber Wilson
-description: This is a list of my front end web engineer experience. See the rest on my experience on LinkedIn - https://www.linkedin.com/in/ambrwlsn90/</a>!
+title: CV
+description: This is a list of my front end web engineer experience. See the rest on my experience on LinkedIn - https://www.linkedin.com/in/ambrwlsn90/!
 ---
+{% from "macros/githubIconSVG.njk" import githubIconSVG %}
+{% from "macros/twitterIconSVG.njk" import twitterIconSVG %}
+{% from "macros/linkedInIconSVG.njk" import linkedInIconSVG %}
+
 <div class="wrapper cv-wrapper">
     <h1 class="cv-title">CV</h1>
     <p class="cv-description">My name is Amber and I’m a mid-level front end engineer with a keen interest in performance, accessibility and security. I have extensive experience in agile, version control, testing, CI/CD, and error handling. Additionally, I’ve worked on internal tools (TypeScript), onboarded engineers, run A/B tests, managed headless CMS requests, written middlewares for backend endpoints, overseen API creation, improved SEO, and more. In my spare time I love writing, reading, taking photos, long walks outside, meeting new people and seeing new places!</p>
@@ -66,16 +70,28 @@ description: This is a list of my front end web engineer experience. See the res
         <span class="cv-description-date-location">2008 - 2011, Christchurch, NZ</span>
     </p>
 
-</div>
+    <h2 class="about-contact">Contact me</h2>
+
+    <p class="contact-links contact-links-not-home">
+        <a href="https://github.com/ambrwlsn">
+            {{ githubIconSVG() }}
+        </a>
+        <a href="https://twitter.com/ambrwlsn90">
+            {{ twitterIconSVG() }}
+        </a>
+        <a href="https://www.linkedin.com/in/ambrwlsn90/">
+            {{ linkedInIconSVG() }}
+        </a>
+    </p>
 
 </div>
 
 <script type="application/ld+json">
-[{
-        "@context": "http://schema.org",
-        "@type": "WebSite",
-        "name": "CV | Amber Wilson",
-        "alternateName": "Amber Wilson | Front end web engineer"
-    }
-]
+    [{
+            "@context": "http://schema.org",
+            "@type": "WebSite",
+            "name": "CV | Amber Wilson",
+            "alternateName": "Amber Wilson | Front end web engineer"
+        }
+    ]
 </script>

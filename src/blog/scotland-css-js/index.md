@@ -29,7 +29,7 @@ I will post a link to the official photos once they are out! (hint: they are goo
 See [Katie Fenn](https://www.katiefenn.co.uk)'s terrific and poignant [article on the conferences](https://www.katiefenn.co.uk/scotland-js-retrospective/).
 
 <div id="diary" class="heading-with-siblings">
-  <h1>Diary&nbsp;<a href="#diary"> # </a>&nbsp;</h1>
+  <h2>Diary&nbsp;<a class="single-link-light" href="#diary"> # </a>&nbsp;</h2>
   <a href="#" role="link">
     <svg
     width="28"
@@ -108,7 +108,7 @@ The last day of the conference began a little later at 9am. It was just as good 
 The last night of the conferences was spent again at Hemma, amongst friends. And amonst fish and chips because Edinburgh restaurants are _really_ busy on Friday nights! I was very glad that I was staying in Scotland for one more day so I could walk around beautiful Edinburgh. I miss it and my web friends already - until next time :-)
 
 <div id="tips" class="heading-with-siblings">
-  <h1>Tips&nbsp;<a href="#tips"> # </a>&nbsp;</h1>
+  <h2>Tips&nbsp;<a class="single-link-light" href="#tips"> # </a>&nbsp;</h2>
 <a href="#" role="link">
     <svg
     width="28"
@@ -147,7 +147,7 @@ I used tips from speakers in this blog post, because the material was just _so_ 
 <br /><br />
 
 <div id="isspecial" class="heading-with-siblings">
-<h1>Why This Conference is Special&nbsp;<a href="#isspecial"> # </a>&nbsp;</h1>
+<h2>Why This Conference is Special&nbsp;<a class="single-link-light" href="#isspecial"> # </a>&nbsp;</h2>
   <a href="#" role="link">
     <svg
     width="28"

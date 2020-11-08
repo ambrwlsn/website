@@ -8,13 +8,13 @@ body {
 
 main {
   width: 100%;
-  padding: var(--spacingS) var(--spacingM);
+  padding: 0 var(--spacingM);
   font-family: var(--fontSansSerif);
 }
 
 @media only screen and (min-width: 686px) {
   main {
-    padding: var(--spacingM) var(--spacingL);
+    padding: var(--spacingM) var(--spacingL) 0 var(--spacingL);
   }
 }
 
@@ -216,6 +216,10 @@ figcaption {
   font-family: var(--fontSansSerif);
 }
 
+.cv-description-date-location:last-of-type {
+  margin-bottom: 0;
+}
+
 @media only screen and (min-width: 900px) {
   .cv-details {
     margin-left: 0;
@@ -259,7 +263,12 @@ figcaption {
   margin-bottom: var(--spacingM);
 }
 
+.cv-education~p:last-of-type {
+  margin-bottom: 0;
+}
+
 .n26-logo {
+  height: 100%;
   background-color: #36a28b;
 }
 
@@ -317,6 +326,15 @@ figcaption {
   font-weight: 500;
 }
 
+.about-wrapper p,
+.cv-description {
+  font-family: var(--fontSerif);
+  margin-top: var(--spacingM);
+  font-weight: 300;
+  font-size: var(--text09);
+  line-height: 1.8;
+}
+
 .checkbox-wrapper {
   position: relative;
   width: 30px;
@@ -330,7 +348,8 @@ figcaption {
   position: absolute;
 }
 
-.checkbox-wrapper input:focus~.focus-outline {
+.checkbox-wrapper input:focus~.focus-outline,
+.checkbox-wrapper input:hover~.focus-outline {
   position: absolute;
   top: 0;
   left: 0;
@@ -348,12 +367,13 @@ figcaption {
   height: 100%;
   border-radius: 3px;
   position: relative;
-  background-color: #8fddfb;
+  background-color: #c3e0fc;
   transition: background-color 1s ease-out;
+  cursor: pointer;
 }
 
 .checkbox-wrapper input:checked~label {
-  background-color: #3838cc;
+  background-color: #243bbd;
 }
 
 .checkbox-wrapper label::after {
@@ -410,8 +430,21 @@ figcaption {
   margin-bottom: var(--spacingM);
 }
 
+.about-contact {
+  margin-top: var(--spacingM);
+}
+
 .about-wrapper a {
   font-weight: bold;
+}
+
+.tags-list {
+  column-width: 200px;
+  font-family: var(--fontSerif);
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 0;
 }
 
 .tags-post-list li {
@@ -421,7 +454,7 @@ figcaption {
 }
 
 .project {
-  margin-bottom: var(--spacingL);
+  margin-bottom: var(--spacingM);
   max-width: 380px;
   height: 200px;
   position: relative;
@@ -431,6 +464,10 @@ figcaption {
   page-break-inside: avoid;
   break-inside: avoid;
   border-bottom: 3px solid var(--funkyBorder);
+}
+
+.project:last-of-type {
+  margin-bottom: 0;
 }
 
 .project a {
@@ -465,6 +502,11 @@ figcaption {
   border-bottom: 2px solid var(--funkyBorder);
   border-top-right-radius: 3px;
   border-top-left-radius: 3px;
+}
+
+.blog-list,
+.project-list {
+  margin-bottom: 0;
 }
 
 .project-item-wrapper {
@@ -678,6 +720,7 @@ figcaption {
 .learn-list {
   column-count: 1;
   font-size: var(--text12);
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width: 686px) {
@@ -694,6 +737,10 @@ figcaption {
   break-inside: avoid;
 }
 
+.learn-list li:last-of-type {
+  margin-bottom: 0;
+}
+
 .learn-post-wrapper article a {
   font-weight: bold;
 }
@@ -703,6 +750,7 @@ figcaption {
   justify-content: space-between;
   font-family: var(--fontSerif);
   font-size: var(--text09);
+  margin-bottom: 0;
 }
 
 .blog-post h2 {
@@ -847,15 +895,6 @@ figcaption {
   padding: 0.2rem;
 }
 
-.about-wrapper p,
-.cv-description {
-  font-family: var(--fontSerif);
-  margin-top: var(--spacingM);
-  font-weight: 300;
-  font-size: var(--text09);
-  line-height: 1.8;
-}
-
 .skip-to-content-link:focus {
   transform: translateX(10%) translateY(30%);
   width: fit-content;
@@ -903,6 +942,10 @@ figcaption {
   grid-template-areas: 'review review review review review review review'
     '. . . . . . .''method method method . picture picture picture'
     '. . . . . . .''threewords threewords threewords . length length length';
+}
+
+.main-review-container:last-of-type {
+  margin-bottom: 0;
 }
 
 @media only screen and (min-width: 800px) {
@@ -1200,12 +1243,15 @@ figcaption {
   margin-bottom: var(--spacingS);
 }
 
-.find-me-on-links {
-  margin-top: var(--spacingXL);
+.contact-links {
   display: flex;
 }
 
-.find-me-on-links a {
+.contact-links-home {
+  margin-top: var(--spacingXL);
+}
+
+.contact-links a {
   margin-right: var(--spacingM);
 }
 
@@ -1287,6 +1333,10 @@ figure img {
   }
 }
 
+.bubble:last-of-type {
+  margin: var(--spacingM) 0 var(--spacingM);
+}
+
 .words-wrapper {
   font-family: var(--fontSerif);
 }
@@ -1338,7 +1388,6 @@ figure img {
 
 .bubble-wrapper {
   width: 100%;
-  padding: 0 0 50px;
   margin: 0 auto;
 }
 

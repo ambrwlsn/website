@@ -151,11 +151,12 @@ pre>code.highlight {
 
 /* Inline code */
 article code {
-  border-radius: 5px;
+  border-radius: 3px;
   background-color: var(--inlineCodeBackgroundColor);
-  color: var(--inlineCodeColor);
-  padding: var(--spacingXXS);
+  color: #000000;
+  padding: 0 .1rem;
   font-size: var(--text09);
+  letter-spacing: 1px;
 }
 
 @media only screen and (min-width: 686px) {
@@ -167,4 +168,5 @@ article code {
 /* do not give padding to code blocks */
 pre code {
   padding: 0 !important;
+  letter-spacing: 0px !important;
 }

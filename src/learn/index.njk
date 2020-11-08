@@ -11,7 +11,7 @@ description: These are all the mini-posts on things I learn as a developer. My a
         {% for p in collections.learn | learnSort %}
             <li>
                 <a href="{{ p.url }}">{{ p.data.title }}</a>
-                <span class="learn-post-dates">{{ p.data.postdate | readableBlogListDate }}</span>
+                <div class="learn-post-dates">{{ p.data.postdate | readableBlogListDate }}</div>
                 <span class="tags learn-post-tags">
                     {% for tag in p.data.tags %}
                         {%- if collections.tagList.indexOf(tag) != -1 -%}

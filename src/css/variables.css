@@ -32,10 +32,8 @@
   --text-color-dark-mode: #ffffff;
   --secondary-text-color-light-mode: #6d6767;
   --secondary-text-color-dark-mode: #b8aeae;
-  --inline-code-color-light-mode: #1a1a1a;
-  --inline-code-color-dark-mode: #e8e8e8;
-  --inline-code-background-color-light-mode: #c3e0fc;
-  --inline-code-background-color-dark-mode: #316fe0;
+  --inline-code-background-color-light-mode: #dae3f7;
+  --inline-code-background-color-dark-mode: #e8e8e8;
   --background-color-light-mode: #ffffff;
   --background-color-dark-mode: #191b1b;
   --secondary-background-color-light-mode: #f1f6ff;
@@ -97,7 +95,6 @@
   html {
     --textColor: var(--text-color-light-mode);
     --secondaryTextColor: var(--secondary-text-color-light-mode);
-    --inlineCodeColor: var(--inline-code-color-light-mode);
     --inlineCodeBackgroundColor: var(--inline-code-background-color-light-mode);
     --linkColor: var(--link-color-light-mode);
     --linkHoverColor: var(--link-hover-color-light-mode);
@@ -116,7 +113,6 @@
   html {
     --textColor: var(--text-color-dark-mode);
     --secondaryTextColor: var(--secondary-text-color-dark-mode);
-    --inlineCodeColor: var(--inline-code-color-dark-mode);
     --inlineCodeBackgroundColor: var(--inline-code-background-color-dark-mode);
     --linkColor: var(--link-color-dark-mode);
     --linkHoverColor: var(--link-hover-color-dark-mode);
@@ -134,7 +130,6 @@
 html {
   --textColor: var(--text-color-light-mode);
   --secondaryTextColor: var(--secondary-text-color-light-mode);
-  --inlineCodeColor: var(--inline-code-color-light-mode);
   --inlineCodeBackgroundColor: var(--inline-code-background-color-light-mode);
   --linkColor: var(--link-color-light-mode);
   --linkHoverColor: var(--link-hover-color-light-mode);
@@ -151,7 +146,6 @@ html {
 .dark {
   --textColor: var(--text-color-dark-mode);
   --secondaryTextColor: var(--secondary-text-color-dark-mode);
-  --inlineCodeColor: var(--inline-code-color-dark-mode);
   --inlineCodeBackgroundColor: var(--inline-code-background-color-dark-mode);
   --linkColor: var(--link-color-dark-mode);
   --linkHoverColorUnchanged: var(--link-hover-color-light-mode);
@@ -169,4 +163,8 @@ html {
 
 .link-single {
   font-weight: bold;
+}
+
+.single-link-light {
+  font-weight: 500;
 }
