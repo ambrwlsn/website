@@ -135,6 +135,10 @@ figcaption {
   align-items: center;
 }
 
+.homepage-title {
+  margin: 0;
+}
+
 .made-with {
   margin-top: var(--spacingXL);
   margin-bottom: 0;
@@ -1102,6 +1106,11 @@ figcaption {
 
 .heading-with-siblings {
   display: flex;
+  align-items: center;
+}
+
+.heading-with-siblings h2 {
+  margin: 0;
 }
 
 /**
