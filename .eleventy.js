@@ -88,12 +88,14 @@ module.exports = function(eleventyConfig, options) {
   eleventyConfig.addFilter('toHTML', str => {
     return new markdownIt(MARKDOWN_OPTIONS).renderInline(str);
   });
-
   eleventyConfig.addFilter('limit', function(arr, limit) {
     return arr.slice(0, limit);
   });
 
   eleventyConfig.addFilter('getExcerpt', excerpts);
+
+  // minify the html output
+  eleventyConfig.addTransform("htmlmin", require("./helpers/minify-html"));
 
   eleventyConfig.addCollection('posts', collection => {
     return collection.getFilteredByGlob('src/blog/**/*.md');
