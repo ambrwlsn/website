@@ -13,7 +13,7 @@ description: Hi, I'm Amber, welcome to my site!
             <picture>
                 <img class="homepage-avatar" src="/img/avatar.png" alt="Digitally-drawn avatar of Amber" width=125 height=125/>
             </picture>
-            <h1 class="homepage-title">Hi, I'm Amber, welcome to my site!</h1>
+            <h1 class="title homepage-title">Hi, I'm Amber, welcome to my site!</h1>
         </div>
 
         <h2 class="homepage-description">Latest blog posts</h2>
@@ -22,10 +22,8 @@ description: Hi, I'm Amber, welcome to my site!
             {% for p in collections.posts | reverse | limit(3) %}
                 <li>
                     <a class="recent-posts-list-item-title" href="{{ p.url }}" aria-label="A blog post - {{ p.data.title }}">{{ p.data.title }}</a>
+                    <time class="recent-posts-list-time">{{ p.data.date | readableBlogListDate }}</time>
                     <p>
-                        <time class="recent-posts-list-time">{{ p.data.date | readableBlogListDate }}</time>
-                    </p>
-                    <p class="recent-posts-list-excerpts">
                         {% if p.data.excerpt %}
                             {{ p.data.excerpt | toHTML | safe }}…
             {% else %}

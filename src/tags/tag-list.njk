@@ -5,9 +5,9 @@ layout: main.njk
 description: This is a list of all tags used on blog posts written by Amber Wilson.
 ---
 <div class="wrapper tag-list-wrapper">
-  <h1 class="tags-title">Tags</h1>
+  <h1 class="title tags-title">Tags</h1>
 
-  <ul class="tags-list">
+  <ul class="tags-list readable-text">
     {% for tag in collections.tagList | tagSort %}
       {% set tagUrl %}/tags/{{ tag }}/{% endset %}
       <li>

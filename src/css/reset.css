@@ -26,7 +26,11 @@ dd {
 h1,
 h2 {
   line-height: 1;
-  font-weight: 500;
+  font-weight: lighter;
+}
+
+h1, h2 {
+  margin: var(--spacingL) 0 var(--spacingM) 0;
 }
 
 /* Set core body defaults */
@@ -46,6 +50,24 @@ a:not([class]) {
 img {
   max-width: 100%;
   display: block;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+p {
+  margin-bottom: var(--spacingM);
+  font-family: var(--fontSerif);
+  margin-top: var(--spacingM);
+  font-weight: 300;
+  font-size: var(--text09);
+  line-height: var(--lineHeight);;
+}
+
+p a {
+  font-weight: bold;
 }
 
 /* Inherit fonts for inputs and buttons */

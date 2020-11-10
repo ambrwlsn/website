@@ -16,7 +16,7 @@ title: Tagged posts
 description: A list of tagged posts.
 ---
 <div class="wrapper tags-wrapper">
-  <h1 class="tags-title">Posts tagged with “{{ tag }}”</h1>
+  <h1 class="title tags-title">Posts tagged with “{{ tag }}”</h1>
   <ul class="tags-post-list">
     {% set taglist = collections[tag] %}
     {% for post in taglist %}

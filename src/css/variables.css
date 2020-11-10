@@ -62,6 +62,7 @@
     background-color var(--duration) var(--timing);
 
   --text25: 2.5rem;
+  --text20: 2.0rem;
   --text15: 1.5rem;
   --text13: 1.3rem;
   --text12: 1.2rem;
@@ -83,6 +84,8 @@
 
   --fontSansSerif: 'Rubik', Arial, Helvetica, sans-serif;
   --fontSerif: 'Merriweather', Georgia, serif;
+
+  --lineHeight: 1.8;
 
   font-size: 112.5%;
   scroll-behavior: smooth;
@@ -167,4 +170,29 @@ html {
 
 .single-link-light {
   font-weight: 500;
+}
+
+.readable-text {
+  font-family: var(--fontSerif);
+  margin-top: var(--spacingM);
+  font-weight: 300;
+  font-size: var(--text09);
+  line-height: var(--lineHeight);;
+}
+
+.hidden {
+  border-top-width: 0 !important;
+  border-right-width: 0 !important;
+  border-bottom-width: 0 !important;
+  border-left-width: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding-top: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
 }
