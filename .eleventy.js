@@ -9,8 +9,6 @@ var nunjucks = require('nunjucks');
 var env = new nunjucks.Environment(null);
 env.addGlobal('variable', 'value');
 
-var provision_uri = env.getGlobal('variable', 'value');
-
 const MARKDOWN_OPTIONS = {
   html: true,
   breaks: false,
@@ -22,6 +20,7 @@ module.exports = function(eleventyConfig, options) {
   eleventyConfig.addWatchTarget('./src/blog/**/**');
   eleventyConfig.on('afterBuild', () => {
     exec('npm run concat');
+    exec('npm run postcss');
   });
   eleventyConfig.addPassthroughCopy('./src/blog/*/img/**');
   eleventyConfig.addPassthroughCopy('./src/learn/img/**');
