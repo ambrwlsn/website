@@ -1,7 +1,7 @@
 ---
 title: The Internet and The World Wide Web
 date: "2017-03-16"
-tags: [internet-history]
+tags: [web-history]
 keywords: [amber wilson,software engineering,web development,coding]
 ---
 

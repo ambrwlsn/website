@@ -1,7 +1,7 @@
 ---
 title: Pandemic
 date: "2020-05-26"
-tags: [non-tech, thoughts]
+tags: [non-tech, reflection]
 keywords: [amber wilson]
 ---
 

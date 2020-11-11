@@ -1,7 +1,7 @@
 ---
 title: New Camera
 date: "2018-04-28"
-tags: [photography]
+tags: [photography, non-tech]
 keywords: [amber wilson,camera,berlin]
 ---
 
