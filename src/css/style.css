@@ -19,7 +19,7 @@ main {
 }
 
 nav {
-  padding: var(--spacingM);
+  padding: var(--spacingL) var(--spacingM) var(--spacingM) var(--spacingM);
   display: flex;
   justify-content: flex-end;
   flex-flow: row wrap;
@@ -34,6 +34,13 @@ nav a {
   font-weight: bold;
   font-size: var(--text20);
   margin-left: var(--spacingM);
+  line-height: var(--lineHeight);
+}
+
+@media only screen and (min-width: 686px) {
+  nav a {
+    line-height: 1;
+  }
 }
 
 .nav-logo-link {
@@ -106,7 +113,7 @@ figcaption {
 }
 
 .wrapper {
-  padding: var(--spacingXL) 0 var(--spacingM) 0;
+  padding: var(--spacingXL) 0 var(--spacingL) 0;
 }
 
 .wrapper {
@@ -129,7 +136,7 @@ figcaption {
 }
 
 .homepage-wrapper {
-  padding: var(--spacingXL) 0 var(--spacingM) 0;
+  padding: var(--spacingXL) 0 var(--spacingL) 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -209,6 +216,9 @@ figcaption {
   color: var(--secondaryTextColor);
   margin-bottom: var(--spacingS);
   display: block;
+  font-family: var(--fontSansSerif);
+  text-transform: uppercase;
+  font-size: var(--text11);
 }
 
 .cv-description-date-location:last-of-type {
@@ -812,11 +822,12 @@ figcaption {
 .review-container {
   grid-area: review;
   padding: var(--spacingM);
-  line-height: 1.5;
+  line-height: var(--lineHeight);
   font-size: var(--text09);
   border-radius: var(--reviewBorderRadius);
   overflow: scroll;
   color: var(--readText);
+  font-family: var(--fontSerif);
 }
 
 .review-title {
@@ -998,6 +1009,10 @@ figcaption {
   text-transform: uppercase;
 }
 
+.recent-posts-list-item-title {
+  font-size: var(--text12);
+}
+
 .recent-posts-list-item-title:hover {
   color: var(--linkColor);
 }
@@ -1076,7 +1091,18 @@ figcaption {
 
 .homepage-description {
   font-weight: 500;
+  margin-top: 0;
   margin-bottom: var(--spacingS);
+}
+
+@media only screen and (min-width: 686px) {
+  .homepage-description {
+    margin-top: var(--spacingXL);
+  }
+}
+
+.contact-me-links {
+  margin-bottom: var(--spacingM);
 }
 
 .contact-links {
