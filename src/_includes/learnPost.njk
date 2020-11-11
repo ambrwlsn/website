@@ -6,7 +6,7 @@ layout: main.njk
   <h1>{{ title }}</h1>
   <p class="post-date">{{ postdate | readableBlogPostDate }}</p>
   <p class="post-reading-time">{{ content | emojiReadTime | safe }}</p>
-  <article>{{ content | safe }}</article>
+  <article class="h-entry">{{ content | safe }}</article>
   <hr>
   <ul class="previous-and-next-section">
     {%- set nextLearnPost = collections.learn | getNextCollectionItem(page) %}

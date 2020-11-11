@@ -6,7 +6,7 @@ layout: main.njk
   <p class="post-date">{{ date | readableBlogPostDate }}</p>
   <p class="post-reading-time">{{ content | emojiReadTime | safe }}</p>
 
-  <article class="blog-post">
+  <article class="blog-post h-entry">
     {{ content | safe }}
   </article>
 
