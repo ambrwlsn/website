@@ -129,32 +129,14 @@ html {
   --imageOpacity: 0.9;
 }
 
-@media screen and (prefers-color-scheme: light) {
-  html {
-    --textColor: var(--text-color-light-mode);
-    --secondaryTextColor: var(--secondary-text-color-light-mode);
-    --inlineCodeBackgroundColor: var(--inline-code-background-color-light-mode);
-    --linkColor: var(--link-color-light-mode);
-    --linkHoverColor: var(--link-hover-color-light-mode);
-    --linkHoverColorUnchanged: var(--link-hover-color-light-mode);
-    --backgroundColor: var(--background-color-light-mode);
-    --secondaryBackgroundColor: var(--secondary-background-color-light-mode);
-    --tertiaryBackgroundColor: var(--tertiary-background-color-light-mode);
-    --blockQuoteBackgroundColor: var(--blockquote-background-color-light-mode);
-    --blogPostPreviewCard: var(--blog-post-preview-light-mode);
-    --blogPostPreviewCardShadow: var(--blog-post-preview-shadow-light-mode);
-    --imageOpacity: 1;
-  }
-}
-
 @media screen and (prefers-color-scheme: dark) {
-  html {
+  html:not(.light) {
     --textColor: var(--text-color-dark-mode);
     --secondaryTextColor: var(--secondary-text-color-dark-mode);
     --inlineCodeBackgroundColor: var(--inline-code-background-color-dark-mode);
     --linkColor: var(--link-color-dark-mode);
-    --linkHoverColor: var(--link-hover-color-dark-mode);
     --linkHoverColorUnchanged: var(--link-hover-color-light-mode);
+    --linkHoverColor: var(--link-hover-color-dark-mode);
     --backgroundColor: var(--background-color-dark-mode);
     --secondaryBackgroundColor: var(--secondary-background-color-dark-mode);
     --tertiaryBackgroundColor: var(--tertiary-background-color-dark-mode);

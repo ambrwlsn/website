@@ -36,9 +36,12 @@
 		<link rel="icon" type="image/png" sizes="16x16" href="{{ '/img/favicon/favicon-16x16.png' | url }}">
 		<script>
 			const html = document.getElementsByTagName("html")[0];
-			var localStorageDark = JSON.parse(localStorage.getItem("dark"));
-			if (localStorageDark) {
-				html.setAttribute("class", "dark");
+			var localStorageColorScheme = localStorage.getItem("color-scheme");
+			var darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+			var prefersDarkMode = darkModeMediaQuery.matches;
+
+			if (localStorageColorScheme) {
+				html.setAttribute("class", localStorageColorScheme);
 			}
 		</script>
 		<script async defer data-domain="amberwilson.co.uk" src="https://plausible.io/js/plausible.js"></script>
@@ -77,19 +80,28 @@
 			navElement.insertAdjacentHTML('beforeend', inputMarkup);
 
 			const element = document.getElementById('dark');
-			if (localStorageDark) {
-				element.checked = true;
-			}
+			element.checked = localStorageColorScheme
+				? localStorageColorScheme === "dark"
+				: prefersDarkMode;
+
 			element.addEventListener('click', function (event) {
+				localStorage.setItem(
+					"color-scheme", event.target.checked
+					? "dark"
+					: "light");
 				if (event.target.checked) {
 					html.setAttribute("class", "dark");
-					localStorage.setItem("dark", element.checked);
 				} else {
-					html.removeAttribute("class");
-					localStorage.removeItem("dark", element.checked);
+					html.setAttribute("class", "light");
 					element.checked = false;
 				}
 			}, false);
+
+			darkModeMediaQuery.addListener(function callback(query) {
+				if (!localStorageColorScheme) {
+					element.checked = query.matches;
+				}
+			});
 		</script>
 	</body>
 
