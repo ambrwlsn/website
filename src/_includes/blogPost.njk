@@ -9,7 +9,12 @@ layout: main.njk
   <article class="blog-post h-entry">
     {{ content | safe }}
   </article>
-
+  {% from "macros/coffeeLogoSVG.njk" import coffeeLogoSVG %}
+  <a href="https://www.buymeacoffee.com/ambrwlsn" class="coffee" aria-label="Buy Amber a coffee">
+    {{ coffeeLogoSVG() }}
+    <span>Buy me a coffee</span>
+    <span role="img" aria-label="love">&#10084;&#65039;</span>
+  </a>
   <hr>
   <ul class="previous-and-next-section">
     {%- set nextPost = collections.posts | getNextCollectionItem(page) %}

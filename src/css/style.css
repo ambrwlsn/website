@@ -76,7 +76,8 @@ article ul {
   padding-left: var(--spacingM);
 }
 
-article strong, article a {
+article strong,
+article a {
   font-weight: bold;
 }
 
@@ -121,7 +122,6 @@ figcaption {
 }
 
 @media only screen and (min-width: 1000px) {
-
   .wrapper {
     margin: 0 auto;
     width: 65%;
@@ -129,7 +129,6 @@ figcaption {
 }
 
 @media only screen and (min-width: 1500px) {
-
   .wrapper {
     width: 40%;
   }
@@ -190,7 +189,7 @@ figcaption {
 
 @media only screen and (max-width: 900px) {
   .cv-item:before {
-    content: "";
+    content: '';
     position: absolute;
     top: 175px;
     left: 0;
@@ -202,7 +201,7 @@ figcaption {
 
 @media only screen and (min-width: 900px) {
   .cv-item:not(:last-of-type):before {
-    content: "";
+    content: '';
     position: absolute;
     top: 160px;
     left: 75px;
@@ -237,7 +236,6 @@ figcaption {
   margin-left: var(--spacingL);
 }
 
-
 @media only screen and (min-width: 900px) {
   .cv-details {
     margin-left: var(--spacingL);
@@ -250,7 +248,7 @@ figcaption {
 }
 
 .cv-item li:before {
-  content: "-";
+  content: '-';
   margin-right: var(--spacingXS);
 }
 
@@ -270,7 +268,7 @@ figcaption {
   font-size: var(--text11);
 }
 
-.cv-education~p:last-of-type {
+.cv-education ~ p:last-of-type {
   margin-bottom: 0;
 }
 
@@ -298,8 +296,8 @@ figcaption {
   position: absolute;
 }
 
-.checkbox-wrapper input:focus~.focus-outline,
-.checkbox-wrapper input:hover~.focus-outline {
+.checkbox-wrapper input:focus ~ .focus-outline,
+.checkbox-wrapper input:hover ~ .focus-outline {
   position: absolute;
   top: 0;
   left: 0;
@@ -322,7 +320,7 @@ figcaption {
   cursor: pointer;
 }
 
-.checkbox-wrapper input:checked~label {
+.checkbox-wrapper input:checked ~ label {
   background-color: #243bbd;
 }
 
@@ -341,7 +339,7 @@ figcaption {
   transition: transform 1s ease-out;
 }
 
-.checkbox-wrapper input:checked~label::after {
+.checkbox-wrapper input:checked ~ label::after {
   transform: translateY(30px);
   transition-timing-function: ease-in;
 }
@@ -357,20 +355,15 @@ figcaption {
   left: 8px;
   color: white;
   background-color: currentColor;
-  box-shadow:
-    17px 5px 0 0 currentColor,
-    9px 1px 0 0 currentColor,
-    16px 21px 0 0 currentColor,
-    2px 14px 0 0 currentColor,
-    4px 21px 0 0 currentColor,
-    13px 14px 0 0 currentColor,
-    10px 8px 0 0 currentColor,
-    -2px 7px 0 0 currentColor,
+  box-shadow: 17px 5px 0 0 currentColor, 9px 1px 0 0 currentColor,
+    16px 21px 0 0 currentColor, 2px 14px 0 0 currentColor,
+    4px 21px 0 0 currentColor, 13px 14px 0 0 currentColor,
+    10px 8px 0 0 currentColor, -2px 7px 0 0 currentColor,
     -3px 18px 0 0 currentColor;
   transition: opacity 1s ease-out;
 }
 
-.checkbox-wrapper input:checked~label::before {
+.checkbox-wrapper input:checked ~ label::before {
   opacity: 1;
   transition-delay: 0.5s;
   transition-timing-function: ease-in;
@@ -472,7 +465,7 @@ figcaption {
   position: absolute;
   width: 150px;
   height: 150px;
-  background-color: #92694B;
+  background-color: #92694b;
   border-radius: 100%;
   bottom: -25px;
   left: -20px;
@@ -497,7 +490,7 @@ figcaption {
   position: absolute;
   width: 55px;
   height: 55px;
-  background-color: #CA3952;
+  background-color: #ca3952;
   right: -33px;
   top: 48px;
   transform: rotate(147deg) skewX(38deg);
@@ -515,7 +508,6 @@ figcaption {
 
 .project-recipe-app {
   background-color: #ffe9ca;
-  ;
 }
 
 .project-recipe-app-title {
@@ -533,7 +525,7 @@ figcaption {
   border-radius: 100%;
   width: 20px;
   height: 20px;
-  background-color: #00B53E;
+  background-color: #00b53e;
   bottom: 10px;
   right: 10px;
 }
@@ -544,7 +536,7 @@ figcaption {
   border-radius: 100%;
   width: 20px;
   height: 20px;
-  background-color: #00B53E;
+  background-color: #00b53e;
   bottom: 10px;
   right: 16px;
 }
@@ -555,7 +547,7 @@ figcaption {
   border-radius: 100%;
   width: 20px;
   height: 20px;
-  background-color: #00B53E;
+  background-color: #00b53e;
   bottom: 1px;
   right: 25px;
 }
@@ -563,7 +555,15 @@ figcaption {
 .project-colour-lovahs {
   position: relative;
   background: rgb(247, 138, 138);
-  background: linear-gradient(54deg, rgb(247, 138, 138) 0%, rgb(248, 247, 166) 16%, rgb(167, 248, 153) 35%, rgb(151, 201, 250) 61%, rgb(209, 163, 253) 81%, rgb(232, 183, 250) 100%);
+  background: linear-gradient(
+    54deg,
+    rgb(247, 138, 138) 0%,
+    rgb(248, 247, 166) 16%,
+    rgb(167, 248, 153) 35%,
+    rgb(151, 201, 250) 61%,
+    rgb(209, 163, 253) 81%,
+    rgb(232, 183, 250) 100%
+  );
 }
 
 .project-colour-lovers-pencil {
@@ -790,11 +790,14 @@ figcaption {
   width: auto;
   height: auto;
   margin-bottom: var(--spacingXL);
-  grid-template-columns: 1fr var(--spacingM) 1fr var(--spacingM) 1fr var(--spacingM) 1fr;
+  grid-template-columns:
+    1fr var(--spacingM) 1fr var(--spacingM) 1fr var(--spacingM)
+    1fr;
   grid-template-rows: 13rem var(--spacingM) 0.5fr var(--spacingM) 0.5fr;
-  grid-template-areas: 'review review review review review review review'
-    '. . . . . . .''method method method . picture picture picture'
-    '. . . . . . .''threewords threewords threewords . length length length';
+  grid-template-areas:
+    'review review review review review review review'
+    '. . . . . . .' 'method method method . picture picture picture'
+    '. . . . . . .' 'threewords threewords threewords . length length length';
 }
 
 .main-review-container:last-of-type {
@@ -805,11 +808,14 @@ figcaption {
   .main-review-container {
     height: 600px;
     margin-bottom: var(--spacingXXXL);
-    grid-template-columns: 1fr var(--spacingM) 1fr var(--spacingM) 1fr var(--spacingM) 1fr;
+    grid-template-columns:
+      1fr var(--spacingM) 1fr var(--spacingM) 1fr var(--spacingM)
+      1fr;
     grid-template-rows: 1fr var(--spacingM) 1fr var(--spacingM) 1fr;
-    grid-template-areas: 'review review review . length length length'
-      'review review review . . . .''review review review . . . picture'
-      '. . . . . . picture''method . threewords threewords threewords . .';
+    grid-template-areas:
+      'review review review . length length length'
+      'review review review . . . .' 'review review review . . . picture'
+      '. . . . . . picture' 'method . threewords threewords threewords . .';
   }
 }
 
@@ -936,7 +942,8 @@ figcaption {
   margin-bottom: var(--spacingS);
 }
 
-.read-more-link a, .back-to-link a {
+.read-more-link a,
+.back-to-link a {
   font-family: var(--fontSansSerif);
   font-weight: 300;
   font-size: var(--text11);
@@ -957,7 +964,8 @@ figcaption {
   color: var(--funkyBorder);
 }
 
-.post-date, .post-reading-time  {
+.post-date,
+.post-reading-time {
   font-family: var(--fontSansSerif);
   font-weight: 500;
   margin: 0;
@@ -1164,7 +1172,7 @@ figure img {
   }
 
   .captions-two-images {
-    grid-template-areas: 'a b''c d';
+    grid-template-areas: 'a b' 'c d';
   }
 
   .image-grid-two-images .item2 {
@@ -1198,7 +1206,6 @@ figure img {
 }
 
 @media screen and (min-width: 686px) {
-
   .bubble,
   .bubbley {
     font-size: var(--text09);
@@ -1291,4 +1298,56 @@ figure img {
 
 .active {
   text-decoration-color: var(--funkyBorder);
+}
+
+/* this is a link */
+.coffee {
+  display: flex;
+  font-family: var(--fontSerif);
+  font-size: var(--text08);
+  padding: var(--spacingS);
+  margin-bottom: var(--spacingM);
+  border-bottom: 3px solid var(--funkyBorder);
+  border-radius: 2px;
+  background-color: var(--secondaryBackgroundColor);
+  color: var(--textColor);
+  line-height: 1;
+  align-items: center;
+  width: fit-content;
+  text-decoration: none;
+  position: relative;
+  outline: none;
+}
+
+.coffee:hover {
+  color: var(--textColor);
+}
+
+.coffee:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.coffee:hover::after,
+.coffee:focus::after {
+  border-right: 2px solid var(--linkHoverColor);
+  border-left: 2px solid var(--linkHoverColor);
+  border-top: 2px solid var(--linkHoverColor);
+  border-bottom: 2px solid var(--funkyBorder);
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+}
+
+.coffee span:before {
+  content: ' ';
+  white-space: pre;
+}
+
+.coffee-icon {
+  color: var(--textColor);
 }
