@@ -12,7 +12,7 @@ env.addGlobal('variable', 'value');
 const MARKDOWN_OPTIONS = {
   html: true,
   breaks: false,
-  linkify: true
+  linkify: true,
 };
 
 module.exports = function(eleventyConfig, options) {
@@ -32,6 +32,7 @@ module.exports = function(eleventyConfig, options) {
   eleventyConfig.addPassthroughCopy('./src/img/**');
   eleventyConfig.addPassthroughCopy('./src/fonts/**');
   eleventyConfig.addPassthroughCopy('./src/_redirects');
+  eleventyConfig.addPassthroughCopy('./src/robots.txt');
 
   // Inspired by https://github.com/5t3ph/eleventy-plugin-emoji-readtime
   const defaults = {
@@ -40,13 +41,13 @@ module.exports = function(eleventyConfig, options) {
     emoji: '📖',
     ariaLabel: 'book',
     label: 'mins',
-    bucketSize: 2
+    bucketSize: 2,
   };
 
-  eleventyConfig.addFilter('emojiReadTime', content => {
+  eleventyConfig.addFilter('emojiReadTime', (content) => {
     const { wpm, showEmoji, emoji, ariaLabel, label, bucketSize } = {
       ...defaults,
-      ...options
+      ...options,
     };
     const minutes = Math.ceil(content.trim().split(/\s+/).length / wpm);
     const buckets = Math.round(minutes / bucketSize) || 1;
@@ -68,23 +69,23 @@ module.exports = function(eleventyConfig, options) {
 
   eleventyConfig.addPlugin(pluginRss);
 
-  eleventyConfig.addFilter('count', value => {
+  eleventyConfig.addFilter('count', (value) => {
     return Math.ceil(value.trim().split(/\s+/).length);
   });
-  eleventyConfig.addFilter('log', value => {
+  eleventyConfig.addFilter('log', (value) => {
     console.log('BOOO:', value);
   });
-  eleventyConfig.addFilter('readableBlogPostDate', dateObj => {
+  eleventyConfig.addFilter('readableBlogPostDate', (dateObj) => {
     return format(new Date(dateObj), 'MMMM do, yyyy');
   });
-  eleventyConfig.addFilter('readableBlogListDate', dateObj => {
+  eleventyConfig.addFilter('readableBlogListDate', (dateObj) => {
     return format(new Date(dateObj), 'MMM do yyyy');
   });
-  eleventyConfig.addFilter('structuredDataDate', dateObj => {
+  eleventyConfig.addFilter('structuredDataDate', (dateObj) => {
     return format(new Date(dateObj), 'yyyy MM dd');
   });
   // see https://webbureaucrat.gitlab.io/posts/eleventy-excerpts/
-  eleventyConfig.addFilter('toHTML', str => {
+  eleventyConfig.addFilter('toHTML', (str) => {
     return new markdownIt(MARKDOWN_OPTIONS).renderInline(str);
   });
   eleventyConfig.addFilter('limit', function(arr, limit) {
@@ -94,21 +95,20 @@ module.exports = function(eleventyConfig, options) {
   eleventyConfig.addFilter('getExcerpt', excerpts);
 
   // minify the html output
-  eleventyConfig.addTransform("htmlmin", require("./helpers/minify-html"));
+  eleventyConfig.addTransform('htmlmin', require('./helpers/minify-html'));
 
-  eleventyConfig.addCollection('posts', collection => {
+  eleventyConfig.addCollection('posts', (collection) => {
     return collection.getFilteredByGlob('src/blog/**/*.md');
   });
 
-  eleventyConfig.addCollection('learn', collection => {
+  eleventyConfig.addCollection('learn', (collection) => {
     return collection.getFilteredByGlob('src/learn/*.md');
   });
-
 
   eleventyConfig.setFrontMatterParsingOptions({
     excerpt: true,
     // Optional, default is "---"
-    excerpt_separator: '<!-- excerpt -->'
+    excerpt_separator: '<!-- excerpt -->',
   });
 
   eleventyConfig.setLibrary('md', markdownIt(MARKDOWN_OPTIONS));
@@ -168,7 +168,7 @@ module.exports = function(eleventyConfig, options) {
       input: 'src',
       includes: '_includes',
       data: '_data',
-      output: 'public'
-    }
+      output: 'public',
+    },
   };
 };
