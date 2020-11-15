@@ -34,6 +34,7 @@
     "postcss-import": "^13.0.0"
   },
   "dependencies": {
+    "elasticlunr": "^0.9.5",
     "eleventy-plugin-reading-time": "0.0.1",
     "he": "^1.2.0",
     "striptags": "^3.1.1",

@@ -618,7 +618,8 @@ figcaption {
   line-height: var(--lineHeight);
 }
 
-.learn-post-dates {
+.learn-post-dates,
+.search-post-dates {
   font-size: var(--text08);
   font-weight: 500;
   color: var(--secondaryTextColor);
@@ -1350,4 +1351,10 @@ figure img {
 
 .coffee-icon {
   color: var(--textColor);
+}
+
+#searchResults li {
+  font-weight: 500;
+  margin-bottom: var(--spacingM);
+  font-size: var(--text15);
 }

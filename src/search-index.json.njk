@@ -1,0 +1,6 @@
+---
+layout: empty.njk
+permalink: /search-index.json
+---
+
+{{ collections.blog | search | dump | safe }}

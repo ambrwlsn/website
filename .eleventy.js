@@ -2,6 +2,7 @@ const markdownIt = require('markdown-it');
 const format = require('date-fns/format');
 // see https://plug11ty.com/plugins/reading-time-plugin-for-eleventy/
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
+const searchFilter = require('./src/filters/search-filter');
 const excerpts = require('./helpers/excerpts');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const { exec } = require('child_process');
@@ -16,6 +17,7 @@ const MARKDOWN_OPTIONS = {
 };
 
 module.exports = function(eleventyConfig, options) {
+  eleventyConfig.addPassthroughCopy('src/js');
   eleventyConfig.addWatchTarget('./src/css/**');
   eleventyConfig.addWatchTarget('./src/blog/**/**');
   eleventyConfig.on('afterBuild', () => {
@@ -75,6 +77,10 @@ module.exports = function(eleventyConfig, options) {
   eleventyConfig.addFilter('log', (value) => {
     console.log('BOOO:', value);
   });
+  eleventyConfig.addCollection('blog', (collection) => {
+    return [...collection.getFilteredByGlob('./src/blog/**/*.md')];
+  });
+  eleventyConfig.addFilter('search', searchFilter);
   eleventyConfig.addFilter('readableBlogPostDate', (dateObj) => {
     return format(new Date(dateObj), 'MMMM do, yyyy');
   });
