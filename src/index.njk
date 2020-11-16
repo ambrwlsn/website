@@ -21,7 +21,7 @@ description: Hi, I'm Amber, welcome to my site!
                 <li>
                     <a class="recent-posts-list-item-title" href="{{ p.url }}" aria-label="A blog post - {{ p.data.title }}">{{ p.data.title }}</a>
                     <time class="recent-posts-list-time">{{ p.data.date | readableBlogListDate }}</time>
-                    <p>
+                    <p class="recent-posts-list-excerpts">
                         {% if p.data.excerpt %}
                             {{ p.data.excerpt | toHTML | safe }}…
             {% else %}
