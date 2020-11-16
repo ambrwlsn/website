@@ -45,6 +45,7 @@ nav a {
 
 .nav-logo-link {
   margin-right: auto;
+  margin-left: 0;
 }
 
 .nav-logo-link svg {
@@ -722,6 +723,10 @@ figcaption {
   font-family: var(--fontSansSerif);
 }
 
+.blog-list-excerpt {
+  margin-top: var(--spacingS);
+}
+
 .tags a {
   display: inline-block;
   font-family: var(--fontSansSerif);
@@ -1007,10 +1012,8 @@ figcaption {
   }
 }
 
-@media only screen and (min-width: 686px) {
-  .recent-posts-list-excerpts {
-    font-size: var(--text09);
-  }
+.recent-posts-list-excerpts {
+  margin-top: var(--spacingS);
 }
 
 .recent-posts-list-time {
