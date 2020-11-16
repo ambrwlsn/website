@@ -1009,7 +1009,7 @@ figcaption {
 
 @media only screen and (min-width: 686px) {
   .recent-posts-list-excerpts {
-    font-size: var(--text08);
+    font-size: var(--text09);
   }
 }
 
