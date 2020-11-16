@@ -22,7 +22,11 @@ description: A list of tagged posts.
     {% for post in taglist | reverse %}
       <li>
         <a href="{{ post.url | url }}">{{ post.data.title }}</a>
-        <div class="learn-post-dates">{{ post.data.date }}</div>
+        <div class="learn-post-dates">
+          {% if post.data.postdate -%}{{ post.data.postdate | readableBlogListDate }}
+          {% elif (post.data.date) -%}{{ post.data.date | readableBlogListDate }}
+          {% endif -%}
+        </div>
       </li>
     {% endfor %}
   </ul>
