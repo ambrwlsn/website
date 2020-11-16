@@ -28,6 +28,8 @@ module.exports = function(eleventyConfig, options) {
   eleventyConfig.addPassthroughCopy('./src/learn/img/**');
   eleventyConfig.addPassthroughCopy('./src/favicon.ico');
   eleventyConfig.addPassthroughCopy('./src/apple-touch-icon.png');
+  eleventyConfig.addPassthroughCopy('./src/browserconfig.xml');
+  eleventyConfig.addPassthroughCopy('./src/mstile-150x150.png');
   eleventyConfig.addPassthroughCopy('./src/about/img/**');
   eleventyConfig.addPassthroughCopy('./src/projects/img/**');
   eleventyConfig.addPassthroughCopy('./src/read/img/**');
