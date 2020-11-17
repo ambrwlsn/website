@@ -1,3 +1,5 @@
+const sanitizeHTML = require('sanitize-html');
+
 module.exports = function(webmentions, url) {
   // define which types of webmentions should be included per URL.
   // possible values listed here:

@@ -5,7 +5,7 @@ layout: main.njk
 <div class="wrapper learn-post-wrapper">
   <h1>{{ title }}</h1>
   <p class="post-date">{{ postdate | readableBlogPostDate }}</p>
-  <p class="post-reading-time">{{ content | emojiReadTime | safe }}</p>
+  <p class="post-reading-time dt-published">{{ content | emojiReadTime | safe }}</p>
   <article class="h-entry">{{ content | safe }}</article>
   <hr>
   <ul class="previous-and-next-section">

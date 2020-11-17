@@ -34,7 +34,8 @@
     "postcss": "^8.1.7",
     "postcss-cli": "^8.2.0",
     "postcss-import": "^13.0.0",
-    "dotenv": "^6.2.0"
+    "dotenv": "^6.2.0",
+    "sanitize-html": "^1.20.0"
   },
   "dependencies": {
     "elasticlunr": "^0.9.5",
