@@ -31,6 +31,10 @@ h2 {
   margin: var(--spacingL) 0 var(--spacingS) 0;
 }
 
+article h1 {
+  font-size: 2rem;
+}
+
 /* Set core body defaults */
 body {
   min-height: 100vh;
