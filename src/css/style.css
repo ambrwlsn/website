@@ -656,11 +656,11 @@ figcaption {
 }
 
 .previous-and-next-section {
-  display: flex;
-  justify-content: space-between;
   font-family: var(--fontSerif);
   font-size: var(--text09);
   margin-bottom: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .blog-list li {
