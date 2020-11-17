@@ -3,6 +3,7 @@ const format = require('date-fns/format');
 // see https://plug11ty.com/plugins/reading-time-plugin-for-eleventy/
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const searchFilter = require('./src/filters/search-filter');
+const webmentionsFilter = require('./src/filters/webmentions-filter');
 const excerpts = require('./helpers/excerpts');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const { exec } = require('child_process');
@@ -173,6 +174,9 @@ module.exports = function(eleventyConfig, options) {
     // returning an array in addCollection works in Eleventy 0.5.3
     return [...tagSet];
   });
+
+  // WEBMENTIONS FILTER
+  eleventyConfig.addFilter('webmentionsForUrl', webmentionsFilter);
 
   return {
     dir: {

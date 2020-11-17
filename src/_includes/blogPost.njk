@@ -15,6 +15,7 @@ layout: main.njk
     <span>Buy me a coffee</span>
     <span role="img" aria-label="love">&#10084;&#65039;</span>
   </a>
+  {% include 'webmentionlist.njk' %}
   <hr>
   <ul class="previous-and-next-section">
     {%- set nextPost = collections.posts | getNextCollectionItem(page) %}

@@ -1,0 +1,18 @@
+
+{
+
+  "title": "Amber's Blog",
+  "url": "https://amberwilson.co.uk/",
+  "domain": "amberwilson.co.uk",
+  "description": "I am writing about my experiences as a developer.",
+  "feed": {
+    "subtitle": "I am writing about my experiences as a developer.",
+    "filename": "rss.xml",
+    "path": "/rss.xml",
+    "url": "https://amberwilson.co.uk/rss.xml",
+    "id": "https://amberwilson.co.uk/"
+  },
+  "author": {
+    "name": "Amber"
+  }
+}
