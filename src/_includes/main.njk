@@ -11,7 +11,7 @@
 		<meta name="description" content="{% if description -%}{{ description }}{% elif (excerpt) -%}{{ excerpt }}{% elif (postExcerpt) -%}{{ postExcerpt | trim }}{% elif (learnExcerpt) -%}{{ learnExcerpt | trim }}{% else -%}{{ page.url | log }}{% endif -%}"/>
 		<link rel="canonical" href="https://amberwilson.co.uk{{ page.url }}"/>
 		<link rel="icon" href="{{ '/img/favicon/favicon-32x32.png' | url }}"/>
-		<meta name="keywords" content="{% if keywords -%}{{ keywords }}{% endif %}"/>
+		<meta name="keywords" content="{{ keywords }}{% if (keywords) and (tags) %},{% endif -%}{{ tags }}"/>
 		<meta name="author" content="Amber Wilson"/>
 		<meta name="publisher" content="Amber Wilson"/>
 		<meta name="copyright" content="Amber Wilson"/>
