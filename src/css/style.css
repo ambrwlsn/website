@@ -1086,6 +1086,7 @@ figcaption {
   opacity: var(--imageOpacity);
   margin-right: var(--spacingM);
   margin-bottom: var(--spacingM);
+  background: #eeacd9;
 }
 
 @media only screen and (min-width: 686px) {
