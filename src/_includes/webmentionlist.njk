@@ -1,7 +1,10 @@
 {%- set absoluteUrl -%}{{ page.url | url | absoluteUrl(metadata.url) }}{%- endset -%}
 {%- set mentions = webmentions.children | webmentionsForUrl(absoluteUrl) -%}
 <div class="webmentions" id="webmentions">
-    <h2>Responses</h2>
+    <div style="display: flex; align-items: center;">
+        <h2>Responses</h2>&nbsp;
+        <a style="font-size: 0.8rem; font-family: var(--fontSerif) ;    margin: var(--spacingL) 0 var(--spacingS) 0;" aria-label="information on webmention responses" href="https://indieweb.org/Webmention">&#x2139;</a>
+    </div>
 
     {% if mentions | length %}
         <div class="webmentions__facepile">

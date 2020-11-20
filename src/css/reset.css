@@ -35,6 +35,10 @@ article h1 {
   font-size: 2rem;
 }
 
+article li:not(:last-child) {
+  margin-bottom: var(--spacingS);
+}
+
 /* Set core body defaults */
 body {
   min-height: 100vh;

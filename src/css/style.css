@@ -1311,7 +1311,6 @@ figure img {
   font-family: var(--fontSerif);
   font-size: var(--text08);
   padding: var(--spacingS);
-  margin-bottom: var(--spacingM);
   border-bottom: 3px solid var(--funkyBorder);
   border-radius: 2px;
   background-color: var(--secondaryBackgroundColor);
