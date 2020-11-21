@@ -6,7 +6,8 @@ description: These are all the mini-posts on things I learn as a developer. My a
 
 <div class="wrapper learn-wrapper">
     <h1 class="title learn-title">Learn</h1>
-    <p class="learn-introduction">These are all the mini-posts on things I learn as a developer. There are currently <strong>{{ collections.learn.length }}</strong>. My aim is to add at least 100. I didn't yet because most get too long and become <a href="/blog" class="link-single">regular blog posts</a>!</p>
+    <p class="learn-introduction">These are all the mini-posts on things I learn as a developer. There are currently <strong>{{ collections.learn.length }}</strong>. My aim is to add at least 100. I didn't yet because most get too long and become <a href="/blog" class="link-single">regular blog posts</a>! Add the <span class="rss-feed-text">
+      <a class="rss-feed-link" href="/learn.xml">RSS feed</a>&nbsp;to get updates <img src="/img/rss-feed-icon.svg" alt="rss feed icon"/></span></p>
     <ul class="learn-list">
         {% for p in collections.learn | learnSort %}
             <li>
