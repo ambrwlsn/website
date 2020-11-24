@@ -1,4 +1,5 @@
 const sanitizeHTML = require('sanitize-html');
+const uniqBy = require('lodash/uniqBy');
 
 module.exports = function(webmentions, url) {
   // define which types of webmentions should be included per URL.
@@ -50,6 +51,7 @@ module.exports = function(webmentions, url) {
     .filter((obj) => {
       return obj['wm-property'] === 'like-of';
     })
+    .sort(orderByDate)
     .map((_) => _.author);
 
   // Re-tweets on Twitter
@@ -62,18 +64,25 @@ module.exports = function(webmentions, url) {
     .map((_) => _.author);
 
   // Replies on Twitter
-  // const replies = webmentions
-  //   .filter((entry) => entry['wm-target'] === url)
-  //   .filter((obj) => {
-  //     return obj['wm-property'] === 'in-reply-to';
-  //   })
-  //   .sort(orderByDate)
-  //   .map(clean);
+  const replies = webmentions
+    .filter((entry) => entry['wm-target'] === url)
+    .filter((obj) => {
+      return obj['wm-property'] === 'in-reply-to';
+    })
+    .filter((obj) => obj.author.url !== 'https://twitter.com/ambrwlsn90')
+    .sort(orderByDate)
+    .map(clean);
+
+  // removes duplicate replies in the replies array
+  const uniqueReplies = uniqBy(
+    replies.reverse(),
+    (obj) => obj.author.name
+  ).reverse();
 
   // run all of the above for each webmention that targets the current URL
   return {
     likes,
     reposts,
-    // replies,
+    replies: uniqueReplies,
   };
 };

@@ -1362,19 +1362,17 @@ figure img {
   font-size: var(--text15);
 }
 
-/* Webmention Section */
-
+/* Start of webmention section */
 .webmentions {
   display: block;
   text-align: left;
-  padding-bottom: var(--spacingM);
 }
 .webmentions__responses {
   display: flex;
   align-items: center;
 }
 .webmentions__responses--link {
-  font-size: 0.8rem;
+  font-size: var(--text08);
   font-family: var(--fontSerif);
   margin: var(--spacingL) 0 var(--spacingS) 0;
 }
@@ -1382,31 +1380,38 @@ figure img {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+}
+.webmentions__more {
   color: var(--secondaryTextColor);
   font-size: var(--text09);
 }
 .webmentions__face {
-  width: 2rem;
-  height: 2rem;
+  width: var(--spacingXL);
+  height: var(--spacingXL);
   border-radius: 50%;
   object-fit: cover;
   flex: none;
+  margin: var(--spacingXS) var(--spacingXS) 0 0;
 }
 .webmentions__list {
   list-style-type: none;
   padding: 0;
 }
 .webmentions__item {
-  margin-bottom: 2rem;
+  margin-bottom: var(--spacingM);
+  font-family: var(--fontSerif);
+  font-size: var(--text09);
 }
 .webmentions__likes {
   margin-top: var(--spacingM);
 }
 
-/* Single Webmention */
-
 .webmention {
   display: block;
+}
+.webmention__content {
+  margin-top: var(--spacingS);
+  font-weight: lighter;
 }
 .webmention__meta,
 .webmention__author {
@@ -1414,19 +1419,22 @@ figure img {
   align-items: center;
   flex-wrap: wrap;
 }
-.webmention__meta {
-  margin-bottom: 0.5rem;
+.webmention__author__name {
+  font-size: var(--text1);
 }
 .webmention__author {
-  margin-right: 0.25rem;
+  margin-right: var(--spacingXS);
 }
 .webmention__author__photo {
-  height: 3rem;
-  width: 3rem;
+  height: var(--spacingXL);
+  width: var(--spacingXL);
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 0.5rem;
+  margin-right: var(--spacingS);
 }
 .webmention__pubdate {
-  font-style: italic;
+  color: var(--secondaryTextColor);
+  font-family: var(--fontSansSerif);
+  font-size: var(--text09);
 }
+/* end of webmention section */

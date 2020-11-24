@@ -12,9 +12,9 @@
 
         <div class="webmentions__facepile">
             {% for like in mentions.likes | reverse | head(8) %}
-                <a href="{{ like.url }}"><img loading="lazy" src="{% if like.photo %}{{ like.photo }}{% else %}{{ '/img/webmention-avatar-default.svg' | url }}{% endif %}" title="{{ like.name }}" alt="like.name" class="webmentions__face"/></a>
+                <a href="{{ like.url }}"><img loading="lazy" src="{% if like.photo %}{{ like.photo }}{% else %}{{ '/img/webmention-avatar-default.svg' | url }}{% endif %}" title="{{ like.name }}" alt="{{ like.name }}" class="webmentions__face"/></a>
             {% endfor %}
-            {% if mentions.likes.length > 8 %}&nbsp;+ {{ mentions.likes.length - 8 }} more&#8230;{% endif %}
+            {% if mentions.likes.length > 8 %}&nbsp;<span class="webmentions__more">+ {{ mentions.likes.length - 8 }} more</span>&#8230;{% endif %}
         </div>
     {% endif %}
 
@@ -23,17 +23,17 @@
 
         <div class="webmentions__facepile">
             {% for repost in mentions.reposts | reverse | head(8) %}
-                <a href="{{ repost.url }}"><img loading="lazy" src="{% if repost.photo %}{{ repost.photo }}{% else %}{{ '/img/webmention-avatar-default.svg' | url }}{% endif %}" title="{{ repost.name }}" alt="repost.name" class="webmentions__face"/></a>
+                <a href="{{ repost.url }}"><img loading="lazy" src="{% if repost.photo %}{{ repost.photo }}{% else %}{{ '/img/webmention-avatar-default.svg' | url }}{% endif %}" title="{{ repost.name }}" alt="{{ repost.name }}" class="webmentions__face"/></a>
             {% endfor %}
-            {% if mentions.reposts.length > 8 %}&nbsp;+ {{ mentions.reposts.length - 8 }} more&#8230;{% endif %}
+            {% if mentions.reposts.length > 8 %}&nbsp;<span class="webmentions__more">+ {{ mentions.reposts.length - 8 }} more</span>&#8230;{% endif %}
         </div>
     {% endif %}
 
-    {# {% if mentions.replies.length %}
+    {% if mentions.replies.length %}
         <h3>{{ mentions.replies.length }} Replies</h3>
 
         <ol class="webmentions__list">
-            {% for reply in mentions.replies | reverse %}
+            {% for reply in mentions.replies | reverse | head(10) %}
                 <li class="webmentions__item">
                     <div class="webmention__meta">
                         {% if reply.author %}
@@ -43,7 +43,7 @@
                                 {% else %}
                                     <img class="webmention__author__photo" src="{{ '/img/webmention-avatar-default.svg' | url }}" alt="">
                                 {% endif %}
-                                <strong class="p-name">{{ reply.author.name }}</strong>
+                                <strong class="webmention__author__name p-name">{{ reply.author.name }}</strong>
                             </a>
                         {% else %}
                             <span class="webmention__author">
@@ -51,18 +51,19 @@
                                 <strong>Anonymous</strong>
                             </span>
                         {% endif %}
-
                         {% if reply.published %}
                             <time class="webmention__pubdate dt-published" datetime="{{ reply.published }}">{{ reply.published  | readableBlogPostDate }}</time>
                         {% endif %}
                     </div>
+
                     <div class="webmention__content p-content">
                         {{ reply.content.value | safe }}
                     </div>
                 </li>
             {% endfor %}
+            {% if mentions.replies.length > 10 %}&nbsp;<span class="webmentions__more">+ {{ mentions.replies.length - 10 }} more</span>&#8230;{% endif %}
         </ol>
-    {% endif %} #}
+    {% endif %}
 
     {% if mentions.length < 1 %}
         <p>None yet.</p>
