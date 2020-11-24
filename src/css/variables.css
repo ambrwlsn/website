@@ -90,6 +90,8 @@
 
   --lineHeight: 1.8;
 
+  --imageBackgroundColor: #eeacd9;
+
   font-size: 112.5%;
   scroll-behavior: smooth;
   word-wrap: break-word;

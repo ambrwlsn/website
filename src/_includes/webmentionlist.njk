@@ -3,12 +3,20 @@
 
 <div class="webmentions" id="webmentions">
     <div class="webmentions__responses">
-        <h2>Responses</h2>&nbsp;
+        <h2>
+            {% if (mentions.total === 1) %}
+                {{ mentions.total }} Response
+            {% else %}
+                {{ mentions.total }} Responses
+            {% endif %}
+        </h2>&nbsp;
         <a class="webmentions__responses--link" aria-label="information on webmention responses" href="https://indieweb.org/Webmention">&#x2139;</a>
     </div>
 
     {% if mentions.likes.length %}
-        <h3 class="webmentions__likes">{{ mentions.likes.length }} Likes</h3>
+        <h3 class="webmentions__likes">
+            {% if mentions.likes.length === 1%}{{ mentions.likes.length }} Like{% elif (mentions.likes.length > 1) -%}{{ mentions.likes.length }} Likes{% endif -%}
+        </h3>
 
         <div class="webmentions__facepile">
             {% for like in mentions.likes | reverse | head(8) %}
@@ -19,7 +27,9 @@
     {% endif %}
 
     {% if mentions.reposts.length %}
-        <h3>{{ mentions.reposts.length }} Reposts</h3>
+        <h3>
+            {% if mentions.reposts.length === 1%}{{ mentions.reposts.length }} Retweet{% elif (mentions.reposts.length > 1) -%}{{ mentions.reposts.length }} Retweets{% endif -%}
+        </h3>
 
         <div class="webmentions__facepile">
             {% for repost in mentions.reposts | reverse | head(8) %}
@@ -30,7 +40,9 @@
     {% endif %}
 
     {% if mentions.replies.length %}
-        <h3>{{ mentions.replies.length }} Replies</h3>
+        <h3>
+            {% if mentions.replies.length === 1%}{{ mentions.replies.length }} Reply{% elif (mentions.replies.length > 1) -%}{{ mentions.replies.length }} Replies{% endif -%}
+        </h3>
 
         <ol class="webmentions__list">
             {% for reply in mentions.replies | reverse | head(10) %}
@@ -65,8 +77,80 @@
         </ol>
     {% endif %}
 
-    {% if mentions.length < 1 %}
-        <p>None yet.</p>
+    {% if mentions.traditionalMentions.length %}
+        <h3>
+            {% if mentions.traditionalMentions.length === 1%}{{ mentions.traditionalMentions.length }} Mention{% elif (mentions.traditionalMentions.length > 1) -%}{{ mentions.traditionalMentions.length }} Mentions{% endif -%}
+        </h3>
+
+        <ol class="webmentions__list">
+            {% for reply in mentions.traditionalMentions | reverse | head(5) %}
+                <li class="webmentions__item">
+                    <div class="webmention__meta">
+                        {% if reply.author %}
+                            <a class="webmention__author p-author h-card u-url" href="{{ reply.url }}" target="_blank" rel="noopener noreferrer">
+                                {% if reply.author.photo %}
+                                    <img class="webmention__author__photo u-photo" src="{{ reply.author.photo }}" alt="{{ reply.author.name }}">
+                                {% else %}
+                                    <img class="webmention__author__photo" src="{{ '/img/webmention-avatar-default.svg' | url }}" alt="">
+                                {% endif %}
+                                <strong class="webmention__author__name p-name">{{ reply.author.name }}</strong>
+                            </a>
+                        {% else %}
+                            <span class="webmention__author">
+                                <img class="webmention__author__photo" src="{{ '/img/webmention-avatar-default.svg' | url }}" alt="">
+                                <strong>Anonymous</strong>
+                            </span>
+                        {% endif %}
+                        {% if reply.published %}
+                            <time class="webmention__pubdate dt-published" datetime="{{ reply.published }}">{{ reply.published  | readableBlogPostDate }}</time>
+                        {% endif %}
+                    </div>
+
+                    <div class="webmention__content p-content">
+                        {{ reply.content.value | safe }}
+                    </div>
+                </li>
+            {% endfor %}
+            {% if mentions.traditionalMentions.length > 5 %}&nbsp;<span class="webmentions__more">+ {{ mentions.traditionalMentions.length - 5 }} more</span>&#8230;{% endif %}
+        </ol>
+    {% endif %}
+
+    {% if mentions.bookmarks.length %}
+        <h3>
+            {% if mentions.bookmarks.length === 1%}{{ mentions.bookmarks.length }} Bookmark{% elif (mentions.bookmarks.length > 1) -%}{{ mentions.bookmarks.length }} Bookmarks{% endif -%}
+        </h3>
+
+        <ol class="webmentions__list">
+            {% for reply in mentions.bookmarks | reverse | head(5) %}
+                <li class="webmentions__item">
+                    <div class="webmention__meta">
+                        {% if reply.author %}
+                            <a class="webmention__author p-author h-card u-url" href="{{ reply.url }}" target="_blank" rel="noopener noreferrer">
+                                {% if reply.author.photo %}
+                                    <img class="webmention__author__photo u-photo" src="{{ reply.author.photo }}" alt="{{ reply.author.name }}">
+                                {% else %}
+                                    <img class="webmention__author__photo" src="{{ '/img/webmention-avatar-default.svg' | url }}" alt="">
+                                {% endif %}
+                                <strong class="webmention__author__name p-name">{{ reply.author.name }}</strong>
+                            </a>
+                        {% else %}
+                            <span class="webmention__author">
+                                <img class="webmention__author__photo" src="{{ '/img/webmention-avatar-default.svg' | url }}" alt="">
+                                <strong>Anonymous</strong>
+                            </span>
+                        {% endif %}
+                        {% if reply.published %}
+                            <time class="webmention__pubdate dt-published" datetime="{{ reply.published }}">{{ reply.published  | readableBlogPostDate }}</time>
+                        {% endif %}
+                    </div>
+
+                    <div class="webmention__content p-content">
+                        {{ reply.content.value | safe }}
+                    </div>
+                </li>
+            {% endfor %}
+            {% if mentions.bookmarks.length > 5 %}&nbsp;<span class="webmentions__more">+ {{ mentions.bookmarks.length - 5 }} more</span>&#8230;{% endif %}
+        </ol>
     {% endif %}
 
 </div>

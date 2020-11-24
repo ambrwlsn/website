@@ -1086,7 +1086,7 @@ figcaption {
   opacity: var(--imageOpacity);
   margin-right: var(--spacingM);
   margin-bottom: var(--spacingM);
-  background: #eeacd9;
+  background: var(--imageBackgroundColor);
 }
 
 @media only screen and (min-width: 686px) {
@@ -1366,10 +1366,14 @@ figure img {
 .webmentions {
   display: block;
   text-align: left;
+  font-size: var(--text09);
 }
 .webmentions__responses {
   display: flex;
   align-items: center;
+}
+.webmentions__responses h2 {
+  margin-bottom: 0;
 }
 .webmentions__responses--link {
   font-size: var(--text08);
@@ -1388,6 +1392,7 @@ figure img {
 .webmentions__face {
   width: var(--spacingXL);
   height: var(--spacingXL);
+  background: var(--imageBackgroundColor);
   border-radius: 50%;
   object-fit: cover;
   flex: none;
@@ -1412,6 +1417,7 @@ figure img {
 .webmention__content {
   margin-top: var(--spacingS);
   font-weight: lighter;
+  line-height: var(--lineHeight);
 }
 .webmention__meta,
 .webmention__author {
@@ -1431,10 +1437,13 @@ figure img {
   border-radius: 50%;
   object-fit: cover;
   margin-right: var(--spacingS);
+  background: var(--imageBackgroundColor);
 }
 .webmention__pubdate {
   color: var(--secondaryTextColor);
   font-family: var(--fontSansSerif);
   font-size: var(--text09);
+  margin-top: 0.1rem;
+  margin-left: var(--spacingXS);
 }
 /* end of webmention section */

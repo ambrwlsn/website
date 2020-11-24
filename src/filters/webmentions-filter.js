@@ -2,17 +2,6 @@ const sanitizeHTML = require('sanitize-html');
 const uniqBy = require('lodash/uniqBy');
 
 module.exports = function(webmentions, url) {
-  // define which types of webmentions should be included per URL.
-  // possible values listed here:
-  // https://github.com/aaronpk/webmention.io#find-links-of-a-specific-type-to-a-specific-page
-  const allowedTypes = [
-    'mention-of',
-    'in-reply-to',
-    'repost-of',
-    'like-of',
-    'bookmark-of',
-  ];
-
   // define which HTML tags you want to allow in the webmention body content
   // https://github.com/apostrophecms/sanitize-html#what-are-the-default-options
   const allowedHTML = {
@@ -41,9 +30,23 @@ module.exports = function(webmentions, url) {
     return entry;
   };
 
+  // only allow webmentions that have an author name and a timestamp
+  const checkRequiredFields = (entry) => {
+    const { author, published } = entry;
+    return !!author && !!author.name && !!published;
+  };
+
   // sort webmentions by published timestamp chronologically.
   // swap a.published and b.published to reverse order.
   const orderByDate = (a, b) => new Date(b.published) - new Date(a.published);
+
+  // define which types of webmentions should be included per URL.
+  // possible values listed here:
+  // https://github.com/aaronpk/webmention.io#find-links-of-a-specific-type-to-a-specific-page
+
+  // Total webmentions
+  const total = webmentions.filter((entry) => entry['wm-target'] === url)
+    .length;
 
   // Likes on Twitter
   const likes = webmentions
@@ -73,16 +76,38 @@ module.exports = function(webmentions, url) {
     .sort(orderByDate)
     .map(clean);
 
+  // Bookmarks. What are these? I don't know
+  const bookmarks = webmentions
+    .filter((entry) => entry['wm-target'] === url)
+    .filter((obj) => {
+      return obj['wm-property'] === 'bookmark-of';
+    })
+    .sort(orderByDate)
+    .map(clean);
+
   // removes duplicate replies in the replies array
   const uniqueReplies = uniqBy(
     replies.reverse(),
     (obj) => obj.author.name
   ).reverse();
 
+  // Traditional (non-twitter) webmentions and quote tweets
+  const traditionalMentions = webmentions
+    .filter((entry) => entry['wm-target'] === url)
+    .filter(checkRequiredFields)
+    .filter((obj) => {
+      return obj['wm-property'] === 'mention-of';
+    })
+    .sort(orderByDate)
+    .map(clean);
+
   // run all of the above for each webmention that targets the current URL
   return {
+    total,
     likes,
     reposts,
     replies: uniqueReplies,
+    bookmarks,
+    traditionalMentions,
   };
 };
