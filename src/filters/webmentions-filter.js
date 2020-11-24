@@ -44,17 +44,36 @@ module.exports = function(webmentions, url) {
   // swap a.published and b.published to reverse order.
   const orderByDate = (a, b) => new Date(b.published) - new Date(a.published);
 
-  // only allow webmentions that have an author name and a timestamp
-  const checkRequiredFields = (entry) => {
-    const { author, published } = entry;
-    return !!author && !!author.name && !!published;
-  };
+  // Likes on Twitter
+  const likes = webmentions
+    .filter((entry) => entry['wm-target'] === url)
+    .filter((obj) => {
+      return obj['wm-property'] === 'like-of';
+    })
+    .map((_) => _.author);
+
+  // Re-tweets on Twitter
+  const reposts = webmentions
+    .filter((entry) => entry['wm-target'] === url)
+    .filter((obj) => {
+      return obj['wm-property'] === 'repost-of';
+    })
+    .sort(orderByDate)
+    .map((_) => _.author);
+
+  // Replies on Twitter
+  // const replies = webmentions
+  //   .filter((entry) => entry['wm-target'] === url)
+  //   .filter((obj) => {
+  //     return obj['wm-property'] === 'in-reply-to';
+  //   })
+  //   .sort(orderByDate)
+  //   .map(clean);
 
   // run all of the above for each webmention that targets the current URL
-  return webmentions
-    .filter((entry) => entry['wm-target'] === url)
-    .filter((entry) => allowedTypes.includes(entry['wm-property']))
-    .filter(checkRequiredFields)
-    .sort(orderByDate)
-    .map(clean);
+  return {
+    likes,
+    reposts,
+    // replies,
+  };
 };

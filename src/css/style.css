@@ -1367,11 +1367,23 @@ figure img {
 .webmentions {
   display: block;
   text-align: left;
+  padding-bottom: var(--spacingM);
+}
+.webmentions__responses {
+  display: flex;
+  align-items: center;
+}
+.webmentions__responses--link {
+  font-size: 0.8rem;
+  font-family: var(--fontSerif);
+  margin: var(--spacingL) 0 var(--spacingS) 0;
 }
 .webmentions__facepile {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
+  color: var(--secondaryTextColor);
+  font-size: var(--text09);
 }
 .webmentions__face {
   width: 2rem;
@@ -1386,6 +1398,9 @@ figure img {
 }
 .webmentions__item {
   margin-bottom: 2rem;
+}
+.webmentions__likes {
+  margin-top: var(--spacingM);
 }
 
 /* Single Webmention */

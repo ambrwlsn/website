@@ -1,30 +1,71 @@
 {%- set absoluteUrl -%}{{ page.url | url | absoluteUrl(metadata.url) }}{%- endset -%}
 {%- set mentions = webmentions.children | webmentionsForUrl(absoluteUrl) -%}
+
 <div class="webmentions" id="webmentions">
-    <div style="display: flex; align-items: center;">
+    <div class="webmentions__responses">
         <h2>Responses</h2>&nbsp;
-        <a style="font-size: 0.8rem; font-family: var(--fontSerif) ;    margin: var(--spacingL) 0 var(--spacingS) 0;" aria-label="information on webmention responses" href="https://indieweb.org/Webmention">&#x2139;</a>
+        <a class="webmentions__responses--link" aria-label="information on webmention responses" href="https://indieweb.org/Webmention">&#x2139;</a>
     </div>
 
-    {% if mentions | length %}
+    {% if mentions.likes.length %}
+        <h3 class="webmentions__likes">{{ mentions.likes.length }} Likes</h3>
+
         <div class="webmentions__facepile">
-            {% for webmention in mentions | reverse | head(5) %}
-                <img src="{% if webmention.author.photo %}{{ webmention.author.photo }}{% else %}{{ '/img/webmention-avatar-default.svg' | url }}{% endif %}" title="{{ webmention.author.name }}" alt="" class="webmentions__face"/>
+            {% for like in mentions.likes | reverse | head(8) %}
+                <a href="{{ like.url }}"><img loading="lazy" src="{% if like.photo %}{{ like.photo }}{% else %}{{ '/img/webmention-avatar-default.svg' | url }}{% endif %}" title="{{ like.name }}" alt="like.name" class="webmentions__face"/></a>
             {% endfor %}
-            {% if mentions.length > 5 %}
-                <span>+{{ mentions.length - 5 }}</span>
-            {% endif %}
+            {% if mentions.likes.length > 8 %}&nbsp;+ {{ mentions.likes.length - 8 }} more&#8230;{% endif %}
         </div>
+    {% endif %}
+
+    {% if mentions.reposts.length %}
+        <h3>{{ mentions.reposts.length }} Reposts</h3>
+
+        <div class="webmentions__facepile">
+            {% for repost in mentions.reposts | reverse | head(8) %}
+                <a href="{{ repost.url }}"><img loading="lazy" src="{% if repost.photo %}{{ repost.photo }}{% else %}{{ '/img/webmention-avatar-default.svg' | url }}{% endif %}" title="{{ repost.name }}" alt="repost.name" class="webmentions__face"/></a>
+            {% endfor %}
+            {% if mentions.reposts.length > 8 %}&nbsp;+ {{ mentions.reposts.length - 8 }} more&#8230;{% endif %}
+        </div>
+    {% endif %}
+
+    {# {% if mentions.replies.length %}
+        <h3>{{ mentions.replies.length }} Replies</h3>
 
         <ol class="webmentions__list">
-            {% for webmention in mentions | reverse %}
+            {% for reply in mentions.replies | reverse %}
                 <li class="webmentions__item">
-                    {% include 'webmention.njk' %}
+                    <div class="webmention__meta">
+                        {% if reply.author %}
+                            <a class="webmention__author p-author h-card u-url" href="{{ reply.url }}" target="_blank" rel="noopener noreferrer">
+                                {% if reply.author.photo %}
+                                    <img class="webmention__author__photo u-photo" src="{{ reply.author.photo }}" alt="{{ reply.author.name }}">
+                                {% else %}
+                                    <img class="webmention__author__photo" src="{{ '/img/webmention-avatar-default.svg' | url }}" alt="">
+                                {% endif %}
+                                <strong class="p-name">{{ reply.author.name }}</strong>
+                            </a>
+                        {% else %}
+                            <span class="webmention__author">
+                                <img class="webmention__author__photo" src="{{ '/img/webmention-avatar-default.svg' | url }}" alt="">
+                                <strong>Anonymous</strong>
+                            </span>
+                        {% endif %}
+
+                        {% if reply.published %}
+                            <time class="webmention__pubdate dt-published" datetime="{{ reply.published }}">{{ reply.published  | readableBlogPostDate }}</time>
+                        {% endif %}
+                    </div>
+                    <div class="webmention__content p-content">
+                        {{ reply.content.value | safe }}
+                    </div>
                 </li>
             {% endfor %}
         </ol>
+    {% endif %} #}
 
-    {% else %}
+    {% if mentions.length < 1 %}
         <p>None yet.</p>
     {% endif %}
+
 </div>
