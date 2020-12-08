@@ -1,6 +1,7 @@
 ---
 title: Grow the IndieWeb with Webmentions
 date: "2020-12-08"
+ogImage: indieweb3.png
 tags: [ssg, indie-web]
 keywords: [amber wilson,software engineering,indie web, webmentions, webmention, eleventy]
 ---
