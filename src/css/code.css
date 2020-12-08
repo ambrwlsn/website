@@ -152,7 +152,7 @@ pre > code.highlight {
 /* Inline code */
 article code {
   border-radius: 3px;
-  color: #000000;
+  color: var(--textColor);
   padding: 0 0.1rem;
   font-size: var(--text09);
   letter-spacing: 1px;
