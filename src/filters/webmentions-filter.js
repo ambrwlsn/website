@@ -76,7 +76,7 @@ module.exports = function(webmentions, url) {
     .sort(orderByDate)
     .map(clean);
 
-  // Bookmarks. What are these? I don't know
+  // Bookmarks
   const bookmarks = webmentions
     .filter((entry) => entry['wm-target'] === url)
     .filter((obj) => {
