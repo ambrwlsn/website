@@ -757,6 +757,39 @@ figcaption {
   border-radius: 3px;
 }
 
+.tags-with-no-background {
+  margin-top: 0;
+}
+
+.tags-with-no-background a {
+  display: inline-block;
+  font-family: var(--fontSansSerif);
+  font-weight: 500;
+  padding: var(--spacingXXS) var(--spacingS);
+  background-color: var(--tertiaryBackgroundColor);
+  font-size: var(--text08);
+  position: relative;
+  color: var(--linkColor);
+  border-radius: 3px;
+  outline: none;
+}
+
+.tags-with-no-background a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.tags-with-no-background a:hover::after,
+.tags-with-no-background a:focus::after {
+  border: 2px solid var(--linkHoverColor);
+  border-radius: 3px;
+}
+
 .blog-list-tags,
 .learn-post-tags {
   margin: var(--spacingS) 0;
