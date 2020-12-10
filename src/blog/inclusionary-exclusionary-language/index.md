@@ -1,8 +1,8 @@
 ---
 title: Inclusionary and Exclusionary Language
 date: "2018-02-03"
-tags: ["workshop", "public-speaking"]
-keywords: [amber wilson,software engineering,web development,speaking, event, workshop, mentoring]
+tags: [community]
+keywords: [amber wilson,software engineering,web development,speaking, event, workshop, mentoring,public-speaking, cfp day, peter aitken]
 ---
 
 Today I attended the [Global Diversity CFP Day](https://www.globaldiversitycfpday.com/) – Berlin style. There were 13 amazing mentors and over 20 students – all of us hosted by the awesome [Stefan Judis](https://www.stefanjudis.com/) and [Irina Botea](https://twitter.com/irina_botea?lang=en) in the Contentful offices. The day was pre-planned for us by the great [Peter Aitken](https://twitter.com/jiggy_pete?lang=en). We watched inspiring educational videos, had discussions and completed exercises. The exercise which struck the biggest chord with the participants was the one on use of exclusionary language within public speaking, and how we can work to be much more inclusionary. Two groups of around 15 people discussed and wrote their ideas down so they could be presented to everyone. Here were the things (formatted as <u>issues</u>) that my group discussed:

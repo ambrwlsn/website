@@ -1,7 +1,7 @@
 ---
 title: Storytelling
 date: "2017-05-08"
-tags: [storytelling]
+tags: [tips]
 keywords: [amber wilson,software engineering,web development,coding,story,stories]
 ---
 

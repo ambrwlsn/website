@@ -1,8 +1,8 @@
 ---
 title: GET vs. POST Requests
 date: "2017-03-27"
-tags: [learning]
-keywords: [amber wilson,software engineering,web development,coding, get, post, https request]
+tags: [http]
+keywords: [amber wilson,software engineering,web development,coding,get, post, https request, learning]
 ---
 
 Amidst a learning spree on semantic HTML and the ways servers communicate with web browsers, I was introduced to 'GET' and 'POST' requests.

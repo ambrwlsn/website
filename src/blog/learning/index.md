@@ -1,7 +1,7 @@
 ---
 title: Learning
 date: "2017-03-16"
-tags: [learning]
+tags: [tips, reflection]
 keywords: [amber wilson, javascript, software engineering, web development, coding]
 ---
 

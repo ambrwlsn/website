@@ -1,7 +1,7 @@
 ---
 title: What Am I Looking For?
 date: "2017-12-06"
-tags: [me]
+tags: [reflection]
 keywords: [amber wilson,software engineering,web development,speaking, job search, skills]
 ---
 

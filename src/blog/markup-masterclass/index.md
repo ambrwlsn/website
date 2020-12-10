@@ -1,7 +1,7 @@
 ---
 title: Markup-Masterclass
 date: "2017-03-16"
-tags: [learning]
+tags: [html]
 keywords: [amber wilson, javascript, software engineering, web development, coding, markup]
 ---
 

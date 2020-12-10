@@ -2,7 +2,7 @@
 title: Nightlybuild 2017
 date: "2017-09-06"
 tags: [conference, public-speaking]
-keywords: [amber wilson, javascript, software engineering, web development, coding]
+keywords: [amber wilson, javascript, software engineering, web development, coding, public speaking]
 ---
 
 Darkness. A good kind. The theatre dressed in purple and black hues. The theme colours. Quite empty at first, smattered with only a few people. Organisers, speakers and sponsors. Everyone calm and confident, or maybe hiding nerves well. Time moved fast. The seats, around 200, seemed to fill at the blink of an eye.

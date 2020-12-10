@@ -1,8 +1,8 @@
 ---
 title: What I Learned Today
 date: "2017-06-22"
-tags: [wilt, learning]
-keywords: [amber wilson,javascript,software engineering,web development, coding, code newbie]
+tags: [wilt]
+keywords: [amber wilson,javascript,software engineering,web development, coding, code newbie, learning]
 ---
 
 Today I sat with Russell Ward, technical director at [The Unit](https://www.theunit.co.uk/). We talked about how I can get involved in the development team as part of my internship. This quickly turned into a discussion about programming languages and the Web.

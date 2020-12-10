@@ -1,8 +1,8 @@
 ---
 title: Apart From Code
 date: "2018-04-28"
-keywords: [amber wilson,javascript,software engineering,web development, coding]
-tags: [mentor, learning]
+keywords: [amber wilson,javascript,software engineering,web development, coding,mentor,learning]
+tags: [reflection]
 ---
 <blockquote>
 <p lang="en" dir="ltr">Yes, exactly!!!!</p>&mdash; Amber Wilson (@ambrwlsn90) <a href="https://twitter.com/ambrwlsn90/status/989514766807904256?ref_src=twsrc%5Etfw">April 26, 2018</a>

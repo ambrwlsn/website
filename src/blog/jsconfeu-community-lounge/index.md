@@ -1,8 +1,8 @@
 ---
 title: 'JSConf EU: Community Lounge'
 date: "2018-06-07"
-tags: [conference, codebar]
-keywords: [amber wilson,software engineering,web development, coding, community lounge]
+tags: [conference, community]
+keywords: [amber wilson,software engineering,web development, coding, community lounge,codebar]
 ---
 
 One month ago, I was invited by [Vanessa](https://twitter.com/vanessayuenn) and [Michele](https://twitter.com/sheley) to speak at the JSConf EU community lounge in sunny Berlin. This was a tremendous honour - not only would I be able to talk about how great [codebar](https://codebar.io) is to a crowd of eager attendees, but I'd be able to participate in both [CSS](https://2018.cssconf.eu/) and [JSConf EU](https://2018.jsconf.eu/), and catch up with lots of old and new friends.

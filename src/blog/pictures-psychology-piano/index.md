@@ -1,7 +1,7 @@
 ---
 title: Pictures, Psychology and Piano
 date: "2017-08-18"
-tags: [public-speaking]
+tags: [reflection,non-tech]
 keywords: [amber wilson, javascript, software engineering, web development, coding,writing]
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: CSS Tips for New Devs
 date: "2020-05-04"
-tags: [learning, css, dev-tips]
-keywords: []
+tags: [css]
+keywords: [amber wilson,software engineering,web development,learning]
 ---
 
 May the 4th be with you! 

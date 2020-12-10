@@ -8,9 +8,10 @@ keywords:
     software engineering,
     web development,
     coding,
-    accessibility,
+    dev-tips,
+    advice
   ]
-tags: [accessibility, dev-tips, advice]
+tags: [accessibility]
 ---
 
 Recently, I've been chatting about accessibility with two of the biggest experts on the subject. Also, the web developers I work with at [N26](https://n26.com/en-eu) take accessibility very seriously. This got me interested enough to read some blog posts on the subject. Many of these posts mentioned 'landmark roles' - one of which is 'navigation'. The navigation landmark is for identifying groups of links that help users navigate around a site, or within a page. You can give an HTML element a role of navigation (please see code block below):

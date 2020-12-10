@@ -1,8 +1,8 @@
 ---
 title: JPG? PNG? SVG?
 date: "2017-09-25"
-tags: [learning]
-keywords: [amber wilson,software engineering,web development,coding,images,png,svg,jpg, image format, image formats]
+tags: [images]
+keywords: [amber wilson,software engineering,web development,coding,png,svg,jpg, image format, image formats]
 ---
 
 There is a room that contains all there is to know about images. The door to it is locked. Most of us have casually peered through its keyhole or witnessed light of various colours and brightness spilling from it. If you are granted a guest pass to the room, beware. Akin to JK Rowling’s Triwizard Maze, you are likely to get lost in its twisting passages, or be usurped by something surprising along the way.

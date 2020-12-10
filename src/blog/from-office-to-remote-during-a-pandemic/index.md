@@ -1,8 +1,8 @@
 ---
 title: From Office to Remote (During a Pandemic)
 date: "2020-09-10"
-tags: [reflection, self-care, non-tech]
-keywords: [amber wilson, software engineering, web development]
+tags: [reflection, non-tech]
+keywords: [amber wilson, software engineering, web development, self care]
 excerpt: I wanted to write my thoughts on remote working as I enter my sixth consecutive month of it. This remote working situation I am in is special because
 ---
 ## Background

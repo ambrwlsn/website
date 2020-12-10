@@ -1,8 +1,8 @@
 ---
 title: Imperative and Declarative Programming
 date: '2019-07-28'
-tags: [dev-tips, learning, javascript]
-keywords: [amber wilson, software engineering, web development, mentoring]
+tags: [paradigm]
+keywords: [amber wilson, software engineering, web development, mentoring,dev tips, learning, javascript]
 ---
 
 In spoken languages, the imperative is used to express commands/give orders. This helps me remember how programming languages use the imperative.

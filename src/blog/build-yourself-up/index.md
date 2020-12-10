@@ -1,8 +1,8 @@
 ---
 title: Build Yourself Up
 date: "2018-08-04"
-keywords: [amber wilson, javascript, software engineering, web development, coding, advice]
-tags: [dev-tips, advice]
+keywords: [amber wilson, javascript, software engineering, web development, coding, advice, tips, dev tips]
+tags: [reflection]
 ---
 
 What I've written here is meant for developers but I think it could work for anyone :)

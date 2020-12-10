@@ -14,8 +14,12 @@ keywords:
     software engineering,
     web development,
     dev tools,
-    coding]
-tags: [learning, dev-tips, javascript]
+    coding,
+    browser,
+    learning,
+    devtips,
+    javascript]
+tags: [browser, create]
 excerpt: I have just found out what bookmarklets (aka favelets - a term coined by my friend Tantek back in the early 2000s) are and I like 'em! So what are they? 
 ---
 

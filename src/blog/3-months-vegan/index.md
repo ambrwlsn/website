@@ -1,8 +1,8 @@
 ---
 title: 3 Months Vegan
 date: "2017-09-05"
-keywords: [vegan]
-tags: [diet]
+keywords: [vegan,diet]
+tags: [non-tech]
 ---
 
 I watched the documentary “What the Earth” three months ago and became vegan the very next day – totally cold turkey – no meat, no milk, no cheese, no eggs, no honey…

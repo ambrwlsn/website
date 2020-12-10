@@ -1,8 +1,8 @@
 ---
 title: Where did the focus go?
 date: "2020-06-17"
-tags: [javascript, dev-tips, accessibility]
-keywords: [learning, html, focus, element, document, DOM]
+tags: [accessibility]
+keywords: [learning, html, focus, element, document, DOM,javascript, dev tips]
 ---
 
 There was a bug in some of my code recently. A skip link was not working correctly. When it was focused and enter was pressed, focus was placed on the main content. Seemed okay. But, when tab was pressed to go into the main content, the focus went off to some place I could not see! I spent a few minutes trying to figure it out but could not. Then, I searched for how to programatically find focus. I found I could log `document.activeElement` into my console to do this.

@@ -1,8 +1,8 @@
 ---
 title: Mobile First
 date: "2017-05-19"
-tags: [mobile-first]
-keywords: [amber wilson, javascript, software engineering, web development, coding]
+tags: [tips]
+keywords: [amber wilson, javascript, software engineering, web development, coding, mobile first]
 ---
 
 Today I realised I wasn't adhering to a new, up-and-coming idea called '[Mobile First](https://www.lukew.com/ff/entry.asp?933)'...maybe you've heard of it?

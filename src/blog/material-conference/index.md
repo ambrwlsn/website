@@ -2,7 +2,7 @@
 title: Material Conference
 date: "2017-08-18"
 tags: [conference, public-speaking]
-keywords: [amber wilson, javascript, software engineering, web development, coding]
+keywords: [amber wilson, javascript, software engineering, web development, coding, public speaking]
 ---
 
 Where do I start? The preconceptions I had about the experience were inaccurate. I thought it’d be an absolutely great day – a day full of learning about the Web, meeting cool people, and achieving my first big talk. Those things turned out to be included for sure. The thing is though... it was also so much more.

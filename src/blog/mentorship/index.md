@@ -1,8 +1,8 @@
 ---
 title: Mentorship
 date: "2017-03-06"
-tags: [mobile-first]
-keywords: [amber wilson, javascript, software engineering, web development, coding]
+tags: [community]
+keywords: [amber wilson, javascript, software engineering, web development, coding, mentorship]
 ---
 
 It was around October last year when I arrived at 68 Middle Street for a [codebar](http://codebar.io) session. It was the first time I had been in the building and I was immediately struck by how spaceous and well-designed it was. Even if I wasn't entirely sure what people did there. I had begun coming to [codebar](http://codebar.io) about two months prior, and hadn't missed a single session. I loved how I got to see a different working environment each week and meet developers from any and all backgrounds. Not to mention, I was completely blown away when I first attended. The brilliant [Lotte Jackson](https://twitter.com/Lottejackson), [Rosa Fox](https://twitter.com/rosaemerald) and [Dorothy Wingrove](https://twitter.com/notthepoint) showed me that strong, intelligent, kind, ambitious (+ many more adjectives) women could feel comfortable in the tech world and that there is indeed a place for us there after all.

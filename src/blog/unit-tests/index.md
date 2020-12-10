@@ -1,7 +1,7 @@
 ---
 title: Unit Tests
 date: '2018-02-05'
-tags: [javascript, testing]
+tags: [testing]
 keywords:
   [
     amber wilson,
@@ -10,6 +10,7 @@ keywords:
     coding,
     code examples,
     unit tests,
+    javascript
   ]
 ---
 

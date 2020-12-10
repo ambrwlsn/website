@@ -1,8 +1,8 @@
 ---
 title: What I Learned Today
 date: "2017-04-13"
-tags: [wilt, learning]
-keywords: [amber wilson,javascript,software engineering,web development, coding, code newbie]
+tags: [wilt]
+keywords: [amber wilson,javascript,software engineering,web development, coding, code newbie, learning]
 ---
 
 At [Clearleft](https://clearleft.com) today, I ran through many new (and some familiar) things with [Jeremy](https://adactio.com):

@@ -1,8 +1,8 @@
 ---
 title: From Gatsby to Eleventy
 date: "2020-11-20"
-tags: [html, ssg]
-keywords: [amber wilson, software engineering, web development, performance, accessibility, gatsby, eleventy, static site, static site generator, javascript]
+tags: [ssg]
+keywords: [amber wilson, software engineering, web development, performance, accessibility, gatsby, eleventy, static site, static site generator, javascript, html]
 ---
 
 In this post I'll compare my experience building my personal blogging site (the one you're on now) with two static site generators (SSGs) - Gatsby and Eleventy.

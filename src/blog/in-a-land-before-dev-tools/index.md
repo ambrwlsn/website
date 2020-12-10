@@ -13,8 +13,8 @@ keywords:
     software engineering,
     web development,
     dev tools,
-    coding]
-tags: [web-history]
+    coding, web history]
+tags: [browser, web-history]
 ---
 
 <img class="blog-image" src="img/dinosaur.jpg" alt="a toy dinosaur" />

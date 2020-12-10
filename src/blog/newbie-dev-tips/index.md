@@ -1,7 +1,7 @@
 ---
 title: Newbie Dev Tips
 date: "2017-08-29"
-tags: [dev-tips]
+tags: [tips]
 keywords: [amber wilson, javascript, software engineering, web development, coding]
 ---
 

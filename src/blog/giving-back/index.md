@@ -1,7 +1,7 @@
 ---
 title: Giving Back
 date: '2019-06-10'
-tags: [community, reflection, codebar]
+tags: [community]
 keywords:
   [
     amber wilson,
@@ -10,7 +10,7 @@ keywords:
     coding,
     giving back,
     challenge,
-    community,
+    codebar,
   ]
 ---
 

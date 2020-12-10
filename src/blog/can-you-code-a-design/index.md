@@ -1,8 +1,8 @@
 ---
 title: Can You Code A Design?
 date: "2018-10-31"
-keywords: [amber wilson, javascript, software engineering, web development, coding, design,communication, communicate, documentation, document]
-tags: [design, dev-tips]
+keywords: [amber wilson, javascript, software engineering, web development, coding, design,communication, communicate, documentation, document, dev tips]
+tags: [design]
 ---
 
 If you said "YES", how exciting! Well done, you :-) *But wait*... it's not always a bed of roses. If you've already developed a real web page from a design, maybe you'll nod along to some of the points I have made below. The past two weeks, I’ve learned loads from building a static page using Gatsby (React) and SCSS (in this case CSS Modules, although I'd have been partial to some Styled Components). React and SCSS get on pretty well from what I have seen. And static site generators like Gatsby help you set them up to work together. The configuration is the hardest part. Once you're past that, developing with these two is a breeze. *But wait*... is it?

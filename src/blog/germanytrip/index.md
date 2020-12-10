@@ -1,8 +1,8 @@
 ---
 title: Germany Trip
 date: "2017-03-02"
-tags: [germany, travel]
-keywords: [amber wilson,software engineering,web development, photography, friends, pictures, bilder, fotos, freunde]
+tags: [non-tech]
+keywords: [amber wilson,software engineering,web development, photography, friends, pictures, bilder, fotos, freunde, germany, deutschland, travel, reise, reisen]
 ---
 
 An incredible time with wonderful friends ❤

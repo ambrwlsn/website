@@ -1,8 +1,8 @@
 ---
 title: Cookies
 date: "2017-04-11"
-tags: [learning]
-keywords: [amber wilson,software engineering,web development,coding,cookies,memory]
+tags: [cookies]
+keywords: [amber wilson,software engineering,web development,coding,memory, learning]
 ---
 
 **What is a cookie?** If you have a sweet tooth like me you might imagine a round, freshly-baked treat containing chocolate chips:

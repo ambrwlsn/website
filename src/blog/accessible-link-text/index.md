@@ -1,8 +1,8 @@
 ---
 title: Accessible Link Text
 date: "2020-11-05"
-tags: [html, accessibility, dev-tips]
-keywords: [amber wilson,software engineering,web development,coding,links,screen reader]
+tags: [accessibility]
+keywords: [amber wilson,software engineering,web development,coding,links,screen reader,html,dev-tips]
 ---
 
 I use a bookmarklet tool called <a href="https://khan.github.io/tota11y/">Tota11y</a>, which gives me a quick overview of my site's accessibility. I opened it on my site's homepage and clicked "link text". The tool flagged not one, but SIX inaccessible links. Woops!

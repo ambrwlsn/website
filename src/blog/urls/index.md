@@ -1,7 +1,7 @@
 ---
 title: URLs
 date: "2017-06-07"
-tags: [learning]
+tags: [tips]
 keywords: [amber wilson,software engineering,web development,coding,urls,links]
 ---
 

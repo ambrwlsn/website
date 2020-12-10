@@ -1,7 +1,7 @@
 ---
 title: Pair Programming
 date: "2018-05-06"
-tags: [teamwork]
+tags: [tips]
 keywords: [amber wilson,software engineering,web development, coding, pair programming, pairing, working together]
 ---
 

@@ -1,7 +1,7 @@
 ---
 title: Podcasts and Knowledge Sharing
 date: "2017-03-07"
-tags: [podcasts, learning]
+tags: [tips]
 keywords: [amber wilson, javascript, software engineering, web development, coding]
 ---
 

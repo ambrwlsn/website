@@ -14,6 +14,8 @@ keywords:
     scotland js,
     final,
     privilege,
+    community,
+    peter aitken
   ]
 ---
 

@@ -1,8 +1,8 @@
 ---
 title: 'House Elves'
 date: "2018-04-02"
-tags: [self-care, psychology]
-keywords: [amber wilson,software engineering,web development, take a break, house elves, musing, psychology]
+tags: [non-tech, reflection]
+keywords: [amber wilson,software engineering,web development, take a break, house elves, musing, psychology, self care]
 ---
 
 I’ve been wanting to write about psychology for a while now. However, despite having quite a few years of formal education in it, I was unsure where to begin.

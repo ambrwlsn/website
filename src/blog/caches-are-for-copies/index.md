@@ -1,8 +1,8 @@
 ---
 title: Caches are for Copies
 date: "2020-11-11"
-keywords: [amber wilson, javascript, software engineering, web development, coding, caching]
-tags: [browser, learning]
+keywords: [amber wilson, javascript, software engineering, web development, coding, browser]
+tags: [caching]
 ---
 
 When someone uses their browser to visit your website, the browser fetches files from your website's server. One example could be a CSS file. Once the CSS file has been fetched, the browser can cache (store) a copy of it. This means that, as the visitor browses your site, the CSS does not need to be fetched once again from the server. 

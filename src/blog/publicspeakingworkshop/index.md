@@ -1,7 +1,7 @@
 ---
 title: Public Speaking Workshop
 date: "2017-06-15"
-tags: [public-speaking, workshop]
+tags: [public-speaking]
 keywords: [amber wilson,software engineering,web development,workshop]
 ---
 
