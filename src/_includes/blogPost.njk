@@ -6,6 +6,14 @@ layout: main.njk
     <h1 class="title blog-post-title">{{ title }}</h1>
     <time class="post-date dt-published" itemprop="dateCreated pubdate datePublished">{{ date | readableBlogPostDate }}</time>
     <p class="post-reading-time">{{ content | emojiReadTime | safe }}</p>
+    <p class="tags-with-no-background">
+      {% for tag in tags %}
+        {%- if collections.tagList.indexOf(tag) != -1 -%}
+          {% set tagUrl %}/tags/{{ tag }}/{%endset %}
+          <a href="{{ tagUrl | url }}" aria-label="{{ tag }} tag">{{ tag }}</a>
+        {%- endif -%}
+      {% endfor %}
+    </p>
     <div class="e-content" itemprop="articleBody">
       {{ content | safe }}
     </div>

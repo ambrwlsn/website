@@ -767,6 +767,7 @@ figcaption {
   font-weight: 500;
   padding: var(--spacingXXS) var(--spacingS);
   background-color: var(--tertiaryBackgroundColor);
+  margin-right: var(--spacingXXS);
   font-size: var(--text08);
   position: relative;
   color: var(--linkColor);
