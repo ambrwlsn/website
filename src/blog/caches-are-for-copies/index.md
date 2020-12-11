@@ -11,7 +11,7 @@ The advantages of caching a file are: one less network request per page load, le
 
 It is important to note once again that the **files cached by the browser are copies**. This means that if a file living on your server is updated, the browser might not know about it. Therefore, a visitor might get the outdated copy of that file, rather than the updated one. The file will still load fast, as it is coming from the browser cache, but it will be outdated.
 
-<h2>How do servers manage files?</h2>
+## How do servers manage files?
 
 The server you're using to serve your website determines which of your site's resources are cached, and how they are cached. There are many different server options available. For the rest of this post, I'll talk about the one hosting the post you are reading -  Netlify. 
 
@@ -27,7 +27,7 @@ So, no visitors will be served outdated files. However, all files are re-request
 
 Additionally, Netlify makes the constant checking of files faster using their CDN (content delivery network) and HTTP/2. Please look up these two things, as discussing them is beyond the scope of this post.
 
-<h2>Trust, then verify</h2>
+## Trust, then verify
 
 It is a really nice thing in modern web development to be able to enjoy stuff done for you automatically by your browser and server. This doesn't mean that you shouldn't know how it all works, though.
 

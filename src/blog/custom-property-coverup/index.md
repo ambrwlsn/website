@@ -221,10 +221,7 @@ width: 200px;
     </a>
 </p>
 
-<div class="heading-with-siblings">
-  <h2 id="why-do-browsers-differ">Why do browsers differ?</h2>&nbsp;
-  <a href="#why-do-browsers-differ" role="link" aria-hidden="true">#</a>
-</div>
+## Why do browsers differ?
 
 Interesting! Why is it that Safari shows all the custom properties in the computed styles list? I am not sure. In Safari they are also interactive. Clicking a computed style directs you to the location of the style and allows you to edit it in the dev tools. This is not the case in Chrome or Firefox.
 
