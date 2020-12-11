@@ -114,6 +114,37 @@ figcaption {
   font-family: var(--fontSansSerif);
 }
 
+/* for all h2s that have a neighbouring anchor link */
+.heading-wrapper {
+  position: relative;
+  width: fit-content;
+}
+
+.anchor-link::before {
+  top: 0;
+  left: 100%;
+  display: inline-block;
+  position: absolute;
+  content: '';
+  background-image: url('/img/anchor.svg');
+  background-repeat: no-repeat;
+  height: 1rem;
+  width: 1rem;
+}
+
+.heading-wrapper:hover .anchor-link::before,
+.anchor-link:focus::before {
+  opacity: 1;
+}
+
+@media only screen and (min-width: 800px) {
+  .anchor-link::before {
+    right: 100%;
+    left: unset;
+    opacity: 0;
+  }
+}
+
 .wrapper {
   padding: var(--spacingXL) 0 var(--spacingL) 0;
 }

@@ -10,7 +10,12 @@ When I re-made my site with Eleventy, the pages didn't change much, but I had lo
 
 First, let me step back and explain why webmentions exist—the IndieWeb.
 
-<h2>IndieWeb</h2>
+<div class="heading-wrapper">
+    <h2 id="indieweb">
+        IndieWeb
+    </h2>
+    <a aria-label="link to this heading" aria-describedby="indieweb" class="anchor-link" href="#indieweb"></a>
+</div>
 
 Check out this official description of the IndieWeb:
 
@@ -23,7 +28,12 @@ So, a community of personal websites, connected together, used as identities, th
 - When you're convinced, see this handy page for a <a href="https://indiewebify.me/"> quick start to becoming a citizen of the IndieWeb</a>
 - International IndieWebCamps are here to help—I wrote a <a href="/blog/indiewebcamp/">post about my first IndieWebCamp visit</a><figure><img loading="lazy" src="img/indiewebcamp2017.png" src="Nuernberg IndieWebCamp 2017"><figcaption>Nürnberg IndieWebCamp 2017 (I'm in the bottom right)</figcaption></figure>
 
-<h2>Webmentions</h2>
+<div class="heading-wrapper">
+    <h2 id="webmentions">
+        Webmentions
+    </h2>
+    <a aria-label="link to this heading" aria-describedby="webmentions" class="anchor-link" href="#webmentions"></a>
+</div>
 
 Now the juicy stuff!
 

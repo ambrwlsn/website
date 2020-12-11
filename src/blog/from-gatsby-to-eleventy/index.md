@@ -15,7 +15,12 @@ Firstly, I'll summarise the reasons that I decided to use Gatsby in the first pl
 
 Gatsby sounds really good, so why did I move to Eleventy? This is a question I've put a lot of thought in to. First, I want to explain that I didn't add any new features to the site between the Gatsby and Eleventy versions. The only thing that changed is that now, all the <a href="/learn">learn posts</a> have their own page, instead of existing on one page.
 
-<h2>Benefits gained</h2>
+<div class="heading-wrapper">
+    <h2 id="benefits-gained">
+        Benefits Gained
+    </h2>
+    <a aria-label="link to this heading" aria-describedby="benefits-gained" class="anchor-link" href="#benefits-gained"></a>
+</div>
 
 - As my Eleventy site outputs a non-SPA, I didn't need to check or ensure that it is server-rendered, is able to be crawled by search engines to allow good search engine optimisation (SEO), or works without JavaScript. Non-SPAs do all of this by default.
 - A number of Gatsby plugins stopped some of the functionality on my site working. For example, Gatsby's progressive web app plugin caused my server-side rendering to stop working.
@@ -28,13 +33,23 @@ Gatsby sounds really good, so why did I move to Eleventy? This is a question I'v
 - By writing lower-level template code (Nunjucks vs JSX), I felt like I had more control over the generated code, which allowed me to output better and more consistent HTML.
 - Gatsby has GraphQL baked in. For a lot of use cases, especially a personal blog site, GraphQL is overpowered and can be a large learning curve for some.
 
-<h2>Challenges faced</h2>
+<div class="heading-wrapper">
+    <h2 id="challenges-faced">
+        Challenges Faced
+    </h2>
+    <a aria-label="link to this heading" aria-describedby="challenges-faced" class="anchor-link" href="#challenges-faced"></a>
+</div>
 
 - Eleventy is newer and maintained by less people than Gatsby. Therefore, I felt that Eleventy is a bit less feature-rich and has less documentation. Although honestly, this isn't a huge deal. Firstly, I found Eleventy simpler to use (less abstract), and found the documentation covers all the most important aspects of the SSG. Secondly, almost any time I needed extra help or information, I found it in the form of excellent blog posts or example repositories created by other web developers.
 - One of the very few issues I couldn't find help with was the sharing of one type of data (blog post excerpts) across my Eleventy-powered site. Gatsby, along with React, makes it easy to see what data is being shared and how. Eleventy has a fantastic data-sharing API (in my case the data sharing was orchestrated between Nunjucks and the Eleventy config file). However, I found it to be quite abstracted and struggled a lot trying to get my blog post excerpt data to be easily shared across pages. In the end, I created a workaround for this, but this workaround is quite hacky. I plan to write about it in a separate post.
 - I had to learn how to use the Nunjucks templating language. This is only a small nitpick, as the learning curve was in no way steep.
 
-<h2>Concluding thoughts</h2>
+<div class="heading-wrapper">
+    <h2 id="concluding-thoughts">
+        Concluding Thoughts
+    </h2>
+    <a aria-label="link to this heading" aria-describedby="concluding-thoughts" class="anchor-link" href="#concluding-thoughts"></a>
+</div>
 
 Using Gatsby has taught me a lot about single page apps, and that's important! Sometimes using it was frustrating, and a few things broke without me realising why or even when, but these experiences can be good lessons. Also, I am employed to work on a large SPA, and probably will continue to work on SPAs professionally for years to come, so any experience working with them is good! 
 
