@@ -117,19 +117,23 @@ figcaption {
 /* for all h2s that have a neighbouring anchor link */
 .heading-wrapper {
   position: relative;
-  width: fit-content;
+}
+
+.heading-wrapper h2 {
+  display: inline;
 }
 
 .anchor-link::before {
-  top: 0;
-  left: 100%;
   display: inline-block;
-  position: absolute;
+  background-image: url('/img/anchorLight.svg');
   content: '';
-  background-image: url('/img/anchor.svg');
   background-repeat: no-repeat;
   height: 1rem;
   width: 1rem;
+}
+
+html.dark .anchor-link::before {
+  background-image: url('/img/anchorDark.svg');
 }
 
 .heading-wrapper:hover .anchor-link::before,
@@ -139,8 +143,9 @@ figcaption {
 
 @media only screen and (min-width: 800px) {
   .anchor-link::before {
+    top: 3px;
+    position: absolute;
     right: 100%;
-    left: unset;
     opacity: 0;
   }
 }
