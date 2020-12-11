@@ -4,6 +4,7 @@ const format = require('date-fns/format');
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 const searchFilter = require('./src/filters/search-filter');
 const webmentionsFilter = require('./src/filters/webmentions-filter');
+const markdownAnchorWat = require('./helpers/markdown-anchor-wat');
 const excerpts = require('./helpers/excerpts');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const { exec } = require('child_process');
@@ -123,7 +124,15 @@ module.exports = function(eleventyConfig, options) {
     excerpt_separator: '<!-- excerpt -->',
   });
 
-  eleventyConfig.setLibrary('md', markdownIt(MARKDOWN_OPTIONS));
+  const opts = {
+    permalink: true,
+    permalinkSymbol: 0,
+  };
+
+  eleventyConfig.setLibrary(
+    'md',
+    markdownIt(MARKDOWN_OPTIONS).use(markdownAnchorWat, opts)
+  );
 
   // Sort with `Array.sort`
   eleventyConfig.addFilter('learnSort', function(collection) {
