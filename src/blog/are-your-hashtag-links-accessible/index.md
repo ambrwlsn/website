@@ -89,7 +89,7 @@ I realised that my hashtag links could have a better flow. Below is the **fourth
 
 VoiceOver reads the `<h2>` out as "heading level 2 introduction" and the `<a>` as, "link, link to this heading, introduction". When the heading is first, the screen reader user may be able to associate the heading more easily with its corresponding hashtag link.
 
-While I made great progress by the fourth version of my hashtag link, there are final some outstanding issues that I wanted to address. Thanks to my friend <a href="https://hugogiraudel.com/">Hugo Giraudel</a> for helping me realise these outstanding issues. Be sure to keep up to date with Hugo's current <a href="https://hugogiraudel.com/2020/12/01/a11y-advent-calendar/">A11y Advent Calendar</a> and check out their other great posts :)
+While I made great progress by the fourth version of my hashtag link, there are final some outstanding issues that I wanted to address. Thanks to my friend <a href="https://hugogiraudel.com/">Hugo Giraudel</a> for helping me realise these outstanding issues. Be sure to keep up to date with Hugo's current <a href="https://hugogiraudel.com/2020/12/01/a11y-advent-calendar/">A11y Advent Calendar</a> and check out their other great posts. <span role="img" aria-hidden="true">&#128578;</span>
 
 First, `aria-label` is not actually brilliant for accessibility, as some translation services can have trouble accessing its value. So, it's best to add text content to the `<a>` element, and visually hide it. This way, screen readers can still access it but it'll be visually hidden for other users. Similarly, the `#` can be left in and hidden from screen readers using `aria-hidden`, while still being visible for other users.
 

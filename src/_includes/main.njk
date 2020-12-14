@@ -15,7 +15,7 @@
 		<meta name="author" content="Amber Wilson"/>
 		<meta name="publisher" content="Amber Wilson"/>
 		<meta name="copyright" content="Amber Wilson"/>
-		<meta property="og:title" content="All posts"/>
+		<meta property="og:title" content="{{ title }}"/>
 		<meta property="og:type" content="website"/>
 		<meta property="og:description" content="{% if description -%}{{ description }}{% elif (excerpt) -%}{{ excerpt }}{% elif (postExcerpt) -%}{{ postExcerpt | trim }}{% elif (learnExcerpt) -%}{{ learnExcerpt | trim }}{% endif -%}"/>
 		<meta property="og:image" content="{% if ogImage -%}https://amberwilson.co.uk{{ page.url }}img/{{ ogImage }}{% else -%}https://amberwilson.co.uk/amber.png{% endif -%}"/>
