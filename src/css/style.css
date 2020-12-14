@@ -123,26 +123,24 @@ figcaption {
   display: inline;
 }
 
-.anchor-link::before {
+.anchor-link {
   display: inline-block;
-  background-image: url('/img/anchorLight.svg');
-  content: '';
   background-repeat: no-repeat;
   height: 1rem;
   width: 1rem;
 }
 
-html.dark .anchor-link::before {
-  background-image: url('/img/anchorDark.svg');
+.anchor-link:focus {
+  outline: auto;
 }
 
-.heading-wrapper:hover .anchor-link::before,
-.anchor-link:focus::before {
+.heading-wrapper:hover .anchor-link,
+.anchor-link:focus {
   opacity: 1;
 }
 
 @media only screen and (min-width: 800px) {
-  .anchor-link::before {
+  .anchor-link {
     top: 3px;
     position: absolute;
     right: 100%;

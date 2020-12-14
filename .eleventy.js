@@ -124,14 +124,9 @@ module.exports = function(eleventyConfig, options) {
     excerpt_separator: '<!-- excerpt -->',
   });
 
-  const opts = {
-    permalink: true,
-    permalinkSymbol: 0,
-  };
-
   eleventyConfig.setLibrary(
     'md',
-    markdownIt(MARKDOWN_OPTIONS).use(markdownAnchorWat, opts)
+    markdownIt(MARKDOWN_OPTIONS).use(markdownAnchorWat)
   );
 
   // Sort with `Array.sort`

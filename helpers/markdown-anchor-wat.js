@@ -1,3 +1,5 @@
+const linkIcon = require('./link');
+
 const slugify = (s) =>
   encodeURIComponent(
     String(s)
@@ -36,7 +38,10 @@ const anchor = (md, options) => {
         options.ariaLabel
       }" aria-describedby="${slug}" class="${
         options.anchorClass
-      }" href="#${slug}"></a></div">`;
+      }" href="#${slug}">
+      <span aria-hidden="true">${linkIcon}</span>
+      <span class="hidden"Section titled ${contentToken.content}></span>
+      </a></div">`;
     }
     return `</${tokens[index].tag}>`;
   };
