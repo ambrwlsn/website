@@ -11,7 +11,6 @@ const slugify = (s) =>
 const defaultOptions = {
   divClass: 'heading-wrapper',
   anchorClass: 'anchor-link',
-  ariaLabel: 'link to this heading',
 };
 
 const anchor = (md, options) => {
@@ -34,13 +33,11 @@ const anchor = (md, options) => {
     const slug = slugify(contentToken.content);
 
     if (tokens[index].tag === 'h2') {
-      return `</${tokens[index].tag}><a aria-label="${
-        options.ariaLabel
-      }" aria-describedby="${slug}" class="${
+      return `</${tokens[index].tag}><a class="${
         options.anchorClass
       }" href="#${slug}">
       <span aria-hidden="true">${linkIcon}</span>
-      <span class="hidden"Section titled ${contentToken.content}></span>
+      <span class="hidden">Section titled ${contentToken.content}</span>
       </a></div">`;
     }
     return `</${tokens[index].tag}>`;
