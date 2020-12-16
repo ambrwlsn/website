@@ -21,9 +21,9 @@ const anchor = (md, options) => {
     const slug = slugify(contentToken.content);
 
     if (tokens[index].tag === 'h2') {
-      return `<div class="${options.divClass}"><${
-        tokens[index].tag
-      } id="${slug}">`;
+      return `
+      <div class="${options.divClass}">
+        <${tokens[index].tag} id="${slug}">`;
     }
     return `<${tokens[index].tag}>`;
   };
@@ -33,12 +33,13 @@ const anchor = (md, options) => {
     const slug = slugify(contentToken.content);
 
     if (tokens[index].tag === 'h2') {
-      return `</${tokens[index].tag}><a class="${
-        options.anchorClass
-      }" href="#${slug}">
-      <span aria-hidden="true">${linkIcon}</span>
-      <span class="hidden">Section titled ${contentToken.content}</span>
-      </a></div">`;
+      return `
+      </${tokens[index].tag}>
+        <a class="${options.anchorClass}" href="#${slug}">
+          <span aria-hidden="true">${linkIcon}</span>
+          <span class="hidden">Section titled ${contentToken.content}</span>
+        </a>
+      </div>`;
     }
     return `</${tokens[index].tag}>`;
   };

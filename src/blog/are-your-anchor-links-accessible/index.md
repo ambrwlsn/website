@@ -110,6 +110,6 @@ I tried finding a plugin that would help me to automate the addition of anchor l
 
 There is handy <a href="https://github.com/markdown-it/markdown-it/tree/master/docs">markdown-it developer documentation</a> for people wanting to create plugins. Using these docs, a <a href="https://markdown-it.github.io/">markdown-it demo page</a>, and some inspiration from a plugin called <a href="https://github.com/valeriangalliat/markdown-it-anchor">markdown-it-anchor</a>, I wrote a plugin.
 
-Here is <a href="https://github.com/ambrwlsn/website/blob/06f5f33b4d05050076d60424fd3c8673dcf8b92d/helpers/markdown-anchor-wat.js#L1">a permalink to my plugin file</a>. It recreates parsing functions for opening and closing `<h2>` elements from the `markdown-it` library. In my `eleventy.config` file, I `use` (connect) the plugin with `markdown-it`. This allows me to automatically add custom anchor links for all my level two headings.
+Here is <a href="https://github.com/ambrwlsn/website/blob/da2056c316fa45fa58b443b07be1ac4c5080912e/helpers/markdown-anchor-wat.js#L1">a permalink to my plugin file</a>. It recreates parsing functions for opening and closing `<h2>` elements from the `markdown-it` library. In my `eleventy.config` file, I `use` (connect) the plugin with `markdown-it`. This allows me to automatically add custom anchor links for all my level two headings.
 
 
