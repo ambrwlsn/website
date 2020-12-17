@@ -102,6 +102,26 @@ Here is the **fifth** version of my anchor link:
 
 This fifth and final version of my anchor link is the one I am using on this page, along with a wrapper `<div>` for styling purposes. It is much better than the first version! However, if you can think of improvements, please let me know.
 
+## A word of caution
+
+**Edit (17th December):** Beware, there be dragons! <span aria-hidden="true">🐉</span> I realise that including a link within a section heading may seem tempting, because it can make styling an anchor link easier. However, it's worth repeating that this can harm accessibility.
+
+Version one of my example anchor link (see <a href="/blog/are-your-anchor-links-accessible/#accessibility-check">accessibility check</a>) introduces the issues caused by placing a link inside a heading, but I want to provide some more context to why it is not a good idea! I'll do this by describing a handy feature of VoiceOver.
+
+VoiceOver (and likely also other screen readers) gives a nice overview of a page's section headings. This feature, called the web rotor, is accessed by default by pressing `caps lock` + `u` while VoiceOver is on. Below are two screenshots of the web rotor comparing how headings are formed, depending on whether a link is inside or not:
+
+<figure>
+  <img style="border: 1px solid #ffffff" src="img/headings-with-link.png" alt="web rotor">
+  <figcaption>VoiceOver web rotor displaying headings containing links</figcaption>
+</figure>
+
+<figure>
+  <img style="border: 1px solid #ffffff" src="img/headings-without-link.png" alt="web rotor">
+  <figcaption>VoiceOver web rotor displaying headings without links</figcaption>
+</figure>
+
+When links are placed within headings, the text label of the link is included in the computed content of the heading. This may make it more difficult for a screen reader user to get a clear overview of a page's structure.
+
 ## Automating accessible anchor links
 
 I use <a href="www.11ty.dev">Eleventy</a> together with <a href="https://github.com/markdown-it">markdown-it</a> to convert my markdown files into HTML files.
