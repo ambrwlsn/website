@@ -26,6 +26,14 @@ While researching the best way to do this, something I noticed again and again w
 
 Within a few hours, I had made a plugin to automate the addition of anchor links to my blog post sections, AND I had ensured the links were accessible!
 
+## Contents
+
+- [What are anchor links exactly?](#what-are-anchor-links-exactly%3F)
+- [Accessibility check](#accessibility-check)
+- [A word of caution](#a-word-of-caution)
+- [Another option](#another-option)
+- [Automating accessible anchor links](#automating-accessible-anchor-links)
+
 ## What are anchor links exactly?
 
 Anchor links provide a way to link to separate sections of a page. On this page, hover over the level two headings on desktop to see the links (the links are always visible on smaller screens).
@@ -104,7 +112,7 @@ This fifth and final version of my anchor link is the one I am using on this pag
 
 ## A word of caution
 
-**Edit (17th December):** Beware, there be dragons! <span aria-hidden="true">🐉</span> I realise that including a link within a section heading may seem tempting, because it can make styling an anchor link easier. However, it's worth repeating that this can harm accessibility.
+**Edit (17th December):** Beware, there be dragons! <span aria-hidden="true">🐉</span> I realise that including a link (that has its own text content) as a child of a heading may seem tempting (as it can make styling an anchor link easier). However, it's worth repeating that this can harm accessibility.
 
 Version one of my example anchor link (see <a href="/blog/are-your-anchor-links-accessible/#accessibility-check">accessibility check</a>) introduces the issues caused by placing a link inside a heading, but I want to provide some more context to why it is not a good idea! I'll do this by describing a handy feature of VoiceOver.
 
@@ -120,8 +128,35 @@ VoiceOver (and likely also other screen readers) gives a nice overview of a page
   <figcaption>VoiceOver web rotor displaying headings without links</figcaption>
 </figure>
 
-When links are placed within headings, the text label of the link is included in the computed content of the heading. This may make it more difficult for a screen reader user to get a clear overview of a page's structure.
+If a link that has its own content is placed within a heading, the computed heading text may be more difficult for a screen reader user to understand. This can affect how clear a page's structure is.
 
+## Another option
+
+**Edit (18th December):** Despite warning against the following option above, I want to write about making a whole heading into an anchor link. Or, more specifically, wrapping the heading text content in a link. Several people across different sites have asked me why I didn't mention this option before:
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Interesting reading but why do you need the # symbol in the HTML at all?<br><br>Why not just make the whole heading the link (easier clicked too!) and use ::before or ::after to put the symbol there through CSS? <a href="https://t.co/ecaDkZjJH0">https://t.co/ecaDkZjJH0</a></p>&mdash; Barry Pollard (@tunetheweb) <a href="https://twitter.com/tunetheweb/status/1338984100133294083?ref_src=twsrc%5Etfw">December 15, 2020</a></blockquote>
+
+I think both options—using an icon as a link, and making the header a link (when the content of the link is the heading text)—can be valid. However, I have a few concerns with wrapping a heading's text content in a link: 
+
+- It can be useful separate the anchor link from the heading so that the link can have its own text content
+- It may be harder to select heading text wrapped in a link
+- Both screen reader and non-screen reader users may find this option less familiar and not understand its purpose
+
+Here are two examples of sites that implement anchor links where a link wraps the text content of a heading: <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/link#Including_a_stylesheet">MDN Web Docs</a> and <a href="https://almanac.httparchive.org/en/2019/accessibility#introduction">The Web Almanac</a>.
+
+Here is a code example of an accessible anchor link where a link wraps the text content of a heading:
+
+```html
+<h2 id="introduction">
+  <a href="#introduction">
+    Introduction
+  </a>
+</h2>
+```
+
+Would you rather implement anchor links in this way? It is a simpler solution. However, it is also less flexible.
+
+Of course, the way a feature is implemented depends on your own personal use case. But, no matter which way you implement something, please remember to think of the user experience!
 ## Automating accessible anchor links
 
 I use <a href="www.11ty.dev">Eleventy</a> together with <a href="https://github.com/markdown-it">markdown-it</a> to convert my markdown files into HTML files.
