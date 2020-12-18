@@ -1,3 +1,5 @@
+// altered from plugin provided by https://www.npmjs.com/package/markdown-it-anchor
+
 const linkIcon = require('./link');
 
 const slugify = (s) =>
