@@ -282,22 +282,8 @@ A good way to approach using useCallback is reactively rather than proactively. 
 It's highly recommended that you have React linting in your development environment, so that your linter can suggest appropriate times to use useCallback.
 
 If your linter is not suggesting useCallback, but you see that your UI is re-rendering in unexpected ways (as in the example in this post), or you have an infinite loop, check to see whether useCallback helps.
-
-<!-- useCallback() often is used in conjunction with useEffect() because it allows you to prevent the re-creation of a function. For this, it's important to understand that functions are just objects in JavaScript.
-Therefore, if you have a function (B) inside of a function (A), the inner function (=B) will be re-created (i.e. a brand-new object is created) whenever the outer function (A) runs.
-That means that in a functional component, any function you define inside of it is re-created whenever the component rebuilds -->
-
-<!-- To stabilise a function passed down as a prop so it doesn't change across renders which could cause issues if said function is used in a React.useEffect further down.
-
-Give me the previously created function unless any of the dependencies I send you change. -->
-
 ## Resources
 
 - Official React docs for <a href="https://reactjs.org/docs/hooks-reference.html#useeffect">useEffect</a> and <a href="https://reactjs.org/docs/hooks-reference.html#usecallback">useCallback</a>
 - Kent Dodd's post on [when to use (and not use) useCallback](https://kentcdodds.com/blog/usememo-and-usecallback)
 - Dan Abramov's <a href="https://overreacted.io/a-complete-guide-to-useeffect/">guide on useEffect()</a> offering a deep dive into React hooks
-
-<!-- 
-useCallback caches the function so you get the same exacty value passed in, unless the prop value(s) change. Referential identity. 
-
-useMemo caches the return value or a function, not the function itself. -->
