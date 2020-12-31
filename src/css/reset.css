@@ -64,6 +64,10 @@ ul {
   padding: 0;
 }
 
+ol {
+  padding-left: var(--spacingM);
+}
+
 p {
   margin: var(--spacingM) 0;
   font-family: var(--fontSerif);
