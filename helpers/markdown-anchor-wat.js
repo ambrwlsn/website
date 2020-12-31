@@ -38,7 +38,7 @@ const anchor = (md, options) => {
       return `
       </${tokens[index].tag}>
         <a class="${options.anchorClass}" href="#${slug}">
-          <span aria-hidden="true">${linkIcon}</span>
+          <span class="anchor-icon" aria-hidden="true">${linkIcon}</span>
           <span class="hidden">Section titled ${contentToken.content}</span>
         </a>
       </div>`;

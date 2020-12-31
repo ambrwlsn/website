@@ -148,6 +148,18 @@ figcaption {
   }
 }
 
+.anchor-icon {
+  position: relative;
+  left: 3px;
+}
+
+@media only screen and (min-width: 800px) {
+  .anchor-icon {
+    top: -4px;
+    left: -3px;
+  }
+}
+
 .wrapper {
   padding: var(--spacingXL) 0 var(--spacingL) 0;
 }
