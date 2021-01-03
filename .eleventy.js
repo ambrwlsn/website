@@ -197,5 +197,6 @@ module.exports = function(eleventyConfig, options) {
       data: '_data',
       output: 'public',
     },
+    markdownTemplateEngine: 'njk',
   };
 };
