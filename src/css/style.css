@@ -134,17 +134,11 @@ figcaption {
   outline: auto;
 }
 
-.heading-wrapper:hover .anchor-link,
-.anchor-link:focus {
-  opacity: 1;
-}
-
 @media only screen and (min-width: 800px) {
   .anchor-link {
     top: 3px;
     position: absolute;
     right: 100%;
-    opacity: 0;
   }
 }
 
