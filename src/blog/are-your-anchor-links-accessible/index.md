@@ -159,7 +159,7 @@ Would you rather implement anchor links in this way? It is a simpler solution. H
 Of course, the way a feature is implemented depends on your own personal use case. But, no matter which way you implement something, please remember to think of the user experience!
 ## Automating accessible anchor links
 
-I use <a href="www.11ty.dev">Eleventy</a> together with <a href="https://github.com/markdown-it">markdown-it</a> to convert my markdown files into HTML files.
+I use <a href="https://www.11ty.dev">Eleventy</a> together with <a href="https://github.com/markdown-it">markdown-it</a> to convert my markdown files into HTML files.
 
 I tried finding a plugin that would help me to automate the addition of anchor links for all my `<h2>` elements. I did find one but soon realised it didn't make accessible links possible. So, I decided to make my own plugin.
 
