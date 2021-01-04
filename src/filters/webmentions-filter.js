@@ -45,7 +45,9 @@ module.exports = function(webmentions, url) {
   // https://github.com/aaronpk/webmention.io#find-links-of-a-specific-type-to-a-specific-page
 
   // Total webmentions
-  const total = webmentions.filter((entry) => entry['wm-target'] === url)
+  const total = webmentions
+    .filter((entry) => entry['wm-target'] === url)
+    .filter((obj) => obj.author.url !== 'https://twitter.com/ambrwlsn90')
     .length;
 
   // Likes on Twitter
@@ -57,7 +59,7 @@ module.exports = function(webmentions, url) {
     .sort(orderByDate)
     .map((_) => _.author);
 
-  // Re-tweets on Twitter
+  // Re-posts
   const reposts = webmentions
     .filter((entry) => entry['wm-target'] === url)
     .filter((obj) => {
@@ -66,7 +68,7 @@ module.exports = function(webmentions, url) {
     .sort(orderByDate)
     .map((_) => _.author);
 
-  // Replies on Twitter
+  // Replies
   const replies = webmentions
     .filter((entry) => entry['wm-target'] === url)
     .filter((obj) => {
