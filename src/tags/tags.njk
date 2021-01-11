@@ -22,6 +22,11 @@ description: A list of tagged posts.
     {% for post in taglist | reverse %}
       <li>
         <a href="{{ post.url | url }}">{{ post.data.title }}</a>
+        <div class="learn-post-dates">
+          {% if post.data.postdate -%}{{ post.data.postdate | readableBlogListDate }}
+          {% elif (post.data.date) -%}{{ post.data.date | readableBlogListDate }}
+          {% endif -%}
+        </div>
         <p class="tags-with-no-background">
           {% for tag in post.data.tags %}
             {%- if collections.tagList.indexOf(tag) != -1 -%}
@@ -30,11 +35,6 @@ description: A list of tagged posts.
             {%- endif -%}
           {% endfor %}
         </p>
-        <div class="learn-post-dates">
-          {% if post.data.postdate -%}{{ post.data.postdate | readableBlogListDate }}
-          {% elif (post.data.date) -%}{{ post.data.date | readableBlogListDate }}
-          {% endif -%}
-        </div>
       </li>
     {% endfor %}
   </ul>

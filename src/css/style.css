@@ -798,7 +798,7 @@ figcaption {
 }
 
 .tags-with-no-background {
-  margin-top: 0;
+  margin-top: var(--spacingXS);
 }
 
 .tags-with-no-background a {
@@ -1521,3 +1521,12 @@ figure img {
   margin-left: var(--spacingXS);
 }
 /* end of webmention section */
+
+/* start of level card section */
+.level-card {
+  border-radius: 3px;
+  background-color: #d8f0ff;
+  padding: var(--spacingS);
+  margin: var(--spacingM) 0;
+}
+/* end of level card section */
