@@ -39,6 +39,8 @@
   --secondary-background-color-dark-mode: #141640;
   --tertiary-background-color-light-mode: #e6e8fd;
   --tertiary-background-color-dark-mode: #243bbd;
+  --card-background-light-mode: #ffe8ce;
+  --card-background-dark-mode: #45568a;
   --blockquote-background-color-light-mode: #e9ebf3;
   --blockquote-background-color-dark-mode: #33374c;
   --link-color-light-mode: #4b0e90;
@@ -109,6 +111,7 @@ html {
   --backgroundColor: var(--background-color-light-mode);
   --secondaryBackgroundColor: var(--secondary-background-color-light-mode);
   --tertiaryBackgroundColor: var(--tertiary-background-color-light-mode);
+  --cardBackground: var(--card-background-light-mode);
   --blockQuoteBackgroundColor: var(--blockquote-background-color-light-mode);
   --blogPostPreviewCard: var(--blog-post-preview-light-mode);
   --blogPostPreviewCardShadow: var(--blog-post-preview-shadow-light-mode);
@@ -125,6 +128,7 @@ html {
   --backgroundColor: var(--background-color-dark-mode);
   --secondaryBackgroundColor: var(--secondary-background-color-dark-mode);
   --tertiaryBackgroundColor: var(--tertiary-background-color-dark-mode);
+  --cardBackground: var(--card-background-dark-mode);
   --blockQuoteBackgroundColor: var(--blockquote-background-color-dark-mode);
   --blogPostPreviewCard: var(--blog-post-preview-dark-mode);
   --blogPostPreviewCardShadow: '';
@@ -142,6 +146,7 @@ html {
     --backgroundColor: var(--background-color-dark-mode);
     --secondaryBackgroundColor: var(--secondary-background-color-dark-mode);
     --tertiaryBackgroundColor: var(--tertiary-background-color-dark-mode);
+    --cardBackground: var(--card-background-dark-mode);
     --blockQuoteBackgroundColor: var(--blockquote-background-color-dark-mode);
     --blogPostPreviewCard: var(--blog-post-preview-dark-mode);
     --blogPostPreviewCardShadow: '';

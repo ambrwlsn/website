@@ -6,6 +6,7 @@ const searchFilter = require('./src/filters/search-filter');
 const webmentionsFilter = require('./src/filters/webmentions-filter');
 const markdownAnchorWat = require('./helpers/markdown-anchor-wat');
 const excerpts = require('./helpers/excerpts');
+const card = require('./components/card');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
 const { exec } = require('child_process');
 var nunjucks = require('nunjucks');
@@ -188,6 +189,11 @@ module.exports = function(eleventyConfig, options) {
     }
 
     return array.slice(0, n);
+  });
+
+  // https://www.11ty.dev/docs/languages/markdown/#there-are-extra-and-in-my-output
+  eleventyConfig.addShortcode('card', function(text, purpose) {
+    return card(text, purpose);
   });
 
   return {

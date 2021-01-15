@@ -798,7 +798,7 @@ figcaption {
 }
 
 .tags-with-no-background {
-  margin-top: var(--spacingXS);
+  margin-top: var(--spacingS);
 }
 
 .tags-with-no-background a {
@@ -1522,11 +1522,24 @@ figure img {
 }
 /* end of webmention section */
 
-/* start of level card section */
-.level-card {
+/* start of card section */
+.card {
+  position: relative;
   border-radius: 3px;
-  background-color: #d8f0ff;
+  /* background-color: #d8f0ff; */
+  background-color: var(--cardBackground);
   padding: var(--spacingS);
   margin: var(--spacingM) 0;
 }
-/* end of level card section */
+.why-card {
+  margin-top: 0;
+  padding: var(--spacingM) var(--spacingM) var(--spacingM) var(--spacingXXL);
+  margin-bottom: var(--spacingXL);
+}
+.why-card::before {
+  position: absolute;
+  content: url(/img/thumbs_up.png);
+  top: 14px;
+  left: 10px;
+}
+/* end of card section */
