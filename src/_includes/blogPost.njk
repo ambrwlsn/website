@@ -29,7 +29,7 @@ layout: main.njk
   <ul class="previous-and-next-section">
     {%- set nextPost = collections.posts | getNextCollectionItem(page) %}
     {%- if nextPost %}
-      <li>Next: <a href="{{ nextPost.url | url }}" aria-label="Next post - {{ nextPost.data.title }}">{{ nextPost.data.title }}</a>
+      <li style="margin-bottom: var(--spacingS)">Next: <a href="{{ nextPost.url | url }}" aria-label="Next post - {{ nextPost.data.title }}">{{ nextPost.data.title }}</a>
       </li>
     {% endif %}
     {%- set previousPost = collections.posts | getPreviousCollectionItem(page) %}
@@ -38,6 +38,7 @@ layout: main.njk
       </li>
     {% endif %}
   </ul>
+  <hr>
 </div>
 
 <script type="application/ld+json">

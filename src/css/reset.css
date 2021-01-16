@@ -59,6 +59,12 @@ img {
   display: block;
 }
 
+hr {
+  height: 3px;
+  border: none;
+  background-color: var(--textColor);
+}
+
 ul {
   list-style: none;
   padding: 0;

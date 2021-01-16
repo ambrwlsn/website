@@ -698,7 +698,6 @@ figcaption {
 .previous-and-next-section {
   font-family: var(--fontSerif);
   font-size: var(--text09);
-  margin-bottom: 0;
   list-style: none;
   padding: 0;
 }
