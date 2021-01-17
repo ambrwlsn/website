@@ -24,7 +24,7 @@ Jeremy noticed I had formatted my paragraphs using the `div` element. He asked m
 
 I swapped `div` elements with `section` elements. I thought these elements only helped developers make sense of code. I was wrong. They also differ practically in that `section` elements help assistive technology and search bots decipher site content for the benefit of all users. By now, I thought that I really must have nailed the perfect semantic document. I thought I'd try to be clever and stick an `hgroup` element in - something I read about on the MDN. I triumphantly called Jeremy over. In a fraction of a second, he'd spotted my error and told me to research 'hgroup' more. After ten minutes, I hadn't got far.
 
-Jeremy recommended I find a way to validate my markup. I found this [site](https://validator.w3.org/), and almost switched it off because it looks like a W3 Schools site. I was wrong, it is a W3C site. No matter how hard I tried, I couldn't get it to tell me my 'hgroup' element was valid. The realisation came that I'd been trawling quite heavily out-of-date sites for a lot of information. Eventually, I scrolled down the MDN page a little more and saw that this element was removed from the HTML5 specification. Oops.
+Jeremy recommended I find a way to validate my markup. I found the [w3c HTML validator](https://validator.w3.org/), and almost switched it off because it looks like a W3 Schools site. I was wrong, it is a W3C site. No matter how hard I tried, I couldn't get it to tell me my 'hgroup' element was valid. The realisation came that I'd been trawling quite heavily out-of-date sites for a lot of information. Eventually, I scrolled down the MDN page a little more and saw that this element was removed from the HTML5 specification. Oops.
 
 Recapping, I'd gotten rid of my `hgroup` element, I had my `section` elements in place, and I'd added my meta data. What else? Next, I was asked why my 'h' elements were all odd sizes. I said it was because I wanted the headings to present text in a certain size. I was told this is CSS's job and to "not worry about how it looks". These elements are for adding structural outline to a page. I changed my markup until I received this outline summary from W3C -
 
@@ -48,5 +48,3 @@ Here's a summary of what I learned today:
 *   & a lot more.
 
 Thank you [Jeremy](https://adactio.com) for teaching me.
-
-See my [HTML resume](/blog/html-resume) here.

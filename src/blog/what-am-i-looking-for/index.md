@@ -35,7 +35,7 @@ I love to be involved in the web development community as much as possible. From
 
 If you are a friendly and open company on the search for a junior developer who is insatiably curious, lives to learn, and loves to try new things, please get in touch either through [Twitter](https://twitter.com/ambrwlsn90) or [email](mailto:ambrwlsn90@gmail.com) :)
 
-See my fully-semantic HTML CV [here](../html-cv).
+See [my CV](/cv).
 
 Looking forward to hearing from you!
 

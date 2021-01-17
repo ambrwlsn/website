@@ -8,7 +8,7 @@ keywords: [amber wilson,javascript,software engineering,web development, coding,
 At [Clearleft](https://clearleft.com) today, I ran through many new (and some familiar) things with [Jeremy](https://adactio.com):
 
 *   We talked about [Jeremy](https://adactio.com)'s upcoming event - [Patterns Day](http://patternsday.com/) (check out the site, it's nifty - also, buy a ticket!), to be held on June 30th. Jeremy kindly invited me along and I'm really excited!
-*   I found out where [Clearleft](clearleft.com) got their idea for the 100 day challenge - [Aaron Parecki](https://twitter.com/aaronpk)'s [100 days of music](https://100.aaronparecki.com/)!
+*   I found out where [Clearleft](https://clearleft.com) got their idea for the 100 day challenge - [Aaron Parecki](https://twitter.com/aaronpk)'s [100 days of music](https://100.aaronparecki.com/)!
 *   I learned that these _amazing_ [color fonts](http://www.colorfonts.wtf/) won't be available for a while (sadly).
 *   I discovered a nice example of excellent forward-thinking. The creators of the [font-weight](https://developer.mozilla.org/en/docs/Web/CSS/font-weight) CSS property use 100-700 for weighting type, not 1-7\. This is because they anticipated that more values could be utilised in the future. Now they can, with [variable fonts](http://typographica.org/on-typography/variable-fonts/).
 *   Microformats [rel values](http://microformats.org/wiki/existing-rel-values) (a question about these sprung up when I coached at [codebar](https://codebar.io) earlier in the week).
