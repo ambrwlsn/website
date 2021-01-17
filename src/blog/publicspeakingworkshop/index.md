@@ -21,6 +21,6 @@ Here's just a tiny snippet of the things I learned from the brilliant attendees 
 
 If you'd like to discover your own fantastic tips, you can get in touch with Matt [here](https://www.improvisingchange.co.uk/get-in-touch) to ask about workshop possibilities :)
 
-![](img/publicspeaking.jpg)
+![Attendees of the public speaking workshop](img/publicspeaking.jpg)
 
 Very happy workshop participants - thanks Matt for the workshop and the pic!

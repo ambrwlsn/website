@@ -17,12 +17,12 @@ document.addEventListener('focusin', function() {
 
 Below is an image showing what such a log looks like in Firefox. It shows that the first element focused when I opened the page was a `div`. When I moved focus to the light/dark mode toggle, the focused element was an `input`:
 
-<img src='img/firefox-active-element-log.png' src='showing active element log in the firefox browser' />
+<img src='img/firefox-active-element-log.png' alt='showing active element log in the firefox browser' />
 
 In Chrome there is a live expression tool for logging the document's active element. The following two images show examples of this tool in action.
 
-<img src='img/active-element-link.png' src='active element that is a link' />
-<img src='img/active-element-toggle.png' src='active element that is a toggle' />
+<img src='img/active-element-link.png' alt='active element that is a link' />
+<img src='img/active-element-toggle.png' alt='active element that is a toggle' />
 
 There are two things to note:
 1. Ensuring focus is handled correctly is important for the accessibility of a web page. However, focus behaviour is not always consistent across browsers. If you're developing something and you are not sure whether focus is being handled correctly, it's a good idea to investigate by logging the document's active element.

@@ -17,7 +17,7 @@ We all demoed what we'd done - check these out [here](https://youtu.be/_Zub-PBHP
 
 Personally, I worked on HTTPS, site search, file extensions, HTML/CSS tidying, redirects, and passing IndieWeb levels one and two via [indiewebify.me](https://indiewebify.me/).
 
-![](img/indiewebcamp.jpg)
+![what I worked on at indie web camp](img/indiewebcamp.jpg)
 
 Thanks to [Joschi](https://jkphl.is/) for this [shoutout](https://twitter.com/jkphl/status/866310997207863296).
 

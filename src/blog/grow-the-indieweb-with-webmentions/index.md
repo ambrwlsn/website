@@ -26,7 +26,7 @@ So, a community of personal websites, connected together, used as identities, th
 - There's a <a href="https://indieweb.org/">great IndieWeb resource</a>  that will tell you everything you need to know
 - But, start here if you want to know <a href="https://indieweb.org/why">why the IndieWeb deserves your attention</a>
 - When you're convinced, see this handy page for a <a href="https://indiewebify.me/"> quick start to becoming a citizen of the IndieWeb</a>
-- International IndieWebCamps are here to help—I wrote a <a href="/blog/indiewebcamp/">post about my first IndieWebCamp visit</a><figure><img loading="lazy" src="img/indiewebcamp2017.png" src="Nuernberg IndieWebCamp 2017"><figcaption>Nürnberg IndieWebCamp 2017 (I'm in the bottom right)</figcaption></figure>
+- International IndieWebCamps are here to help—I wrote a <a href="/blog/indiewebcamp/">post about my first IndieWebCamp visit</a><figure><img loading="lazy" src="img/indiewebcamp2017.png" alt="Nuernberg IndieWebCamp 2017"><figcaption>Nürnberg IndieWebCamp 2017 (I'm in the bottom right)</figcaption></figure>
 
 <div class="heading-wrapper">
     <h2 id="webmentions">
@@ -58,7 +58,7 @@ I used Max Böck's post on <a href="https://mxb.dev/blog/using-webmentions-on-st
 
 Here are some of my webmentions (from <a href="/blog/from-gatsby-to-eleventy/">my Gatsby to Eleventy post</a>):
 
-<img loading="lazy" src="img/webmentions.png" src="Amber's webmentions on her Gatsby to Eleventy post">
+<img loading="lazy" src="img/webmentions.png" alt="Amber's webmentions on her Gatsby to Eleventy post">
 
 If all of this seems too difficult and inaccessible, please don't give up! I thought getting webmentions on my little static site would be <strong>way too difficult</strong>. But there are so many wonderful posts about setting up webmentions, and so many great people willing to help. I count myself as one of those people :) If you want to implement webmentions on your site and are stuck on any of the points I listed above, ping me on Twitter and I'll do my best to help out.
 

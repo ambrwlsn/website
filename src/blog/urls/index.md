@@ -9,7 +9,7 @@ Welcome to my learning process. Today I tried learning about URLs.
 
 **1: Sizzling Intro (Overconfidence)**
 
-<a href="https://css-tricks.com/future-front-end-web-development/"><img src="img/killerfeature.png"></a>
+<a href="https://css-tricks.com/future-front-end-web-development/"><img src="img/killerfeature.png" alt="urls are a killer feature"></a>
 
 URLs are _still_ a killer feature of the Web. This is what [Chris Coyier](http://chriscoyier.net/) wrote recently on [CSS tricks](https://css-tricks.com/).
 
