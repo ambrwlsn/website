@@ -43,6 +43,8 @@ My first attempt at a fix involved using `aria-label` (please see code block bel
 
 Whatever value is given to `aria-label` will be accessible to screen reader users, making it much easier to understand a HTML page's structure and purpose. The labels should provide a concise description of what each navigation element contains.
 
+## Tricky translations
+
 After using `aria-label`, the warning was gone from my console! Was I all done? I could have been. However, I soon learned something else. Some translation systems (e.g. Google translate) might not translate the value of `aria-label`. Luckily, there is a way around this (please see code block below):
 
 ```html
@@ -58,8 +60,8 @@ After using `aria-label`, the warning was gone from my console! Was I all done? 
 </nav>
 ```
 
-Here, an `aria-labelledby` value of a `nav` matches the `id` value of an `h2`. The `h2` contains human-readable text. It is this text that will be accessible to screen reader users. The element containing this text can also be a hidden element which exists purely for screen readers. In this case, the hidden element of course still needs text content. This method has an advantage over `aria-label` in that the human-readable content is contained in a text node rather than an attribute. Text nodes are easier for some translation systems to access. See Heydon's [post](https://heydonworks.com/article/aria-label-is-a-xenophobe/) for more information.
+Here, an `aria-labelledby` value of a `nav` matches the `id` value of an `h2`. The `h2` contains human-readable text. It is this text that will be accessible to screen reader users. The element containing this text can also be a hidden element which exists purely for screen readers. In this case, the hidden element of course still needs text content. This method has an advantage over `aria-label` in that the human-readable content is contained in a text node rather than an attribute. Text nodes are easier for some translation systems to access.
 
 I learned all of this today and I am very grateful for the knowledge. Now I know it, I'll be able to apply it wherever needed in my HTML.
 
-For more information on the `nav` element, see this [post](http://html5doctor.com/nav-element/) from html5 doctor.
+For more information, check out this post on the [navigation element](http://html5doctor.com/nav-element/) from html5 doctor.
