@@ -1,0 +1,36 @@
+[
+  {
+    "yearRead": "2021",
+    "title": "Alte Sorten by Ewald Arenz",
+    "length": "255",
+    "useThreeWords": "",
+    "review": "50 pages left",
+    "coverImage": "alte-sorten.jpg",
+    "coverImageAlt": "Alte Sorten book cover",
+    "methodImage": "Book",
+    "methodFill": "var(--readText)",
+    "methodStroke": "var(--readText)",
+    "methodBoxColour": "#FFD76B",
+    "useThreeWordsBoxColour": "#FFE5BC",
+    "buttonBoxColour": "#9295AC",
+    "lengthBoxColour": "#ACB26D",
+    "reviewBoxColour": "#EFEBDE"
+  },
+  {
+    "yearRead": "2021",
+    "title": "Entangled Life by Merlin Sheldrake",
+    "length": "368",
+    "useThreeWords": "Fascinating, hopeful, clever",
+    "review": "This book starts like a poem, then time travels before diving beneath forests, and ends by dazzling with the ridiculously fascinating and tantalising world of fungi-human symbiotic possiblities. I read it with so much love and respect for how mother nature does her thing, and for the rare professionals and amateurs who seek to understand her ways. The vastness and mystery around the lives of fungi and its symbiotic partners actually reminds me of the vastness and mystery of space. There is endless space above us, and endless fungal activity below us. This books brings me hope that humans can manage their impact on the planet in a way that benefits both themselves and the ecosystem around them. The growing possibilities of working in partnership with the wonderful and boundless nature around us makes me feel happy.",
+    "coverImage": "entangled-life.jpg",
+    "coverImageAlt": "Entangled Life book cover",
+    "methodImage": "Kindle",
+    "methodFill": "#e0dcdc",
+    "methodStroke": "#e0dcdc",
+    "methodBoxColour": "#D01801",
+    "useThreeWordsBoxColour": "#dae1f3",
+    "buttonBoxColour": "#9295AC",
+    "lengthBoxColour": "#C6CD74",
+    "reviewBoxColour": "#BDC1DC"
+  }
+]
