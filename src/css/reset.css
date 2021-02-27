@@ -43,7 +43,6 @@ article li:not(:last-child) {
 /* Set core body defaults */
 body {
   min-height: 100vh;
-  scroll-behavior: smooth;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
@@ -92,6 +91,12 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+@media (prefers-reduced-motion) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
 }
 
 /* Remove all animations and transitions for people that prefer not to see them */

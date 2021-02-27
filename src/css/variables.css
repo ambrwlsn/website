@@ -95,10 +95,13 @@
   --imageBackgroundColor: #eeacd9;
 
   font-size: 112.5%;
-  scroll-behavior: smooth;
   word-wrap: break-word;
   background: var(--backgroundColor);
   color: var(--textColor);
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
 }
 
 html {
@@ -172,7 +175,7 @@ html {
   line-height: var(--lineHeight);
 }
 
-.hidden {
+.hidden:not(:focus):not(:active) {
   border-top-width: 0 !important;
   border-right-width: 0 !important;
   border-bottom-width: 0 !important;
