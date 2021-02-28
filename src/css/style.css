@@ -58,10 +58,12 @@ nav a {
 
 a {
   color: var(--linkColor);
+  text-underline-offset: 0.1rem;
 }
 
 a:hover {
   color: var(--funkyBorder);
+  text-decoration-style: dashed;
 }
 
 article {
@@ -112,6 +114,34 @@ article blockquote p {
 figcaption {
   font-size: var(--text09);
   font-family: var(--fontSansSerif);
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  padding-bottom: var(--spacingL);
+}
+
+.footer-info {
+  width: 90%;
+  border: 3px solid var(--textColor);
+  padding: var(--spacingM);
+}
+
+@media only screen and (min-width: 800px) {
+  .footer-info {
+    width: 60%;
+  }
+}
+
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-link span {
+  line-height: 1;
+  padding-left: var(--spacingXS);
 }
 
 /* for all h2s that have a neighbouring anchor link */
@@ -733,6 +763,8 @@ figcaption {
 
 .blog-list-post-title:hover {
   color: var(--linkColor);
+  /* counteracts the general a style */
+  text-decoration-style: solid;
 }
 
 .blog-list-post-title::after {
@@ -1100,6 +1132,8 @@ figcaption {
 
 .recent-posts-list-item-title:hover {
   color: var(--linkColor);
+  /* counteracts the general a style */
+  text-decoration-style: solid;
 }
 
 .recent-posts-list li {
@@ -1376,6 +1410,7 @@ figure img {
 
 .active {
   text-decoration-color: var(--funkyBorder);
+  text-decoration-style: dashed;
 }
 
 /* this is a link */
