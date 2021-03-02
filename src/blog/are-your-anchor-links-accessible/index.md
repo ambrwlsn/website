@@ -33,6 +33,7 @@ Within a few hours, I had made a plugin to automate the addition of anchor links
 - [A word of caution](#a-word-of-caution)
 - [Another option](#another-option)
 - [Automating accessible anchor links](#automating-accessible-anchor-links)
+- [Continued discussion](#continued-discussion)
 
 ## What are anchor links exactly?
 
@@ -166,5 +167,26 @@ I tried finding a plugin that would help me to automate the addition of anchor l
 There is handy <a href="https://github.com/markdown-it/markdown-it/tree/master/docs">markdown-it developer documentation</a> for people wanting to create plugins. Using these docs, a <a href="https://markdown-it.github.io/">markdown-it demo page</a>, and some inspiration from a plugin called <a href="https://github.com/valeriangalliat/markdown-it-anchor">markdown-it-anchor</a>, I wrote a plugin.
 
 Here is <a href="https://github.com/ambrwlsn/website/blob/da2056c316fa45fa58b443b07be1ac4c5080912e/helpers/markdown-anchor-wat.js#L1">a permalink to my plugin file</a>. It recreates parsing functions for opening and closing `<h2>` elements from the `markdown-it` library. In my `eleventy.config` file, I `use` (connect) the plugin with `markdown-it`. This allows me to automatically add custom anchor links for all my level two headings.
+
+## Continued discussion
+
+A few people have been inspired by this post and one of them is [Nicolas Hoizey](https://nicolas-hoizey.com/). In February 2021, Nicolas created [an issue in markdown-it-anchor's GitHub repository](https://github.com/valeriangalliat/markdown-it-anchor/issues/82), hoping the maintainers would consider making changes. 
+
+What followed was a really good discussion among several people, kicked off by [Valérian Galliat](https://www.codejam.info/val.html), regarding the solution I decided on in this blog post. I definitely recommend reading through the comments because there are some great nuggets of information about accessibility in there!
+
+Here are some criticisms of the approach to accessible anchor links that I took in this blog post: 
+
+- The text hidden with CSS creates a large gap between heading and paragraphs in Firefox reader mode. However, this could be seen as a reader mode limitation.
+- There is an SEO concern that text usually hidden with CSS shows up in descriptions of posts in Google. However, anchor links will most likely not being reported as illegitimate content.
+- Text usually hidden with CSS also shows up in RSS readers.
+
+Some suggested that `aria-label` could be used to offer accessible text without the need for `aria-labelledby`.  [Kitty](https://kittygiraudel.com/) reminded us that [`aria-label` is notoriously bad with content translating services](https://heydonworks.com/article/aria-label-is-a-xenophobe/) such as Google Translate.
+
+I learned a lot from the discussion. I still think there is not really a **silver bullet** to creating accessible anchor links that would suit everyone. There are quite a few ways to approach it, each with their own advantages and disadvantages, based on things like browser support, screen size, screen readers, and more. 
+
+However, [Barry Pollard](https://www.tunetheweb.com/) made a good point. His idea is that there are [several advantages to making headings into links themselves](https://github.com/valeriangalliat/markdown-it-anchor/issues/82#issuecomment-788268457). I would be happy to use this approach on my own site. Try to hover or focus [a heading on a Web Almanac post](https://almanac.httparchive.org/en/2020/accessibility#ease-of-reading) to see the approach first hand.
+
+
+What do you think? I'd love to know if you have any ideas. If so, please comment on the [GitHub Issue](https://github.com/valeriangalliat/markdown-it-anchor/issues/82)!
 
 
