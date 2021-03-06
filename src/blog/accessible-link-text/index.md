@@ -13,7 +13,7 @@ I was a bit confused why the 'learn' and 'about' navigation links were flagged, 
 
 I was happy that I didn't have to add any new code in order to make the six flagged links accessible! If an accessibility audit flags any links on your site, and you determine that they are in fact inaccessible, there are a few things you can do.
 
-One method is to add a `<span>` next to the existing text that is hidden (<a href="https://hugogiraudel.com/2016/10/13/css-hide-and-seek/">this post describes a method for visually hiding text  using CSS</a>). This would make the text invisible in the UI, but a screen reader would still read it out. 
+One method is to add a `<span>` next to the existing text that is hidden (<a href="https://kittygiraudel.com/2016/10/13/css-hide-and-seek/">this post describes a method for visually hiding text  using CSS</a>). This would make the text invisible in the UI, but a screen reader would still read it out. 
 
 Another similar method is to add more descriptive (non-hidden) text to links, just as I have done for the link in the previous paragraph.
 

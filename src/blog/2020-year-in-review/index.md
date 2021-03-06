@@ -77,7 +77,7 @@ I want to thank a few people this year:
 
 - [Jeremy Keith](https://adactio.com) for his support, mentorship, and being my most fave person ever to debate the web with.
 
-- [Kitty](https://hugogiraudel.com) for their support, mentorship, and enviable ability to make pretty much anything.
+- [Kitty](https://kittygiraudel.com) for their support, mentorship, and enviable ability to make pretty much anything.
 
 - [Eva](https://includejs.dev/) for being a bright light in the murkiness of this year, and getting people motivated to socialise and learn together.
 
