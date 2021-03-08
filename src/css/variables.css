@@ -5,17 +5,17 @@
 }
 
 @font-face {
-  font-family: 'Merriweather';
-  src: url('/fonts/merriweather-v22-latin-regular.woff2') format('woff2');
-  font-style: normal;
-  font-weight: 400;
+  font-family: 'Rubik';
+  src: url('/fonts/rubik-v11-latin-900-webfont.woff2') format('woff2');
+  font-weight: bold;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Rubik';
-  src: url('/fonts/rubik-v11-latin-900-webfont.woff2') format('woff2');
-  font-weight: bold;
+  font-family: 'Merriweather';
+  src: url('/fonts/merriweather-v22-latin-regular.woff2') format('woff2');
+  font-style: normal;
+  font-weight: 400;
   font-display: swap;
 }
 

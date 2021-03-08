@@ -1,0 +1,18 @@
+---
+layout: main.njk
+title: Notes
+description: Amber's thoughts about life and web development!.
+---
+
+<div class="wrapper about-wrapper">
+
+    <h1 class="about-title">Notes</h1>
+    <p class="learn-introduction">My thoughts about life and web development!</p>
+    <ul class="learn-list">
+        {% for p in collections.notes %}
+            <li>
+                <a href="{{ p.url }}">{{ p.data.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
