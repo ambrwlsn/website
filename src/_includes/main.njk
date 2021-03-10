@@ -41,7 +41,17 @@
 		<link rel="apple-touch-icon" sizes="180x180" href="{{ '/img/favicon/apple-touch-icon.png' | url }}">
 		<link rel="icon" type="image/png" sizes="32x32" href="{{ '/img/favicon/favicon-32x32.png' | url }}">
 		<link rel="icon" type="image/png" sizes="16x16" href="{{ '/img/favicon/favicon-16x16.png' | url }}">
-		<script type="module" src="./js/toggle.js"></script>
+		<script>
+			const html = document.getElementsByTagName("html")[0];
+			var localStorageColorScheme = localStorage.getItem("color-scheme");
+			var darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+			var prefersDarkMode = darkModeMediaQuery.matches;
+
+			if (localStorageColorScheme) {
+				html.setAttribute("class", localStorageColorScheme);
+			}
+		</script>
+		{# <script type="module" src="./js/toggle.js"></script> #}
 		<script async defer data-domain="amberwilson.co.uk" src="https://plausible.io/js/plausible.js"></script>
 		<link rel="stylesheet" type="text/css" href="{{ '/css/minified.css' | url }}"/>
 	</head>
@@ -57,7 +67,7 @@
 			<a class="{{ 'active' if '/read' in page.url }}" href="{{ '/read' | url }}">Read</a>
 			<a class="{{ 'active' if '/projects' in page.url }}" href="{{ '/projects' | url }}">Projects</a>
 			<a class="{{ 'active' if '/about' in page.url }}" href="{{ '/about' | url }}">About</a>
-			<web-toggle></web-toggle>
+			{# <web-toggle></web-toggle> #}
 		</nav>
 
 		<main id="main">
@@ -102,6 +112,44 @@
 				</p>
 			</footer>
 		{% endif %}
+		<script>
+			const inputMarkup = `
+    <div class="checkbox-wrapper">
+        <input type="checkbox" id="dark" name="dark">
+        <span class="focus-outline"></span>
+        <label for="dark">
+            <span class="hidden">Light and Dark Mode Toggle</span>
+        </label>
+    </div>
+    `
+
+			const navElement = document.getElementById("main-nav");
+			navElement.insertAdjacentHTML('beforeend', inputMarkup);
+
+			const element = document.getElementById('dark');
+			element.checked = localStorageColorScheme
+				? localStorageColorScheme === "dark"
+				: prefersDarkMode;
+
+			element.addEventListener('click', function (event) {
+				localStorage.setItem(
+					"color-scheme", event.target.checked
+					? "dark"
+					: "light");
+				if (event.target.checked) {
+					html.setAttribute("class", "dark");
+				} else {
+					html.setAttribute("class", "light");
+					element.checked = false;
+				}
+			}, false);
+
+			darkModeMediaQuery.addListener(function callback(query) {
+				if (!localStorageColorScheme) {
+					element.checked = query.matches;
+				}
+			});
+		</script>
 	</body>
 
 </html>
