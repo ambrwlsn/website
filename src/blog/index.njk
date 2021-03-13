@@ -15,11 +15,6 @@ description: These are all the blog posts I've written since I started web devel
       <li>
         <a class="blog-list-post-title" href="{{ p.url }}" aria-label="A blog post - {{ p.data.title }}">{{ p.data.title }}</a>
         <p class="blog-list-date">{{ p.data.date | readableBlogListDate }}</p>
-        {% if p.data.excerpt %}
-          <p class="blog-list-excerpt">{{ p.data.excerpt | toHTML | safe }}…</p>
-        {% else %}
-          <p class="blog-list-excerpt">{{ p.templateContent | getExcerpt }}</p>
-        {% endif %}
         <p class="tags blog-list-tags">
           {% for tag in p.data.tags %}
             {%- if collections.tagList.indexOf(tag) != -1 -%}
