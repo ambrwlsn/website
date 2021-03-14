@@ -28,7 +28,7 @@
 
 :root {
   --text-color-light-mode: #000000;
-  --text-color-dark-mode: #ffffff;
+  --text-color-dark-mode: #eee6e6;
   --secondary-text-color-light-mode: #6d6767;
   --secondary-text-color-dark-mode: #b8aeae;
   --inline-code-background-color-light-mode: #dae3f7;
@@ -45,6 +45,8 @@
   --blockquote-background-color-dark-mode: #33374c;
   --link-color-light-mode: #4b0e90;
   --link-color-dark-mode: #ffffff;
+  --blog-status-light-mode: #2c7a2c;
+  --blog-status-dark-mode: #8bc870;
   --link-hover-color-light-mode: #2b0a79;
   --link-hover-color-dark-mode: #f758d7;
   --blog-post-preview-shadow-light-mode: 8px 10px 8px -5px rgba(150, 150, 150, 0.5);
@@ -109,6 +111,7 @@ html {
   --secondaryTextColor: var(--secondary-text-color-light-mode);
   --inlineCodeBackgroundColor: var(--inline-code-background-color-light-mode);
   --linkColor: var(--link-color-light-mode);
+  --blogStatus: var(--blog-status-light-mode);
   --linkHoverColor: var(--link-hover-color-light-mode);
   --linkHoverColorUnchanged: var(--link-hover-color-light-mode);
   --backgroundColor: var(--background-color-light-mode);
@@ -126,6 +129,7 @@ html {
   --secondaryTextColor: var(--secondary-text-color-dark-mode);
   --inlineCodeBackgroundColor: var(--inline-code-background-color-dark-mode);
   --linkColor: var(--link-color-dark-mode);
+  --blogStatus: var(--blog-status-dark-mode);
   --linkHoverColorUnchanged: var(--link-hover-color-light-mode);
   --linkHoverColor: var(--link-hover-color-dark-mode);
   --backgroundColor: var(--background-color-dark-mode);
@@ -144,6 +148,7 @@ html {
     --secondaryTextColor: var(--secondary-text-color-dark-mode);
     --inlineCodeBackgroundColor: var(--inline-code-background-color-dark-mode);
     --linkColor: var(--link-color-dark-mode);
+    --blogStatus: var(--blog-status-dark-mode);
     --linkHoverColorUnchanged: var(--link-hover-color-light-mode);
     --linkHoverColor: var(--link-hover-color-dark-mode);
     --backgroundColor: var(--background-color-dark-mode);

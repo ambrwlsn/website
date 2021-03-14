@@ -6,6 +6,9 @@ layout: main.njk
     <h1 class="title blog-post-title">{{ title }}</h1>
     <time class="post-date dt-published" itemprop="dateCreated pubdate datePublished">{{ date | readableBlogPostDate }}</time>
     <p class="post-reading-time">{{ content | emojiReadTime | safe }}</p>
+    {%- if status -%}
+      <span class="blog-post-status-in-post">Room for growth <span aria-hidden="true">&#127793;</span></span>
+    {%- endif -%}
     <p class="tags-with-no-background">
       {% for tag in tags %}
         {%- if collections.tagList.indexOf(tag) != -1 -%}

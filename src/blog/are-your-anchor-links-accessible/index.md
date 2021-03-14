@@ -3,6 +3,7 @@ title: Are your Anchor Links Accessible?
 date: "2020-12-14"
 ogImage: accessibility.png
 tags: [accessibility, create, ssg]
+status: growing
 keywords:
   [
     web development,
