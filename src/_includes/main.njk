@@ -11,7 +11,7 @@
 		<meta name="robots" content="index,follow"/>
 		<title>{{ title }} | Amber Wilson</title>
 		<meta name="description" content="{% if description -%}{{ description }}{% elif (excerpt) -%}{{ excerpt }}{% elif (postExcerpt) -%}{{ postExcerpt | trim }}{% elif (learnExcerpt) -%}{{ learnExcerpt | trim }}{% else -%}{{ page.url | log }}{% endif -%}"/>
-		<link rel="canonical" href="https://amberwilson.co.uk{{ page.url }}"/>
+		<link rel="canonical" href="{% if canonical -%}{{ canonical }}{% else -%}https://amberwilson.co.uk{{ page.url }}{% endif -%}"/>
 		<link rel="icon" href="{{ '/img/favicon/favicon-32x32.png' | url }}"/>
 		<meta name="keywords" content="{{ keywords }}{% if (keywords) and (tags) %},{% endif -%}{{ tags }}"/>
 		<meta name="author" content="Amber Wilson"/>
@@ -75,7 +75,7 @@
 		</main>
 		{% if (page.url !== '/') %}
 			<footer role="contentinfo">
-				<p class="footer-info">Hi my name is Amber, and I am a web developer who wants to make the web pleasant for everyone to use. You can find me writing here, building at N26, on <a class="footer-link" rel="me" href="https://twitter.com/ambrwlsn90">
+				<p class="footer-info">Hi my name is Amber, and I am a web developer who wants to make the web pleasant for everyone to use. You can find me writing here, building at Ableton, on <a class="footer-link" rel="me" href="https://twitter.com/ambrwlsn90">
 				Twitter
 					<span>
 							<svg
