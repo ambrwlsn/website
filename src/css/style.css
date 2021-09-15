@@ -1533,7 +1533,7 @@ figure img {
   padding: var(--spacingM) var(--spacingM) var(--spacingM) var(--spacingXXL);
   margin-bottom: var(--spacingXL);
 }
-.why-card::before {
+.card-icon::before {
   position: absolute;
   content: url(/img/thumbs_up.png);
   top: 14px;
