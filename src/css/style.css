@@ -1531,6 +1531,8 @@ figure img {
 .why-card {
   margin-top: 0;
   padding: var(--spacingM) var(--spacingM) var(--spacingM) var(--spacingXXL);
+}
+.why-card__bullet-list {
   margin-bottom: var(--spacingXL);
 }
 .card-icon::before {
