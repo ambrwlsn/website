@@ -928,12 +928,6 @@ footer {
   padding: var(--spacingM);
 }
 
-@media only screen and (min-width: 320px) {
-  .length-container {
-    padding: 0;
-  }
-}
-
 @media only screen and (min-width: 686px) {
   .length-container {
     font-size: var(--text25);
@@ -970,11 +964,13 @@ footer {
   color: var(--readText);
   font-size: var(--text09);
   text-align: center;
+  padding: var(--spacingM);
 }
 
 @media only screen and (min-width: 686px) {
   .three-words-container {
     font-size: var(--text11);
+    padding: 0;
   }
 }
 
