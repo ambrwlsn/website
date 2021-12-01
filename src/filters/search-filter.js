@@ -15,7 +15,7 @@ module.exports = function(collection) {
       title: page.data.title,
       tags: page.data.tags,
       keywords: page.data.keywords,
-      date: format(new Date(page.data.date), 'MMM do yyyy'),
+      date: format(new Date(page.data.date), 'MM/dd/yyyy'),
       id: page.url,
     });
   });
