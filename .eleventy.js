@@ -150,6 +150,10 @@ module.exports = function(eleventyConfig, options) {
     });
   });
 
+  eleventyConfig.addFilter('urlify', function(value) {
+    return value.replace(/\s+/g, '-').toLowerCase();
+  });
+
   eleventyConfig.addFilter('trim', function(value) {
     return value.trim();
   });

@@ -3,9 +3,9 @@
 {% from "macros/bookSVG.njk" import bookSVG %}
 
 {% macro bookReviewPanels(book) %}
-    <div class="review-title" style="border: 3px solid {{ book.lengthBoxColour }}";>
+    <h2 class="review-title" style="border: 3px solid {{ book.lengthBoxColour }}" id="{{ book.title | urlify }}";>
         {{ book.title }}
-    </div>
+    </h2>
     <div class="main-review-container">
         <div class="review-container" 
     style="background-color:{{ book.reviewBoxColour }}";
