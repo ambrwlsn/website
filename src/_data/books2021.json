@@ -1,6 +1,22 @@
 [
   {
     "yearRead": "2021",
+    "title": "The Book You Wish Your Parents Had Read by Philippa Perry",
+    "length": "532",
+    "useThreeWords": "Affirming, warm, encouraging",
+    "review": "'We owe our children honesty'. This is one of my favourite messages from the book and one that I am sure is hard for lots of parents to honour. If you experienced emotional upset or confusion in your own childhood, I can pretty much guarantee that you'll recognise some of your own personal, previously-experienced parent-child relationship dynamics in this book. I think tired, stressed parents are likely to take a child's 'undesirable' behaviours and label them as manipulative or bad. This book tries to teach that children do not have 'bad' behaviour, and nor do they seek to be manipulative. Children seek to understand the world around them and can often find this difficult due to lack of knowledge and emotional coping skills. Adults can forget that children have a heck of a lot to learn about life! An adult's job is to nurture a child's ability to figure things out and regulate emotions for themselves. I've bought a physical copy of this book as well as the audio book, so that I can highlight certain parts. I'm sure I am going to need to re-read these highlighted parts over and over as a stressed new parent! The author reads the audio book in her lovely, calm voice. She apologises quite often for any irritation her words might cause parents who see her ideas as too idealistic and impractical. However, she also emphasises that no parent (or person) can be perfect, but that the important thing is reflecting on and repairing the parent-child relationship when a parent is in a better place themselves.",
+    "coverImage": "the-book-you-wish-your-parents-had-read.jpeg",
+    "coverImageAlt": "The Book You Wish Your Parents Had Read book cover",
+    "methodImage": "Headphones",
+    "methodFill": "var(--readText)",
+    "methodStroke": "var(--readText)",
+    "methodBoxColour": "#5EBACE",
+    "useThreeWordsBoxColour": "#F4B441",
+    "lengthBoxColour": "#A2C999",
+    "reviewBoxColour": "#EBFFFF"
+  },
+  {
+    "yearRead": "2021",
     "title": "The Simple Guide to Attachment Difficulties in Children by Betsy de Thierry",
     "length": "120",
     "useThreeWords": "",
