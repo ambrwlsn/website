@@ -39,7 +39,7 @@ module.exports = function(eleventyConfig, options) {
   eleventyConfig.addPassthroughCopy('./src/read/img/**');
   eleventyConfig.addPassthroughCopy('./src/cv/img/**');
   eleventyConfig.addPassthroughCopy('./src/cv/**');
-  eleventyConfig.addPassthroughCopy('./src/notes/**');
+  // eleventyConfig.addPassthroughCopy('./src/notes/**');
   eleventyConfig.addPassthroughCopy('./src/img/**');
   eleventyConfig.addPassthroughCopy('./src/fonts/**');
   eleventyConfig.addPassthroughCopy('./src/_redirects');

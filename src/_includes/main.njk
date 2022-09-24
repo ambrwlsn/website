@@ -62,7 +62,7 @@
 		<nav id="main-nav">
 			<a class="nav-logo-link" href="/">{{ logoSVG() }}</a>
 			<a class="nav-blog-link {{ 'active' if '/blog' in page.url }}" href="{{ '/blog' | url }}">Blog</a>
-			<a class="{{ 'active' if '/notes' in page.url }}" href="{{ '/notes' | url }}">Notes</a>
+			{# <a class="{{ 'active' if '/notes' in page.url }}" href="{{ '/notes' | url }}">Notes</a> #}
 			<a class="{{ 'active' if '/learn' in page.url }}" href="{{ '/learn' | url }}">Learn</a>
 			<a class="{{ 'active' if '/read' in page.url }}" href="{{ '/read' | url }}">Read</a>
 			<a class="{{ 'active' if '/projects' in page.url }}" href="{{ '/projects' | url }}">Projects</a>
