@@ -65,8 +65,6 @@
   --funkyBorder: #fa0dc7;
   --duration: 0.5s;
   --timing: ease;
-  transition: color var(--duration) var(--timing),
-    background-color var(--duration) var(--timing);
 
   --text25: 2.5rem;
   --text20: 2rem;
