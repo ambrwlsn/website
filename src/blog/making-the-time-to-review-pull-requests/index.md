@@ -6,7 +6,7 @@ ogImage: 'og-code-review.png'
 keywords: [amber wilson,web development,html,frontend]
 ---
 
-Code review is super important. At times I have worried that I've spent too long reviewing and not enough time working fast and breaking things. Today I was reminded that time spent on code review is worth it's weight in gold.
+Code review is super important. At times I have worried that I've spent too long reviewing and not enough time working fast and breaking things. Today I was reminded that time spent on code review is worth its weight in gold.
 
 ## Contents
 
@@ -22,7 +22,7 @@ Her review was so careful and thoughtful! During the call, she whipped open a No
 
 I felt so good that she had put so much time and effort into her review! She had even had a chat with another engineer to find out how to answer my questions better. 
 
-We discussed possible improvements and solutions for about half an hour. After the call, I felt great. I felt more confident that my pull request could be improved and, once merged, really add value to the project I'm working on. Not only that - but the code will now be clearer and more future-proof.
+We discussed possible improvements and solutions for about half an hour. After the call, I felt great. I felt more confident that my pull request could be improved and, once merged, really add value to the project I'm working on. Not only that — but the code will now be clearer and more future-proof.
 
 ## Benefits of Code Review
 
