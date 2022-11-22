@@ -6,6 +6,8 @@ ogImage: 'og-code-review.png'
 keywords: [amber wilson,web development,html,frontend]
 ---
 
+Code review is super important. At times I have worried that I've spent too long reviewing and not enough time working fast and breaking things. Today I was reminded that time spent on code review is worth it's weight in gold.
+
 ## Contents
 
 - [My Code Review Story](#my-code-review-story)
@@ -13,8 +15,6 @@ keywords: [amber wilson,web development,html,frontend]
 - [Summary](#summary)
 
 ## My Code Review Story
-
-Code review is super important. At times I have worried that I've spent too long reviewing and not enough time working fast and breaking things. Today I was reminded that time spent on code review is worth it's weight in gold.
 
 I was invited to a 1 on 1 meeting with a colleague who had offered to review my code in a pull request on GitHub. She wanted to discuss the three questions I'd left on my pull request. 
 
