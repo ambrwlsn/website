@@ -28,7 +28,7 @@ We discussed possible improvements and solutions for about half an hour. After t
 
 Here are some benefits that code review offers:
 
-- Adds to shared knowledge and decreases the <a href='https://en.wikipedia.org/wiki/Bus_factor'>bus factor</a>
+- Adds to shared knowledge and increases the <a href='https://en.wikipedia.org/wiki/Bus_factor'>bus factor</a>
 - Improves the quality and future-proofness of code
 - Decreases the chance of bugs in code by picking up on things others miss
 - Improves the end-user experience
