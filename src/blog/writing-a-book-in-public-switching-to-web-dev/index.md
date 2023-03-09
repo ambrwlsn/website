@@ -58,5 +58,7 @@ I bought and read two other career-switch-to-web books. These books helped me fi
 
 Now that my child is in daycare, I can dedicate a little more time to writing. I can also keep telling myself that a little bit of writing a day is better than none. Logic over fear, let's go!
 
+My writing mantra is to cut the fluff and tell people exactly what they need, in plain language. Currently feeling thankful for the longer, fluffier paragraphs I wrote years ago. I can take those and cut them down!
+
 </section>
 
