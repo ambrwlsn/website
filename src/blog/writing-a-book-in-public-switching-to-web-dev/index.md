@@ -60,5 +60,28 @@ Now that my child is in daycare, I can dedicate a little more time to writing. I
 
 My writing mantra is to cut the fluff and tell people exactly what they need, in plain language. Currently feeling thankful for the longer, fluffier paragraphs I wrote years ago. I can take those and cut them down!
 
+<details>
+    <summary><strong>Update email 1 (31.03.23)</strong></summary>
+
+<u>Progress</u>
+
+I have begun to include a mix of personal stories and more factual information.
+
+Even though I know I don't need to yet, I'm worrying about things like how to fit the personal stories around the facts, among other things like tone of voice.
+
+I'm spending lots of time moving chunks of text around and deleting stuff.
+
+I'm finding that I'm not very comfortable writing huge blocks of text without immediately editing them. Going back to the blocks the next day brings me fresh clarity that enables me to edit better!
+
+<u>Sneak Peek</u>
+
+None yet. Maybe next time ;)
+
+<u>Inspiration</u>
+
+I found a good post from [Leo Babauta](https://leobabauta.com/). He says to make writing easier, write for one person only. I'm writing for people who are in the position I was years ago. I'm writing for people who wish for a career change and are interested in becoming a web developer.
+</details>
+<br>
+
 </section>
 
