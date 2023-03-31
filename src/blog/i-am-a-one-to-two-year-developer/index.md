@@ -2,7 +2,7 @@
 title: I am a 1-2 year developer
 date: "2018-10-15"
 keywords: [amber wilson, javascript, software engineering, web development, coding, junior developer, dev tips, beginner]
-tags: [tips]
+tags: [reflection]
 ---
 
 I recently read a blog post that grouped developers into categories depending on how long they have worked as one. I felt a little proud that I wasn't in the 0-1 year category, but in the 1-2 year one. This made me want to write about other things about my new career that I feel proud of.
