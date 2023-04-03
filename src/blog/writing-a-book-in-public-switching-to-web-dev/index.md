@@ -81,7 +81,13 @@ None yet. Maybe next time ;)
 
 I found a good post from [Leo Babauta](https://leobabauta.com/). He says to make writing easier, write for one person only. I'm writing for people who are in the position I was years ago. I'm writing for people who wish for a career change and are interested in becoming a web developer.
 </details>
+
 <br>
+
+## April 2023
+
+Chipping away at the book, paragraph by paragraph, night by night. The work feels slow. Like I am adding dominoes, one at a time, very, very gradually to a long and dusty, years-old line of old dominoes that stretches further than the eye can see. But, I feel good about it! I can't see or even <em>feel</em> the progress. Not really. But I know it is there. Once I wrote 100 words a day for 100 days and at the end had 10,000 words of material. Those few words I wrote every day felt so easy to write and grew into something huge. This is what's happening with my book as well.
+
 
 </section>
 
