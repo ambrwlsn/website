@@ -88,6 +88,10 @@ I found a good post from [Leo Babauta](https://leobabauta.com/). He says to make
 
 Chipping away at the book, paragraph by paragraph, night by night. The work feels slow. Like I am adding dominoes, one at a time, very, very gradually to a long and dusty, years-old line of old dominoes that stretches further than the eye can see. But, I feel good about it! I can't see or even <em>feel</em> the progress. Not really. But I know it is there. Once I wrote 100 words a day for 100 days and at the end had 10,000 words of material. Those few words I wrote every day felt so easy to write and grew into something huge. This is what's happening with my book as well.
 
+I asked a good friend of mine if she'd share her experiences of becoming a developer with me. She said she'd be happy to support me <span role="img" aria-label="heart emoji">❤️</span>
+
+I asked on Mastodon [whether anyone knows a new web developer who used to do something else](https://indieweb.social/@ambrwlsn/110208988232303128). I am excited to chat with people!
+
 
 </section>
 
