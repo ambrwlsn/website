@@ -92,6 +92,17 @@ I asked a good friend of mine if she'd share her experiences of becoming a devel
 
 I asked on Mastodon [whether anyone knows a new web developer who used to do something else](https://indieweb.social/@ambrwlsn/110208988232303128). I am excited to chat with people!
 
+## August 2024
+
+Hello! I'm back! I've been writing. I have a few chapters set up.
+
+I'm currently grappling with a question.
+
+If I write this book in public, include real developer stories, and ask for review help from other developers, how do I market the finished book? 
+
+I don't want to sell the book as if it's my accomplishment alone. I don't want to profit off of it alone. That feels greedy. 
+
+My current idea is to put it up as a digital file via an indie seller website for around $5. This feels underpriced but would make it more accessible to more people and hopefully nod to all the people who supported me along the way.
 
 </section>
 
