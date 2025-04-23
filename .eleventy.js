@@ -1,15 +1,16 @@
-const markdownIt = require('markdown-it');
-const format = require('date-fns/format');
+import markdownIt from 'markdown-it';
+import format from 'date-fns/format';
 // see https://plug11ty.com/plugins/reading-time-plugin-for-eleventy/
-const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
-const searchFilter = require('./src/filters/search-filter');
-const webmentionsFilter = require('./src/filters/webmentions-filter');
-const markdownAnchorWat = require('./helpers/markdown-anchor-wat');
-const excerpts = require('./helpers/excerpts');
-const card = require('./components/card');
-const pluginRss = require('@11ty/eleventy-plugin-rss');
-const { exec } = require('child_process');
-var nunjucks = require('nunjucks');
+import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
+import searchFilter from './src/filters/search-filter.js';
+import webmentionsFilter from './src/filters/webmentions-filter.js';
+import markdownAnchorWat from './helpers/markdown-anchor-wat.js';
+import htmlMinTransform from './helpers/minify-html.js';
+import eleventyExcerptPlugin from './helpers/eleventy-plugin-excerpt.js';
+import card from './components/card.js';
+import pluginRss from '@11ty/eleventy-plugin-rss';
+import { exec } from 'child_process';
+import nunjucks from 'nunjucks';
 var env = new nunjucks.Environment(null);
 env.addGlobal('variable', 'value');
 
@@ -19,7 +20,7 @@ const MARKDOWN_OPTIONS = {
   linkify: true,
 };
 
-module.exports = function(eleventyConfig, options) {
+export default async function (eleventyConfig, options) {
   eleventyConfig.addPassthroughCopy('src/js');
   eleventyConfig.addWatchTarget('./src/css/**');
   eleventyConfig.addWatchTarget('./src/blog/**/**');
@@ -80,6 +81,8 @@ module.exports = function(eleventyConfig, options) {
 
   eleventyConfig.addPlugin(pluginRss);
 
+  eleventyConfig.addPlugin(eleventyExcerptPlugin);
+
   eleventyConfig.addFilter('count', (value) => {
     return Math.ceil(value.trim().split(/\s+/).length);
   });
@@ -107,10 +110,8 @@ module.exports = function(eleventyConfig, options) {
     return arr.slice(0, limit);
   });
 
-  eleventyConfig.addFilter('getExcerpt', excerpts);
-
   // minify the html output
-  eleventyConfig.addTransform('htmlmin', require('./helpers/minify-html'));
+  eleventyConfig.addTransform('htmlmin', htmlMinTransform);
 
   eleventyConfig.addCollection('posts', (collection) => {
     return collection.getFilteredByGlob('src/blog/**/*.md');

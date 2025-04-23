@@ -1,4 +1,4 @@
---- 
+---
 title: Home
 eleventyExcludeFromCollections: true
 description: Hi, I'm Amber, welcome to my site!
@@ -24,7 +24,7 @@ description: Hi, I'm Amber, welcome to my site!
                         {% if p.data.excerpt %}
                             {{ p.data.excerpt | toHTML | safe }}…
             {% else %}
-                            {{ p.templateContent | getExcerpt }}
+                            {{ p.templateContent | excerpt }}
                         {% endif %}
                     </p>
                     <p class="tags recent-blog-list-tags">

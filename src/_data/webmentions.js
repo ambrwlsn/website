@@ -1,11 +1,15 @@
-const fs = require('fs');
-const fetch = require('node-fetch');
-const unionBy = require('lodash/unionBy');
-const metadata = require('./metadata.json');
-const { domainToASCII } = require('url');
+import fs from 'fs';
+import fetch from 'node-fetch';
+import unionBy from 'lodash';
+import { readFile } from 'fs/promises';
+const metadata = JSON.parse(
+  await readFile(new URL('./metadata.json', import.meta.url), 'utf-8')
+);
+import { domainToASCII } from 'url';
 
 // Load .env variables with dotenv
-require('dotenv').config();
+import dotenv from 'dotenv';
+dotenv.config();
 
 // Configuration Parameters
 const CACHE_DIR = '_cache';
@@ -84,7 +88,7 @@ function readFromCache() {
   };
 }
 
-module.exports = async function() {
+export default async function () {
   const cache = readFromCache();
   const { lastFetched } = cache;
 

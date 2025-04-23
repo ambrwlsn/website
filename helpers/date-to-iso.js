@@ -1,4 +1,4 @@
-module.exports = function(dateObj) {
+export default async function (dateObj) {
   let dateTime = dateObj.getTime();
   let dateStr = dateObj.toString();
   // Grab the Timezone offset from the date string

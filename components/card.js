@@ -1,4 +1,4 @@
-module.exports = function(text, purpose) {
+export default async function (text, purpose) {
   if (!text && !purpose) {
     return null;
   }

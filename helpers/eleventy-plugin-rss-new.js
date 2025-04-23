@@ -1,8 +1,8 @@
-const dateToISO = require('./date-to-iso');
-const absoluteUrl = require('./absolute-url-new');
-const htmlToAbsoluteUrls = require('./html-to-absolute-url-new');
+import dateToISO from './date-to-iso';
+import absoluteUrl from './absolute-url-new';
+import htmlToAbsoluteUrls from './html-to-absolute-url-new';
 
-module.exports = function(eleventyConfig) {
+export default async function (eleventyConfig) {
   eleventyConfig.addNunjucksFilter('rssLastUpdatedDate', (collection) => {
     if (!collection || !collection.length) {
       throw new Error('Collection is empty in rssLastUpdatedDate filter.');

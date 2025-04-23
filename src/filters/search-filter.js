@@ -1,7 +1,7 @@
-const elasticlunr = require('elasticlunr');
-const format = require('date-fns/format');
+import elasticlunr from 'elasticlunr';
+import format from 'date-fns/format';
 
-module.exports = function(collection) {
+export default async function (collection) {
   var index = elasticlunr(function() {
     this.addField('title');
     this.addField('tags');

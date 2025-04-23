@@ -115,7 +115,7 @@ function validate_price(price) {
   return result
 }
 
-module.exports = validate_price
+export default validate_price
 ```
 
 A few minutes before codebar wrapped up for the evening, I wanted to ask Dave the difference between unit tests and a few other testing methods I have been exposed to as a new developer - integration tests, end-to-end tests and browser testing. He answered my question by drawing out the "testing pyramid" for me. This is explained really well [here](http://www.agilenutshell.com/episodes/41-testing-pyramid) (there's also a video). Basically, at the bottom there are unit tests, above there are integration tests, and at the top there are user interface/end-to-end tests. The other kinds of testing (other than unit testing) are beyond the scope of this post, but I plan to write about them later!

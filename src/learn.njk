@@ -20,7 +20,7 @@
   <subtitle>{{ metadata.subtitle }}</subtitle>
   <link href="{{ metadata.feedUrl }}" rel="self"/>
   <link href="{{ metadata.url }}"/>
-  <updated>{{ collections.learn | rssLastUpdatedDate }}</updated>
+  <updated>{{ collections.learn | getNewestCollectionItemDate | dateToRfc822 }}</updated>
   <id>{{ metadata.url }}</id>
   <author>
     <name>{{ metadata.author.name }}</name>

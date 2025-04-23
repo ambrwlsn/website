@@ -1,8 +1,8 @@
-const posthtml = require('posthtml');
-const urls = require('posthtml-urls');
-const absoluteUrl = require('./absolute-url-new');
+import posthtml from 'posthtml';
+import urls from 'posthtml-urls';
+import absoluteUrl from './absolute-url-new';
 
-module.exports = function(htmlContent, base) {
+export default async function (htmlContent, base) {
   if (!base) {
     throw new Error(
       'eleventy-plugin-rss, htmlToAbsoluteUrls(absolutePostUrl) was missing the full URL base `absolutePostUrl` argument.'

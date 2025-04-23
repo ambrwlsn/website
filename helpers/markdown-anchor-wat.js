@@ -1,6 +1,6 @@
 // altered from plugin provided by https://www.npmjs.com/package/markdown-it-anchor
 
-const linkIcon = require('./link');
+import linkIcon from './link.js';
 
 const slugify = (s) =>
   encodeURIComponent(
@@ -47,4 +47,4 @@ const anchor = (md, options) => {
   };
 };
 
-module.exports = anchor;
+export default anchor;

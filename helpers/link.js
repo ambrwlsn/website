@@ -12,4 +12,5 @@ const link = `<svg
     />
   </svg>`;
 
-module.exports = link;
+export default link
+

@@ -1,11 +1,13 @@
-const { URL } = require('url');
-const debug = require('debug')('EleventyPluginRSS');
+import { URL } from 'url';
+import debug from 'debug';
 
-module.exports = function(url, base) {
+const log = debug('EleventyPluginRSS');
+
+export default async function (url, base) {
   try {
     return new URL(url, base).toString();
   } catch (e) {
-    debug(
+    log(
       'Trying to convert %o to be an absolute url with base %o and failed, returning: %o (invalid url)',
       url,
       base,

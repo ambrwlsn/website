@@ -1,7 +1,7 @@
-const striptags = require('striptags');
-const he = require('he');
+import striptags from 'striptags';
+import he from 'he';
 
-module.exports = function(str) {
+export default async function (str) {
   //   Truncate content and add ellipsis.
   const truncate = value => value.slice(0, 160) + '…';
 

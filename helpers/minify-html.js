@@ -1,6 +1,6 @@
-const htmlmin = require("html-minifier");
+import htmlmin from "html-minifier";
 
-module.exports = function(content, outputPath) {
+export default async function (content, outputPath) {
   if( outputPath.endsWith(".html") ) {
     let minified = htmlmin.minify(content, {
       useShortDoctype: true,
