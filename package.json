@@ -16,6 +16,10 @@
     "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "node": ">=18"
+  },
+  "engineStrict": true,
   "keywords": [],
   "author": "Amber Wilson",
   "license": "ISC",
@@ -42,6 +46,7 @@
     "elasticlunr": "^0.9.5",
     "eleventy-plugin-reading-time": "0.0.1",
     "he": "^1.2.0",
+    "netlify-plugin-cache": "^1.0.3",
     "node-fetch": "^3.3.2",
     "postcss-clean": "^1.2.0",
     "striptags": "^3.2.0"
