@@ -16,6 +16,10 @@
     "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "engines": {
+    "node": ">=18"
+  },
+  "engineStrict": true,
   "keywords": [],
   "author": "Amber Wilson",
   "license": "ISC",
