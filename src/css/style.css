@@ -8,6 +8,7 @@ body {
 
 main {
   width: 100%;
+  flex: 1;
   font-family: var(--fontSansSerif);
   padding: 0 var(--spacingM);
 }

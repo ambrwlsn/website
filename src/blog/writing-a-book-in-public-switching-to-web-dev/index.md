@@ -10,15 +10,21 @@ I'm writing a book for people who want to <strong>change careers and get into we
 
 To get updates and sneak peeks please sign up below <span role="img" aria-label="heart emoji">❤️</span>
 
-<form action="https://mailthis.to/switchtowebdev" method="POST" encType="multipart/form-data">
-    <p>
-        <label for="email">Email: </label>
-        <input type="email" id="email" name="email" maxlength="120" multiple="" placeholder="email@example.com" aria-label="Email Address">
-        <input type="hidden" name="_honeypot" value="">
-        <label for="send"> </label>
-        <input type="submit" id="send" name="contact" value="Sign up">
-    </p>
+<form name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you/">
+  <input type="hidden" name="form-name" value="newsletter">
+
+  <!-- Honeypot field to prevent spam -->
+  <p class="hidden">
+    <label>Don’t fill this out: <input name="bot-field" /></label>
+  </p>
+
+  <!-- Email input -->
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" maxlength="120" multiple="" placeholder="email@example.com" aria-label="Email Address" required>
+  <label for="send" class="hidden">Sign Up</label>
+  <input type="submit" id="send" name="contact" value="Sign up">
 </form>
+
 
 To sign up as a [beta reader](https://en.wikipedia.org/wiki/Beta_reader) please send an email to <a href="mailto:switchtowebdev@gmail.com?subject=I'd like to help make Switch to Web Dev great!">switchtowebdev@gmail.com</a> <span role="img" aria-label="heart emoji">❤️</span>
 
