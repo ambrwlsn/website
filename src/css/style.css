@@ -118,7 +118,7 @@ figcaption {
 
 footer {
   display: grid;
-  justify-content: center;
+  justify-items: center;
   padding-bottom: var(--spacingL);
 }
 
