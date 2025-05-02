@@ -117,7 +117,7 @@ figcaption {
 }
 
 footer {
-  display: flex;
+  display: grid;
   justify-content: center;
   padding-bottom: var(--spacingL);
 }
@@ -218,16 +218,16 @@ footer {
 
 .made-with {
   margin-top: var(--spacingXL);
-  margin-bottom: 0;
   font-size: var(--text09);
   font-family: var(--fontSansSerif);
-  display: flex;
-  align-items: center;
-  flex-flow: row wrap;
 }
 
 .made-with a {
   font-weight: 300;
+}
+
+.made-with-hands {
+  margin: auto;
 }
 
 @media only screen and (min-width: 800px) {
