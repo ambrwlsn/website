@@ -2,7 +2,7 @@
 title: Are your Anchor Links Accessible?
 date: "2020-12-14"
 ogImage: accessibility.png
-tags: [accessibility, create, ssg]
+tags: [accessibility, create]
 status: growing
 keywords:
   [
@@ -40,7 +40,7 @@ Within a few hours, I had made a plugin to automate the addition of anchor links
 
 Anchor links provide a way to link to separate sections of a page. On this page, hover over the level two headings on desktop to see the links (the links are always visible on smaller screens).
 
-In essence, an anchor link is a link containg a URL fragment. This fragment usually appears at the end of a URL. It begins with a hash character (`#`), and is followed by a string. This string identifies a section in a web page. 
+In essence, an anchor link is a link containg a URL fragment. This fragment usually appears at the end of a URL. It begins with a hash character (`#`), and is followed by a string. This string identifies a section in a web page.
 
 For example, a page may have a section containing a section header element such as an `<h2>`. This element can be given an `id` attribute. An anchor link is created when the value of the `id` matches the `href` value of an anchor (`<a>`) element on the same page. Consider the following code:
 
@@ -70,7 +70,7 @@ I realised the `<a>` element should exist as a sibling of the heading element, r
 
 When the `<a>` element is outside the `<h2>`, VoiceOver reads out "link number" for the `<a>` and "heading level two introduction" for the `<h2>`. This is a problem, as the elements are not associated with each other in any way.
 
-Associating anchor links with what they link to is important. Some anchor links I found on a popular site have SVGs with no labels or titles as content. When there is no information about a link available, the screen reader falls back to the href value (e.g. `https://example.com/blog/nice-post/`). This makes the purpose of the link hard to decipher. 
+Associating anchor links with what they link to is important. Some anchor links I found on a popular site have SVGs with no labels or titles as content. When there is no information about a link available, the screen reader falls back to the href value (e.g. `https://example.com/blog/nice-post/`). This makes the purpose of the link hard to decipher.
 
 I realised I needed to better associate my section headings with their anchor links. Below is the **third** version of my anchor link:
 
@@ -79,7 +79,7 @@ I realised I needed to better associate my section headings with their anchor li
 <h2 id="introduction">Introduction</h2>
 ```
 
-The attributes I added are `aria-label` and `aria-describedby`. 
+The attributes I added are `aria-label` and `aria-describedby`.
 
 The `aria label` is read out by a screen reader in place of whatever child the `<a>` element has. This is necessary for anchor links, as these links often have a single character as text content. One alternative is to describe the link using text content, but visually hide it (hint: I removed this attribute in a later version of my anchor link - refer to the fifth version).
 
@@ -138,7 +138,7 @@ If a link that has its own content is placed within a heading, the computed head
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Interesting reading but why do you need the # symbol in the HTML at all?<br><br>Why not just make the whole heading the link (easier clicked too!) and use ::before or ::after to put the symbol there through CSS? <a href="https://t.co/ecaDkZjJH0">https://t.co/ecaDkZjJH0</a></p>&mdash; Barry Pollard (@tunetheweb) <a href="https://twitter.com/tunetheweb/status/1338984100133294083?ref_src=twsrc%5Etfw">December 15, 2020</a></blockquote>
 
-I think both options—using an icon as a link, and making the header a link (when the content of the link is the heading text)—can be valid. However, I have a few concerns with wrapping a heading's text content in a link: 
+I think both options—using an icon as a link, and making the header a link (when the content of the link is the heading text)—can be valid. However, I have a few concerns with wrapping a heading's text content in a link:
 
 - It can be useful separate the anchor link from the heading so that the link can have its own text content
 - It may be harder to select heading text wrapped in a link
@@ -171,11 +171,11 @@ Here is <a href="https://github.com/ambrwlsn/website/blob/da2056c316fa45fa58b443
 
 ## Continued discussion
 
-A few people have been inspired by this post and one of them is [Nicolas Hoizey](https://nicolas-hoizey.com/). In February 2021, Nicolas created [an issue in markdown-it-anchor's GitHub repository](https://github.com/valeriangalliat/markdown-it-anchor/issues/82), hoping the maintainers would consider making changes. 
+A few people have been inspired by this post and one of them is [Nicolas Hoizey](https://nicolas-hoizey.com/). In February 2021, Nicolas created [an issue in markdown-it-anchor's GitHub repository](https://github.com/valeriangalliat/markdown-it-anchor/issues/82), hoping the maintainers would consider making changes.
 
 What followed was a really good discussion among several people, kicked off by [Valérian Galliat](https://www.codejam.info/val.html), regarding the solution I decided on in this blog post. I definitely recommend reading through the comments because there are some great nuggets of information about accessibility in there!
 
-Here are some criticisms of the approach to accessible anchor links that I took in this blog post: 
+Here are some criticisms of the approach to accessible anchor links that I took in this blog post:
 
 - The text hidden with CSS creates a large gap between heading and paragraphs in Firefox reader mode. However, this could be seen as a reader mode limitation.
 - There is an SEO concern that text usually hidden with CSS shows up in descriptions of posts in Google. However, anchor links will most likely not being reported as illegitimate content.
@@ -183,7 +183,7 @@ Here are some criticisms of the approach to accessible anchor links that I took 
 
 Some suggested that `aria-label` could be used to offer accessible text without the need for `aria-labelledby`.  [Kitty](https://kittygiraudel.com/) reminded us that [`aria-label` is notoriously bad with content translating services](https://heydonworks.com/article/aria-label-is-a-xenophobe/) such as Google Translate.
 
-I learned a lot from the discussion. I still think there is not really a **silver bullet** to creating accessible anchor links that would suit everyone. There are quite a few ways to approach it, each with their own advantages and disadvantages, based on things like browser support, screen size, screen readers, and more. 
+I learned a lot from the discussion. I still think there is not really a **silver bullet** to creating accessible anchor links that would suit everyone. There are quite a few ways to approach it, each with their own advantages and disadvantages, based on things like browser support, screen size, screen readers, and more.
 
 However, [Barry Pollard](https://www.tunetheweb.com/) made a good point. His idea is that there are [several advantages to making headings into links themselves](https://github.com/valeriangalliat/markdown-it-anchor/issues/82#issuecomment-788268457). I would be happy to use this approach on my own site. Try to hover or focus [a heading on a Web Almanac post](https://almanac.httparchive.org/en/2020/accessibility#ease-of-reading) to see the approach first hand.
 

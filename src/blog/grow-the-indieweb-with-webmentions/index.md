@@ -2,7 +2,7 @@
 title: Grow the IndieWeb with Webmentions
 date: "2020-12-08"
 ogImage: indieweb3.png
-tags: [ssg, indie-web]
+tags: [indie-web]
 keywords: [amber wilson,software engineering,indie web, webmentions, webmention, eleventy]
 ---
 
@@ -43,7 +43,7 @@ On my site I display mentions and bookmarks. It's possible for someone to link t
 
 I also display likes, retweets and replies on blog posts that I have tweeted about. If the URL to my post is in my tweet, I can gather the interactions on that tweet and display them on that post. Although most social media platforms do not support webmentions, it's possible to gather them by using a great free service called <a href="https://brid.gy/">Bridgy</a>.
 
-Some people have had webmentions on their site for many years, so I am a bit behind. <a href="https://adactio.com/journal/6495">Jeremy has had webmentions since 2013</a>. But, there are more people posting content online than ever before, and personal websites aren't shown the love they used to get. 
+Some people have had webmentions on their site for many years, so I am a bit behind. <a href="https://adactio.com/journal/6495">Jeremy has had webmentions since 2013</a>. But, there are more people posting content online than ever before, and personal websites aren't shown the love they used to get.
 
 So, there has never been a more pressing need to put content creation platforms (e.g. Medium) and social media platforms (e.g. Twitter) second, and put your very own little corner of the web first &#128150;
 
@@ -51,8 +51,8 @@ I used Max Böck's post on <a href="https://mxb.dev/blog/using-webmentions-on-st
 
 - Sign up via <a href="https://webmention.io/">Webmention.io</a> - if this doesn't work right away, check out ways to <a href="https://indielogin.com/setup">set up your website for indie logins</a> (I'm able to sign in by linking to my GitHub account on my site's homepage)
 - Add two `<link>` tags to your HTML document's `<head>` element: `<link rel="pingback" href="https://webmention.io/{your-domain-here}/xmlrpc">` and `<link rel="webmention" href="https://webmention.io/{your-domain-here}/webmention">`
-- For social media mentions, sign up to <a href="https://brid.gy/">Bridgy</a> 
-- Fetch <strong>all</strong> of your site's webmention data in JSON format using one of the <a href="https://github.com/aaronpk/webmention.io#api">webmention endpoints described by IndieWebCamp co-founder Aaron Parecki</a> and the API token provided by <a href="https://webmention.io/">Webmention.io</a> 
+- For social media mentions, sign up to <a href="https://brid.gy/">Bridgy</a>
+- Fetch <strong>all</strong> of your site's webmention data in JSON format using one of the <a href="https://github.com/aaronpk/webmention.io#api">webmention endpoints described by IndieWebCamp co-founder Aaron Parecki</a> and the API token provided by <a href="https://webmention.io/">Webmention.io</a>
 - Shape your webmention data however you like - I filter webmentions into separate re-tweet, reply, like, mention, and bookmark functions using the `'wm-property'` (check out the <a href="https://github.com/ambrwlsn/website/blob/1d713ad9fbce19a9bd8821790fd51c1be62e1f76/src/filters/webmentions-filter.js#L51">filter functions</a> and before you say anything, yes I know they could be DRYer)
 - Use the data to display webmentions on your blog posts
 

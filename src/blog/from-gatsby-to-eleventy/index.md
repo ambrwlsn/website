@@ -1,7 +1,7 @@
 ---
 title: From Gatsby to Eleventy
 date: "2020-11-20"
-tags: [ssg]
+tags: [static-site-generation]
 keywords: [amber wilson, software engineering, web development, performance, accessibility, gatsby, eleventy, static site, static site generator, javascript, html]
 ---
 
@@ -51,7 +51,7 @@ Gatsby sounds really good, so why did I move to Eleventy? This is a question I'v
     <a aria-label="link to this heading" aria-describedby="concluding-thoughts" class="anchor-link" href="#concluding-thoughts"></a>
 </div>
 
-Using Gatsby has taught me a lot about single page apps, and that's important! Sometimes using it was frustrating, and a few things broke without me realising why or even when, but these experiences can be good lessons. Also, I am employed to work on a large SPA, and probably will continue to work on SPAs professionally for years to come, so any experience working with them is good! 
+Using Gatsby has taught me a lot about single page apps, and that's important! Sometimes using it was frustrating, and a few things broke without me realising why or even when, but these experiences can be good lessons. Also, I am employed to work on a large SPA, and probably will continue to work on SPAs professionally for years to come, so any experience working with them is good!
 
 I believe it is a good idea to use the <a href="https://adactio.com/journal/14327">least-powerful technology possible for any given task</a>. Building with Eleventy made this possible for me. I find React and GraphQL nice to use, and I was daunted at the thought of not being able to use JSX. But, using simpler and lower-level tools such as Nunjucks made me feel more confident about my site's output (robust HTML and the least JavaScript possible), and I enjoyed the experience much more than I thought I would.
 
