@@ -30,4 +30,4 @@ Inspired by [Paweł Grzybek](https://pawelgrzybek.com/five-things-i-like-dislike
 
 - FOMO on Bluesky just because it gives me too much of a Twitter vibe and I don't want to be on it.
 
-- Being ill a lot because I have a child old who goes to daycare.
+- Being ill a lot because I have a child who goes to daycare.
