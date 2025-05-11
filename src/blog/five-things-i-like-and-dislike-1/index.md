@@ -1,6 +1,7 @@
 ---
 title: 'Five Things I Like and Dislike #1'
 date: "2025-05-11"
+ogImage: like-dislike-og.png
 tags: [reflection, non-tech]
 ---
 
