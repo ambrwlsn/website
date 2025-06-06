@@ -43,6 +43,7 @@ nav .submenu {
   background-color: var(--backgroundColor);
   border: 5px dotted var(--textColor);
   padding: .5rem;
+  z-index: 10;
 }
 
 @media only screen and (min-width: 686px) {
