@@ -3,9 +3,10 @@ name: Syndicate Note to Bluesky
 on:
   push:
     paths:
-      - src/social/**'
+      - src/social/**
     branches:
       - main
+  workflow_dispatch:
 
 jobs:
   post-to-bluesky:
@@ -26,5 +27,5 @@ jobs:
     - name: Run post.js
       env:
         BLUESKY_HANDLE: ${{ secrets.BLUESKY_HANDLE }}
-        BLUESKY_ACCESS_TOKEN: ${{ secrets.BLUESKY_ACCESS_TOKEN }}
+        BLUESKY_APP_PASSWORD: ${{ secrets.BLUESKY_APP_PASSWORD }}
       run: node blueskySyndicate.mjs
