@@ -1,0 +1,18 @@
+---
+layout: main.njk
+title: Social
+description: Posts meant for social media.
+---
+
+<div class="wrapper about-wrapper">
+
+    <h1 class="about-title">Social</h1>
+    <p class="learn-introduction">Posts that I syndicate to Mastodon and Bluesky 💁🏻‍♀️</p>
+    <ul class="learn-list">
+        {% for p in collections.social %}
+            <li>
+                <a href="{{ p.url }}">{{ p.data.title }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>

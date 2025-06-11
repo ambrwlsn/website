@@ -13,14 +13,14 @@ layout: main.njk
     </article>
     <hr>
     <ul class="previous-and-next-section">
-        {%- set nextNotesPost = collections.notes | getNextCollectionItem(page) %}
-        {%- if nextNotesPost %}
-            <li>Next: <a href="{{ nextNotesPost.url | url }}" aria-label="Next post - {{ nextNotesPost.data.title }}">{{ nextNotesPost.data.title }}</a>
+        {%- set nextSocialPost = collections.social | getNextCollectionItem(page) %}
+        {%- if nextSocialPost %}
+            <li>Next: <a href="{{ nextSocialPost.url | url }}" aria-label="Next post - {{ nextSocialPost.data.title }}">{{ nextSocialPost.data.title }}</a>
             </li>
         {% endif %}
-        {%- set previousNotesPost = collections.notes | getPreviousCollectionItem(page) %}
-        {%- if previousNotesPost %}
-            <li>Previous: <a href="{{ previousNotesPost.url | url }}" aria-label="Previous post - {{ previousNotesPost.data.title }}">{{ previousNotesPost.data.title }}</a>
+        {%- set previousSocialPost = collections.social | getPreviousCollectionItem(page) %}
+        {%- if previousSocialPost %}
+            <li>Previous: <a href="{{ previousSocialPost.url | url }}" aria-label="Previous post - {{ previousSocialPost.data.title }}">{{ previousSocialPost.data.title }}</a>
             </li>
         {% endif %}
     </ul>
@@ -51,7 +51,6 @@ layout: main.njk
           "url": "https://amberwilson.co.uk/img/favicon/favicon-32x32.png"
       }
   }
-
 </script>
 <script type="application/ld+json">
     {
@@ -61,8 +60,8 @@ layout: main.njk
             {
                 "@type": "ListItem",
                 "position": 1,
-                "name": "Notes",
-                "item": "https://amberwilson.co.uk/notes/"
+                "name": "Social Posts",
+                "item": "https://amberwilson.co.uk/social/"
             }, {
                 "@type": "ListItem",
                 "position": 2,
