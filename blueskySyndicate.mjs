@@ -5,7 +5,28 @@ import path from 'path';
 
 dotenv.config(); // Load .env
 
-const accessToken = process.env.BLUESKY_ACCESS_TOKEN;
+async function getBlueskyToken(identifier, password) {
+  const response = await fetch('https://bsky.social/xrpc/com.atproto.server.createSession', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ identifier, password }),
+  });
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    throw new Error(`Failed to get token: ${response.status} - ${errorText}`);
+  }
+
+  const data = await response.json();
+  return data.accessJwt;
+}
+
+
+const accessToken = await getBlueskyToken(
+  process.env.BLUESKY_HANDLE,
+  process.env.BLUESKY_APP_PASSWORD
+);
+
 const handle = process.env.BLUESKY_HANDLE;
 
 async function getLatestSocialPost(socialDirectory = './src/social') {
@@ -27,7 +48,8 @@ async function getLatestSocialPost(socialDirectory = './src/social') {
 
   const fullPath = path.join(socialDirectory, latestFile);
   const content = await fs.readFile(fullPath, 'utf-8');
-  return content.trim().slice(0, 300); // Optional: limit to Bluesky's 300 characters
+  const cleaned = content.replace(/^---[\s\S]*?---/, '').trim();
+  return cleaned.slice(0, 300); // Optional: limit to Bluesky's 300 characters
 }
 
 
