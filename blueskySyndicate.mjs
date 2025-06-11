@@ -105,7 +105,7 @@ async function postToBluesky(data = {}) {
 // Run it
 (async () => {
   try {
-    const text = await getLatestSocialPost('./social');
+    const text = await getLatestSocialPost('./src/social');
 
     await postToBluesky({
       text,

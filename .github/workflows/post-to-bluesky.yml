@@ -3,7 +3,7 @@ name: Syndicate Note to Bluesky
 on:
   push:
     paths:
-      - ./src/social/**'
+      - src/social/**'
     branches:
       - main
 
