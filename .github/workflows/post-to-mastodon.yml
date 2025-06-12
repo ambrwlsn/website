@@ -1,0 +1,31 @@
+name: Syndicate Note to Mastodon
+
+on:
+  push:
+    paths:
+      - src/social/**
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  post-to-mastodon:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: Run Mastodon syndication
+      env:
+        MASTODON_API_TOKEN: ${{ secrets.MASTODON_API_TOKEN }}
+        MASTODON_INSTANCE: ${{ secrets.MASTODON_INSTANCE }}
+      run: node mastodonSyndicate.mjs
