@@ -14,7 +14,6 @@
     "start": "npm-run-all delete:public prebuild concat postcss start:eleventy debug",
     "build": "npm run build:eleventy",
     "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
     "node": ">=18"
