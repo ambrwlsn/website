@@ -30,26 +30,26 @@ const accessToken = await getBlueskyToken(
 const handle = process.env.BLUESKY_HANDLE;
 
 async function getLatestSocialPost(socialDirectory = './src/social') {
-  const files = await fs.readdir(socialDirectory);
-  const markdownFiles = files.filter(file => file.endsWith('.md'));
+  const { exec } = await import('child_process');
+  const { promisify } = await import('util');
+  const execAsync = promisify(exec);
 
-  if (markdownFiles.length === 0) throw new Error('No markdown posts found');
+  try {
+    // Get the most recently committed markdown file
+    const { stdout } = await execAsync(`git log -1 --name-only --pretty=format: -- ${socialDirectory}/*.md`);
+    const latestFile = stdout.trim().split('\n').filter(f => f.endsWith('.md'))[0];
 
-  let latestFile = '';
-  let latestTime = 0;
+    if (!latestFile) throw new Error('No recently committed markdown file found.');
 
-  for (const file of markdownFiles) {
-    const stat = await fs.stat(path.join(socialDirectory, file));
-    if (stat.mtimeMs > latestTime) {
-      latestTime = stat.mtimeMs;
-      latestFile = file;
-    }
+    const content = await fs.readFile(latestFile, 'utf-8');
+
+    // Strip frontmatter if present
+    const cleaned = content.replace(/^---[\s\S]*?---/, '').trim();
+
+    return cleaned.slice(0, 300); // Optional: truncate to 300 characters
+  } catch (err) {
+    throw new Error(`Error getting latest social post: ${err.message}`);
   }
-
-  const fullPath = path.join(socialDirectory, latestFile);
-  const content = await fs.readFile(fullPath, 'utf-8');
-  const cleaned = content.replace(/^---[\s\S]*?---/, '').trim();
-  return cleaned.slice(0, 300); // Optional: limit to Bluesky's 300 characters
 }
 
 
