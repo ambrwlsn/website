@@ -13,7 +13,7 @@
     "start:eleventy": "npx @11ty/eleventy --serve --output=public --input=src",
     "start": "npm-run-all delete:public prebuild concat postcss start:eleventy debug",
     "build": "npm run build:eleventy",
-    "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
+    "debug": "DEBUG=Eleventy* npx @11ty/eleventy"
   },
   "engines": {
     "node": ">=18"
