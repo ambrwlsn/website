@@ -1,10 +1,13 @@
 import dotenv from 'dotenv';
-import fetch from 'node-fetch';
 import fs from 'fs/promises';
 import path from 'path';
+import fetch from 'node-fetch';
+import matter from 'gray-matter';
+import mime from 'mime';
 
-dotenv.config(); // Load .env
+dotenv.config();
 
+// 1. Get Bluesky Access Token
 async function getBlueskyToken(identifier, password) {
   const response = await fetch('https://bsky.social/xrpc/com.atproto.server.createSession', {
     method: 'POST',
@@ -21,55 +24,78 @@ async function getBlueskyToken(identifier, password) {
   return data.accessJwt;
 }
 
+// 2. Upload Image to Bluesky
+async function uploadImageToBluesky(filePath, accessToken) {
+  const url = 'https://bsky.social/xrpc/com.atproto.repo.uploadBlob';
 
-const accessToken = await getBlueskyToken(
-  process.env.BLUESKY_HANDLE,
-  process.env.BLUESKY_APP_PASSWORD
-);
+  const imageBuffer = await fs.readFile(filePath);
+  const mimeType = mime.getType(filePath);
 
-const handle = process.env.BLUESKY_HANDLE;
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${accessToken}`,
+      'Content-Type': mimeType,
+    },
+    body: imageBuffer,
+  });
 
+  if (!response.ok) {
+    const error = await response.text();
+    throw new Error(`Failed to upload image: ${response.status} - ${error}`);
+  }
+
+  const blob = await response.json();
+  return blob.blob;
+}
+
+// 3. Get latest post by frontmatter "number"
 async function getLatestSocialPost(socialDirectory = './src/social') {
   const files = await fs.readdir(socialDirectory);
   const markdownFiles = files.filter(file => file.endsWith('.md'));
 
   if (markdownFiles.length === 0) throw new Error('No markdown posts found');
 
-  let latestFile = '';
-  let latestTime = 0;
+  const numberedPosts = [];
 
   for (const file of markdownFiles) {
-    const stat = await fs.stat(path.join(socialDirectory, file));
-    if (stat.mtimeMs > latestTime) {
-      latestTime = stat.mtimeMs;
-      latestFile = file;
+    const fullPath = path.join(socialDirectory, file);
+    const raw = await fs.readFile(fullPath, 'utf-8');
+    const { data, content } = matter(raw);
+
+    if (typeof data.number === 'number') {
+      numberedPosts.push({
+        number: data.number,
+        content,
+        filePath: fullPath,
+      });
     }
   }
 
-  const fullPath = path.join(socialDirectory, latestFile);
-  const content = await fs.readFile(fullPath, 'utf-8');
-  const cleaned = content.replace(/^---[\s\S]*?---/, '').trim();
-  return cleaned.slice(0, 300); // Optional: limit to Bluesky's 300 characters
+  if (numberedPosts.length === 0) throw new Error('No posts with "number" in frontmatter');
+
+  // Find post with highest number
+  const latestPost = numberedPosts.sort((a, b) => b.number - a.number)[0];
+
+  return latestPost;
 }
 
-
-async function postToBluesky(data = {}) {
+// 4. Post to Bluesky
+async function postToBluesky({ text, embed, accessToken, handle }) {
   const url = 'https://bsky.social/xrpc/com.atproto.repo.createRecord';
 
-  const text = data.text || '';
-  const regex = /(https?:\/\/[^\s]+)/g;
-  let match;
-  const links = [];
-
-  while ((match = regex.exec(text)) !== null) {
-    const urlString = match[0];
+  // Extract links for rich text facets
+  const links = [...text.matchAll(/https?:\/\/[^\s)]+/g)].map(match => {
     const start = match.index;
-    const end = start + urlString.length;
+    const end = start + match[0].length;
+    return {
+      start,
+      end,
+      url: match[0],
+    };
+  });
 
-    links.push({ start, end, url: urlString });
-  }
-
-  const facets = links.length > 0
+  const facets = links.length
     ? links.map(link => ({
         index: {
           byteStart: link.start,
@@ -90,51 +116,71 @@ async function postToBluesky(data = {}) {
     createdAt: new Date().toISOString(),
   };
 
-  if (data.embed) record.embed = data.embed;
   if (facets) record.facets = facets;
+  if (embed) record.embed = embed;
 
   const payload = {
-    collection: 'app.bsky.feed.post',
     repo: handle,
+    collection: 'app.bsky.feed.post',
     record,
   };
 
-  try {
-    const response = await fetch(url, {
-      method: 'POST',
-      headers: {
-        Authorization: `Bearer ${data.accessToken}`,
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-        'Accept-Charset': 'utf-8',
-        'User-Agent': 'amberwilson.co.uk',
-      },
-      body: JSON.stringify(payload),
-    });
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${accessToken}`,
+      'Content-Type': 'application/json',
+      'User-Agent': 'amberwilson.co.uk',
+    },
+    body: JSON.stringify(payload),
+  });
 
-    if (!response.ok) {
-      const err = await response.text();
-      throw new Error(`HTTP ${response.status}: ${err}`);
-    }
-
-    const result = await response.json();
-    console.log('✅ Post successful:', result);
-  } catch (err) {
-    console.error('❌ Failed to post to Bluesky:', err.message);
+  if (!response.ok) {
+    const err = await response.text();
+    throw new Error(`HTTP ${response.status}: ${err}`);
   }
+
+  const result = await response.json();
+  console.log('✅ Post successful:', result.uri);
 }
 
-// Run it
+// 5. Main Runner
 (async () => {
   try {
-    const text = await getLatestSocialPost('./src/social');
+    const handle = process.env.BLUESKY_HANDLE;
+    const accessToken = await getBlueskyToken(
+      process.env.BLUESKY_HANDLE,
+      process.env.BLUESKY_APP_PASSWORD
+    );
 
-    await postToBluesky({
-      text,
-      accessToken: accessToken,
-    });
+    const post = await getLatestSocialPost();
+    let text = post.content.trim().slice(0, 300); // Truncate if needed
+    let embed;
+
+    // Look for <img src="img/filename" alt="..."> in text
+    const imgMatch = post.content.match(/<img\s+[^>]*src="img\/([^"]+)"[^>]*alt="([^"]*)"[^>]*>/i);
+
+    if (imgMatch) {
+      const imageFilename = imgMatch[1];
+      const altText = imgMatch[2] || 'Image from post';
+      const imagePath = path.join('./src/social/img', imageFilename);
+
+      try {
+        const blob = await uploadImageToBluesky(imagePath, accessToken);
+        embed = {
+          $type: 'app.bsky.embed.images',
+          images: [{ image: blob, alt: altText }],
+        };
+        // Remove the <img> tag from post text
+        text = text.replace(imgMatch[0], '').trim();
+      } catch (err) {
+        console.error('❌ Failed to upload image:', err.message);
+      }
+    }
+
+    await postToBluesky({ text, embed, accessToken, handle });
+
   } catch (err) {
     console.error('❌ Error running script:', err.message);
   }
 })();
-

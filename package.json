@@ -45,7 +45,10 @@
   "dependencies": {
     "elasticlunr": "^0.9.5",
     "eleventy-plugin-reading-time": "0.0.1",
+    "form-data": "^4.0.3",
+    "gray-matter": "^4.0.3",
     "he": "^1.2.0",
+    "mime": "^4.0.7",
     "node-fetch": "^3.3.2",
     "postcss-clean": "^1.2.0",
     "striptags": "^3.2.0"

@@ -1,6 +1,7 @@
 ---
 title: New Book
 date: "2025-06-14"
+number: 3
 ---
 
 Happy to have my copy!
