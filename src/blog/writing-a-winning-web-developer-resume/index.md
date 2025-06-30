@@ -2,7 +2,7 @@
 title: Writing a Winning Web Developer Resume
 date: "2021-01-15"
 tags: [tips]
-ogImage: 'writing-a-resume.jpg'
+ogImage: 'writing-a-resume.jpeg'
 keywords: [amber wilson,web development,html,javascript,cv,frontend]
 ---
 
