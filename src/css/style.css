@@ -1548,6 +1548,29 @@ figure img {
 }
 /* end of card section */
 
+/* start of formkit section */
+
+.formkit-form-wrapper {
+  display: flex;
+  gap: var(--spacingM);
+}
+
+.formkit-submit-button {
+  color: var(--textColor) !important;
+  background-color: var(--tertiaryBackgroundColor) !important;
+  font-family: var(--fontSerif);
+}
+
+.formkit-input-wrapper {
+  flex: 1;
+}
+
+.formkit-input-wrapper input {
+  width: 100%;
+}
+
+/* end of formkit section */
+
 .checkbox-wrapper {
   position: relative;
   width: 30px;
