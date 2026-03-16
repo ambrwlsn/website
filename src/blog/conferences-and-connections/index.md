@@ -1,6 +1,7 @@
 ---
 title: 'Conferences and Connections'
 date: "2026-03-15"
+description: Being part of the web community was pivotal in my career as a web developer. It's a special experience—being in a room and in face-to-face discussion with other web nerds.
 ogImage: conferences-and-connections.jpg
 tags: [community, conference]
 ---
