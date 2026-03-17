@@ -6,7 +6,7 @@ ogImage: conferences-and-connections.webp
 tags: [community, conference]
 ---
 
-I was so excited to come to Brighton on March 12th 2026 to attend <a href="https://webdayout.com/">Web Day Out</a>. It's been a long time since I regularly attended conferences. Since COVID, I've attended two, the other being <a href="https://beyondtellerrand.com/events/berlin-2025">Beyond Tellerand</a>. Both of them run by very good people, both with very good speakers and attendees. 
+I was so excited to come to Brighton on March 12th 2026 to attend <a href="https://webdayout.com/">Web Day Out</a>. It's been a long time since I regularly attended conferences. Since COVID, I've attended two, the other being <a href="https://beyondtellerrand.com/events/berlin-2025">Beyond Tellerrand</a>. Both of them run by very good people, both with very good speakers and attendees. 
 
 <figure>
     <img loading="lazy" src="img/conferences-and-connections.webp" alt="Buildings on a street in Brighton lit up by red and blue lights.">
